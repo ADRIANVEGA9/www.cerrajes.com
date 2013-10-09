@@ -1,0 +1,38 @@
+@media screen and (min-width: 768px)
+{
+	body
+	{
+		margin: 0 auto;
+		max-width: 1000px;
+	}
+	#contenido 
+	{
+		margin: 0 auto;
+		max-width: 76%;
+	}
+	#logo 
+	{
+		margin-right: 1em;
+		width: 26%;
+	}
+}
+@media screen and (max-width: 767px)
+{
+	body
+	{
+		width: 750px;
+	}
+	#contenido 
+	{
+		margin: 0 auto;
+		width: 580px;
+	}
+	#logo
+	{
+		margin-right: 1em;
+		min-width: 26%;
+	}
+	#menuProductos {
+		min-width: 138px;
+	}
+}

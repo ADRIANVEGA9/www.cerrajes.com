@@ -1,0 +1,101 @@
+ul, ul ul 
+{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.menu 
+{
+	font-size: 0.7em;
+	height: auto;
+	margin: 1em auto 0;
+	width: auto;
+}
+.menu > li > a 
+{
+	background-color: #FFF;
+	border-bottom: 1px dotted #71BF44;
+	color: #333;
+	display: block;
+	height: 2.75em;
+	line-height: 2.75em;
+	position: relative;
+	text-align: left;
+	text-transform: uppercase;
+	width: 100%;
+}
+.menu ul li a 
+{
+	background: #F8F8F8;
+	color: #878d95;
+	display: block;
+	height: 1.3em;
+	line-height: 1.3em;
+	padding-left: .5em;
+	padding-top: .3em;
+	position: relative;
+	text-align: left;
+	width: auto;
+}
+.menu ul li a:last-child
+{
+	padding-bottom: .2em
+}
+.menu > li > a.active 
+{
+	background-color: #FFF;
+	border-bottom: 1px dotted #71BF44;
+	margin-bottom: .5em;
+}
+.menu > li > a:hover
+{
+	background-color: #F8F8F8;
+	border-bottom: 1px dotted #71BF44;
+}
+.menu > li > a.active 
+{
+	border-bottom: 1px dotted #71BF44;
+}
+.menu > li > a span 
+{
+	background: #FFF;
+	color: #71BF44;
+	display: inline-block;
+	font-size: 0.857em; 
+	height: 1em;
+	line-height: 1em;
+	margin: -.8em 0 0 0; 
+	padding: .4em .6em;
+	text-align: center;
+	top: 50%; 
+}
+.menu > li a.active span 
+{
+	background: #FFF;
+}
+.menu > li > a:hover span 
+{
+	background: #F8F8F8;
+} 
+.menu > li > ul li:hover a,
+.menu > li > ul li:hover a span,
+.menu > li > ul li:active a,
+.menu > li > ul li:active a span
+{
+	color: #32373D;
+}
+.menu ul > li > a span 
+{
+	background: #F8F8F8;
+	color: #71BF44;
+	display: inline-block;
+	font-size: 0.857em; 
+	height: 1em;
+	line-height: 1em;
+	margin: -.9em 0 0 0; 
+	/*padding: .4em .7em;*/
+	text-align: center;
+	top: 50%; 
+	width: 3em;
+}
+
