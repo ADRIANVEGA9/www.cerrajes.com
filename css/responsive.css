@@ -1,14 +1,14 @@
-@media screen and (min-width: 768px)
+@media screen and (min-width: 965px)
 {
 	body
-	{
+	{		
 		margin: 0 auto;
 		max-width: 1000px;
 	}
 	#contenido 
 	{
 		margin: 0 auto;
-		max-width: 76%;
+		max-width: 78%;
 	}
 	#logo 
 	{
@@ -16,16 +16,18 @@
 		width: 26%;
 	}
 }
-@media screen and (max-width: 767px)
+@media screen and (max-width: 965px)
 {
 	body
 	{
-		width: 750px;
+		font-size: 13px;
+		max-width: 965px;
+		min-width: 795px;
 	}
 	#contenido 
 	{
 		margin: 0 auto;
-		width: 580px;
+		width: 75%;
 	}
 	#logo
 	{
