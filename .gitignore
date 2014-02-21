@@ -213,3 +213,10 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
+imagenesSitio/
+adodb/
+_notes/
+connections/
+iview/
+nusoap/
+sqlserver.inc.php

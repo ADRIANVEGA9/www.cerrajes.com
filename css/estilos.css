@@ -44,9 +44,11 @@ header
 {
 	display: inline-block;
 	margin: 0 auto;
+	position: relative;
 	text-align: left;
 	vertical-align: top;
 	width: 100%;
+	z-index: 10;
 }
 header #home img 
 {
@@ -68,11 +70,7 @@ nav a
 {
 	background: #71BF44;
 	color: #464646;
-	display: block;
-	height: 40px;
 	line-height: 40px;
-	padding: 0;
-	text-align: center;
 }
 nav a:hover
 {
@@ -97,7 +95,6 @@ nav table
 }
 nav td 
 {
-	padding: 0;
 	padding-bottom: 10px;
 }
 nav td.activo 
@@ -106,10 +103,15 @@ nav td.activo
 	padding: 0;
 	padding-bottom: 10px;
 }
-#buscar input
+#buscar a input
 {
+	background-image: url(../imagenesSitio/search.png); 
+	background-position: right center; 
+	background-repeat: no-repeat; 
+	border-color: whitesmoke;
 	color: #7C9172;
-	width: 90%;
+	padding-right: 10px; 
+	width: 80%;
 }
 #circulo1 
 {
@@ -123,12 +125,73 @@ nav td.activo
 {
 	background: #E5F3DA;
 }
-#contenido 
+#contenedor 
 {
 	color: #666;
 	display: inline-block;
 	vertical-align: top;
 	width: 78%;
+}
+#contenido 
+{
+	position: relative;
+	top: .5em;
+	width: 99%;
+}
+#contenido a:hover
+{
+	text-decoration: underline;
+}
+#contenido a,
+#contenido a:visited
+{
+	color: #666;
+}
+#contenido section article figure {
+	display: inline-block;
+	font-size: .8em;
+	padding: 0 1em 2em 0;
+	vertical-align: top;
+	width: 25%;
+}
+#contenido #np_iconos {
+	padding-top: 1em;
+	text-align: left;
+	width: 100%;
+}
+#contenido #np_iconos figure {
+	width: 50px;
+	display: inline-block;
+	margin-right: 2%;
+	text-align: center;
+	vertical-align: top;
+}
+#contenido #np_iconos figure div {
+	background: rgb(186, 224, 224);
+	border-radius: 50px;
+	height: 50px;
+	position: absolute;
+	width: 50px;
+}
+#contenido #np_iconos figure img {
+	left: -5%;
+	position: relative;
+	top: -5%;
+	width: 110%;
+}
+#contenido #np_iconos figure img:hover {
+	cursor: pointer;
+	left: -25%;
+	top: -25%;
+	width: 150%;
+}
+#contenido #np_info {
+	padding: 1em 0 1em 0;
+	text-align: left;
+	width: 100%;
+}
+#contenido #np_info figure img {
+	width: 100%
 }
 #cuenta {
 	box-shadow: 1px 1px 2px 1px #CACBCD; /*rgba(0, 0, 0, .3);*/
@@ -145,40 +208,20 @@ nav td.activo
 	vertical-align: top;
 	width: 100%;
 }
-#internoHome #logo {
-	margin: 0;
-	text-align: right;
-	width: 79%;
-}
-#internoHome #logo img 
-{
-	background: #71BF44;
-	box-shadow: 0px 8px 10px -5px rgba(0, 0, 0, .8);
-	display: inline-block;
-	margin-right: 1em;
-	padding: 30px 10px 0px;
-	position: relative;
-	right: 0%;
-	width: 20%;
-}
-#internoHome #logo,
-#internoHome #menu
-{
-	display: inline-block;
-	vertical-align: top;
-}
 #internoHome #menu {
 	background: rgba(255, 255, 255, 0.9);
 	box-shadow: 0px 8px 10px -5px rgba(0, 0, 0, .5);
 	color: #71BF44;
-	font-size: .9em;
+	display: inline-block;
+	font-size: 1em;
 	line-height: 2.2em;
 	margin-left: 1em;
 	max-width: 20%;
 	min-height: 165px;
 	min-width: 160px;
-	padding: 0em .5em;
+	padding: 1em .5em;
 	position: relative;
+	vertical-align: top;
 }
 #internoHome #menu a
 {
@@ -262,6 +305,17 @@ nav td.activo
 	padding-right: 1px !important;
 	padding-top: 15px !important;
 }
+.nuevosProductosCirculo 
+{
+	border-radius: 70px;
+	box-shadow: 0px 0px 1px 5px rgba(255, 255, 255, 1);
+	display: inline-block;
+	font-size: 1.4em;
+	height: 100px;
+	line-height: 100px;
+	text-align: center;
+	width: 100px;
+}
 .rectangulo 
 {
 	background: #F8F8F8;
@@ -298,7 +352,7 @@ nav td.activo
 	float: right;
 	margin-before: 1em;
 }
-.tituloSeccion {
+.tituloQS {
 	color: #71BF44;
 	display: block;
 	font-size: 1.2em;
@@ -312,7 +366,7 @@ nav td.activo
 	width: 93%;
 	z-index: 10;
 	}
-.tituloSeccion span 
+.tituloQS span 
 {
 	background: #FFF;
 	box-shadow: 0px 8px 10px -5px rgba(0, 0, 0, .5);
@@ -320,6 +374,15 @@ nav td.activo
 	padding: .7em .5em;
 	position: relative;
 	z-index: 100;
+}
+.tituloSeccion {
+	background: #ECF3EA;
+	color: #71BF44;
+	font-size: 1.2em;
+	padding: .3em .7em;
+	position: relative;
+	text-align: left;
+	text-transform: capitalize;
 }
 .triangulo_top_right 
 {
@@ -330,4 +393,22 @@ nav td.activo
 	height: 0;
 	margin-right: 10%;
 	width: 0;
+}
+.videos 
+{
+	display: inline-block;
+	padding-top: 1em;
+	position: relative;
+	text-align: left;
+	width: 100%;
+}
+.videosImg 
+{
+}
+.VideoLineaPunteada {
+	border-top: 2px dotted #71BF44;
+	margin-bottom: 1em;
+}
+.videoSubTitulo {
+	padding-bottom: 1em;
 }
