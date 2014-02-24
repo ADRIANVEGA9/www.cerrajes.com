@@ -18,11 +18,8 @@
 	</section>
 	<section id="contenedor">
 		<?php require(".nav.php") ?>
-		<section>
-			<div class="tituloSeccion"><strong>Contacto</strong></div>
-			<article class="articuloSeccionT2">
-
-			</article>		
+		<section  id="contenido">
+			<div class="tituloSeccion"><strong>Contacto</strong></div>	
 		</section>
 
 

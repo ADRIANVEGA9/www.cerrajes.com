@@ -18,14 +18,12 @@
 	</section>
 	<section id="contenedor">
 		<?php require(".nav.php") ?>
-		<section>
+		<section  id="contenido">
 			<div class="tituloSeccion"><strong>Noticias</strong></div>
-			<article class="articuloSeccionT2">
-
-			</article>		
+			<section class="noticias">
+				<figure><img src="imagenesSitio/noticias/01.jpg" alt=""/></figure>
+			</section>
 		</section>
-
-
 	</section>
 	<?php require(".footer.php") ?>
 </body>

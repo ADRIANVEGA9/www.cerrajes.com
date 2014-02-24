@@ -18,8 +18,8 @@
 	</section>
 	<section id="contenedor">
 		<?php require(".nav.php") ?>
-		<section>
-			<div class="tituloSeccion"><strong>Home</strong></div>
+		<section  id="contenido">
+			<div class="tituloSeccion"><strong>Cerrajes</strong></div>
 			<article class="articuloSeccionT2">
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae, eum, obcaecati rem eveniet vero illum omnis accusamus quisquam sequi ipsam fugiat debitis tenetur esse expedita molestias assumenda illo. Architecto, eligendi!</p> 
 

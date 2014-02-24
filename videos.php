@@ -29,7 +29,7 @@ overlayOpacity: "0.6",//transparencia
 	<section id="contenedor">
 		<?php require(".nav.php") ?>
 		<section id="contenido">
-			<div class="tituloSeccion"><strong>VIDEOS DE INSTALACIÓN</strong></div>
+			<div class="tituloSeccion"><strong>Videos de instalación</strong></div>
 			<section class="videos">
 
 				<div class="videoSubTitulo">Accesorios para gabinete</div>

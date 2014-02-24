@@ -18,7 +18,7 @@
 	</section>
 	<section id="contenedor">
 		<?php require(".nav.php") ?>
-		<section>
+		<section  id="contenido">
 			<div class="tituloSeccion"><strong>Aviso de privacidad</strong></div>
 			<article class="articuloSeccionT2">
 				 
