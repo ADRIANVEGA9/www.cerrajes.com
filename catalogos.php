@@ -20,6 +20,38 @@
 		<?php require(".nav.php") ?>
 		<section  id="contenido">
 			<div class="tituloSeccion"><strong>Catálogos</strong></div>	
+			<section class="catalogos">				
+
+				<article class="catalogosImg">
+					<figure>
+						<a id="img" href="http://www.cerrajes.me/catalogos/virtual/industrial/index.html" target="_blank" title="Ver cátalogo virtual Industrial">
+							<img src="imagenesSitio/catalogos/industrial.png" alt="Cátalogo Industrial"/>
+						<figcaption>CCI001 Cátalogo Industrial</figcaption>
+						</a>
+						<a id="down" class="icon-download" href="http://www.cerrajes.me/catalogos/pdf/industrial.pdf" target="_blank" title="Descargar pdf"></a>
+					</figure>
+
+
+					<figure>
+						<a href="http://www.cerrajes.me/catalogos/virtual/comercial/index.html" target="_blank" title="Ver cátalogo virtual Comercial">
+							<img src="imagenesSitio/catalogos/Comercial.png" alt="Cátalogo Comercial"/>
+						<figcaption> Cátalogo Comercial</figcaption>
+						</a>
+						<a id="down" class="icon-download" href="http://www.cerrajes.me/catalogos/pdf/comercial.pdf" target="_blank" title="Descargar pdf"></a>
+					</figure>
+
+
+					<figure>
+						<a href="http://www.cerrajes.me/catalogos/virtual/vauth-sagel/index.html" target="_blank" title="Ver cátalogo virtual Vauth-Sagel">
+							<img src="imagenesSitio/catalogos/Vauth-Sagel.png" alt="Cátalogo Vauth-Sagel"/>
+						<figcaption> Cátalogo Vauth-Sagel</figcaption>
+						</a>
+						<a id="down" class="icon-download" href="http://www.cerrajes.me/catalogos/pdf/vauth-sagel.pdf" target="_blank" title="Descargar pdf"></a>
+					</figure>
+
+				</article>	
+
+			</section>
 		</section>
 
 

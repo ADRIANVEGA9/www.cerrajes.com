@@ -58,6 +58,38 @@
 					<figure><img id="09" src="imagenesSitio/nuevosProductos/09.png" alt="icono"/></figure>
 					<figcaption>Bote para basura</figcaption>
 				</section>
+				<section class="icono">
+					<figure><img id="10" src="imagenesSitio/nuevosProductos/10.png" alt="icono"/></figure>
+					<figcaption>Botón hueco</figcaption>
+				</section>
+				<section class="icono">
+					<figure><img id="11" src="imagenesSitio/nuevosProductos/11.png" alt="icono"/></figure>
+					<figcaption>Jaladera barra hueca</figcaption>
+				</section>
+				<section class="icono">
+					<figure><img id="12" src="imagenesSitio/nuevosProductos/12.png" alt="icono"/></figure>
+					<figcaption>Cross dowel</figcaption>
+				</section>
+				<section class="icono">
+					<figure><img id="13" src="imagenesSitio/nuevosProductos/13.png" alt="icono"/></figure>
+					<figcaption>Perno pad permanente</figcaption>
+				</section>
+				<section class="icono">
+					<figure><img id="14" src="imagenesSitio/nuevosProductos/14.png" alt="icono"/></figure>
+					<figcaption>Salice silentia 700</figcaption>
+				</section>
+				<section class="icono">
+					<figure><img id="15" src="imagenesSitio/nuevosProductos/15.png" alt="icono"/></figure>
+					<figcaption>Panel divisor plástico</figcaption>
+				</section>
+				<section class="icono">
+					<figure><img id="16" src="imagenesSitio/nuevosProductos/16.png" alt="icono"/></figure>
+					<figcaption>Perchero embutido</figcaption>
+				</section>
+				<section class="icono">
+					<figure><img id="17" src="imagenesSitio/nuevosProductos/17.png" alt="icono"/></figure>
+					<figcaption>Mecanismo plástico</figcaption>
+				</section>
 			</section>
 
 			<section id="np_info">
@@ -70,6 +102,14 @@
 				<figure id="np_img07" class="_off"><img src="imagenesSitio/nuevosProductos/07.jpg" alt=""></figure>
 				<figure id="np_img08" class="_off"><img src="imagenesSitio/nuevosProductos/08.jpg" alt=""></figure>
 				<figure id="np_img09" class="_off"><img src="imagenesSitio/nuevosProductos/09.jpg" alt=""></figure>
+				<figure id="np_img10" class="_off"><img src="imagenesSitio/nuevosProductos/10.jpg" alt=""></figure>
+				<figure id="np_img11" class="_off"><img src="imagenesSitio/nuevosProductos/11.jpg" alt=""></figure>
+				<figure id="np_img12" class="_off"><img src="imagenesSitio/nuevosProductos/12.jpg" alt=""></figure>
+				<figure id="np_img13" class="_off"><img src="imagenesSitio/nuevosProductos/13.jpg" alt=""></figure>
+				<figure id="np_img14" class="_off"><img src="imagenesSitio/nuevosProductos/14.jpg" alt=""></figure>
+				<figure id="np_img15" class="_off"><img src="imagenesSitio/nuevosProductos/15.jpg" alt=""></figure>
+				<figure id="np_img16" class="_off"><img src="imagenesSitio/nuevosProductos/16.jpg" alt=""></figure>
+				<figure id="np_img17" class="_off"><img src="imagenesSitio/nuevosProductos/17.jpg" alt=""></figure>
 			</section>
 
 		</section>
@@ -80,17 +120,19 @@
 
 	$('#np_iconos .icono figure img').click( mostrarOcultar );
 
-	function mostrarOcultar(){
+	function mostrarOcultar(e){
+	console.log(e);
+	e.preventDefault();
 		 $idn = this.id;
-		console.log("aqui estoy"+$idn);
+		//console.log("aqui estoy"+$idn);
 var $np_on  		= $('#np_info #np_img'+$idn),
 	$np_off  		= $('#np_info #np_img'+$idn).siblings();
-		//console.log("aqui estoy");
-		console.log("$np_on = "+$np_on);
-	$np_off.removeClass('_on');
-	$np_on.addClass('_on');
-	$np_off.addClass('_off');
-	$np_on.removeClass('_off');
+	// $np_off.removeClass('_on');
+	// $np_on.addClass('_on');
+	// $np_off.addClass('_off');
+	// $np_on.removeClass('_off');
+	$np_on.slideDown( 300 ).show(300);
+	$np_off.slideUp( 300 ).hide(300);
 }
 
 </script>

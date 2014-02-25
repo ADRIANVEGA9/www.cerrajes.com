@@ -21,6 +21,30 @@
 	font-weight: normal;
 	font-style: normal;
 }
+@font-face {
+	font-family: 'download';
+	src:url('../fonts/download.eot?-un178');
+	src:url('../fonts/download.eot?#iefix-un178') format('embedded-opentype'),
+		url('../fonts/download.woff?-un178') format('woff'),
+		url('../fonts/download.ttf?-un178') format('truetype'),
+		url('../fonts/download.svg?-un178#download') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'download';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
 ::selection { background:#7AC143; color:#fff; }/*cambiar el color de la selección de texto*/
 a
 {
@@ -149,7 +173,6 @@ nav td.activo
 }
 #contenido section article figure {
 	display: inline-block;
-	padding-top: 1em;
 	vertical-align: top;
 }
 #contenido #np_iconos {
@@ -201,6 +224,37 @@ nav td.activo
 }
 #contenido .noticias figure img{
 	width: 100%;
+}
+#contenido .catalogos article figure {
+	display: inline-block;
+	font-size: .8em;
+	padding: 0 1em 2em 0;
+	vertical-align: top;
+	width: 30%;
+}
+#contenido .catalogos article figure img {
+	width: 100%;
+	transition: all linear .3s;
+}
+#contenido .catalogos article figure img:hover {
+	transform: rotate(3.5deg); /*scale(1.05);*/
+}
+#contenido .catalogos .catalogosImg a{
+	display: inline-block;
+	text-decoration: none;
+	width: 80%;
+}
+#contenido .catalogos .catalogosImg figure #down {
+	display: inline-block;
+	left: -30px;
+	position: relative;
+	text-decoration: none;
+	transition: all linear .3s;
+	vertical-align: top;
+	width: 15%;
+}
+#contenido .catalogos .catalogosImg figure #down:hover {
+	transform: scale(1.30);
 }
 #contenido .videos article figure {
 	display: inline-block;
@@ -307,6 +361,17 @@ nav td.activo
 	vertical-align: top;
 	width: 96%;
 }
+.catalogos 
+{
+	display: inline-block;
+	padding-top: 1em;
+	position: relative;
+	text-align: left;
+	width: 100%;
+}
+.catalogosSubTitulo {
+	padding-bottom: 1em;
+}
 .circulo 
 {
 	border-radius: 70px;
@@ -322,6 +387,21 @@ nav td.activo
 {
 	padding-right: 1px !important;
 	padding-top: 15px !important;
+}
+.icon-box-add:before {
+	content: "\e600";
+}
+.icon-file-pdf:before {
+	content: "\e602";
+}
+.icon-download:before {
+	content: "\e601";
+}
+.icon-box-add:before,
+.icon-file-pdf:before,
+.icon-download:before {
+	color: #71bf44;
+	font-size: 2em
 }
 .icono {
 	display: inline-block;
