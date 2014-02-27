@@ -13,7 +13,6 @@
 <body>
 <?php require(".header.html") ?>
 	<section id="menuProductos">
-		<div id="tituloProductos"><span>productos</span></div>
 		<?php require("menu/.menu.html") ?>
 	</section>
 	<section id="contenedor">

@@ -10,11 +10,6 @@
 		margin: 0 auto;
 		max-width: 78%;
 	}
-	#logo 
-	{
-		margin-right: 1em;
-		width: 26%;
-	}
 }
 @media screen and (max-width: 965px)
 {
@@ -24,15 +19,13 @@
 		max-width: 965px;
 		min-width: 795px;
 	}
+	header #home {
+		height: 280px;
+	}
 	#contenedor 
 	{
 		margin: 0 auto;
 		width: 75%;
-	}
-	#logo
-	{
-		margin-right: 1em;
-		min-width: 26%;
 	}
 	#menuProductos {
 		min-width: 138px;

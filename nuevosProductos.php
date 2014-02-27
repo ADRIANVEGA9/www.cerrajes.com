@@ -13,7 +13,6 @@
 <body>
 <?php require(".header.html") ?>
 	<section id="menuProductos">
-		<div id="tituloProductos"><span>productos</span></div>
 		<?php require("menu/.menu.html") ?>
 	</section>
 	<section id="contenedor">
@@ -25,10 +24,6 @@
 				<section class="icono">
 					<figure><img id="01" src="imagenesSitio/nuevosProductos/01.png" alt="icono"/></figure>
 					<figcaption>Accesorio flexible</figcaption>
-				</section>
-				<section class="icono">
-					<figure><img id="02" src="imagenesSitio/nuevosProductos/02.png" alt="icono"/></figure>
-					<figcaption>Cross dowel</figcaption>
 				</section>
 				<section class="icono">
 					<figure><img id="03" src="imagenesSitio/nuevosProductos/03.png" alt="icono"/></figure>
@@ -67,8 +62,12 @@
 					<figcaption>Jaladera barra hueca</figcaption>
 				</section>
 				<section class="icono">
+					<figure><img id="02" src="imagenesSitio/nuevosProductos/02.png" alt="icono"/></figure>
+					<figcaption>Cross dowel 25mm</figcaption>
+				</section>
+				<section class="icono">
 					<figure><img id="12" src="imagenesSitio/nuevosProductos/12.png" alt="icono"/></figure>
-					<figcaption>Cross dowel</figcaption>
+					<figcaption>Cross dowel 18mm</figcaption>
 				</section>
 				<section class="icono">
 					<figure><img id="13" src="imagenesSitio/nuevosProductos/13.png" alt="icono"/></figure>
@@ -90,6 +89,10 @@
 					<figure><img id="17" src="imagenesSitio/nuevosProductos/17.png" alt="icono"/></figure>
 					<figcaption>Mecanismo plástico</figcaption>
 				</section>
+				<section class="icono">
+					<figure><img id="18" src="imagenesSitio/nuevosProductos/18.png" alt="icono"/></figure>
+					<figcaption>Tubo oval y bridas</figcaption>
+				</section>
 			</section>
 
 			<section id="np_info">
@@ -110,6 +113,7 @@
 				<figure id="np_img15" class="_off"><img src="imagenesSitio/nuevosProductos/15.jpg" alt=""></figure>
 				<figure id="np_img16" class="_off"><img src="imagenesSitio/nuevosProductos/16.jpg" alt=""></figure>
 				<figure id="np_img17" class="_off"><img src="imagenesSitio/nuevosProductos/17.jpg" alt=""></figure>
+				<figure id="np_img18" class="_off"><img src="imagenesSitio/nuevosProductos/18.jpg" alt=""></figure>
 			</section>
 
 		</section>

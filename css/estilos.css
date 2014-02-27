@@ -45,6 +45,17 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
+@keyframes animacionImg{
+    0% {background-image: url(../imagenesSitio/01.png);}
+    1% {background-image: url(../imagenesSitio/01.png);}
+    25% {background-image: url(../imagenesSitio/02.png);}
+    26% {background-image: url(../imagenesSitio/02.png);}
+    50% {background-image: url(../imagenesSitio/03.png);}
+    51% {background-image: url(../imagenesSitio/03.png);}
+    75% {background-image: url(../imagenesSitio/04.png);}
+    76% {background-image: url(../imagenesSitio/04.png);}
+    100% {background-image: url(../imagenesSitio/01.png);}
+}
 ::selection { background:#7AC143; color:#fff; }/*cambiar el color de la selección de texto*/
 a
 {
@@ -68,15 +79,52 @@ header
 {
 	display: inline-block;
 	margin: 0 auto;
+	padding-bottom: .3em;
 	position: relative;
 	text-align: left;
 	vertical-align: top;
 	width: 100%;
 	z-index: 10;
 }
-header #home img 
+header #home {
+	background: #71bf44;
+	height: 320px;
+	text-align: right;
+}
+header #home #imgs {
+	height: 63%;
+	padding-right: 2em;
+} 
+header #home #imgs img{
+	border-radius: 12px;
+	box-shadow: 4px 2px 15px 1px rgba(0, 0, 0, .4);
+	margin-right: .5em;
+	position: relative;
+	top: 3em;
+	width: 17%;
+} 
+header #home #imgs section{
+	background-repeat: no-repeat;
+	background-size: 100%;
+	border-radius: 12px;
+	box-shadow: 4px 2px 15px 1px rgba(0, 0, 0, .4);
+	margin-right: .5em;
+	position: relative;
+	top: 3em;
+	width: 17%;
+    animation: animacionImg 60s infinite;
+    display: inline-block;
+    height: 82%;
+} 
+header #home #logo 
 {
-	width: 100%;
+	height: 37%;
+	padding-right: 1.5em;
+}
+header #home #logo img{
+	position: relative;
+	top: 45%;
+	width: 20%;
 }
 nav 
 {/*font-size: 0px;/*dar tamaño de 0 (cero) al font para evitar que el inline-block ponga espacios en blanco entre cada li*/
@@ -324,6 +372,13 @@ nav td.activo
 	padding-right: 0.3em;
 	width: 20%;
 }
+#simbologia img,
+#simbologia .lineaPunteada {
+	width: 100%;
+}
+#simbologia .lineaPunteada {
+	padding: .2em 0;
+}
 #tituloProductos
 {	
 	background: #71BF44;
@@ -408,6 +463,9 @@ nav td.activo
 	padding-right: 4%;
 	text-align: center;
 	vertical-align: top;
+}
+.lineaPunteada {
+	border-bottom: 1px dotted #71BF44;
 }
 .rectangulo 
 {

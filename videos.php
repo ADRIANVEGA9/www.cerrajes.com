@@ -23,7 +23,6 @@ overlayOpacity: "0.6",//transparencia
 <body>
 <?php require(".header.html") ?>
 	<section id="menuProductos">
-		<div id="tituloProductos"><span>productos</span></div>
 		<?php require("menu/.menu.html") ?>
 	</section>
 	<section id="contenedor">
