@@ -27,7 +27,7 @@
 				<?php if (!$_POST){ ?>
 					<form id="contacto" method="post" onsubmit="return validate1(this)">
 					<fieldset>
-							<span class="mayus, gris">Permítenos conocer tus sugerencias, dudas e inquietudes sobre nuestros productos y servicios.</span><br><br>
+							<span>Permítenos conocer tus sugerencias, dudas e inquietudes sobre nuestros productos y servicios.</span><br><br>
 						<section id="contactoEtiqueta">
 							<label for="nombre">*Nombre</label>
 							<label for="apellidos">*Apellidos</label>

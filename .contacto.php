@@ -123,106 +123,72 @@ background-position: center center;
         <td colspan=\"4\">&nbsp;</td>
         </tr>
       <tr>
-        <td width=\"31\">&nbsp;</td>
-        <td width=\"113\">&nbsp;</td>
         <td class=\"estilo1\">Nombre</td>
         <td class=\"estilo1\" colspan=\"2\">".$_POST['nombre']."</td>
         </tr>
-      <tr>	  
-        <td width=\"31\">&nbsp;</td>
-        <td width=\"113\">&nbsp;</td>
+      <tr>
         <td class=\"estilo1\">Apellidos</td>
         <td class=\"estilo1\" colspan=\"2\">".$_POST['apellidos']."</td>
         </tr>
       <tr>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
         <td class=\"estilo1\">Empresa</td>
         <td class=\"estilo1\" colspan=\"2\">".$_POST['empresa']."</td>
         </tr>
       <tr>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
         <td class=\"estilo1\">Giro de la empresa</td>
         <td class=\"estilo1\" colspan=\"2\">".$_POST['giro']."</td>
         </tr>
       <tr>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
         <td class=\"estilo1\">Direcci&oacute;n&nbsp;(Empresa&nbsp;y/o&nbsp;particular)</td>
         <td class=\"estilo1\" colspan=\"2\">".$_POST['dir']."</td>
         </tr>
       <tr>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
         <td class=\"estilo1\">Cargo en la empresa</td>
         <td class=\"estilo1\" colspan=\"2\">".$_POST['cargo']."</td>
         </tr>
       <tr>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
         <td class=\"estilo1\">Tel&eacute;fono oficina</td>
         <td class=\"estilo1\" width=\"30\">".$_POST['ladaT']."</td>
         <td class=\"estilo1\" width=\"245\">".$_POST['telefono']."</td>
         </tr>
       <tr>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
         <td class=\"estilo1\">Fax</td>
         <td class=\"estilo1\">".$_POST['ladaF']."</td>
         <td class=\"estilo1\">".$_POST['fax']."</td>
         </tr>
       <tr>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
         <td class=\"estilo1\">Municipio</td>
         <td class=\"estilo1\" colspan=\"2\">".$_POST['municipio']."</td>
         </tr>
       <tr>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
         <td class=\"estilo1\">Estado</td>
         <td class=\"estilo1\" colspan=\"2\">".$_POST['estado']."</td>
         </tr>
       <tr>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
         <td class=\"estilo1\">Correo electr&oacute;nico</td>
         <td class=\"estilo1\" colspan=\"2\">".$_POST['correo']."</td>
         </tr>
       <tr>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
         </tr>
       <tr>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
         <td class=\"estilo1\">Pagina web</td>
         <td class=\"estilo1\" colspan=\"2\">".$_POST['web']."</td>
         </tr>
       <tr>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td class=\"estilo1\" valign=\"top\">Sugerencias&nbsp;</td>
+        <td class=\"estilo1\" valign=\"top\">Sugerencias/comentarios</td>
         <td colspan=\"2\" align=\"right\"class=\"estilo1\" >".$_POST['mensaje']."</td>
         </tr>
       <tr>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
         <td>&nbsp;</td>
         <td colspan=\"2\"></td>
         </tr>
       <tr>
         <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
         <td colspan=\"2\" align=\"right\"></td>
         </tr>
       <tr>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
         <td>&nbsp;</td>
         <td colspan=\"2\">&nbsp;</td>
         </tr>
@@ -236,9 +202,9 @@ $headers .= "Content-type: text/html; charset= iso-8859-1\r\n";
 //Las siguientes 2 cabeceras, permitirán que el destinatario sepa a quién responder y quién le ha enviado el mensaje
 $micorreo = "avega@cerrajes.com";/*contacto@cerrajes.com*/
 $correoCli = "$_POST[correo]";
-$headers .= "Reply-To: avega@cerrajes.com\r\n"; /*contacto@cerrajes.com*/ 
+$headers .= "Reply-To: contacto@cerrajes.com\r\n"; /*contacto@cerrajes.com*/ 
 $headers .= "From: Contacto Cerrajes<avega@cerrajes.com>\r\n";/*contacto@cerrajes.com*/
-$headers .= 'Bcc: avega@cerrajes.com' . "\r\n";
+$headers .= 'Bcc: avega@tiendascerrajes.com' . "\r\n";
 //En este ejemplo suponemos que el mail del destinatario lo hemos enviado desde un formulario con el método post, pero es indistinto desde donde se lo obtenga (consulta a la base de datos, almacenado en una variable de sesi&oacute;n, enviado por get,etc.)
 ini_set("SMTP","mail.cerrajes.com");/*mail.cerrajes.com*/
 ini_set("smtp_port","587");/*25*/
