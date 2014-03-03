@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php $ac = 1; ?>
 <html lang="es">
 <head>
 <meta charset="utf-8">
@@ -13,7 +14,7 @@
 <body>
 <?php require(".header.html") ?>
 	<section id="menuProductos">
-		<?php require("menu/.menu.html") ?>
+		<?php require("menu/.menu.php") ?>
 	</section>
 	<section id="contenedor">
 		<?php require(".nav.php") ?>

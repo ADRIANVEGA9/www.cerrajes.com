@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php $ac = 7; ?>
 <html lang="es">
 <head>
 <meta charset="utf-8">
@@ -13,7 +14,7 @@
 <body>
 <?php require(".header.html") ?>
 	<section id="menuProductos">
-		<?php require("menu/.menu.html") ?>
+		<?php require("menu/.menu.php") ?>
 	</section>
 	<section id="contenedor">
 		<?php require(".nav.php") ?>
@@ -131,10 +132,7 @@
 		//console.log("aqui estoy"+$idn);
 var $np_on  		= $('#np_info #np_img'+$idn),
 	$np_off  		= $('#np_info #np_img'+$idn).siblings();
-	// $np_off.removeClass('_on');
-	// $np_on.addClass('_on');
-	// $np_off.addClass('_off');
-	// $np_on.removeClass('_off');
+
 	$np_on.slideDown( 300 ).show(300);
 	$np_off.slideUp( 300 ).hide(300);
 }

@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php $ac = 3; ?>
 <html lang="es">
 <head>
 <meta charset="utf-8">
@@ -13,12 +14,18 @@
 <body>
 <?php require(".header.html") ?>
 	<section id="menuProductos">
-		<?php require("menu/.menu.html") ?>
+		<?php require("menu/.menu.php") ?>
 	</section>
 	<section id="contenedor">
 		<?php require(".nav.php") ?>
 		<section  id="contenido">
-			<div class="tituloSeccion"><strong>Sucursales</strong></div>	
+			<div class="tituloSeccion"><strong>Sucursales</strong></div>
+			<section id="sucursales">
+				<figure>
+					<img src="imagenesSitio/sucursales/burbuja-01.png" alt="">
+					<figcaption></figcaption>
+				</figure>
+			</section>	
 		</section>
 
 

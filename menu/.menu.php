@@ -1,7 +1,7 @@
 <meta charset="utf-8">
 <link rel="stylesheet" href="menu/css/styles.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-		<div id="tituloProductos"><span>productos</span></div>
+		<div id="tituloProductos" class="<?php if ($ac==12) { echo activo2;}?>"><span>productos</span></div>
 	<ul class="menu">
 		<li><a href="#"><span>01</span>maquinaria y herramienta</a>
 			<ul>

@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php $ac = 9; ?>
 <html lang="es">
 <head>
 <meta charset="utf-8">
@@ -23,7 +24,7 @@ overlayOpacity: "0.6",//transparencia
 <body>
 <?php require(".header.html") ?>
 	<section id="menuProductos">
-		<?php require("menu/.menu.html") ?>
+		<?php require("menu/.menu.php") ?>
 	</section>
 	<section id="contenedor">
 		<?php require(".nav.php") ?>
