@@ -109,7 +109,7 @@ header
 	text-align: left;
 	vertical-align: top;
 	width: 100%;
-	z-index: 10;
+	z-index: 1;
 }
 header #home {
 	background: #71bf44;
@@ -237,6 +237,7 @@ nav td.activo
 	position: relative;
 	top: .5em;
 	width: 99%;
+	z-index: 2;
 }
 #contenido a:hover
 {
@@ -283,8 +284,8 @@ nav td.activo
 	height: 25px;
 	margin-bottom: 8px;
 	position: relative;
-	right: -1.5%;
-	width: 70%;
+	right: -1.6%;
+	width: 69%;
 }
 #contenido #contactoCajas #ladaT, 
 #contenido #contactoCajas #ladaTOf {
@@ -379,6 +380,89 @@ nav td.activo
 	height: 100px;
 	resize: none;
 	width: 100%;
+}
+#contenido #equipo {
+	margin: 0 auto;
+	padding-top: 1em;
+	text-align: left;
+	width: 90%;
+}
+#contenido #equipo .botonEnvia 
+{
+	background-repeat: no-repeat;
+	background: #858582;
+	border-width: 0;
+	box-shadow: 1px 1px 10px 1px #717274;
+	color: #FEFEFE;
+	cursor: pointer;
+	font-size: 1em;
+	height: auto;
+	margin-left: 1em;
+	padding: .2em 2em;
+	width: auto;
+}
+#contenido #equipo .botonEnvia:hover 
+{
+	background:#71BF44;
+	background-repeat:no-repeat;
+	border-width: 0;
+	box-shadow: 1px 1px 10px 1px #717274;
+	color: #FEFEFE;
+	cursor:pointer;
+	font-size: 1em;
+	height: auto;
+	margin-left: 1em;
+	padding: .2em 2em;
+	width: auto; 
+}
+#contenido #equipoCajas {
+	font-family: "TChevin";
+	font-size: 14px;
+	height: auto;
+	width: 68%;
+	border-color: #7A7A7A;
+	border-style: dotted;
+	border-width: 0px;
+	display: inline-block;
+	position: relative;
+	vertical-align: text-top;
+}
+#contenido #equipoCajas input[type="text"],
+#contenido #equipoCajas input[type="file"],
+#contenido #equipoCajas select
+{
+	height: 25px;
+	margin-bottom: 8px;
+	width: 100%;
+	color: #333;
+}
+#contenido #equipoEnvia {
+	color: #B1B1B1;
+    display: inline-block;
+    height: auto;
+    margin-top: 1em;
+    text-align: right;
+    width: 100%;
+}
+#contenido #equipoEtiqueta {
+	border-color: #7A7A7A;
+	border-style: dotted;
+	border-width: 0px;
+	display: inline-block;
+	font-family: "TChevin";
+	font-size: 14px;
+	position: relative;
+	vertical-align: text-top;
+	width: 31%;
+}
+#contenido #equipoEtiqueta label {
+    display: block;
+    height: 37px;
+    color:#333;
+    font-size: 14px;
+}
+#contenido #equipoForm {
+	margin-top: 1em;
 }
 #contenido #np_iconos {
 	padding-top: 1em;
@@ -487,16 +571,97 @@ nav td.activo
 	width: 100%;
 }
 #contenido #sucursales {
-	background: url(../imagenesSitio/sucursales/mapa.png) no-repeat;
-	background-size: 100%;
-	height: 550px;
+	position: relative;
 	padding-top: 1em;
 }
 #contenido #sucursales figure {
-	width: 35%;
+	/*background: url(../imagenesSitio/sucursales/mapa.png) no-repeat;
+	background-size: 100%;
+	height: 550px;*/
 }
-#contenido #sucursales img {
-	width: 100%;
+#contenido #sucursales figure img {
+	display: none;
+	opacity: .75;
+	position: absolute;
+	width: 30%;
+}
+#contenido #sucursales figure .sucQro,
+#contenido #sucursales #sucDir .sucQro {
+	left: 42.5%;
+	top: 2%;
+} 
+#contenido #sucursales figure .sucMex,
+#contenido #sucursales #sucDir .sucMex {
+	left: 46.5%;
+	top: 7.5%;
+} 
+#contenido #sucursales figure .sucGdl,
+#contenido #sucursales #sucDir .sucGdl {
+	left: 32%;
+	top: 2%;
+} 
+#contenido #sucursales figure .sucMty,
+#contenido #sucursales #sucDir .sucMty {
+	left: 42%;
+	top: -15%;
+} 
+#contenido #sucursales figure .sucMor,
+#contenido #sucursales #sucDir .sucMor {
+	left: 39%;
+	top: 6%;
+} 
+#contenido #sucursales figure .sucLeo,
+#contenido #sucursales #sucDir .sucLeo {
+	left: 39%;
+	top: 0%;
+}
+#contenido #sucursales #sucDir span{
+	height: auto;
+	line-height: 1.5em;
+	margin-top: 1em;
+	padding: 0em 1.5em;
+	text-align: center;
+	width: 25%;
+}
+#contenido #sucursales #sucDir p {
+	font-size: 1.8em;
+	text-transform: uppercase;
+}
+#contenido #sucursales #sucMenu {
+	font-size: .8em;
+	left: 10%;
+	line-height: 1.5em;
+	position: absolute;
+	text-align: left;
+	top: 53%;
+}
+#contenido #sucursales #sucMenu ul li {
+	cursor: pointer;
+	text-transform: uppercase;
+}
+#contenido #sucursales #sucMenu ul li:before {
+	color: #71BF44;
+	content: "\e605";
+	font-family: icomoon;
+	letter-spacing: .2em;
+}
+#contenido #sucursales #sucMenu ul li:hover:before {
+	color: #7E8083;
+}
+#contenido #sucursales #sucMenu ul .activoSuc:before {
+	color: #7E8083;
+}
+#contenido #sucursales .mapa {
+	width: 100%
+}
+#contenido #sucursales span {
+	display: none;
+	font-size: .8em;
+	left: 30%;
+	position: absolute;
+	text-align: center;
+	top: 76%;
+	width: 60%;
 }
 #contenido .catalogos article figure {
 	display: inline-block;

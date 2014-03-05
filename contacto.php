@@ -41,18 +41,18 @@
 							<label for="web">Sitio web</label>
 						</section>
 						<section id="contactoCajas">
-							<input type="text" name="nombre" id="nombre" placeholder="Nombre" required onkeypress="return validar(event)"></td>
-							<input type="text" name="apellidos" id="apellidos" placeholder="Apellidos" required onkeypress="return validar(event)"></td>
-							<input type="text" name="municipio" id="municipio" placeholder="Municipio" required onkeypress="return validar(event)"></td>
-							<input type="text" name="estado" id="estado" placeholder="Estado" required onkeypress="return validar(event)"></td>
-							<input type="tel" name="ladaT" id="ladaT" placeholder="Lada" required onkeypress="return validarNum(event)"></td>
-							<input type="tel" name="telefono" id="telefono" placeholder="Tel&eacute;fono" required onkeypress="return validarNum(event)"></td>
-							<input type="mail" name="correo" id="correo" placeholder="ejemplo@dominio.ext" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required ></td>
-							<input type="text" name="empresa" id="empresa" placeholder="Empresa" onkeypress="return validarTxtNum(event)"></td>
-							<input type="text" name="giro" id="giro" placeholder="Giro de la empresa" onkeypress="return validar(event)"></td>
-							<input type="tel" name="ladaTOf" id="ladaTOf" placeholder="Lada" onkeypress="return validarNum(event)"></td>
-							<input type="tel" name="telOf" id="telOf" placeholder="Tel&eacute;fono oficina" onkeypress="return validarNum(event)"></td>
-							<input type="url" name="web" id="web" placeholder="http.//www.tusitio.com"></td>
+							<input type="text" name="nombre" id="nombre" placeholder="Nombre" required onkeypress="return validar(event)"/>
+							<input type="text" name="apellidos" id="apellidos" placeholder="Apellidos" required onkeypress="return validar(event)"/>
+							<input type="text" name="municipio" id="municipio" placeholder="Municipio" required onkeypress="return validar(event)"/>
+							<input type="text" name="estado" id="estado" placeholder="Estado" required onkeypress="return validar(event)"/>
+							<input type="tel" name="ladaT" id="ladaT" placeholder="Lada" required onkeypress="return validarNum(event)"/>
+							<input type="tel" name="telefono" id="telefono" placeholder="Tel&eacute;fono" required onkeypress="return validarNum(event)"/>
+							<input type="mail" name="correo" id="correo" placeholder="ejemplo@dominio.ext" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required />
+							<input type="text" name="empresa" id="empresa" placeholder="Empresa" onkeypress="return validarTxtNum(event)"/>
+							<input type="text" name="giro" id="giro" placeholder="Giro de la empresa" onkeypress="return validar(event)"/>
+							<input type="tel" name="ladaTOf" id="ladaTOf" placeholder="Lada" onkeypress="return validarNum(event)"/>
+							<input type="tel" name="telOf" id="telOf" placeholder="Tel&eacute;fono oficina" onkeypress="return validarNum(event)"/>
+							<input type="url" name="web" id="web" placeholder="http.//www.tusitio.com"/>
 						</section>
 						<section id="contactoEnvia">
 							<label for="mensaje">Comentarios</label>
@@ -68,7 +68,7 @@
 								require_once(".contacto.php");
 						 	}//fin else?>
 
-	</section>
+			</section>
 	<?php require(".footer.php") ?>
 </body>
 </html>	

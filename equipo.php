@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="css/estilos.css">
 <link rel="stylesheet" href="css/responsive.css">
 <script src="js/prefixfree.min.js"></script>
+<script src="js/validaForm.js"></script>
 </head>
 <body>
 <?php require(".header.html") ?>
@@ -20,6 +21,53 @@
 		<?php require(".nav.php") ?>
 		<section  id="contenido">
 			<div class="tituloSeccion"><strong>Forma parte del equipo</strong></div>	
+			<section id="equipo">
+			<?php if (!$_POST){ ?>
+				<span>
+					La empresa te invita a integrarte con nosotros. <br> Si deseas pertenecer a esta gran familia, ingresa los siguientes datos:
+				</span>
+					<form id="equipoForm" method="post" onsubmit="return validate1(this)">
+					<fieldset>
+						<section id="equipoEtiqueta">
+							<label for="nombre">*Nombre</label>
+							<label for="estado">*Estado</label>
+							<label for="interes">*Área de interés</label>
+							<label for="archivo">*Subir curriculo en formato PDF</label>
+						</section>
+						<section id="equipoCajas">
+							<input type="text" name="nombre" id="nombre" placeholder="Nombre" required onkeypress="return validar(event)">
+							<select name="estado" id="estado" placeholder="elige una opción" required onkeypress="return validar(event)">
+								<script language="javascript">
+								var states = new Array("Aguascalientes", "Baja California", "Baja California Sur", "Campeche", "Chiapas", "Chihuahua", "Coahuila de Zaragoza", "Colima", "Distrito Federal", "Durango", "Guanajuato", "Guerrero", "Hidalgo", "Jalisco", "Mexico", "Michoacan de Ocampo", "Morelos", "Nayarit", "Nuevo Leon", "Oaxaca", "Puebla", "Queretaro de Arteaga", "Quintana Roo", "San Luis Potosi", "Sinaloa", "Sonora", "Tabasco", "Tamaulipas", "Tlaxcala", "Veracruz", "Yucatan", "Zacatecas");
+								for(var hi=0; hi<states.length; hi++) 
+								document.write("<option value=\""+states[hi]+"\">"+states[hi]+"</option>");
+								</script>
+							</select>
+							<select name="interes" id="interes" placeholder="elige una opción" required onkeypress="return validar(event)">
+								<option value="">Ventas</option>
+								<option value="">Atención a Cliente</option>
+								<option value="">Recursos Humanos</option>
+								<option value="">Finanzas</option>
+								<option value="">Contraloría</option>
+								<option value="">Tecnología de Información</option>
+								<option value="">Compras y Logística</option>
+								<option value="">Legal</option>
+								<option value="">Mercadotecnia</option>
+							</select>
+							<input type="file" name="archivo" id="archivo" placeholder="archivo PDF" value="seleccionar" required onkeypress="return validar(event)">
+						</section>
+						<section id="equipoEnvia">
+							<input name="Enviar" type="submit" class="botonEnvia" id="button" value="ENVIAR"/>
+						</section>
+
+					</fieldset>
+					</form>
+					<?php }
+						else 
+							{ 
+								require_once(".equipo.php");
+						 	}//fin else?>
+			</section>
 		</section>
 
 

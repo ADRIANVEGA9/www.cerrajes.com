@@ -29,7 +29,7 @@
 					<p>CERRAJES® cuenta con una extensa gama de herrajes para muebles como son: La línea de jaladeras y botones, bisagras bidimensionales, correderas, accesorios para cocina y clóset, tornillería, sistemas de oficina, maquinaria y herramientas, entre otros.</p>
 				</article>
 				<article class="articuloSeccionT1">
-					<figure><img src="imagenessitio/img.jpg"></figure>
+					<figure><img src="imagenessitio/qs.jpg"></figure>
 				</article>			
 			</section>
 			<section>
