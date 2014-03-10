@@ -19,14 +19,21 @@
 	<section id="contenedor">
 		<?php require(".nav.php") ?>
 		<section  id="contenido">
-			<div class="tituloSeccion"><strong>&nbsp;</strong></div>
-			<article class="articuloSeccionT2">
-				<p>Los muebles son indispensables en el día a día de nuestras vidas para llevar a cabo actividades relevantes, pero también hacen del hogar un lugar especial de acuerdo al estilo que se elija según las preferencias y gustos. Estilos clásicos, barrocos, minimalistas son algunos de ellos.</p>
+			<div class="tituloSeccion"><strong>Tendencias del herraje</strong></div>
+			<article class="articuloHome">
+				<figure class="img01"><img src="imagenesSitio/home01.jpg" alt="Tendencias"></figure>
+				<p>En el mundo del mueble, la Creatividad y la Innovación constante conforman e impulsan las nuevas tendencias, presentes en las recientes propuestas de los fabricantes en México; las Jaladeras con diseños a la Vanguardia conforman parte de las tendencias previstas para el 2014, entre las que presentamos algunas a continuación:</p>
+				<strong>Origami</strong>
+				<p>Basadas en este antiguo arte Japonés, se realza la propuesta de diseño que nos remite al Origami en donde el uso de líneas rectas, prismas irregulares y ángulos poco convencionales, generan una impresión de apacibilidad y sencillez, que en realidad conlleva a los diseñadores contemporáneos hacia nuevos retos.</p>
+				<figure class="img01"><img src="imagenesSitio/home02.jpg" alt="Origami"><figcaption><small>http://www.cocinasconestilo.net/2011/12/las-formas-geometricas-de-una-cocina.html</small></figcaption></figure>
+				<br>
+				<strong>Vintage</strong>
+				<p>Fusionando el diseño contemporáneo con el diseño nostálgico, el minimalismo expresado por el herraje moderno sobre la calidez y nostalgia de la madera de apariencia desgastada por el tiempo. </p>
+				<figure class="img01"><img src="imagenesSitio/home03.jpg" alt="Vintage"></figure>
+				<strong>Técnico</strong>
+				<p>Bajo los conceptos de precisión, perfección, sencillez, claridad y limpieza, el diseño técnico se conceptualiza como la nueva propuesta, en donde el uso de líneas limpias y uso selectivo del color, se renueva dentro del minimalismo puro, haciendo uso de nuevas las nuevas tecnologías aplicadas al herraje, que permiten sistemas de cierre suave en las bisagras, colgadores para gabinetes y correderas ocultas de bajo montaje.</p>
+				<figure class="img01"><img src="imagenesSitio/home04.jpg" alt="Técnico"></figure>
 
-				<p>Los herrajes forman parte de los muebles con la finalidad de hacerlos funcionales y útiles; sin embargo también añaden un valor más al formar parte del mismo diseño y es por eso que en la actualidad existe gran variedad de herrajes y apliques que satisfacen hasta los gustos más exigentes para crear un mueble único con herraje excepcional.</p>
-			</article>
-			<article class="articuloSeccionT1">
-				<figure><img src="imagenessitio/img.jpg"></figure>
 			</article>			
 		</section>
 

@@ -799,6 +799,25 @@ nav td.activo
 .activo2 {
 	color: #FEFEFE !important;
 }
+.articuloHome 
+{
+	display: inline-block;
+	font-size: 0.79em;
+	padding-top: 1em;
+	text-align: justify;
+	vertical-align: top;
+	width:100%;
+}
+.articuloHome figure {
+	text-align: center;
+}
+.articuloHome .img01 {
+	margin: 0 auto;
+	width: 80%;
+}
+.articuloHome .img01 img {
+	width: 100%;
+}
 .articuloSeccionT1 
 {
 	display: inline-block;

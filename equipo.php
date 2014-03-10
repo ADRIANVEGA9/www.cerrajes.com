@@ -26,7 +26,7 @@
 				<span>
 					La empresa te invita a integrarte con nosotros. <br> Si deseas pertenecer a esta gran familia, ingresa los siguientes datos:
 				</span>
-					<form id="equipoForm" method="post" onsubmit="return validate1(this)">
+					<form id="equipoForm" method="POST" enctype="multipart/form-data" onsubmit="return validate1(this)" >
 					<fieldset>
 						<section id="equipoEtiqueta">
 							<label for="nombre">*Nombre</label>
@@ -38,21 +38,21 @@
 							<input type="text" name="nombre" id="nombre" placeholder="Nombre" required onkeypress="return validar(event)">
 							<select name="estado" id="estado" placeholder="elige una opción" required onkeypress="return validar(event)">
 								<script language="javascript">
-								var states = new Array("Aguascalientes", "Baja California", "Baja California Sur", "Campeche", "Chiapas", "Chihuahua", "Coahuila de Zaragoza", "Colima", "Distrito Federal", "Durango", "Guanajuato", "Guerrero", "Hidalgo", "Jalisco", "Mexico", "Michoacan de Ocampo", "Morelos", "Nayarit", "Nuevo Leon", "Oaxaca", "Puebla", "Queretaro de Arteaga", "Quintana Roo", "San Luis Potosi", "Sinaloa", "Sonora", "Tabasco", "Tamaulipas", "Tlaxcala", "Veracruz", "Yucatan", "Zacatecas");
+								var states = new Array("Aguascalientes", "Baja California", "Baja California Sur", "Campeche", "Chiapas", "Chihuahua", "Coahuila de Zaragoza", "Colima", "Distrito Federal", "Durango", "Guanajuato", "Guerrero", "Hidalgo", "Jalisco", "México", "Michoacán de Ocampo", "Morelos", "Nayarit", "Nuevo León", "Oaxaca", "Puebla", "Querétaro", "Quintana Roo", "San Luis Potosí", "Sinaloa", "Sonora", "Tabasco", "Tamaulipas", "Tlaxcala", "Veracruz", "Yucatán", "Zacatecas");
 								for(var hi=0; hi<states.length; hi++) 
 								document.write("<option value=\""+states[hi]+"\">"+states[hi]+"</option>");
 								</script>
 							</select>
-							<select name="interes" id="interes" placeholder="elige una opción" required onkeypress="return validar(event)">
-								<option value="">Ventas</option>
-								<option value="">Atención a Cliente</option>
-								<option value="">Recursos Humanos</option>
-								<option value="">Finanzas</option>
-								<option value="">Contraloría</option>
-								<option value="">Tecnología de Información</option>
-								<option value="">Compras y Logística</option>
-								<option value="">Legal</option>
-								<option value="">Mercadotecnia</option>
+							<select name="interes" id="interes" placeholder="elige una opción" onkeypress="return validar(event)">
+								<option value="Ventas">Ventas</option>
+								<option value="ACliente">Atención a Cliente</option>
+								<option value="RH">Recursos Humanos</option>
+								<option value="Finanzas">Finanzas</option>
+								<option value="Contraloría">Contraloría</option>
+								<option value="TI">Tecnología de Información</option>
+								<option value="CyL">Compras y Logística</option>
+								<option value="Legal">Legal</option>
+								<option value="Mkt">Mercadotecnia</option>
 							</select>
 							<input type="file" name="archivo" id="archivo" placeholder="archivo PDF" value="seleccionar" required onkeypress="return validar(event)">
 						</section>
@@ -65,7 +65,7 @@
 					<?php }
 						else 
 							{ 
-								require_once(".equipo.php");
+								require_once("carga_archivos.php");
 						 	}//fin else?>
 			</section>
 		</section>

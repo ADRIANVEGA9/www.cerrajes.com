@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<?php $ac = 12; ?>
+<?php $ac = 13; ?>
 <html lang="es">
 <head>
 <meta charset="utf-8">
@@ -10,17 +10,34 @@
 <link rel="stylesheet" href="css/estilos.css">
 <link rel="stylesheet" href="css/responsive.css">
 <script src="js/prefixfree.min.js"></script>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+
+<script type="text/javascript" src="js/ddpowerzoomer.js"></script>
+<script type="text/javascript">//http://www.dynamicdrive.com/dynamicindex4/powerzoomer.htm
+jQuery(document).ready(function($){ //fire on DOM ready
+	//	EXAMPLE 1:	$('#simbologia .lineaPunteada').addpowerzoom()
+	//EXAMPLE 2:
+	$('#simb01').addpowerzoom({	defaultpower: 2, powerrange: [2,5],	largeimage: 'imagenesSitio/productos/simbologia-01.png', magnifiersize: [350,150] })
+	$('#simb02').addpowerzoom({	defaultpower: 2, powerrange: [2,5],	largeimage: null, magnifiersize: [350,150] })
+	$('#simb03').addpowerzoom({	defaultpower: 2, powerrange: [2,5],	largeimage: null, magnifiersize: [350,150] })
+	$('#simb04').addpowerzoom({	defaultpower: 2, powerrange: [2,5],	largeimage: null, magnifiersize: [350,150] })
+	$('#simb05').addpowerzoom({	defaultpower: 2, powerrange: [2,5],	largeimage: null, magnifiersize: [350,150] })
+	
+})
+</script>
+
 </head>
 <body>
 <?php require(".header.html") ?>
 	<section id="menuProductos">
 		<?php require("menu/.menu.php") ?>
 		<section id="simbologia">
-			<img class="lineaPunteada" src="imagenesSitio/productos/simbologia-01.png" alt="">
-			<img class="lineaPunteada" src="imagenesSitio/productos/simbologia-03.png" alt="">
-			<img class="lineaPunteada" src="imagenesSitio/productos/simbologia-02.png" alt="">
-			<img class="lineaPunteada" src="imagenesSitio/productos/simbologia-04.png" alt="">			
-			<img src="imagenesSitio/productos/simbologia-05.png" alt="">			
+			<img id="simb01" class="lineaPunteada" src="imagenesSitio/productos/simbologia-01.png" alt="">
+			<img id="simb02" class="lineaPunteada" src="imagenesSitio/productos/simbologia-03.png" alt="">
+			<img id="simb03" class="lineaPunteada" src="imagenesSitio/productos/simbologia-02.png" alt="">
+			<img id="simb04" class="lineaPunteada" src="imagenesSitio/productos/simbologia-04.png" alt="">			
+			<img id="simb05" src="imagenesSitio/productos/simbologia-05.png" alt="">			
 		</section>				
 	</section>
 	<section id="contenedor">
