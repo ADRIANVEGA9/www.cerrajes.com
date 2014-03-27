@@ -29,6 +29,7 @@
 					<img class="sucMty" id="sucI04" src="imagenesSitio/sucursales/burbuja-04.png" alt=""/>
 					<img class="sucMor" id="sucI05" src="imagenesSitio/sucursales/burbuja-05.png" alt=""/>
 					<img class="sucLeo" id="sucI06" src="imagenesSitio/sucursales/burbuja-06.png" alt=""/>
+					<img class="sucGtm" id="sucI07" src="imagenesSitio/sucursales/burbuja-07.png" alt=""/>
 				</figure>
 				<section id="sucDir">
 					<span class="sucQro" id="sucD01"><p>Querétaro</p>
@@ -82,6 +83,15 @@
 						Fax 01 (477) 779 4861<br>
 						leon@cerrajes.com 
 					</span>
+					<span class="sucGtm" id="sucD07">
+						<p>GUATEMALA</p>
+						4 Avenida 1-12 zona 9<br>
+						C.P. 01009, Guatemala, C.A.<br>
+						Tel. 00 (502) 2331 0051<br>
+						&nbsp;&nbsp;&nbsp;&nbsp; 00 (502) 2362 5839<br>
+						PBX 00 (502) 2431 8494<br>
+						guatemala@cerrajes.com 
+					</span>
 				</section>
 				<section id="sucCobertura">
 					<span id="sucC01">COBERTURA<br>
@@ -102,6 +112,9 @@
 					<span id="sucC06">COBERTURA<br>
 						Aguascalientes y Guanajuato, excepto los municipios de Dolores Hidalgo, San Miguel de Allende, Celaya y Salamanca.
 					</span>
+					<span id="sucC07">COBERTURA<br>
+						Centro América.
+					</span>
 				</section>
 				<section id="sucMenu">
 					<ul>
@@ -111,6 +124,7 @@
 						<li id="01">Querétaro</li>
 						<li id="06">León</li>
 						<li id="05">Morelia</li>
+						<li id="07">Guatemala</li>
 					</ul>
 				</section>
 			</section>	

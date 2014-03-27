@@ -33,8 +33,8 @@
 				<li><a href="#"><span>0401</span>Tradicional</a></li>
 				<li><a href="#"><span>0402</span>Diseño</a></li>
 				<li><a href="#"><span>0403</span>Rústica</a></li>
-				<li><a href="#"><span>0402</span>Clásica</a></li>
-				<li><a href="#"><span>0403</span>Especiales</a></li>
+				<li><a href="#"><span>0404</span>Clásica</a></li>
+				<li><a href="#"><span>0405</span>Especiales</a></li>
 			</ul>
 		</li>
 		<li><a href="#"><span>05</span>tornillería y conectores</a>

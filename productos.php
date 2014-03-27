@@ -33,11 +33,12 @@ jQuery(document).ready(function($){ //fire on DOM ready
 	<section id="menuProductos">
 		<?php require("menu/.menu.php") ?>
 		<section id="simbologia">
-			<img id="simb01" class="lineaPunteada" src="imagenesSitio/productos/simbologia-01.png" alt="">
+			<img id="simb00" class="simb00" src="imagenesSitio/productos/simbologia-00.png" alt="">
 			<img id="simb02" class="lineaPunteada" src="imagenesSitio/productos/simbologia-03.png" alt="">
+			<img id="simb01" class="lineaPunteada" src="imagenesSitio/productos/simbologia-01.png" alt="">
 			<img id="simb03" class="lineaPunteada" src="imagenesSitio/productos/simbologia-02.png" alt="">
-			<img id="simb04" class="lineaPunteada" src="imagenesSitio/productos/simbologia-04.png" alt="">			
-			<img id="simb05" src="imagenesSitio/productos/simbologia-05.png" alt="">			
+			<img id="simb05" class="lineaPunteada" src="imagenesSitio/productos/simbologia-05.png" alt="">	
+			<img id="simb04" src="imagenesSitio/productos/simbologia-04.png" alt="">					
 		</section>				
 	</section>
 	<section id="contenedor">
@@ -89,6 +90,7 @@ jQuery(document).ready(function($){ //fire on DOM ready
 				</section>
 				<article id="vFT-0101-128">
 					<figure><img src="imagenesSitio/productos/fichas/FT-0101-128.jpg" alt=""></figure>
+					<!-- <iframe src="fichas/FT-0102-024_242.pdf" width="100%" height="600" type="application/pdf" ></iframe> -->
 				</article>	
 				<div class="ProductosLineaPunteada"></div>
 

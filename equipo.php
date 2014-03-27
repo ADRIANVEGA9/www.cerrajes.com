@@ -38,7 +38,7 @@
 							<input type="text" name="nombre" id="nombre" placeholder="Nombre" required onkeypress="return validar(event)">
 							<select name="estado" id="estado" placeholder="elige una opción" required onkeypress="return validar(event)">
 								<script language="javascript">
-								var states = new Array("Aguascalientes", "Baja California", "Baja California Sur", "Campeche", "Chiapas", "Chihuahua", "Coahuila de Zaragoza", "Colima", "Distrito Federal", "Durango", "Guanajuato", "Guerrero", "Hidalgo", "Jalisco", "México", "Michoacán de Ocampo", "Morelos", "Nayarit", "Nuevo León", "Oaxaca", "Puebla", "Querétaro", "Quintana Roo", "San Luis Potosí", "Sinaloa", "Sonora", "Tabasco", "Tamaulipas", "Tlaxcala", "Veracruz", "Yucatán", "Zacatecas");
+								var states = new Array("Aguascalientes", "Baja California", "Baja California Sur", "Campeche", "Chiapas", "Chihuahua", "Coahuila de Zaragoza", "Colima", "Distrito Federal", "Durango", "Guanajuato", "Guerrero", "Hidalgo", "Jalisco", "México", "Michoacán", "Morelos", "Nayarit", "Nuevo León", "Oaxaca", "Puebla", "Querétaro", "Quintana Roo", "San Luis Potosí", "Sinaloa", "Sonora", "Tabasco", "Tamaulipas", "Tlaxcala", "Veracruz", "Yucatán", "Zacatecas");
 								for(var hi=0; hi<states.length; hi++) 
 								document.write("<option value=\""+states[hi]+"\">"+states[hi]+"</option>");
 								</script>
@@ -65,7 +65,7 @@
 					<?php }
 						else 
 							{ 
-								require_once("carga_archivos.php");
+								require_once("equipo_upload.php");
 						 	}//fin else?>
 			</section>
 		</section>

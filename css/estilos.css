@@ -615,6 +615,11 @@ nav td.activo
 	left: 39%;
 	top: 0%;
 }
+#contenido #sucursales figure .sucGtm,
+#contenido #sucursales #sucDir .sucGtm {
+	left: 77%;
+	top: 25%;
+}
 #contenido #sucursales #sucDir span{
 	height: auto;
 	line-height: 1.5em;
@@ -662,6 +667,80 @@ nav td.activo
 	text-align: center;
 	top: 76%;
 	width: 60%;
+}
+#contenido .articuloHome 
+{
+	display: inline-block;
+	font-size: 0.79em;
+	padding-top: 1em;
+	text-align: justify;
+	vertical-align: top;
+	width:100%;
+}
+#contenido .articuloHome .homeArticulo {
+	height: 200px;
+	overflow: hidden;
+	padding: 2em 0;
+}
+#contenido .articuloHome .homeArticulo .homeTxt {
+	background: #EEE;
+	display: inline-block;
+	height: 100%;
+	padding: 0 .5em;
+	position: relative;
+	top: 0;
+	vertical-align: middle;
+	width: 57%;
+}
+#contenido .articuloHome .homeArticulo .homeTxt:after {
+	border-left: 35px solid transparent;
+	border-top: 200px solid rgba(241, 237, 237, 1);
+	bottom: 0;
+	content: "";
+	position: absolute;
+	right: 100%;
+}
+#contenido .articuloHome .homeArticulo .homeTxt:before {
+	background: rgba(241, 237, 237, 1);
+	content: "";
+	height: 100%;
+	left: 100%;
+	position: absolute;
+	width: 100px;
+}
+#contenido .articuloHome .homeArticulo .homeTxt div {
+	display: table-cell;
+	height: 200px;
+	margin: 0 2em;
+	vertical-align: middle;
+}
+#contenido .articuloHome .img01 {
+	display: inline-block;
+	height: 90%;
+	margin: 0 auto;
+	position: relative;
+	vertical-align: middle;
+	width: 40%;
+}
+#contenido .articuloHome .img01 figcaption {
+	color: #666;
+	font-size: 90%;
+	position: relative;
+	top: -0.5em;
+	width: 120%;
+	z-index: 100;
+}
+#contenido .articuloHome .img01 .imgW1{
+	height: 100%;
+	position: relative;
+	width: 101%;
+}
+#contenido .articuloHome .img01 .imgW2{
+	height: 100%;
+	position: relative;
+}
+#contenido .articuloHome .img01 .img1 {
+	left: -250px;
 }
 #contenido .catalogos article figure {
 	display: inline-block;
@@ -785,6 +864,9 @@ nav td.activo
 #simbologia .lineaPunteada {
 	padding: .2em 0;
 }
+#simbologia .simb00 {
+	margin-top: 1em;
+}
 #tituloProductos
 {	
 	background: #71BF44;
@@ -798,25 +880,6 @@ nav td.activo
 }
 .activo2 {
 	color: #FEFEFE !important;
-}
-.articuloHome 
-{
-	display: inline-block;
-	font-size: 0.79em;
-	padding-top: 1em;
-	text-align: justify;
-	vertical-align: top;
-	width:100%;
-}
-.articuloHome figure {
-	text-align: center;
-}
-.articuloHome .img01 {
-	margin: 0 auto;
-	width: 80%;
-}
-.articuloHome .img01 img {
-	width: 100%;
 }
 .articuloSeccionT1 
 {
@@ -976,6 +1039,10 @@ nav td.activo
 	height: 0;
 	margin-right: 10%;
 	width: 0;
+}
+.verdeHome {
+	color: #71BF44;
+	font-size: 1.2em;
 }
 .videos 
 {
