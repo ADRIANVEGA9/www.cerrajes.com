@@ -220,3 +220,4 @@ connections/
 iview/
 nusoap/
 sqlserver.inc.php
+*.pdf
