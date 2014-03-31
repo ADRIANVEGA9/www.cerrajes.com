@@ -6,11 +6,10 @@ $query_menuLinea= $db->Execute("SELECT id_linea, linea
 							ORDER BY id_linea ASC");
 // Verificamos si hemos realizado bien nuestro Query
 if(!$query_menuLinea){
-exit("Error en la consulta");
+exit("Error en la consulta Menu linea");
 }
 
 ?>
-<meta charset="utf-8">
 <link rel="stylesheet" href="menu/css/styles.css">
 <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> -->
 <script src="js/jquery-1.7.2.min.js"></script>
@@ -25,7 +24,7 @@ exit("Error en la consulta");
 										ORDER BY id_sublinea ASC");
 			// Verificamos si hemos realizado bien nuestro Query
 			if(!$query_menuSublinea){
-			exit("Error en la consulta");
+			exit("Error en la consulta Menu sublinea");
 			}
 			?>
 		<li><a href="#"><span><?php echo $row_menuLinea['id_linea'];?></span><?php echo $row_menuLinea['linea'];?></a>
@@ -33,7 +32,7 @@ exit("Error en la consulta");
 				<?php
 				foreach($query_menuSublinea as $ks => $row_menuSublinea) 
 				{ ?>
-				<li><a href="productos.php">
+				<li><a href="productos.php?id_linea=<?php echo $row_menuLinea['id_linea'];?>&id_sublinea=<?php echo $row_menuSublinea['id_sublinea'];?>">
 					<span><?php echo $row_menuSublinea['id_sublinea'];?></span>
 					<?php echo $row_menuSublinea['sublinea'];?></a></li>				
 				<?php } ?>

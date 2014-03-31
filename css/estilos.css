@@ -528,15 +528,20 @@ nav td.activo
 	width: 65%;
 }
 #contenido #productos #producto #codigo figure{
-	width: auto;
+	height: auto;
+	overflow: hidden;
+	text-align: center;
+	width: 8%;
 }
 #contenido #productos #producto #codigo figure div {
 	color: #ADABAB;
-	display: inline-block;
+	display: block;
 	font-size: 55%;
-	left: -50%;
+	left: -5%;
 	position: relative;
-	top: 8px;
+	text-align: center;
+	top: -5px;
+	width: 110%;
 }
 #contenido #productos #producto #codigo #ficha {
 	font-size: .7em;
@@ -1029,6 +1034,9 @@ nav td.activo
 	padding: .3em .7em;
 	position: relative;
 	text-align: left;
+}
+.tituloSeccion:first-letter {
+	text-transform: uppercase;
 }
 .triangulo_top_right 
 {
