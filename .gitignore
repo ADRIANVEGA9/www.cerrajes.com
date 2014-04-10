@@ -221,3 +221,5 @@ iview/
 nusoap/
 sqlserver.inc.php
 *.pdf
+*.gif
+*.png

@@ -11,15 +11,6 @@
 <link rel="stylesheet" href="css/responsive.css">
 <script src="js/prefixfree.min.js"></script>
 
-<link rel="stylesheet" href="Shadowbox/shadowbox.css">
-<script src="Shadowbox/shadowbox.js"></script>
-<script type='text/javascript'>
-Shadowbox.init({
-overlayColor: "#2E3B4D",//color de fondo
-overlayOpacity: "0.6",//transparencia
-});
-</script>
-
 </head>
 <body>
 <?php require(".header.html") ?>
@@ -35,13 +26,13 @@ overlayOpacity: "0.6",//transparencia
 				<div class="videoSubTitulo">Accesorios para gabinete</div>
 				<article class="videosImg">
 					<figure>
-						<a href="http://www.youtube.com/v/5IDW8suNBAs?autoplay=1&amp;rel=0" rel="shadowbox;width=640;height=385;" title="Pistón gradual y automático kraby">
+						<a class="fancybox-media" href="http://www.youtube.com/watch?v=5IDW8suNBAs&amp;autoplay=1rel=0" title="Pistón gradual y automático kraby">
 							<img src="imagenesSitio/videos/02/01.jpg" alt="Pistón gradual y automático kraby"/>
 						<figcaption>Pistón gradual y automático kraby</figcaption>
 						</a>
 					</figure>
 					<figure>
-						<a href="http://www.youtube.com/v/rGxgVbQ1WqQ?autoplay=1&amp;rel=0" rel="shadowbox;width=640;height=385;" title="Sistema 32">
+						<a class="fancybox-media" href="http://www.youtube.com/watch?v=rGxgVbQ1WqQ&amp;autoplay=1&amp;rel=0" title="Sistema 32">
 							<img src="imagenesSitio/videos/02/02.jpg" alt="Sistema 32"/>
 						<figcaption>Sistema 32</figcaption>
 						</a>
@@ -53,7 +44,7 @@ overlayOpacity: "0.6",//transparencia
 				<div class="videoSubTitulo">Correderas</div>
 				<article class="videosImg">
 					<figure>
-						<a href="http://www.youtube.com/v/UfIG5c5egTg?autoplay=1&amp;rel=0" rel="shadowbox;width=640;height=385;" title="Corredera Ten">
+						<a class="fancybox-media" href="http://www.youtube.com/watch?v=UfIG5c5egTg&amp;autoplay=1&amp;rel=0" title="Corredera Ten">
 							<img src="imagenesSitio/videos/03/01.jpg" alt="Corredera Ten"/>
 						<figcaption>Corredera Ten</figcaption>
 						</a>
@@ -65,55 +56,55 @@ overlayOpacity: "0.6",//transparencia
 				<div class="videoSubTitulo">Accesorios para clóset</div>
 				<article class="videosImg">
 					<figure>
-						<a href="http://www.youtube.com/v/BGglUnxooEY?autoplay=1&amp;rel=0" rel="shadowbox;width=640;height=385;" title="Amortiguador If K Push">
+						<a class="fancybox-media" href="http://www.youtube.com/watch?v=BGglUnxooEY&amp;autoplay=1&amp;rel=0" title="Amortiguador If K-Push">
 							<img src="imagenesSitio/videos/11/01.jpg" alt="Amortiguador If K-Push"/>
 						<figcaption>Amortiguador If K-Push</figcaption>
 						</a>
 					</figure>
 					<figure>
-						<a href="http://www.youtube.com/v/_xKmTmOBmjw?autoplay=1&amp;rel=0" rel="shadowbox;width=640;height=385;" title="Bortoluzzi coplanar">
+						<a class="fancybox-media" href="http://www.youtube.com/watch?v=_xKmTmOBmjw&amp;autoplay=1&amp;rel=0" title="Bortoluzzi coplanar">
 							<img src="imagenesSitio/videos/11/02.jpg" alt="Bortoluzzi coplanar"/>
 						<figcaption>Bortoluzzi coplanar</figcaption>
 						</a>
 					</figure>
 					<figure>
-						<a href="http://www.youtube.com/v/cGvapayO58U?autoplay=1&amp;rel=0" rel="shadowbox;width=640;height=385;" title="Ménsula para cristal PEKI">
+						<a class="fancybox-media" href="http://www.youtube.com/watch?v=cGvapayO58U&amp;autoplay=1&amp;rel=0" title="Ménsula para cristal PEKI">
 							<img src="imagenesSitio/videos/11/03.jpg" alt="Ménsula para cristal PEKI"/>
 						<figcaption>Ménsula para cristal PEKI</figcaption>
 						</a>
 					</figure>
 					<figure>
-						<a href="http://www.youtube.com/v/doeLujY9x0A?autoplay=1&amp;rel=0" rel="shadowbox;width=640;height=385;" title="Ménsula y perno para unifix Flipper">
+						<a class="fancybox-media" href="http://www.youtube.com/watch?v=doeLujY9x0A&amp;autoplay=1&amp;rel=0" title="Ménsula y perno para unifix Flipper">
 							<img src="imagenesSitio/videos/11/04.jpg" alt="Ménsula y perno para unifix Flipper"/>
 						<figcaption>Ménsula y perno para unifix Flipper</figcaption>
 						</a>
 					</figure>
 					<figure>
-						<a href="http://www.youtube.com/v/4_UZryRMWOI?autoplay=1&amp;rel=0" rel="shadowbox;width=640;height=385;" title="Nivelador">
+						<a class="fancybox-media" href="http://www.youtube.com/watch?v=4_UZryRMWOI&amp;autoplay=1&amp;rel=0" title="Nivelador">
 							<img src="imagenesSitio/videos/11/05.jpg" alt="Nivelador"/>
 						<figcaption>Nivelador</figcaption>
 						</a>
 					</figure>
 					<figure>
-						<a href="http://www.youtube.com/v/jP23dxK2rbw?autoplay=1&amp;rel=0" rel="shadowbox;width=640;height=385;" title="Unifix y Ménsula para Unifix PK">
+						<a class="fancybox-media" href="http://www.youtube.com/watch?v=jP23dxK2rbw&amp;autoplay=1&amp;rel=0" title="Unifix y Ménsula para Unifix PK">
 							<img src="imagenesSitio/videos/11/06.jpg" alt="Unifix y Ménsula para Unifix PK"/>
 						<figcaption>Unifix y Ménsula para Unifix PK</figcaption>
 						</a>
 					</figure>
 					<figure>
-						<a href="http://www.youtube.com/v/Ur3_Gfs5hYk?autoplay=1&amp;rel=0" rel="shadowbox;width=640;height=385;" title="Zapatera">
+						<a class="fancybox-media" href="http://www.youtube.com/watch?v=Ur3_Gfs5hYk&amp;autoplay=1&amp;rel=0" title="Zapatera">
 							<img src="imagenesSitio/videos/11/07.jpg" alt="Zapatera"/>
 						<figcaption>Zapatera</figcaption>
 						</a>
 					</figure>
 					<figure>
-						<a href="http://www.youtube.com/v/163_wVYrtIU?autoplay=1&amp;rel=0" rel="shadowbox;width=640;height=385;" title="Marco extraible">
+						<a class="fancybox-media" href="http://www.youtube.com/watch?v=163_wVYrtIU&amp;autoplay=1&amp;rel=0" title="Marco extraible">
 							<img src="imagenesSitio/videos/11/08.jpg" alt="Marco extraible"/>
 						<figcaption>Marco extraible</figcaption>
 						</a>
 					</figure>
 					<figure>
-						<a href="http://www.youtube.com/v/dYgvDharkLA?autoplay=1&amp;rel=0" rel="shadowbox;width=640;height=385;" title="Tope transparente para puerta">
+						<a class="fancybox-media" href="http://www.youtube.com/watch?v=dYgvDharkLA&amp;autoplay=1&amp;rel=0" title="Tope transparente para puerta">
 							<img src="imagenesSitio/videos/11/09.jpg" alt="Tope transparente para puerta"/>
 						<figcaption>Tope transparente para puerta</figcaption>
 						</a>
@@ -126,5 +117,36 @@ overlayOpacity: "0.6",//transparencia
 
 	</section>
 	<?php require(".footer.php") ?>
+
+	<!-- Add mousewheel plugin (this is optional) -->
+	<script type="text/javascript" src="js/jquery.mousewheel-3.0.6.pack.js"></script>
+	<!-- Add fancyBox main JS and CSS files -->
+	<script type="text/javascript" src="fancybox/jquery.fancybox.js?v=2.1.5"></script>
+	<link rel="stylesheet" type="text/css" href="fancybox/jquery.fancybox.css?v=2.1.5" media="screen" />
+	<!-- Add Media helper (this is optional) -->
+	<script type="text/javascript" src="fancybox/jquery.fancybox-media.js?v=1.0.6"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('.fancybox-media')
+				.attr('rel', 'media-gallery')
+				.fancybox({
+					openEffect : 'none',
+					closeEffect : 'none',
+					prevEffect : 'none',
+					nextEffect : 'none',
+
+					arrows : true,
+					helpers : {
+						title : {
+							position: 'top',
+							type : 'inside'
+						},
+						media : {},
+						buttons : {}
+					}
+				});
+			});
+	</script>
 </body>
 </html>	

@@ -1,0 +1,21 @@
+<script type="text/javascript" src="js/ddpowerzoomer.js"></script>
+<script type="text/javascript">//http://www.dynamicdrive.com/dynamicindex4/powerzoomer.htm
+jQuery(document).ready(function($){ //fire on DOM ready
+	//	EXAMPLE 1:	$('#simbologia .lineaPunteada').addpowerzoom()
+	//EXAMPLE 2:
+	$('#simb01').addpowerzoom({	defaultpower: 2, powerrange: [2,5],	largeimage: 'imagenesSitio/productos/simbologia-01.png', magnifiersize: [350,150] })
+	$('#simb02').addpowerzoom({	defaultpower: 2, powerrange: [2,5],	largeimage: null, magnifiersize: [350,150] })
+	$('#simb03').addpowerzoom({	defaultpower: 2, powerrange: [2,5],	largeimage: null, magnifiersize: [350,150] })
+	$('#simb04').addpowerzoom({	defaultpower: 2, powerrange: [2,5],	largeimage: null, magnifiersize: [350,150] })
+	$('#simb05').addpowerzoom({	defaultpower: 2, powerrange: [2,5],	largeimage: null, magnifiersize: [350,150] })
+	
+})
+</script>
+<section id="simbologia">
+	<img id="simb00" class="simb00" src="imagenesSitio/productos/simbologia-00.png" alt="">
+	<img id="simb02" class="lineaPunteada" src="imagenesSitio/productos/simbologia-03.png" alt="">
+	<img id="simb01" class="lineaPunteada" src="imagenesSitio/productos/simbologia-01.png" alt="">
+	<img id="simb03" class="lineaPunteada" src="imagenesSitio/productos/simbologia-02.png" alt="">
+	<img id="simb05" class="lineaPunteada" src="imagenesSitio/productos/simbologia-05.png" alt="">	
+	<img id="simb04" src="imagenesSitio/productos/simbologia-04.png" alt="">					
+</section>	

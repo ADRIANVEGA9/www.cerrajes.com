@@ -31,7 +31,7 @@ if (isset($id_sublinea)) {
 	$id_sublinea='0101';
 }
 
-$query_titulo= $db->Execute("SELECT linea.linea, sublinea.sublinea
+$query_titulo = $db->Execute("SELECT linea.linea, sublinea.sublinea
 								FROM linea
 								INNER JOIN sublinea ON linea.id_linea = sublinea.id_linea
 								WHERE linea.id_linea = '$id_linea' AND sublinea.id_sublinea = '$id_sublinea'");
@@ -40,10 +40,20 @@ if(!$query_titulo){
 exit("Error en la consulta titulo");
 }
 
+$query_productos = $db->Execute("SELECT *, GROUP_CONCAT( DISTINCT id SEPARATOR  ' - ') AS codigos, count('codigos') AS cuenta
+								FROM productos
+								WHERE linea = '$id_linea' AND sublinea = '$id_sublinea'
+								GROUP BY id");
+// Verificamos si hemos realizado bien nuestro Query
+if(!$query_productos){
+exit("Error en la consulta productos");
+}
+
 ?>
 <html lang="es">
 <head>
 <meta charset="utf-8">
+<!-- <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> -->
 <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> -->
 <link rel="shortcut icon" href="favicon.ico">
 <title>Cerrajes&reg; el herraje ideal para su mueble... - Productos</title>
@@ -51,92 +61,96 @@ exit("Error en la consulta titulo");
 <link rel="stylesheet" href="css/estilos.css">
 <link rel="stylesheet" href="css/responsive.css">
 <script src="js/prefixfree.min.js"></script>
-
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-
-<script type="text/javascript" src="js/ddpowerzoomer.js"></script>
-<script type="text/javascript">//http://www.dynamicdrive.com/dynamicindex4/powerzoomer.htm
-jQuery(document).ready(function($){ //fire on DOM ready
-	//	EXAMPLE 1:	$('#simbologia .lineaPunteada').addpowerzoom()
-	//EXAMPLE 2:
-	$('#simb01').addpowerzoom({	defaultpower: 2, powerrange: [2,5],	largeimage: 'imagenesSitio/productos/simbologia-01.png', magnifiersize: [350,150] })
-	$('#simb02').addpowerzoom({	defaultpower: 2, powerrange: [2,5],	largeimage: null, magnifiersize: [350,150] })
-	$('#simb03').addpowerzoom({	defaultpower: 2, powerrange: [2,5],	largeimage: null, magnifiersize: [350,150] })
-	$('#simb04').addpowerzoom({	defaultpower: 2, powerrange: [2,5],	largeimage: null, magnifiersize: [350,150] })
-	$('#simb05').addpowerzoom({	defaultpower: 2, powerrange: [2,5],	largeimage: null, magnifiersize: [350,150] })
-	
-})
-</script>
 
 </head>
 <body>
 <?php require(".header.html") ?>
 	<section id="menuProductos">
 		<?php require("menu/.menu.php") ?>
-		<section id="simbologia">
-			<img id="simb00" class="simb00" src="imagenesSitio/productos/simbologia-00.png" alt="">
-			<img id="simb02" class="lineaPunteada" src="imagenesSitio/productos/simbologia-03.png" alt="">
-			<img id="simb01" class="lineaPunteada" src="imagenesSitio/productos/simbologia-01.png" alt="">
-			<img id="simb03" class="lineaPunteada" src="imagenesSitio/productos/simbologia-02.png" alt="">
-			<img id="simb05" class="lineaPunteada" src="imagenesSitio/productos/simbologia-05.png" alt="">	
-			<img id="simb04" src="imagenesSitio/productos/simbologia-04.png" alt="">					
-		</section>				
+		<?php require(".zoom.html") ?>
+
 	</section>
 	<section id="contenedor">
 		<?php require(".nav.php") ?>
 		<section  id="contenido">
 		<?php
 		foreach($query_titulo as $t => $row_titulo) 
-		{//inicia Titulos linea - sublinea?> 
+		{//inicia Titulos linea - sublinea 			print $query_productos;?> 
 			<div class="tituloSeccion"><strong><?php echo $row_titulo['linea'];?></strong></div>	
 			<section id="productos">
 				<span id="sublinea"><?php echo $row_titulo['sublinea'];?></span>
-		<?php } //termina Titulos linea - sublinea?>
-				<section id="producto">
-					<figure id="suelto"><img src="imagenesSitio/productos/0101-127.png" alt=""/></figure>
-					<section id="codigo">
-						<span>Máquina embisagradora perf 48x6mm p/bisagra salice/fgv</span><br>
-						<span>Código: </span><span class="codigo">0101-127</span><br>
-						<span>UM: Pieza</span><br>
-						<span>UxC: 1 Pieza</span><br>
-						<figure>
-							<img src="imagenesSitio/productos/iconos/perforacion.png" alt="icono"/>
-							<div>48x6mm</div>
-						</figure>
-						<figure>
-							<img src="imagenesSitio/productos/iconos/ap_frontal.png" alt="icono"/>
-						</figure>					
-					</section>
-					<figure id="aplicado"><img src="imagenesSitio/productos/0101-127_.png" alt=""/></figure>
-				</section>
-				<div class="ProductosLineaPunteada"></div>
+				<?php } //termina Titulos linea - sublinea
+					foreach($query_productos as $p => $row_producto)
+					{//inicia foreach productos
+				?>
 
-				<section id="producto">
-					<figure id="suelto"><img src="imagenesSitio/productos/0101-128.png" alt=""/></figure>
-					<section id="codigo">
-						<span>Máquina embisagradora 48x6mm con brocas 35mm y 2mm</span><br>
-						<span>Código: </span><span class="codigo">0101-128</span><br>
-						<span>UM: Pieza</span><br>
-						<span>UxC: 1 Pieza</span><br>
-						<figure>
-							<img src="imagenesSitio/productos/iconos/perforacion.png" alt="icono"/>
-							<div>48x6mm</div>
+					<section id="producto" class="sombra">
+						<figure id="suelto">
+							<img src="http://cerrajes.me/imgCerrajes/img/<?php print $row_producto['imagen']?>.png" alt="<?php print $row_producto['imagen']?>"/>
 						</figure>
-						<figure>
-							<img src="imagenesSitio/productos/iconos/ap_frontal.png" alt="icono"/>
-						</figure>
-						<section id="ficha">
-							<span class="ft">FT</span>&nbsp;&nbsp;Ficha Técnica&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-							<span id="FT-0101-128" class="mostrar">Mostrar&nbsp;</span>
+						
+						<section id="codigo">
+							<span><?php print $row_producto['Descripción']?></span><br>
+							<span>C&oacute;digo: </span><span class="codigo"><?php print $row_producto['Código'].'-'.$row_producto['cuenta']?></span><br>
+							<span>UM: <?php print $row_producto['UM'];?></span><br>
+							<span>UxC: <?php print $row_producto['UXC'];?></span><br>
+							
+							<?php if ($row_producto[utf8_decode('Perforación')] <> "") { //inicia icono perforación?>
+								<figure>
+									<img src="imagenesSitio/productos/iconos/perforacion.png" alt="icono"/>
+									<div><?php print $row_producto[utf8_decode('Perforación')] ?></div>
+								</figure>
+							<?php } //termina icono perforación?>
+
+								<figure>
+								<?php if ($row_producto[utf8_decode('Aplicación')] <> "") { //inica icono aplicación?>
+									<img src="imagenesSitio/productos/iconos/<?php print $row_producto[utf8_decode('Aplicación')] ?>.png" alt="icono"/>
+								<?php } //termina icono aplicación?>
+								</figure>
+							
+							<?php if ($row_producto['ficha'] <> "") {//inicia if ficha ?>
+								<section id="ficha">
+									<span class="ft">FT</span>&nbsp;&nbsp;Ficha T&eacute;cnica&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<span id="<?php print $row_producto['ficha'];?>" class="mostrar">Mostrar&nbsp;</span>
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;descargar&nbsp;
+									<a id="down" class="icon-download" href="http://www.cerrajes.me/fichas/<?php print $row_producto['ficha'];?>.pdf" target="_blank" title="Descargar pdf"></a>
+								</section>
+							<?php } //termina if ficha?>
+							
+							<?php if ($row_producto['instructivo'] <> "") {//inicia if instructivo ?>
+								<section id="instructivo">
+									<span class="ii">&nbsp;II&nbsp;</span>
+									<span>&nbsp;&nbsp;Instructivo de Instalaci&oacute;n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+									<span id="<?php print $row_producto['instructivo'];?>" class="mostrar">Mostrar&nbsp;</span>
+									<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;descargar&nbsp;</span>
+									<span>
+										<a id="down" class="icon-download" href="http://www.cerrajes.me/instructivos/<?php print $row_producto['instructivo'];?>.pdf" target="_blank" title="Descargar pdf"></a>
+									</span>
+								</section>
+							<?php } //termina if instructivo?>
+
 						</section>
+
+						<figure id="aplicado">
+							<img src="http://cerrajes.me/imgCerrajes/aplicado/<?php print $row_producto['imagenA']?>.png" alt="<?php print $row_producto['imagenA']?>"/>
+						</figure>
+
 					</section>
-					<figure id="aplicado"><img src="imagenesSitio/productos/0101-128_.png" alt=""></figure>
-				</section>
-				<article id="vFT-0101-128">
-					<figure><img src="imagenesSitio/productos/fichas/FT-0101-128.jpg" alt=""></figure>
-					<!-- <iframe src="fichas/FT-0102-024_242.pdf" width="100%" height="600" type="application/pdf" ></iframe> -->
-				</article>	
-				<div class="ProductosLineaPunteada"></div>
+
+					<article id="v<?php print $row_producto['ficha'];?>">
+						<figure><img src="imagenesSitio/productos/fichas/FT-0101-128.jpg" alt=""></figure>
+						<!-- <iframe src="fichas/FT-0102-024_242.pdf" width="100%" height="600" type="application/pdf" ></iframe> -->
+					</article>
+
+					<article id="v<?php print $row_producto['instructivo'];?>">
+						<figure><img src="imagenesSitio/productos/fichas/FT-0101-128.jpg" alt=""></figure>
+						<!-- <iframe src="fichas/FT-0102-024_242.pdf" width="100%" height="600" type="application/pdf" ></iframe> -->
+					</article>			
+
+					<div class="ProductosLineaPunteada"></div>
+
+				<?php } //termina foreach productos ?>
 
 			</section>
 		</section>
@@ -146,9 +160,9 @@ jQuery(document).ready(function($){ //fire on DOM ready
 
 <script>
 
-	$('#productos #producto #codigo #ficha .mostrar').click( mostrarOcultar );
+	$('#productos #producto #codigo #ficha .mostrar').click( mostrarOcultarF );
 
-	function mostrarOcultar(e){
+	function mostrarOcultarF(e){
 	// console.log(e);
 		 $idn = this.id;
 		 $txt = $('#productos #producto #codigo #ficha #'+$idn).text();
@@ -169,6 +183,28 @@ var $ft  		= $('#productos #v'+$idn);
 	$ft.slideToggle( 300 );
 }
 
+	$('#productos #producto #codigo #instructivo .mostrar').click( mostrarOcultarI );
+
+	function mostrarOcultarI(e){
+	// console.log(e);
+		 $idn = this.id;
+		 $txt = $('#productos #producto #codigo #instructivo #'+$idn).text();
+		console.log("entré a la función"+$txt);
+var $ii  		= $('#productos #v'+$idn);
+
+	$test=$('#productos #v'+$idn).css('display');
+	console.log('es none? '+$test);
+	if ($('#productos #v'+$idn).css('display') == 'none') {
+		$('#productos #producto #codigo #instructivo #'+$idn).text('Ocultar ');
+		$('#productos #producto #codigo #instructivo #'+$idn).addClass('ocultar')
+	} 
+	if ($('#productos #v'+$idn).css('display') == 'block') {
+		$('#productos #producto #codigo #instructivo #'+$idn).text('Mostrar ');
+		$('#productos #producto #codigo #instructivo #'+$idn).removeClass('ocultar')	
+	};
+
+	$ii.slideToggle( 300 );
+}
 </script>
 </body>
 </html>	
