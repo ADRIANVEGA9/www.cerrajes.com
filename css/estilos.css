@@ -35,46 +35,6 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
-@keyframes animacionImg01{
-    0% {background-image: url(../imagenesSitio/01.png);}
-    20% {background-image: url(../imagenesSitio/01.png);}
-    25% {background-image: url(../imagenesSitio/02.png);}
-    50% {background-image: url(../imagenesSitio/02.png);}
-    55% {background-image: url(../imagenesSitio/03.png);}
-    75% {background-image: url(../imagenesSitio/03.png);}
-    80% {background-image: url(../imagenesSitio/01.png);}
-    100% {background-image: url(../imagenesSitio/01.png);}
-}
-@keyframes animacionImg02{
-    0% {background-image: url(../imagenesSitio/04.png);}
-    25% {background-image: url(../imagenesSitio/04.png);}
-    30% {background-image: url(../imagenesSitio/05.png);}
-    55% {background-image: url(../imagenesSitio/05.png);}
-    60% {background-image: url(../imagenesSitio/06.png);}
-    80% {background-image: url(../imagenesSitio/06.png);}
-    85% {background-image: url(../imagenesSitio/04.png);}
-    100% {background-image: url(../imagenesSitio/04.png);}
-}
-@keyframes animacionImg03{
-    0% {background-image: url(../imagenesSitio/07.png);}
-    30% {background-image: url(../imagenesSitio/07.png);}
-    35% {background-image: url(../imagenesSitio/08.png);}
-    60% {background-image: url(../imagenesSitio/08.png);}
-    65% {background-image: url(../imagenesSitio/09.png);}
-    85% {background-image: url(../imagenesSitio/09.png);}
-    90% {background-image: url(../imagenesSitio/07.png);}
-    100% {background-image: url(../imagenesSitio/07.png);}
-}
-@keyframes animacionImg04{
-    0% {background-image: url(../imagenesSitio/10.png);}
-    35% {background-image: url(../imagenesSitio/10.png);}
-    40% {background-image: url(../imagenesSitio/11.png);}
-    65% {background-image: url(../imagenesSitio/11.png);}
-    70% {background-image: url(../imagenesSitio/12.png);}
-    90% {background-image: url(../imagenesSitio/12.png);}
-    95% {background-image: url(../imagenesSitio/10.png);}
-    100% {background-image: url(../imagenesSitio/10.png);}
-}
 ::selection { background:#7AC143; color:#fff; }/*cambiar el color de la selección de texto*/
 a
 {
@@ -121,28 +81,30 @@ header #home #imgs {
 	padding-right: 2em;
 } 
 header #home #imgs section{
-	background-repeat: no-repeat;
-	background-size: 100%;
 	border-radius: 12px;
 	box-shadow: 4px 2px 15px 1px rgba(0, 0, 0, .4);
 	display: inline-block;
 	height: 81.5%;
 	margin-right: .5em;
+	overflow: hidden;
 	position: relative;
 	top: 3em;
 	width: 17%;
 }
-header #home #imgs #img01 {
-    animation: animacionImg01 60s infinite;
+header #home #imgs section p {
+	background: rgba(113, 191, 68, 0.50);
+	bottom: 0px;
+	color: #EEE;
+	font-size: 1.4em;
+	line-height: .7em;
+	margin: 0;
+	padding: 5px 0;
+	position: absolute;
+	text-align: center;
+	width: 100%;
 }
-header #home #imgs #img02 {
-    animation: animacionImg02 60s infinite;
-}
-header #home #imgs #img03 {
-    animation: animacionImg03 60s infinite;
-}
-header #home #imgs #img04 {
-    animation: animacionImg04 60s infinite;
+header #home #imgs section div img {
+	width: 100%
 }
 header #home #logo 
 {
@@ -561,9 +523,17 @@ nav td.activo
 	font-size: .7em;
 	font-style: italic;
 }
+#contenido #productos #producto #codigo #ficha span,
+#contenido #productos #producto #codigo #instructivo span {
+	font-size: .9em;
+}
 #contenido #productos #producto #codigo #ficha .mostrar,
 #contenido #productos #producto #codigo #instructivo .mostrar{
 	cursor: pointer;
+}
+#contenido #productos #producto #codigo #ficha .mostrar:hover:after,
+#contenido #productos #producto #codigo #instructivo .mostrar:hover:after{
+	color: lightgray;
 }
 #contenido #productos #producto #codigo #ficha .ft,
 #contenido #productos #producto #codigo #instructivo .ii{
@@ -578,6 +548,7 @@ nav td.activo
 #contenido #productos #producto #codigo #ficha #down,
 #contenido #productos #producto #codigo #instructivo #down {
 	display: inline-block;
+	font-size: .8em;
 	position: relative;
 	text-decoration: none;
 	transition: all linear .3s;
@@ -585,6 +556,7 @@ nav td.activo
 }
 #contenido #productos #producto #codigo #ficha #down:hover,
 #contenido #productos #producto #codigo #instructivo #down:hover {
+	color: lightgray;
 	transform: scale(1.20);
 }
 #contenido #productos #producto #codigo small

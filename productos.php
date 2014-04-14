@@ -86,35 +86,106 @@ exit("Error en la consulta productos");
 				?>
 
 					<section id="producto" class="sombra">
-						<figure id="suelto">
+						<figure id="suelto"><!-- imagen de producto "suelto" -->
 							<img src="http://cerrajes.me/imgCerrajes/img/<?php print $row_producto['imagen']?>.png" alt="<?php print $row_producto['imagen']?>"/>
 						</figure>
 						
-						<section id="codigo">
-							<span><?php print $row_producto['Descripción']?></span><br>
+						<section id="codigo"><!-- inicia sección de información de producto -->
+							<span><?php print $row_producto['Descripción'].' '; if ($row_producto['cuenta']==1 && $row_producto['Medida'] <> ""){ print $row_producto['Medida'];}?></span><br>
 							<span>C&oacute;digo: </span><span class="codigo"><?php print $row_producto['Código'].'-'.$row_producto['cuenta']?></span><br>
 							<span>UM: <?php print $row_producto['UM'];?></span><br>
 							<span>UxC: <?php print $row_producto['UXC'];?></span><br>
 							
-							<?php if ($row_producto[utf8_decode('Perforación')] <> "") { //inicia icono perforación?>
+							<?php if ($row_producto['Bandera'] <> "") { //inicia icono Bandera?>
+								<figure>
+									<img src="imagenesSitio/productos/iconos/<?php print $row_producto['Bandera'] ?>.png" alt="icono"/>
+								</figure>
+							<?php } //termina icono Bandera?>
+							
+							<?php if ($row_producto['Perforación'] <> "") { //inicia icono perforación?>
 								<figure>
 									<img src="imagenesSitio/productos/iconos/perforacion.png" alt="icono"/>
-									<div><?php print $row_producto[utf8_decode('Perforación')] ?></div>
+									<div><?php print $row_producto['Perforación'] ?></div>
 								</figure>
 							<?php } //termina icono perforación?>
-
+							
+							<?php if ($row_producto['Diámetro'] <> "") { //inicia icono Diametro?>
 								<figure>
-								<?php if ($row_producto[utf8_decode('Aplicación')] <> "") { //inica icono aplicación?>
-									<img src="imagenesSitio/productos/iconos/<?php print $row_producto[utf8_decode('Aplicación')] ?>.png" alt="icono"/>
-								<?php } //termina icono aplicación?>
+									<img src="imagenesSitio/productos/iconos/diametro.png" alt="icono"/>
+									<div><?php print $row_producto['Diámetro'] ?></div>
 								</figure>
+							<?php } //termina icono Diametro?>
+							
+							<?php if ($row_producto['Para perfil'] <> "") { //inicia icono perfil?>
+								<figure>
+									<img src="imagenesSitio/productos/iconos/perfil.png" alt="icono"/>
+									<div><?php print $row_producto['Para perfil'] ?></div>
+								</figure>
+							<?php } //termina icono perfil de aluminio?>
+
+							<?php if ($row_producto['Aplicación'] <> "") { //inica icono aplicación?>
+								<figure>
+									<img src="imagenesSitio/productos/iconos/<?php print $row_producto['Aplicación'] ?>.png" alt="icono"/>
+								</figure>
+							<?php } //termina icono aplicación?>
+
+							<?php if ($row_producto['Acabado'] <> "") { //inica icono acabado?>
+								<figure>
+									<img src="imagenesSitio/productos/iconos/acabado.png" alt="icono"/>
+									<div><?php print $row_producto['Acabado'] ?></div>
+								</figure>
+							<?php } //termina icono acabado?>
+
+							<?php if ($row_producto['Material'] <> "") { //inica icono Material?>
+								<figure>
+									<img src="imagenesSitio/productos/iconos/material.png" alt="icono"/>
+									<div><?php print $row_producto['Material'] ?></div>
+								</figure>
+							<?php } //termina icono Material?>
+
+							<?php if ($row_producto['Carga'] <> "") { //inica icono Carga?>
+								<figure>
+									<img src="imagenesSitio/productos/iconos/carga.png" alt="icono"/>
+									<div><?php print $row_producto['Carga'] ?></div>
+								</figure>
+							<?php } //termina icono Carga?>
+
+							<?php if ($row_producto['Giro'] <> "") { //inica icono Giro?>
+								<figure>
+									<img src="imagenesSitio/productos/iconos/giro.png" alt="icono"/>
+									<div><?php print $row_producto['Giro'] ?></div>
+								</figure>
+							<?php } //termina icono Giro?>
+
+							<?php if ($row_producto['Vástago'] <> "") { //inica icono Vastago?>
+								<figure>
+									<img src="imagenesSitio/productos/iconos/vastago.png" alt="icono"/>
+									<div><?php print $row_producto['Vástago'] ?></div>
+								</figure>
+							<?php } //termina icono Vastago?>
+
+							<?php if ($row_producto['Adhesión'] <> "") { //inica icono Adhesión?>
+								<figure>
+									<img src="imagenesSitio/productos/iconos/adhesion.png" alt="icono"/>
+									<div><?php print $row_producto['Adhesión'] ?></div>
+								</figure>
+							<?php } //termina icono Adhesión?>
+
+							<?php if ($row_producto['No. hojas'] <> "") { //inica icono No. hojas?>
+								<figure>
+									<img src="imagenesSitio/productos/iconos/<?php print $row_producto['No. hojas'] ?>.png" alt="icono"/>
+								</figure>
+							<?php } //termina icono No. hojas?>
 							
 							<?php if ($row_producto['ficha'] <> "") {//inicia if ficha ?>
 								<section id="ficha">
-									<span class="ft">FT</span>&nbsp;&nbsp;Ficha T&eacute;cnica&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+									<span class="ft">FT</span>
+									<span>&nbsp;&nbsp;Ficha T&eacute;cnica&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 									<span id="<?php print $row_producto['ficha'];?>" class="mostrar">Mostrar&nbsp;</span>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;descargar&nbsp;
+									<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;descargar&nbsp;</span>
+									<span>
 									<a id="down" class="icon-download" href="http://www.cerrajes.me/fichas/<?php print $row_producto['ficha'];?>.pdf" target="_blank" title="Descargar pdf"></a>
+									</span>
 								</section>
 							<?php } //termina if ficha?>
 							
@@ -130,21 +201,21 @@ exit("Error en la consulta productos");
 								</section>
 							<?php } //termina if instructivo?>
 
-						</section>
+						</section><!-- termina sección de información de producto -->
 
-						<figure id="aplicado">
+						<figure id="aplicado"> <!-- imagen producto aplicado -->
 							<img src="http://cerrajes.me/imgCerrajes/aplicado/<?php print $row_producto['imagenA']?>.png" alt="<?php print $row_producto['imagenA']?>"/>
 						</figure>
 
 					</section>
 
-					<article id="v<?php print $row_producto['ficha'];?>">
-						<figure><img src="imagenesSitio/productos/fichas/FT-0101-128.jpg" alt=""></figure>
+					<article id="v<?php print $row_producto['ficha'];?>"> <!-- Mostrar ficha -->
+						<figure><img src="http://www.cerrajes.me/imgCerrajes/fichas/<?php print $row_producto['imgF'];?>.jpg" alt=""></figure>
 						<!-- <iframe src="fichas/FT-0102-024_242.pdf" width="100%" height="600" type="application/pdf" ></iframe> -->
 					</article>
 
-					<article id="v<?php print $row_producto['instructivo'];?>">
-						<figure><img src="imagenesSitio/productos/fichas/FT-0101-128.jpg" alt=""></figure>
+					<article id="v<?php print $row_producto['instructivo'];?>"> <!-- Mostrar instructivo -->
+						<figure><img src="http://www.cerrajes.me/imgCerrajes/instructivo/<?php print $row_producto['imgI'];?>.jpg" alt=""></figure>
 						<!-- <iframe src="fichas/FT-0102-024_242.pdf" width="100%" height="600" type="application/pdf" ></iframe> -->
 					</article>			
 

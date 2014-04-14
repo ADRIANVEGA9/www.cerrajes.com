@@ -1,4 +1,33 @@
-
+<script type="text/javascript">
+$(function(){
+    $('#h01 div:gt(0)').hide();
+    setInterval(function(){
+      $('#h01 div:first-child').slideDown(0)
+         .next('div').slideUp(400)
+         .end().appendTo('#h01');}, 10000);
+});
+$(function(){
+    $('#h02 div:gt(0)').hide();
+    setInterval(function(){
+      $('#h02 div:first-child').slideDown(0)
+         .next('div').slideUp(600)
+         .end().appendTo('#h02');}, 10000);
+});
+$(function(){
+    $('#h03 div:gt(0)').hide();
+    setInterval(function(){
+      $('#h03 div:first-child').slideDown(0)
+         .next('div').slideUp(800)
+         .end().appendTo('#h03');}, 10000);
+});
+$(function(){
+    $('#h04 div:gt(0)').hide();
+    setInterval(function(){
+      $('#h04 div:first-child').slideDown(0)
+         .next('div').slideUp(1000)
+         .end().appendTo('#h04');}, 10000);
+});
+</script>
 	<script>
 	document.createElement('article');
 	document.createElement('aside');
@@ -24,10 +53,26 @@
 	</section>
 	<section id="home">
 		<figure id="imgs">
-			<section id="img01" alt="imagen cerrajes"></section>
-			<section id="img02" alt="imagen cerrajes"></section>
-			<section id="img03" alt="imagen cerrajes"></section>
-			<section id="img04" alt="imagen cerrajes"></section>
+			<section id="h01">
+				<div><img src="imagenesSitio/01.png" alt=""></div>
+				<div><img src="imagenesSitio/02.png" alt=""></div>
+				<div><img src="imagenesSitio/03.png" alt=""></div>
+			</section>
+			<section id="h02">
+				<div><img src="imagenesSitio/04.png" alt=""></div>
+				<div><img src="imagenesSitio/05.png" alt=""></div>
+				<div><img src="imagenesSitio/06.png" alt=""></div>
+			</section>
+			<section id="h03">
+				<div><img src="imagenesSitio/07.png" alt=""></div>
+				<div><img src="imagenesSitio/08.png" alt=""></div>
+				<div><img src="imagenesSitio/09.png" alt=""></div>
+			</section>
+			<section id="h04">
+				<div><img src="imagenesSitio/10.png" alt=""></div>
+				<div><img src="imagenesSitio/11.png" alt=""></div>
+				<div><img src="imagenesSitio/12.png" alt=""></div>
+			</section>
 		</figure>
 		<figure id="logo">
 			<img src="imagenesSitio/logo.png" alt="logo cerrajes">
