@@ -1,1 +1,1 @@
-<footer><span>visitas: 456789 Online: 25 Derechos Reservados® Grupo Cerrajes® <?php echo date("Y"); ?></span></footer>
+<footer><span>visitas: 456789 Derechos Reservados® Grupo Cerrajes® <?php echo date("Y"); ?></span></footer>

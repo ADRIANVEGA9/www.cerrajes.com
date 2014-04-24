@@ -478,12 +478,14 @@ nav td.activo
 	padding: 0 0 0.7em 0.7em;
 	display: block;
 }
-#contenido #productos #producto:hover.sombra {
-	box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, .4);
+#contenido #productos #producto.sombra {
 	padding-bottom: .2em;
 	padding-top: .5em;
+	z-index: 1;
+}
+#contenido #productos #producto:hover.sombra {
+	box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, .4);
 	position: relative;
-	top: -.5em;
 	transition: box-shadow linear .2s;
 }
 #contenido #productos #producto figure,
@@ -499,6 +501,46 @@ nav td.activo
 	min-height: 130px;
 	position: relative;
 	width: 65%;
+}
+#contenido #productos #producto #codigo #codigoMultiple {
+	display: inline-block;
+	font-size: .7em;
+	margin-top: .5em;
+	text-align: center;
+	vertical-align: top;
+	width: 72%;
+}
+#contenido #productos #producto #codigo #codigoMultiple #recuadro {
+	border-radius: 10px;
+	border: solid 1px #BEBECF;
+	display: inline-block;
+	height: auto;
+	min-width: 10%;
+	padding: .5em .3em;
+	vertical-align: top;
+	width: auto;
+}
+#contenido #productos #producto #codigo #codigoMultiple #recuadro .lineaPunteadaCodigo {
+	border-left: dotted 1px #BEBECF;
+	padding-left: .4em;
+}
+#contenido #productos #producto #codigo #codigoMultiple #recuadro .titulo {
+	color: #71BF44;
+	text-transform: uppercase;
+}
+#contenido #productos #producto #codigo #codigoMultiple #recuadro span {
+	display: inline-block;
+	vertical-align: top;
+	padding: 0 .2em;
+}
+#contenido #productos #producto #codigo #codigoUM {
+	display: inline-block;
+	vertical-align: top;
+	width: 27%;
+}
+#contenido #productos #producto #codigo #descripcion {
+	display: inline-block;
+	width: 100%;
 }
 #contenido #productos #producto #codigo figure{
 	height: auto;
@@ -522,6 +564,9 @@ nav td.activo
 	bottom: 0;
 	font-size: .7em;
 	font-style: italic;
+}
+#contenido #productos #producto #codigo #instructivo {
+	margin-top: .5em;
 }
 #contenido #productos #producto #codigo #ficha span,
 #contenido #productos #producto #codigo #instructivo span {
@@ -989,7 +1034,7 @@ nav td.activo
 }
 .ProductosLineaPunteada {
 	border-top: 2px dotted #71BF44;
-	margin: .5em 0 1em 0;
+	margin: .5em 0 .5em 0;
 }
 .rectangulo 
 {

@@ -40,7 +40,20 @@ if(!$query_titulo){
 exit("Error en la consulta titulo");
 }
 
-$query_productos = $db->Execute("SELECT *, GROUP_CONCAT( DISTINCT id SEPARATOR  ' - ') AS codigos, count('codigos') AS cuenta
+$query_productos = $db->Execute("SELECT *, GROUP_CONCAT( DISTINCT id SEPARATOR  ' - ') AS ids
+										 , GROUP_CONCAT( DISTINCT Código SEPARATOR  '<br>') AS codigo, count('ids') AS cuenta
+										 , GROUP_CONCAT( Medida SEPARATOR  '<br>') AS medida
+										 , GROUP_CONCAT( Freno SEPARATOR  '<br>') AS freno
+										 , GROUP_CONCAT( Alto SEPARATOR  '<br>') AS alto
+										 , GROUP_CONCAT( Ancho SEPARATOR  '<br>') AS ancho
+										 , GROUP_CONCAT( Pistón SEPARATOR  '<br>') AS piston
+										 , GROUP_CONCAT( Fuerza SEPARATOR  '<br>') AS fuerza
+										 , GROUP_CONCAT( Largo SEPARATOR  '<br>') AS largo
+										 , GROUP_CONCAT( ParaPerfil SEPARATOR  '<br>') AS perfil
+										 , GROUP_CONCAT( Aplicación SEPARATOR  '<br>') AS aplicacion
+										 , GROUP_CONCAT( Orientación SEPARATOR  '<br>') AS orientacion
+										 , GROUP_CONCAT( complementario SEPARATOR  '<br>') AS complemento
+										 , GROUP_CONCAT( opcional SEPARATOR  '<br>') AS opcion
 								FROM productos
 								WHERE linea = '$id_linea' AND sublinea = '$id_sublinea'
 								GROUP BY id");
@@ -91,11 +104,65 @@ exit("Error en la consulta productos");
 						</figure>
 						
 						<section id="codigo"><!-- inicia sección de información de producto -->
-							<span><?php print $row_producto['Descripción'].' '; if ($row_producto['cuenta']==1 && $row_producto['Medida'] <> ""){ print $row_producto['Medida'];}?></span><br>
-							<span>C&oacute;digo: </span><span class="codigo"><?php print $row_producto['Código'].'-'.$row_producto['cuenta']?></span><br>
-							<span>UM: <?php print $row_producto['UM'];?></span><br>
-							<span>UxC: <?php print $row_producto['UXC'];?></span><br>
+							<span id="descripcion"><?php print $row_producto['Descripción'].' '; if ($row_producto['cuenta']==1 && $row_producto['Medida'] <> ""){ print $row_producto['Medida'];}?></span>
 							
+							<span id="codigoUM">
+								<?php if ($row_producto['cuenta']==1) { //si cuenta es == 1, es un solo código?>
+								<span>C&oacute;digo: </span><span class="codigo"><?php print $row_producto['codigo']?></span><br>
+								<?php } //termina código unico?>
+								
+								<span>UM: <?php print $row_producto['UM'];?></span><br>
+								<span>UxC: <?php print $row_producto['UXC'];?></span><br>
+							</span>
+
+							<span id="codigoMultiple">
+								<?php if ($row_producto['cuenta']>1) {$i=0; //si cuenta es > 1, es código multiple?>
+								<div id="recuadro"><!-- inicia recuadro de información de códigos multiples -->
+									<?php if ($row_producto['codigo'] <> "") { 
+										$i=1; print '<span><span class="titulo">CÓDIGO</span><br>'.$row_producto['codigo'].'</span>'; }?>
+									<?php if (($row_producto['medida'] <> "") AND ((substr($row_producto['medida'], 0, 4)) <> "<br>")) { 
+										$i++; if ($i>1) { print '<span class="lineaPunteadaCodigo">';} else { print '<span>';}
+										print '<span class="titulo">MEDIDA</span><br>'.$row_producto['medida'].'</span>'; }?>
+									<?php if (($row_producto['freno'] <> "") AND ((substr($row_producto['freno'], 0, 4)) <> "<br>")) { 
+										$i++; if ($i>1) { print '<span class="lineaPunteadaCodigo">';} else { print '<span>';}
+										print '<span class="titulo">FRENO</span><br>'.$row_producto['freno'].'</span>'; }?>
+									<?php if (($row_producto['alto'] <> "") AND ((substr($row_producto['alto'], 0, 4)) <> "<br>")) { 
+										$i++; if ($i>1) { print '<span class="lineaPunteadaCodigo">';} else { print '<span>';}
+										print '<span class="titulo">alto</span><br>'.$row_producto['alto'].'</span>'; }?>
+									<?php if (($row_producto['ancho'] <> "")  AND ((substr($row_producto['ancho'], 0, 4)) <> "<br>")){ 
+										$i++; if ($i>1) { print '<span class="lineaPunteadaCodigo">';} else { print '<span>';}
+										print '<span class="titulo">ancho</span><br>'.$row_producto['ancho'].'</span>'; }?>
+									<?php if (($row_producto['piston'] <> "")  AND ((substr($row_producto['piston'], 0, 4)) <> "<br>")){ 
+										$i++; if ($i>1) { print '<span class="lineaPunteadaCodigo">';} else { print '<span>';}
+										print '<span class="titulo">pistón</span><br>'.$row_producto['piston'].'</span>'; }?>
+									<?php if (($row_producto['fuerza'] <> "")  AND ((substr($row_producto['fuerza'], 0, 4)) <> "<br>")){ 
+										$i++; if ($i>1) { print '<span class="lineaPunteadaCodigo">';} else { print '<span>';}
+										print '<span class="titulo">fuerza</span><br>'.$row_producto['fuerza'].'</span>'; }?>
+									<?php if (($row_producto['largo'] <> "")  AND ((substr($row_producto['largo'], 0, 4)) <> "<br>")){ 
+										$i++; if ($i>1) { print '<span class="lineaPunteadaCodigo">';} else { print '<span>';}
+										print '<span class="titulo">largo</span><br>'.$row_producto['largo'].'</span>'; }?>
+									<?php if (($row_producto['perfil'] <> "")  AND ((substr($row_producto['perfil'], 0, 4)) <> "<br>")){ 
+										$i++; if ($i>1) { print '<span class="lineaPunteadaCodigo">';} else { print '<span>';}
+										print '<span class="titulo">medidas</span><br>'.$row_producto['perfil'].'</span>'; }?>
+									<?php if (($row_producto['aplicacion'] <> "")  AND ((substr($row_producto['aplicacion'], 0, 4)) <> "<br>")){ 
+										$i++; if ($i>1) { print '<span class="lineaPunteadaCodigo">';} else { print '<span>';}
+										print '<span class="titulo">aplicación</span><br>'.$row_producto['aplicacion'].'</span>'; }?>
+									<?php if (($row_producto['orientacion'] <> "")  AND ((substr($row_producto['orientacion'], 0, 4)) <> "<br>")){ 
+										$i++; if ($i>1) { print '<span class="lineaPunteadaCodigo">';} else { print '<span>';}
+										print '<span class="titulo">orientación</span><br>'.$row_producto['orientacion'].'</span>'; }?>
+									<?php if (($row_producto['puerta'] <> "")  AND ((substr($row_producto['puerta'], 0, 4)) <> "<br>")){ 
+										$i++; if ($i>1) { print '<span class="lineaPunteadaCodigo">';} else { print '<span>';}
+										print '<span class="titulo">Tipo de puerta</span><br>'.$row_producto['puerta'].'</span>'; }?>
+									<?php if (($row_producto['complemento'] <> "")  AND ((substr($row_producto['complemento'], 0, 4)) <> "<br>")){ 
+										$i++; if ($i>1) { print '<span class="lineaPunteadaCodigo">';} else { print '<span>';}
+										print '<span class="titulo">complementario</span><br>'.$row_producto['complemento'].'</span>'; }?>
+									<?php if (($row_producto['opcion'] <> "")  AND ((substr($row_producto['opcion'], 0, 4)) <> "<br>")){ 
+										$i++; if ($i>1) { print '<span class="lineaPunteadaCodigo">';} else { print '<span>';}
+										print '<span class="titulo">opcional</span><br>'.$row_producto['opcion'].'</span>'; }?>
+								</div><!-- termina recuadro de información de códigos multiples -->
+								<?php } ?>
+							</span>
+	<!-- inicia sección de iconos -->
 							<?php if ($row_producto['Bandera'] <> "") { //inicia icono Bandera?>
 								<figure>
 									<img src="imagenesSitio/productos/iconos/<?php print $row_producto['Bandera'] ?>.png" alt="icono"/>
@@ -116,67 +183,67 @@ exit("Error en la consulta productos");
 								</figure>
 							<?php } //termina icono Diametro?>
 							
-							<?php if ($row_producto['Para perfil'] <> "") { //inicia icono perfil?>
+							<?php if (($row_producto['ParaPerfil'] <> "") AND ($row_producto['cuenta'] == 1)){ //inicia icono perfil?>
 								<figure>
 									<img src="imagenesSitio/productos/iconos/perfil.png" alt="icono"/>
-									<div><?php print $row_producto['Para perfil'] ?></div>
+									<div><?php print $row_producto['ParaPerfil'] ?></div>
 								</figure>
 							<?php } //termina icono perfil de aluminio?>
 
-							<?php if ($row_producto['Aplicación'] <> "") { //inica icono aplicación?>
+							<?php if (($row_producto['aplicacion'] <> "") AND ($row_producto['aplicacion'] == 1)) { //inicia icono aplicación?>
 								<figure>
 									<img src="imagenesSitio/productos/iconos/<?php print $row_producto['Aplicación'] ?>.png" alt="icono"/>
 								</figure>
 							<?php } //termina icono aplicación?>
 
-							<?php if ($row_producto['Acabado'] <> "") { //inica icono acabado?>
+							<?php if ($row_producto['Acabado'] <> "") { //inicia icono acabado?>
 								<figure>
 									<img src="imagenesSitio/productos/iconos/acabado.png" alt="icono"/>
 									<div><?php print $row_producto['Acabado'] ?></div>
 								</figure>
 							<?php } //termina icono acabado?>
 
-							<?php if ($row_producto['Material'] <> "") { //inica icono Material?>
+							<?php if ($row_producto['Material'] <> "") { //inicia icono Material?>
 								<figure>
 									<img src="imagenesSitio/productos/iconos/material.png" alt="icono"/>
 									<div><?php print $row_producto['Material'] ?></div>
 								</figure>
 							<?php } //termina icono Material?>
 
-							<?php if ($row_producto['Carga'] <> "") { //inica icono Carga?>
+							<?php if ($row_producto['Carga'] <> "") { //inicia icono Carga?>
 								<figure>
 									<img src="imagenesSitio/productos/iconos/carga.png" alt="icono"/>
 									<div><?php print $row_producto['Carga'] ?></div>
 								</figure>
 							<?php } //termina icono Carga?>
 
-							<?php if ($row_producto['Giro'] <> "") { //inica icono Giro?>
+							<?php if ($row_producto['Giro'] <> "") { //inicia icono Giro?>
 								<figure>
 									<img src="imagenesSitio/productos/iconos/giro.png" alt="icono"/>
 									<div><?php print $row_producto['Giro'] ?></div>
 								</figure>
 							<?php } //termina icono Giro?>
 
-							<?php if ($row_producto['Vástago'] <> "") { //inica icono Vastago?>
+							<?php if ($row_producto['Vástago'] <> "") { //inicia icono Vastago?>
 								<figure>
 									<img src="imagenesSitio/productos/iconos/vastago.png" alt="icono"/>
 									<div><?php print $row_producto['Vástago'] ?></div>
 								</figure>
 							<?php } //termina icono Vastago?>
 
-							<?php if ($row_producto['Adhesión'] <> "") { //inica icono Adhesión?>
+							<?php if ($row_producto['Adhesión'] <> "") { //inicia icono Adhesión?>
 								<figure>
 									<img src="imagenesSitio/productos/iconos/adhesion.png" alt="icono"/>
 									<div><?php print $row_producto['Adhesión'] ?></div>
 								</figure>
 							<?php } //termina icono Adhesión?>
 
-							<?php if ($row_producto['No. hojas'] <> "") { //inica icono No. hojas?>
+							<?php if ($row_producto['No. hojas'] <> "") { //inicia icono No. hojas?>
 								<figure>
 									<img src="imagenesSitio/productos/iconos/<?php print $row_producto['No. hojas'] ?>.png" alt="icono"/>
 								</figure>
 							<?php } //termina icono No. hojas?>
-							
+	<!-- termina sección de iconos -->
 							<?php if ($row_producto['ficha'] <> "") {//inicia if ficha ?>
 								<section id="ficha">
 									<span class="ft">FT</span>
