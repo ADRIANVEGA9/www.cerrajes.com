@@ -82,7 +82,14 @@ ul, ul ul
 .menu > li > ul li:active a,
 .menu > li > ul li:active a span
 {
-	color: #32373D;
+	color: #71BF44;
+}
+.menu > li > ul .activo a,
+.menu > li > ul .activo a span,
+.menu > li > ul .activo a,
+.menu > li > ul .activo a span
+{
+	color: #71BF44;
 }
 .menu ul > li > a span 
 {

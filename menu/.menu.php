@@ -27,12 +27,12 @@ exit("Error en la consulta Menu linea");
 			exit("Error en la consulta Menu sublinea");
 			}
 			?>
-		<li><a href="#"><span><?php echo $row_menuLinea['id_linea'];?></span><?php echo $row_menuLinea['linea'];?></a>
+		<li id="<?php echo $row_menuLinea['id_linea'];?>"><a href="#"><span><?php echo $row_menuLinea['id_linea'];?></span><?php echo $row_menuLinea['linea'];?></a>
 			<ul>
 				<?php
 				foreach($query_menuSublinea as $ks => $row_menuSublinea) 
 				{ ?>
-				<li><a href="productos.php?id_linea=<?php echo $row_menuLinea['id_linea'];?>&id_sublinea=<?php echo $row_menuSublinea['id_sublinea'];?>">
+				<li id="<?php echo $row_menuSublinea['id_sublinea'];?>"><a href="productos.php?id_linea=<?php echo $row_menuLinea['id_linea'];?>&id_sublinea=<?php echo $row_menuSublinea['id_sublinea'];?>">
 					<span><?php echo $row_menuSublinea['id_sublinea'];?></span>
 					<?php echo $row_menuSublinea['sublinea'];?></a></li>				
 				<?php } ?>
@@ -43,14 +43,29 @@ exit("Error en la consulta Menu linea");
 
 <!--initiate accordion-->
 <script type="text/javascript">
+	function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+	}
+
 	$(function() {
 	
-	    var menu_ul = $('.menu > li > ul'),
-	           menu_a  = $('.menu > li > a');
+	    var 	idLinea		= getParameterByName('id_linea'),
+	    	 	idSublinea	= getParameterByName('id_sublinea'),
+	    		menu_ul 	= $('.menu > li > ul'),
+	           	menu_a  	= $('.menu > li > a'),
+	           	menuLinea	= $('.menu > #'+idLinea+' > a'),
+	           	menuUL 		= $('.menu > #'+idLinea+' > ul'),	
+	           	menuLI 		= $('.menu > li > ul > #'+idSublinea);	
 	    
 	    menu_ul.hide();
+	    menuLinea.addClass('active');
+	    menuUL.show();
+	    menuLI.addClass('activo');
 	
-	    menu_a.click(function(e) { //mouseover cuando mouse se mueva por encima -- mouseenter cuando el mouse entre al objeto
+	    menu_a.click(function(e) { //mouseover cuando mouse se mueva por encima -- mouseenter cuando el mouse entre al objeto --click al dar click
 	        e.preventDefault();
 	        if(!$(this).hasClass('active')) {
 	            menu_a.removeClass('active');
@@ -61,6 +76,8 @@ exit("Error en la consulta Menu linea");
 	            $(this).next().stop(true,true).slideUp('normal');
 	        }
 	    });
+
+
 	
 	});
 </script>

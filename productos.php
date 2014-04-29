@@ -9,15 +9,6 @@ $valores1 = array_values($_GET);// obtiene los valores de las varibles
 for($i=0;$i<$numero1;$i++){// crea las variables y les asigna el valor
 $$tags1[$i]=$valores1[$i];
 }
-/***VARIABLES POR POST ***/
-$numero = count($_POST);
-$tags = array_keys($_POST); // obtiene los nombres de las varibles
-$valores = array_values($_POST);// obtiene los valores de las varibles
-
-for($i=0;$i<$numero;$i++){ // crea las variables y les asigna el valor
-$$tags[$i]=$valores[$i]; 
-}
-/*ahora solo hay que llamar las variables por su nombre*/
 
 if (isset($id_linea)) {
   $id_linea = $id_linea;
@@ -163,86 +154,88 @@ exit("Error en la consulta productos");
 								<?php } ?>
 							</span>
 	<!-- inicia sección de iconos -->
-							<?php if ($row_producto['Bandera'] <> "") { //inicia icono Bandera?>
-								<figure>
-									<img src="imagenesSitio/productos/iconos/<?php print $row_producto['Bandera'] ?>.png" alt="icono"/>
-								</figure>
-							<?php } //termina icono Bandera?>
-							
-							<?php if ($row_producto['Perforación'] <> "") { //inicia icono perforación?>
-								<figure>
-									<img src="imagenesSitio/productos/iconos/perforacion.png" alt="icono"/>
-									<div><?php print $row_producto['Perforación'] ?></div>
-								</figure>
-							<?php } //termina icono perforación?>
-							
-							<?php if ($row_producto['Diámetro'] <> "") { //inicia icono Diametro?>
-								<figure>
-									<img src="imagenesSitio/productos/iconos/diametro.png" alt="icono"/>
-									<div><?php print $row_producto['Diámetro'] ?></div>
-								</figure>
-							<?php } //termina icono Diametro?>
-							
-							<?php if (($row_producto['ParaPerfil'] <> "") AND ($row_producto['cuenta'] == 1)){ //inicia icono perfil?>
-								<figure>
-									<img src="imagenesSitio/productos/iconos/perfil.png" alt="icono"/>
-									<div><?php print $row_producto['ParaPerfil'] ?></div>
-								</figure>
-							<?php } //termina icono perfil de aluminio?>
+							<span id="iconos">
+								<?php if ($row_producto['Bandera'] <> "") { //inicia icono Bandera?>
+									<figure>
+										<img src="imagenesSitio/productos/iconos/<?php print $row_producto['Bandera'] ?>.png" alt="icono"/>
+									</figure>
+								<?php } //termina icono Bandera?>
+								
+								<?php if ($row_producto['Perforación'] <> "") { //inicia icono perforación?>
+									<figure>
+										<img src="imagenesSitio/productos/iconos/perforacion.png" alt="icono"/>
+										<div><?php print $row_producto['Perforación'] ?></div>
+									</figure>
+								<?php } //termina icono perforación?>
+								
+								<?php if ($row_producto['Diámetro'] <> "") { //inicia icono Diametro?>
+									<figure>
+										<img src="imagenesSitio/productos/iconos/diametro.png" alt="icono"/>
+										<div><?php print $row_producto['Diámetro'] ?></div>
+									</figure>
+								<?php } //termina icono Diametro?>
+								
+								<?php if (($row_producto['ParaPerfil'] <> "") AND ($row_producto['cuenta'] == 1)){ //inicia icono perfil?>
+									<figure>
+										<img src="imagenesSitio/productos/iconos/perfil.png" alt="icono"/>
+										<div><?php print $row_producto['ParaPerfil'] ?></div>
+									</figure>
+								<?php } //termina icono perfil de aluminio?>
 
-							<?php if (($row_producto['aplicacion'] <> "") AND ($row_producto['aplicacion'] == 1)) { //inicia icono aplicación?>
-								<figure>
-									<img src="imagenesSitio/productos/iconos/<?php print $row_producto['Aplicación'] ?>.png" alt="icono"/>
-								</figure>
-							<?php } //termina icono aplicación?>
+								<?php if (($row_producto['aplicacion'] <> "") AND ($row_producto['aplicacion'] == 1)) { //inicia icono aplicación?>
+									<figure>
+										<img src="imagenesSitio/productos/iconos/<?php print $row_producto['Aplicación'] ?>.png" alt="icono"/>
+									</figure>
+								<?php } //termina icono aplicación?>
 
-							<?php if ($row_producto['Acabado'] <> "") { //inicia icono acabado?>
-								<figure>
-									<img src="imagenesSitio/productos/iconos/acabado.png" alt="icono"/>
-									<div><?php print $row_producto['Acabado'] ?></div>
-								</figure>
-							<?php } //termina icono acabado?>
+								<?php if ($row_producto['Acabado'] <> "") { //inicia icono acabado?>
+									<figure>
+										<img src="imagenesSitio/productos/iconos/acabado.png" alt="icono"/>
+										<div><?php print $row_producto['Acabado'] ?></div>
+									</figure>
+								<?php } //termina icono acabado?>
 
-							<?php if ($row_producto['Material'] <> "") { //inicia icono Material?>
-								<figure>
-									<img src="imagenesSitio/productos/iconos/material.png" alt="icono"/>
-									<div><?php print $row_producto['Material'] ?></div>
-								</figure>
-							<?php } //termina icono Material?>
+								<?php if ($row_producto['Material'] <> "") { //inicia icono Material?>
+									<figure>
+										<img src="imagenesSitio/productos/iconos/material.png" alt="icono"/>
+										<div><?php print $row_producto['Material'] ?></div>
+									</figure>
+								<?php } //termina icono Material?>
 
-							<?php if ($row_producto['Carga'] <> "") { //inicia icono Carga?>
-								<figure>
-									<img src="imagenesSitio/productos/iconos/carga.png" alt="icono"/>
-									<div><?php print $row_producto['Carga'] ?></div>
-								</figure>
-							<?php } //termina icono Carga?>
+								<?php if ($row_producto['Carga'] <> "") { //inicia icono Carga?>
+									<figure>
+										<img src="imagenesSitio/productos/iconos/carga.png" alt="icono"/>
+										<div><?php print $row_producto['Carga'] ?></div>
+									</figure>
+								<?php } //termina icono Carga?>
 
-							<?php if ($row_producto['Giro'] <> "") { //inicia icono Giro?>
-								<figure>
-									<img src="imagenesSitio/productos/iconos/giro.png" alt="icono"/>
-									<div><?php print $row_producto['Giro'] ?></div>
-								</figure>
-							<?php } //termina icono Giro?>
+								<?php if ($row_producto['Giro'] <> "") { //inicia icono Giro?>
+									<figure>
+										<img src="imagenesSitio/productos/iconos/giro.png" alt="icono"/>
+										<div><?php print $row_producto['Giro'] ?></div>
+									</figure>
+								<?php } //termina icono Giro?>
 
-							<?php if ($row_producto['Vástago'] <> "") { //inicia icono Vastago?>
-								<figure>
-									<img src="imagenesSitio/productos/iconos/vastago.png" alt="icono"/>
-									<div><?php print $row_producto['Vástago'] ?></div>
-								</figure>
-							<?php } //termina icono Vastago?>
+								<?php if ($row_producto['Vástago'] <> "") { //inicia icono Vastago?>
+									<figure>
+										<img src="imagenesSitio/productos/iconos/vastago.png" alt="icono"/>
+										<div><?php print $row_producto['Vástago'] ?></div>
+									</figure>
+								<?php } //termina icono Vastago?>
 
-							<?php if ($row_producto['Adhesión'] <> "") { //inicia icono Adhesión?>
-								<figure>
-									<img src="imagenesSitio/productos/iconos/adhesion.png" alt="icono"/>
-									<div><?php print $row_producto['Adhesión'] ?></div>
-								</figure>
-							<?php } //termina icono Adhesión?>
+								<?php if ($row_producto['Adhesión'] <> "") { //inicia icono Adhesión?>
+									<figure>
+										<img src="imagenesSitio/productos/iconos/adhesion.png" alt="icono"/>
+										<div><?php print $row_producto['Adhesión'] ?></div>
+									</figure>
+								<?php } //termina icono Adhesión?>
 
-							<?php if ($row_producto['No. hojas'] <> "") { //inicia icono No. hojas?>
-								<figure>
-									<img src="imagenesSitio/productos/iconos/<?php print $row_producto['No. hojas'] ?>.png" alt="icono"/>
-								</figure>
-							<?php } //termina icono No. hojas?>
+								<?php if ($row_producto['No. hojas'] <> "") { //inicia icono No. hojas?>
+									<figure>
+										<img src="imagenesSitio/productos/iconos/<?php print $row_producto['No. hojas'] ?>.png" alt="icono"/>
+									</figure>
+								<?php } //termina icono No. hojas?>
+							</span>
 	<!-- termina sección de iconos -->
 							<?php if ($row_producto['ficha'] <> "") {//inicia if ficha ?>
 								<section id="ficha">

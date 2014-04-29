@@ -542,6 +542,11 @@ nav td.activo
 	display: inline-block;
 	width: 100%;
 }
+#contenido #productos #producto #codigo #iconos {
+	display: inline-block;
+	vertical-align: middle;
+	width: 100%;
+}
 #contenido #productos #producto #codigo figure{
 	height: auto;
 	min-height: 45px;
