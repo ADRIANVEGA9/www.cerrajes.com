@@ -1,32 +1,32 @@
 <script src="js/jquery-1.10.1.min.js"></script>
 <script type="text/javascript">
 $(function(){
-    $('#h01 div:gt(0)').hide();
+    $('#h01 div:gt(0)').slideToggle(0);
     setInterval(function(){
-      $('#h01 div:first-child').slideDown(0)
-         .next('div').slideUp(400)
-         .end().appendTo('#h01');}, 10000);
+      $('#h01 div:first-child').slideToggle(400)
+         .next('div').slideToggle(400)
+         .end().appendTo('#h01');}, 8000);
 });
 $(function(){
-    $('#h02 div:gt(0)').hide();
+    $('#h02 div:gt(0)').slideToggle(0);
     setInterval(function(){
-      $('#h02 div:first-child').slideDown(0)
-         .next('div').slideUp(600)
-         .end().appendTo('#h02');}, 10000);
+      $('#h02 div:first-child').slideToggle(600)
+         .next('div').slideToggle(600)
+         .end().appendTo('#h02');}, 8000);
 });
 $(function(){
-    $('#h03 div:gt(0)').hide();
+    $('#h03 div:gt(0)').slideToggle(0);
     setInterval(function(){
-      $('#h03 div:first-child').slideDown(0)
-         .next('div').slideUp(800)
-         .end().appendTo('#h03');}, 10000);
+      $('#h03 div:first-child').slideToggle(800)
+         .next('div').slideToggle(800)
+         .end().appendTo('#h03');}, 8000);
 });
 $(function(){
-    $('#h04 div:gt(0)').hide();
+    $('#h04 div:gt(0)').slideToggle(0);
     setInterval(function(){
-      $('#h04 div:first-child').slideDown(0)
-         .next('div').slideUp(1000)
-         .end().appendTo('#h04');}, 10000);
+      $('#h04 div:first-child').slideToggle(1000)
+         .next('div').slideToggle(1000)
+         .end().appendTo('#h04');}, 8000);
 });
 </script>
 	<script>
@@ -55,24 +55,24 @@ $(function(){
 	<section id="home">
 		<figure id="imgs">
 			<section id="h01">
-				<div><img src="imagenesSitio/01.png" alt="cerrajes"></div>
-				<div><img src="imagenesSitio/02.png" alt="cerrajes"></div>
-				<div><img src="imagenesSitio/03.png" alt="cerrajes"></div>
+				<div><a href="#"><img src="imagenesSitio/01.png" alt="cerrajes"></a></div>
+				<div><a href="#"><img src="imagenesSitio/02.png" alt="cerrajes"></a></div>
+				<div><a href="#"><img src="imagenesSitio/03.png" alt="cerrajes"></a></div>
 			</section>
 			<section id="h02">
-				<div><img src="imagenesSitio/04.png" alt="cerrajes"></div>
-				<div><img src="imagenesSitio/05.png" alt="cerrajes"></div>
-				<div><img src="imagenesSitio/06.png" alt="cerrajes"></div>
+				<div><a href="#"><img src="imagenesSitio/04.png" alt="cerrajes"></a></div>
+				<div><a href="#"><img src="imagenesSitio/05.png" alt="cerrajes"></a></div>
+				<div><a href="#"><img src="imagenesSitio/06.png" alt="cerrajes"></a></div>
 			</section>
 			<section id="h03">
-				<div><img src="imagenesSitio/07.png" alt="cerrajes"></div>
-				<div><img src="imagenesSitio/08.png" alt="cerrajes"></div>
-				<div><img src="imagenesSitio/09.png" alt="cerrajes"></div>
+				<div><a href="#"><img src="imagenesSitio/07.png" alt="cerrajes"></a></div>
+				<div><a href="#"><img src="imagenesSitio/08.png" alt="cerrajes"></a></div>
+				<div><a href="#"><img src="imagenesSitio/09.png" alt="cerrajes"></a></div>
 			</section>
 			<section id="h04">
-				<div><img src="imagenesSitio/10.png" alt="cerrajes"></div>
-				<div><img src="imagenesSitio/11.png" alt="cerrajes"></div>
-				<div><img src="imagenesSitio/12.png" alt="cerrajes"></div>
+				<div><a href="#"><img src="imagenesSitio/10.png" alt="cerrajes"></a></div>
+				<div><a href="#"><img src="imagenesSitio/11.png" alt="cerrajes"></a></div>
+				<div><a href="#"><img src="imagenesSitio/12.png" alt="cerrajes"></a></div>
 			</section>
 		</figure>
 		<figure id="logo">

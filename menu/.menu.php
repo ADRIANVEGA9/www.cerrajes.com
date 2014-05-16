@@ -43,25 +43,32 @@ exit("Error en la consulta Menu linea");
 
 <!--initiate accordion-->
 <script type="text/javascript">
-	function getParameterByName(name) {
-    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-        results = regex.exec(location.search);
-    return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-	}
+	$getURL = function(key)   {  
+        key = key.replace(/[\[]/, '\\[');  
+        key = key.replace(/[\]]/, '\\]');  
+        var pattern = "[\\?&]" + key + "=([^&#]*)";  
+        var regex = new RegExp(pattern);  
+        var url = unescape(window.location.href);  
+        var results = regex.exec(url);  
+        if (results === null) {  
+	            return '0';  
+	        } else {  
+	            return results[1];  
+	        } 
+        } 
 
 	$(function() {
 	
-	    var 	idLinea		= getParameterByName('id_linea'),
-	    	 	idSublinea	= getParameterByName('id_sublinea'),
+	    var 	idLinea		= $getURL('id_linea'),
+	    	 	idSublinea	= $getURL('id_sublinea'),
 	    		menu_ul 	= $('.menu > li > ul'),
 	           	menu_a  	= $('.menu > li > a'),
 	           	menuLinea	= $('.menu > #'+idLinea+' > a'),
 	           	menuUL 		= $('.menu > #'+idLinea+' > ul'),	
 	           	menuLI 		= $('.menu > li > ul > #'+idSublinea);	
-	    
-	    menu_ul.hide();
-	    menuLinea.addClass('active');
+
+		menu_ul.hide();
+    	menuLinea.addClass('active');
 	    menuUL.show();
 	    menuLI.addClass('activo');
 	

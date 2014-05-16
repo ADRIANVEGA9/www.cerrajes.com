@@ -533,10 +533,22 @@ nav td.activo
 	vertical-align: top;
 	padding: 0 .2em;
 }
+#contenido #productos #producto #codigo #codigoMultiple .verde {
+	color: #71BF44;
+}
 #contenido #productos #producto #codigo #codigoUM {
 	display: inline-block;
 	vertical-align: top;
 	width: 27%;
+}
+#contenido #productos #producto #codigo #codigoUM #logo {
+	left: -131px;
+	position: absolute;
+	top: 0;
+	width: 5%;
+}
+#contenido #productos #producto #codigo #codigoUM #logo img {
+	width: 100%;
 }
 #contenido #productos #producto #codigo #descripcion {
 	display: inline-block;
@@ -549,10 +561,12 @@ nav td.activo
 }
 #contenido #productos #producto #codigo figure{
 	height: auto;
+	max-width: 9%;
 	min-height: 45px;
+	min-width: 8%;
 	overflow: hidden;
 	text-align: center;
-	width: 8%;
+	width: auto;
 }
 #contenido #productos #producto #codigo figure div {
 	color: #ADABAB;
@@ -569,9 +583,28 @@ nav td.activo
 	bottom: 0;
 	font-size: .7em;
 	font-style: italic;
+	left: -25%;
+	position: relative;
 }
 #contenido #productos #producto #codigo #instructivo {
 	margin-top: .5em;
+}
+#contenido #productos #producto #codigo #ficha div,
+#contenido #productos #producto #codigo #instructivo div {
+	display: inline-block;
+	vertical-align: top;
+}
+#contenido #productos #producto #codigo #ficha #fichaDescarga,
+#contenido #productos #producto #codigo #instructivo #instructDescarga{
+	width: 20%;
+}
+#contenido #productos #producto #codigo #ficha #fichaMostrar,
+#contenido #productos #producto #codigo #instructivo #instructMostrar{
+	width: 10%;
+}
+#contenido #productos #producto #codigo #ficha #fichaOrden,
+#contenido #productos #producto #codigo #instructivo #instructOrden{
+	width: 28%;
 }
 #contenido #productos #producto #codigo #ficha span,
 #contenido #productos #producto #codigo #instructivo span {
@@ -607,7 +640,7 @@ nav td.activo
 #contenido #productos #producto #codigo #ficha #down:hover,
 #contenido #productos #producto #codigo #instructivo #down:hover {
 	color: lightgray;
-	transform: scale(1.20);
+	/*transform: scale(1.20);*/
 }
 #contenido #productos #producto #codigo small
 {
@@ -1009,6 +1042,9 @@ nav td.activo
 .icon-download:before {
 	color: #71bf44;
 	font-size: 2em
+}
+.icon-download:hover:before {
+	color: lightgray;
 }
 .icono {
 	display: inline-block;

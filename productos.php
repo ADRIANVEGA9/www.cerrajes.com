@@ -42,6 +42,10 @@ $query_productos = $db->Execute("SELECT *, GROUP_CONCAT( DISTINCT id SEPARATOR  
 										 , GROUP_CONCAT( Largo SEPARATOR  '<br>') AS largo
 										 , GROUP_CONCAT( ParaPerfil SEPARATOR  '<br>') AS perfil
 										 , GROUP_CONCAT( Aplicación SEPARATOR  '<br>') AS aplicacion
+										 , GROUP_CONCAT( Material SEPARATOR  '<br>') AS material
+										 , GROUP_CONCAT( DISTINCT Material SEPARATOR  '<br>') AS materialD
+										 , GROUP_CONCAT( Acabado SEPARATOR  '<br>') AS acabado
+										 , GROUP_CONCAT( DISTINCT Acabado SEPARATOR  '<br>') AS acabadoD
 										 , GROUP_CONCAT( Orientación SEPARATOR  '<br>') AS orientacion
 										 , GROUP_CONCAT( complementario SEPARATOR  '<br>') AS complemento
 										 , GROUP_CONCAT( opcional SEPARATOR  '<br>') AS opcion
@@ -87,6 +91,12 @@ exit("Error en la consulta productos");
 				<?php } //termina Titulos linea - sublinea
 					foreach($query_productos as $p => $row_producto)
 					{//inicia foreach productos
+						$material = explode("<br>", $row_producto['materialD']);//explode convierte un string en un array, en base a un delimitador, en este caso <br>
+						$cuentaMaterial = count($material);
+						$acabado = explode("<br>", $row_producto['acabadoD']);//explode convierte un string en un array, en base a un delimitador, en este caso <br>
+						$cuentaAcabado = count($acabado);
+						//var_dump($acabado);//ver el contenido de la variable
+						//var_dump($cuentaAcabado);
 				?>
 
 					<section id="producto" class="sombra">
@@ -102,56 +112,78 @@ exit("Error en la consulta productos");
 								<span>C&oacute;digo: </span><span class="codigo"><?php print $row_producto['codigo']?></span><br>
 								<?php } //termina código unico?>
 								
-								<span>UM: <?php print $row_producto['UM'];?></span><br>
-								<span>UxC: <?php print $row_producto['UXC'];?></span><br>
+								<span>UM: <?= $row_producto['UM'];?></span><br>
+								<span>UxC: <?= $row_producto['UXC'];?></span><br>
+
+								<?php if ($row_producto['Logotipo'] <> "") {?>									
+								<div id="logo">
+									<img src="imagenesSitio/productos/iconos/<?= $row_producto['Logotipo'] ?>.png" alt="<?= $row_producto['Logotipo'] ?>"/>
+								</div>
+								<?php } ?>
 							</span>
 
 							<span id="codigoMultiple">
-								<?php if ($row_producto['cuenta']>1) {$i=0; //si cuenta es > 1, es código multiple?>
+							<?php if ($row_producto['cuenta']>1) 
+							{//si cuenta es > 1, es código multiple
+								$i=0; ?>
 								<div id="recuadro"><!-- inicia recuadro de información de códigos multiples -->
-									<?php if ($row_producto['codigo'] <> "") { 
+								<?php if ($row_producto['codigo'] <> "") { 
 										$i=1; print '<span><span class="titulo">CÓDIGO</span><br>'.$row_producto['codigo'].'</span>'; }?>
-									<?php if (($row_producto['medida'] <> "") AND ((substr($row_producto['medida'], 0, 4)) <> "<br>")) { 
+							 	<?php if (($row_producto['medida'] <> "") AND ((substr($row_producto['medida'], 0, 4)) <> "<br>")) { 
 										$i++; if ($i>1) { print '<span class="lineaPunteadaCodigo">';} else { print '<span>';}
-										print '<span class="titulo">MEDIDA</span><br>'.$row_producto['medida'].'</span>'; }?>
-									<?php if (($row_producto['freno'] <> "") AND ((substr($row_producto['freno'], 0, 4)) <> "<br>")) { 
+										print '<span class="titulo">MEDIDA</span><br>'.$row_producto['medida'].'</span>'; }
+								 	if (($row_producto['freno'] <> "") AND ((substr($row_producto['freno'], 0, 4)) <> "<br>")) { 
 										$i++; if ($i>1) { print '<span class="lineaPunteadaCodigo">';} else { print '<span>';}
-										print '<span class="titulo">FRENO</span><br>'.$row_producto['freno'].'</span>'; }?>
-									<?php if (($row_producto['alto'] <> "") AND ((substr($row_producto['alto'], 0, 4)) <> "<br>")) { 
+										print '<span class="titulo">FRENO</span><br>'.$row_producto['freno'].'</span>'; }
+								 	if (($row_producto['alto'] <> "") AND ((substr($row_producto['alto'], 0, 4)) <> "<br>")) { 
 										$i++; if ($i>1) { print '<span class="lineaPunteadaCodigo">';} else { print '<span>';}
-										print '<span class="titulo">alto</span><br>'.$row_producto['alto'].'</span>'; }?>
-									<?php if (($row_producto['ancho'] <> "")  AND ((substr($row_producto['ancho'], 0, 4)) <> "<br>")){ 
+										print '<span class="titulo">alto</span><br>'.$row_producto['alto'].'</span>'; }
+								 	if (($row_producto['ancho'] <> "")  AND ((substr($row_producto['ancho'], 0, 4)) <> "<br>")){ 
 										$i++; if ($i>1) { print '<span class="lineaPunteadaCodigo">';} else { print '<span>';}
-										print '<span class="titulo">ancho</span><br>'.$row_producto['ancho'].'</span>'; }?>
-									<?php if (($row_producto['piston'] <> "")  AND ((substr($row_producto['piston'], 0, 4)) <> "<br>")){ 
+										print '<span class="titulo">ancho</span><br>'.$row_producto['ancho'].'</span>'; }
+								 	if (($row_producto['piston'] <> "")  AND ((substr($row_producto['piston'], 0, 4)) <> "<br>")){ 
 										$i++; if ($i>1) { print '<span class="lineaPunteadaCodigo">';} else { print '<span>';}
-										print '<span class="titulo">pistón</span><br>'.$row_producto['piston'].'</span>'; }?>
-									<?php if (($row_producto['fuerza'] <> "")  AND ((substr($row_producto['fuerza'], 0, 4)) <> "<br>")){ 
+										print '<span class="titulo">pistón</span><br>'.$row_producto['piston'].'</span>'; }
+								 	if (($row_producto['fuerza'] <> "")  AND ((substr($row_producto['fuerza'], 0, 4)) <> "<br>")){ 
 										$i++; if ($i>1) { print '<span class="lineaPunteadaCodigo">';} else { print '<span>';}
-										print '<span class="titulo">fuerza</span><br>'.$row_producto['fuerza'].'</span>'; }?>
-									<?php if (($row_producto['largo'] <> "")  AND ((substr($row_producto['largo'], 0, 4)) <> "<br>")){ 
+										print '<span class="titulo">fuerza</span><br>'.$row_producto['fuerza'].'</span>'; }
+								 	if (($row_producto['largo'] <> "")  AND ((substr($row_producto['largo'], 0, 4)) <> "<br>")){ 
 										$i++; if ($i>1) { print '<span class="lineaPunteadaCodigo">';} else { print '<span>';}
-										print '<span class="titulo">largo</span><br>'.$row_producto['largo'].'</span>'; }?>
-									<?php if (($row_producto['perfil'] <> "")  AND ((substr($row_producto['perfil'], 0, 4)) <> "<br>")){ 
+										print '<span class="titulo">largo</span><br>'.$row_producto['largo'].'</span>'; }
+								 	if (($row_producto['perfil'] <> "")  AND ((substr($row_producto['perfil'], 0, 4)) <> "<br>")){ 
 										$i++; if ($i>1) { print '<span class="lineaPunteadaCodigo">';} else { print '<span>';}
-										print '<span class="titulo">medidas</span><br>'.$row_producto['perfil'].'</span>'; }?>
-									<?php if (($row_producto['aplicacion'] <> "")  AND ((substr($row_producto['aplicacion'], 0, 4)) <> "<br>")){ 
+										print '<span class="titulo">medidas</span><br>'.$row_producto['perfil'].'</span>'; }
+								 	if (($row_producto['aplicacion'] <> "")  AND ((substr($row_producto['aplicacion'], 0, 4)) <> "<br>")){ 
 										$i++; if ($i>1) { print '<span class="lineaPunteadaCodigo">';} else { print '<span>';}
-										print '<span class="titulo">aplicación</span><br>'.$row_producto['aplicacion'].'</span>'; }?>
-									<?php if (($row_producto['orientacion'] <> "")  AND ((substr($row_producto['orientacion'], 0, 4)) <> "<br>")){ 
+										print '<span class="titulo">aplicación</span><br>'.$row_producto['aplicacion'].'</span>'; }
+								 	if (($row_producto['orientacion'] <> "")  AND ((substr($row_producto['orientacion'], 0, 4)) <> "<br>")){ 
 										$i++; if ($i>1) { print '<span class="lineaPunteadaCodigo">';} else { print '<span>';}
-										print '<span class="titulo">orientación</span><br>'.$row_producto['orientacion'].'</span>'; }?>
-									<?php if (($row_producto['puerta'] <> "")  AND ((substr($row_producto['puerta'], 0, 4)) <> "<br>")){ 
+										print '<span class="titulo">orientación</span><br>'.$row_producto['orientacion'].'</span>'; }
+								 	if (($row_producto['puerta'] <> "")  AND ((substr($row_producto['puerta'], 0, 4)) <> "<br>")){ 
 										$i++; if ($i>1) { print '<span class="lineaPunteadaCodigo">';} else { print '<span>';}
-										print '<span class="titulo">Tipo de puerta</span><br>'.$row_producto['puerta'].'</span>'; }?>
-									<?php if (($row_producto['complemento'] <> "")  AND ((substr($row_producto['complemento'], 0, 4)) <> "<br>")){ 
+										print '<span class="titulo">Tipo de puerta</span><br>'.$row_producto['puerta'].'</span>'; }
+								 	if ((($row_producto['material'] <> "")  AND ((substr($row_producto['material'], 0, 4)) <> "<br>")) AND ($cuentaMaterial>1)){ 
 										$i++; if ($i>1) { print '<span class="lineaPunteadaCodigo">';} else { print '<span>';}
-										print '<span class="titulo">complementario</span><br>'.$row_producto['complemento'].'</span>'; }?>
-									<?php if (($row_producto['opcion'] <> "")  AND ((substr($row_producto['opcion'], 0, 4)) <> "<br>")){ 
+										print '<span class="titulo">material</span><br>'.$row_producto['material'].'</span>'; }
+								 	if ((($row_producto['acabado'] <> "")  AND ((substr($row_producto['acabado'], 0, 4)) <> "<br>")) AND ($cuentaAcabado>1)){ 
+										$i++; if ($i>1) { print '<span class="lineaPunteadaCodigo">';} else { print '<span>';}
+										print '<span class="titulo">acabado</span><br>'.$row_producto['acabado'].'</span>'; }
+								 	if (($row_producto['complemento'] <> "")  AND ((substr($row_producto['complemento'], 0, 4)) <> "<br>")){ 
+										$i++; if ($i>1) { print '<span class="lineaPunteadaCodigo">';} else { print '<span>';}
+										print '<span class="titulo">complementario</span><br>'.$row_producto['complemento'].'</span>'; }
+								 	if (($row_producto['opcion'] <> "")  AND ((substr($row_producto['opcion'], 0, 4)) <> "<br>")){ 
 										$i++; if ($i>1) { print '<span class="lineaPunteadaCodigo">';} else { print '<span>';}
 										print '<span class="titulo">opcional</span><br>'.$row_producto['opcion'].'</span>'; }?>
 								</div><!-- termina recuadro de información de códigos multiples -->
-								<?php } ?>
+							<?php 
+							}//Complementos y opcionales para códigos unicos.
+							if (($row_producto['complemento'] <> "")  AND ($row_producto['cuenta']==1)) {
+								print '<span class="verde">»</span><span>'.$row_producto['complemento'].'</span>';
+							}
+							if (($row_producto['opcion'] <> "")  AND ($row_producto['cuenta']==1)) {
+								print '<span class="verde"><br>»</span><span>'.$row_producto['opcion'].'</span>';
+							}
+							 ?>
 							</span>
 	<!-- inicia sección de iconos -->
 							<span id="iconos">
@@ -159,78 +191,67 @@ exit("Error en la consulta productos");
 									<figure>
 										<img src="imagenesSitio/productos/iconos/<?php print $row_producto['Bandera'] ?>.png" alt="icono"/>
 									</figure>
-								<?php } //termina icono Bandera?>
-								
-								<?php if ($row_producto['Perforación'] <> "") { //inicia icono perforación?>
+								<?php } //termina icono Bandera
+								if ($row_producto['Perforación'] <> "") { //inicia icono perforación?>
 									<figure>
 										<img src="imagenesSitio/productos/iconos/perforacion.png" alt="icono"/>
 										<div><?php print $row_producto['Perforación'] ?></div>
 									</figure>
-								<?php } //termina icono perforación?>
-								
-								<?php if ($row_producto['Diámetro'] <> "") { //inicia icono Diametro?>
+								<?php } //termina icono perforación
+								if ($row_producto['Diámetro'] <> "") { //inicia icono Diametro?>
 									<figure>
 										<img src="imagenesSitio/productos/iconos/diametro.png" alt="icono"/>
 										<div><?php print $row_producto['Diámetro'] ?></div>
 									</figure>
-								<?php } //termina icono Diametro?>
-								
-								<?php if (($row_producto['ParaPerfil'] <> "") AND ($row_producto['cuenta'] == 1)){ //inicia icono perfil?>
+								<?php } //termina icono Diametro
+								if (($row_producto['ParaPerfil'] <> "") AND ($row_producto['cuenta'] == 1)){ //inicia icono perfil?>
 									<figure>
 										<img src="imagenesSitio/productos/iconos/perfil.png" alt="icono"/>
 										<div><?php print $row_producto['ParaPerfil'] ?></div>
 									</figure>
-								<?php } //termina icono perfil de aluminio?>
-
-								<?php if (($row_producto['aplicacion'] <> "") AND ($row_producto['aplicacion'] == 1)) { //inicia icono aplicación?>
+								<?php } //termina icono perfil de aluminio
+								if (($row_producto['aplicacion'] <> "") AND ($row_producto['aplicacion'] == 1)) { //inicia icono aplicación?>
 									<figure>
 										<img src="imagenesSitio/productos/iconos/<?php print $row_producto['Aplicación'] ?>.png" alt="icono"/>
 									</figure>
-								<?php } //termina icono aplicación?>
-
-								<?php if ($row_producto['Acabado'] <> "") { //inicia icono acabado?>
+								<?php } //termina icono aplicación
+								if (($row_producto['Acabado'] <> "") AND ($cuentaMaterial == 1)) { //inicia icono acabado?>
 									<figure>
 										<img src="imagenesSitio/productos/iconos/acabado.png" alt="icono"/>
 										<div><?php print $row_producto['Acabado'] ?></div>
 									</figure>
-								<?php } //termina icono acabado?>
-
-								<?php if ($row_producto['Material'] <> "") { //inicia icono Material?>
+								<?php } //termina icono acabado
+								if (($row_producto['Material'] <> "") AND ($cuentaMaterial == 1)) { //inicia icono Material?>
 									<figure>
 										<img src="imagenesSitio/productos/iconos/material.png" alt="icono"/>
 										<div><?php print $row_producto['Material'] ?></div>
 									</figure>
-								<?php } //termina icono Material?>
-
-								<?php if ($row_producto['Carga'] <> "") { //inicia icono Carga?>
+								<?php } //termina icono Material
+								if ($row_producto['Carga'] <> "") { //inicia icono Carga?>
 									<figure>
 										<img src="imagenesSitio/productos/iconos/carga.png" alt="icono"/>
 										<div><?php print $row_producto['Carga'] ?></div>
 									</figure>
-								<?php } //termina icono Carga?>
-
-								<?php if ($row_producto['Giro'] <> "") { //inicia icono Giro?>
+								<?php } //termina icono Carga
+								if ($row_producto['Giro'] <> "") { //inicia icono Giro?>
 									<figure>
 										<img src="imagenesSitio/productos/iconos/giro.png" alt="icono"/>
 										<div><?php print $row_producto['Giro'] ?></div>
 									</figure>
-								<?php } //termina icono Giro?>
-
-								<?php if ($row_producto['Vástago'] <> "") { //inicia icono Vastago?>
+								<?php } //termina icono Giro
+								if ($row_producto['Vástago'] <> "") { //inicia icono Vastago?>
 									<figure>
 										<img src="imagenesSitio/productos/iconos/vastago.png" alt="icono"/>
 										<div><?php print $row_producto['Vástago'] ?></div>
 									</figure>
-								<?php } //termina icono Vastago?>
-
-								<?php if ($row_producto['Adhesión'] <> "") { //inicia icono Adhesión?>
+								<?php } //termina icono Vastago
+								if ($row_producto['Adhesión'] <> "") { //inicia icono Adhesión?>
 									<figure>
 										<img src="imagenesSitio/productos/iconos/adhesion.png" alt="icono"/>
 										<div><?php print $row_producto['Adhesión'] ?></div>
 									</figure>
-								<?php } //termina icono Adhesión?>
-
-								<?php if ($row_producto['No. hojas'] <> "") { //inicia icono No. hojas?>
+								<?php } //termina icono Adhesión
+								if ($row_producto['No. hojas'] <> "") { //inicia icono No. hojas?>
 									<figure>
 										<img src="imagenesSitio/productos/iconos/<?php print $row_producto['No. hojas'] ?>.png" alt="icono"/>
 									</figure>
@@ -239,25 +260,37 @@ exit("Error en la consulta productos");
 	<!-- termina sección de iconos -->
 							<?php if ($row_producto['ficha'] <> "") {//inicia if ficha ?>
 								<section id="ficha">
-									<span class="ft">FT</span>
-									<span>&nbsp;&nbsp;Ficha T&eacute;cnica&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-									<span id="<?php print $row_producto['ficha'];?>" class="mostrar">Mostrar&nbsp;</span>
-									<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;descargar&nbsp;</span>
-									<span>
-									<a id="down" class="icon-download" href="http://www.cerrajes.me/fichas/<?php print $row_producto['ficha'];?>.pdf" target="_blank" title="Descargar pdf"></a>
-									</span>
+									<div id="fichaOrden">
+										<span class="ft">FT</span>
+										<span>&nbsp;&nbsp;Ficha T&eacute;cnica&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+									</div>
+									<div id="fichaMostrar">
+										<span id="FT<?php print $row_producto['codigo'];?>" class="mostrar">Mostrar&nbsp;</span>
+									</div>
+									<div id="fichaDescarga">
+										<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;descargar&nbsp;</span>
+										<span>
+										<a id="down" class="icon-download" href="http://www.cerrajes.me/fichas/<?php print $row_producto['ficha'];?>.pdf" target="_blank" title="Descargar pdf"></a>
+										</span>
+									</div>
 								</section>
 							<?php } //termina if ficha?>
 							
 							<?php if ($row_producto['instructivo'] <> "") {//inicia if instructivo ?>
 								<section id="instructivo">
-									<span class="ii">&nbsp;II&nbsp;</span>
-									<span>&nbsp;&nbsp;Instructivo de Instalaci&oacute;n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-									<span id="<?php print $row_producto['instructivo'];?>" class="mostrar">Mostrar&nbsp;</span>
-									<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;descargar&nbsp;</span>
-									<span>
-										<a id="down" class="icon-download" href="http://www.cerrajes.me/instructivos/<?php print $row_producto['instructivo'];?>.pdf" target="_blank" title="Descargar pdf"></a>
-									</span>
+									<div id="instructOrden">
+										<span class="ii">&nbsp;II&nbsp;</span>
+										<span>&nbsp;&nbsp;Instructivo de Instalaci&oacute;n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+									</div>
+									<div id="instructMostrar">
+										<span id="II<?php print $row_producto['codigo'];?>" class="mostrar">Mostrar&nbsp;</span>
+									</div>
+									<div id="instructDescarga">
+										<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;descargar&nbsp;</span>
+										<span>
+											<a id="down" class="icon-download" href="http://www.cerrajes.me/instructivos/<?php print $row_producto['instructivo'];?>.pdf" target="_blank" title="Descargar pdf"></a>
+										</span>
+									</div>
 								</section>
 							<?php } //termina if instructivo?>
 
@@ -269,12 +302,12 @@ exit("Error en la consulta productos");
 
 					</section>
 
-					<article id="v<?php print $row_producto['ficha'];?>"> <!-- Mostrar ficha -->
+					<article id="vFT<?php print $row_producto['codigo'];?>"> <!-- Mostrar ficha -->
 						<figure><img src="http://www.cerrajes.me/imgCerrajes/fichas/<?php print $row_producto['imgF'];?>.jpg" alt=""></figure>
 						<!-- <iframe src="fichas/FT-0102-024_242.pdf" width="100%" height="600" type="application/pdf" ></iframe> -->
 					</article>
 
-					<article id="v<?php print $row_producto['instructivo'];?>"> <!-- Mostrar instructivo -->
+					<article id="vII<?php print $row_producto['codigo'];?>"> <!-- Mostrar instructivo -->
 						<figure><img src="http://www.cerrajes.me/imgCerrajes/instructivo/<?php print $row_producto['imgI'];?>.jpg" alt=""></figure>
 						<!-- <iframe src="fichas/FT-0102-024_242.pdf" width="100%" height="600" type="application/pdf" ></iframe> -->
 					</article>			
@@ -301,7 +334,6 @@ exit("Error en la consulta productos");
 var $ft  		= $('#productos #v'+$idn);
 
 	$test=$('#productos #v'+$idn).css('display');
-	console.log('es none? '+$test);
 	if ($('#productos #v'+$idn).css('display') == 'none') {
 		$('#productos #producto #codigo #ficha #'+$idn).text('Ocultar ');
 		$('#productos #producto #codigo #ficha #'+$idn).addClass('ocultar')
