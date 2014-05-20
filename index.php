@@ -1,1 +1,1 @@
-<? require 'home.php';
+<?php require 'home.php';

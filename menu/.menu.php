@@ -13,7 +13,7 @@ exit("Error en la consulta Menu linea");
 <link rel="stylesheet" href="menu/css/styles.css">
 <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> -->
 <script src="js/jquery-1.10.1.min.js"></script>
-<div id="tituloProductos" class="<?php if ($ac==13) { echo activo2;}?>"><span>productos</span></div>
+<div id="tituloProductos" class="<?php if ($ac==13) { echo 'activo2';}?>"><span>productos</span></div>
 	<ul class="menu">
 		<?php
 		foreach($query_menuLinea as $k => $row_menuLinea) 
