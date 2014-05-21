@@ -559,11 +559,20 @@ nav td.activo
 	vertical-align: middle;
 	width: 100%;
 }
-#contenido #productos #producto #codigo figure{
+#contenido #productos #producto #codigo #iconos figure{
 	height: auto;
 	max-width: 9%;
 	min-height: 45px;
 	min-width: 8%;
+	overflow: hidden;
+	text-align: center;
+	width: auto;
+}
+#contenido #productos #producto #codigo #iconosM figure{
+	height: auto;
+	max-width: 30%;
+	min-height: 45px;
+	min-width: 25%;
 	overflow: hidden;
 	text-align: center;
 	width: auto;

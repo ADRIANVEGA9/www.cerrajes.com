@@ -125,24 +125,100 @@ exit("Error en la consulta productos");
 						<section id="codigo"><!-- inicia sección de información de producto -->
 							<span id="descripcion"><?php print $row_producto['Descripción'].' '; if ($row_producto['cuenta']==1 && $row_producto['Medida'] <> ""){ print $row_producto['Medida'];}?></span>
 							
-							<span id="codigoUM">
+							<span id="codigoUM"><!-- inicia span #codigoUM -->
 								<?php if ($row_producto['cuenta']==1) { //si cuenta es == 1, es un solo código?>
-								<span>C&oacute;digo: </span><span class="codigo"><?php print $row_producto['codigo']?></span><br>
+									<span>C&oacute;digo: </span><span class="codigo"><?php print $row_producto['codigo']?></span><br>
 								<?php } //termina código unico?>
 																
 								<span>UM: <?php print $row_producto['UM'];?></span><br>
 								<?if  ( ($row_producto['UXC'] <> "") AND ($cuentaUXC == 1)) {								?>
-								<span>UxC: <?php print $row_producto['UXC'];?></span><br>
+									<span>UxC: <?php print $row_producto['UXC'];?></span><br>
 								<?php } ?>
 
 								<?php if ($row_producto['Logotipo'] <> "") {?>									
-								<div id="logo">
-									<img src="imagenesSitio/productos/iconos/<?php print $row_producto['Logotipo'] ?>.png" alt="<?php print $row_producto['Logotipo'] ?>"/>
-								</div>
+									<div id="logo">
+										<img src="imagenesSitio/productos/iconos/<?php print $row_producto['Logotipo'] ?>.png" alt="<?php print $row_producto['Logotipo'] ?>"/>
+									</div>
 								<?php } ?>
-							</span>
 
-							<span id="codigoMultiple">
+	<!-- inicia sección de iconos -->
+								<?php if ($row_producto['cuenta']>1) { ?>
+									<span id="iconosM">
+										<?php if ($row_producto['Bandera'] <> "") { //inicia icono Bandera?>
+											<figure>
+												<img src="imagenesSitio/productos/iconos/<?php print $row_producto['Bandera'] ?>.png" alt="icono"/>
+											</figure>
+										<?php } //termina icono Bandera
+										if ($row_producto['Perforación'] <> "") { //inicia icono perforación?>
+											<figure>
+												<img src="imagenesSitio/productos/iconos/perforacion.png" alt="icono"/>
+												<div><?php print $row_producto['Perforación'] ?></div>
+											</figure>
+										<?php } //termina icono perforación
+										if (($row_producto['Diámetro'] <> "") AND ($cuentaDiametro == 1)) { //inicia icono Diametro?>
+											<figure>
+												<img src="imagenesSitio/productos/iconos/diametro.png" alt="icono"/>
+												<div><?php print $row_producto['diametro'] ?></div>
+											</figure>
+										<?php } //termina icono Diametro
+										if (($row_producto['ParaPerfil'] <> "") AND ($row_producto['cuenta'] == 1)){ //inicia icono perfil?>
+											<figure>
+												<img src="imagenesSitio/productos/iconos/perfil.png" alt="icono"/>
+												<div><?php print $row_producto['ParaPerfil'] ?></div>
+											</figure>
+										<?php } //termina icono perfil de aluminio
+										if (($row_producto['aplicacion'] <> "") AND ($row_producto['aplicacion'] == 1)) { //inicia icono aplicación?>
+											<figure>
+												<img src="imagenesSitio/productos/iconos/<?php print $row_producto['Aplicación'] ?>.png" alt="icono"/>
+											</figure>
+										<?php } //termina icono aplicación
+										if (($row_producto['Acabado'] <> "") AND ($cuentaAcabado == 1)) { //inicia icono acabado?>
+											<figure>
+												<img src="imagenesSitio/productos/iconos/acabado.png" alt="icono"/>
+												<div><?php print $row_producto['Acabado'] ?></div>
+											</figure>
+										<?php } //termina icono acabado
+										if (($row_producto['Material'] <> "") AND ($cuentaMaterial == 1)) { //inicia icono Material?>
+											<figure>
+												<img src="imagenesSitio/productos/iconos/material.png" alt="icono"/>
+												<div><?php print $row_producto['Material'] ?></div>
+											</figure>
+										<?php } //termina icono Material
+										if ($row_producto['Carga'] <> "") { //inicia icono Carga?>
+											<figure>
+												<img src="imagenesSitio/productos/iconos/carga.png" alt="icono"/>
+												<div><?php print $row_producto['Carga'] ?></div>
+											</figure>
+										<?php } //termina icono Carga
+										if ($row_producto['Giro'] <> "") { //inicia icono Giro?>
+											<figure>
+												<img src="imagenesSitio/productos/iconos/giro.png" alt="icono"/>
+												<div><?php print $row_producto['Giro'] ?></div>
+											</figure>
+										<?php } //termina icono Giro
+										if ($row_producto['Vástago'] <> "") { //inicia icono Vastago?>
+											<figure>
+												<img src="imagenesSitio/productos/iconos/vastago.png" alt="icono"/>
+												<div><?php print $row_producto['Vástago'] ?></div>
+											</figure>
+										<?php } //termina icono Vastago
+										if ($row_producto['Adhesión'] <> "") { //inicia icono Adhesión?>
+											<figure>
+												<img src="imagenesSitio/productos/iconos/adhesion.png" alt="icono"/>
+												<div><?php print $row_producto['Adhesión'] ?></div>
+											</figure>
+										<?php } //termina icono Adhesión
+										if ($row_producto['NoHojas'] <> "") { //inicia icono NoHojas?>
+											<figure>
+												<img src="imagenesSitio/productos/iconos/<?php print $row_producto['NoHojas'] ?>.png" alt="icono"/>
+											</figure>
+										<?php } //termina icono NoHojas?>
+									</span>
+								<?php } //cierre if iconos de códigos multiples?>
+	<!-- termina sección de iconos -->
+							</span><!-- termina span #codigoUM -->
+
+							<span id="codigoMultiple"><!-- inicia span codigoMultiple -->
 							<?php if ($row_producto['cuenta']>1) 
 							{//si cuenta es > 1, es código multiple
 								$i=0; ?>
@@ -213,80 +289,85 @@ exit("Error en la consulta productos");
 								print '<span class="verde"><br>»</span><span>'.$row_producto['opcion'].'</span>';
 							}
 							 ?>
-							</span>
-	<!-- inicia sección de iconos -->
-							<span id="iconos">
-								<?php if ($row_producto['Bandera'] <> "") { //inicia icono Bandera?>
-									<figure>
-										<img src="imagenesSitio/productos/iconos/<?php print $row_producto['Bandera'] ?>.png" alt="icono"/>
-									</figure>
-								<?php } //termina icono Bandera
-								if ($row_producto['Perforación'] <> "") { //inicia icono perforación?>
-									<figure>
-										<img src="imagenesSitio/productos/iconos/perforacion.png" alt="icono"/>
-										<div><?php print $row_producto['Perforación'] ?></div>
-									</figure>
-								<?php } //termina icono perforación
-								if (($row_producto['Diámetro'] <> "") AND ($cuentaDiametro == 1)) { //inicia icono Diametro?>
-									<figure>
-										<img src="imagenesSitio/productos/iconos/diametro.png" alt="icono"/>
-										<div><?php print $row_producto['diametro'] ?></div>
-									</figure>
-								<?php } //termina icono Diametro
-								if (($row_producto['ParaPerfil'] <> "") AND ($row_producto['cuenta'] == 1)){ //inicia icono perfil?>
-									<figure>
-										<img src="imagenesSitio/productos/iconos/perfil.png" alt="icono"/>
-										<div><?php print $row_producto['ParaPerfil'] ?></div>
-									</figure>
-								<?php } //termina icono perfil de aluminio
-								if (($row_producto['aplicacion'] <> "") AND ($row_producto['aplicacion'] == 1)) { //inicia icono aplicación?>
-									<figure>
-										<img src="imagenesSitio/productos/iconos/<?php print $row_producto['Aplicación'] ?>.png" alt="icono"/>
-									</figure>
-								<?php } //termina icono aplicación
-								if (($row_producto['Acabado'] <> "") AND ($cuentaAcabado == 1)) { //inicia icono acabado?>
-									<figure>
-										<img src="imagenesSitio/productos/iconos/acabado.png" alt="icono"/>
-										<div><?php print $row_producto['Acabado'] ?></div>
-									</figure>
-								<?php } //termina icono acabado
-								if (($row_producto['Material'] <> "") AND ($cuentaMaterial == 1)) { //inicia icono Material?>
-									<figure>
-										<img src="imagenesSitio/productos/iconos/material.png" alt="icono"/>
-										<div><?php print $row_producto['Material'] ?></div>
-									</figure>
-								<?php } //termina icono Material
-								if ($row_producto['Carga'] <> "") { //inicia icono Carga?>
-									<figure>
-										<img src="imagenesSitio/productos/iconos/carga.png" alt="icono"/>
-										<div><?php print $row_producto['Carga'] ?></div>
-									</figure>
-								<?php } //termina icono Carga
-								if ($row_producto['Giro'] <> "") { //inicia icono Giro?>
-									<figure>
-										<img src="imagenesSitio/productos/iconos/giro.png" alt="icono"/>
-										<div><?php print $row_producto['Giro'] ?></div>
-									</figure>
-								<?php } //termina icono Giro
-								if ($row_producto['Vástago'] <> "") { //inicia icono Vastago?>
-									<figure>
-										<img src="imagenesSitio/productos/iconos/vastago.png" alt="icono"/>
-										<div><?php print $row_producto['Vástago'] ?></div>
-									</figure>
-								<?php } //termina icono Vastago
-								if ($row_producto['Adhesión'] <> "") { //inicia icono Adhesión?>
-									<figure>
-										<img src="imagenesSitio/productos/iconos/adhesion.png" alt="icono"/>
-										<div><?php print $row_producto['Adhesión'] ?></div>
-									</figure>
-								<?php } //termina icono Adhesión
-								if ($row_producto['NoHojas'] <> "") { //inicia icono NoHojas?>
-									<figure>
-										<img src="imagenesSitio/productos/iconos/<?php print $row_producto['NoHojas'] ?>.png" alt="icono"/>
-									</figure>
-								<?php } //termina icono NoHojas?>
-							</span>
-	<!-- termina sección de iconos -->
+							</span><!-- termina #codigoMultiple -->
+
+<!-- inicia sección de iconos unicos-->
+							<?php if ($row_producto['cuenta']==1) { //apertura if iconos de códigos unicos?>
+								<span id="iconos">
+									<?php if ($row_producto['Bandera'] <> "") { //inicia icono Bandera?>
+										<figure>
+											<img src="imagenesSitio/productos/iconos/<?php print $row_producto['Bandera'] ?>.png" alt="icono"/>
+										</figure>
+									<?php } //termina icono Bandera
+									if ($row_producto['Perforación'] <> "") { //inicia icono perforación?>
+										<figure>
+											<img src="imagenesSitio/productos/iconos/perforacion.png" alt="icono"/>
+											<div><?php print $row_producto['Perforación'] ?></div>
+										</figure>
+									<?php } //termina icono perforación
+									if (($row_producto['Diámetro'] <> "") AND ($cuentaDiametro == 1)) { //inicia icono Diametro?>
+										<figure>
+											<img src="imagenesSitio/productos/iconos/diametro.png" alt="icono"/>
+											<div><?php print $row_producto['diametro'] ?></div>
+										</figure>
+									<?php } //termina icono Diametro
+									if (($row_producto['ParaPerfil'] <> "") AND ($row_producto['cuenta'] == 1)){ //inicia icono perfil?>
+										<figure>
+											<img src="imagenesSitio/productos/iconos/perfil.png" alt="icono"/>
+											<div><?php print $row_producto['ParaPerfil'] ?></div>
+										</figure>
+									<?php } //termina icono perfil de aluminio
+									if (($row_producto['aplicacion'] <> "") AND ($row_producto['aplicacion'] == 1)) { //inicia icono aplicación?>
+										<figure>
+											<img src="imagenesSitio/productos/iconos/<?php print $row_producto['Aplicación'] ?>.png" alt="icono"/>
+										</figure>
+									<?php } //termina icono aplicación
+									if (($row_producto['Acabado'] <> "") AND ($cuentaAcabado == 1)) { //inicia icono acabado?>
+										<figure>
+											<img src="imagenesSitio/productos/iconos/acabado.png" alt="icono"/>
+											<div><?php print $row_producto['Acabado'] ?></div>
+										</figure>
+									<?php } //termina icono acabado
+									if (($row_producto['Material'] <> "") AND ($cuentaMaterial == 1)) { //inicia icono Material?>
+										<figure>
+											<img src="imagenesSitio/productos/iconos/material.png" alt="icono"/>
+											<div><?php print $row_producto['Material'] ?></div>
+										</figure>
+									<?php } //termina icono Material
+									if ($row_producto['Carga'] <> "") { //inicia icono Carga?>
+										<figure>
+											<img src="imagenesSitio/productos/iconos/carga.png" alt="icono"/>
+											<div><?php print $row_producto['Carga'] ?></div>
+										</figure>
+									<?php } //termina icono Carga
+									if ($row_producto['Giro'] <> "") { //inicia icono Giro?>
+										<figure>
+											<img src="imagenesSitio/productos/iconos/giro.png" alt="icono"/>
+											<div><?php print $row_producto['Giro'] ?></div>
+										</figure>
+									<?php } //termina icono Giro
+									if ($row_producto['Vástago'] <> "") { //inicia icono Vastago?>
+										<figure>
+											<img src="imagenesSitio/productos/iconos/vastago.png" alt="icono"/>
+											<div><?php print $row_producto['Vástago'] ?></div>
+										</figure>
+									<?php } //termina icono Vastago
+									if ($row_producto['Adhesión'] <> "") { //inicia icono Adhesión?>
+										<figure>
+											<img src="imagenesSitio/productos/iconos/adhesion.png" alt="icono"/>
+											<div><?php print $row_producto['Adhesión'] ?></div>
+										</figure>
+									<?php } //termina icono Adhesión
+									if ($row_producto['NoHojas'] <> "") { //inicia icono NoHojas?>
+										<figure>
+											<img src="imagenesSitio/productos/iconos/<?php print $row_producto['NoHojas'] ?>.png" alt="icono"/>
+										</figure>
+									<?php } //termina icono NoHojas?>
+								</span>
+							<?php } //cierre if iconos de códigos unicos?>
+	<!-- termina sección de iconos unicos-->
+
+
 							<?php if ($row_producto['ficha'] <> "") {//inicia if ficha ?>
 								<section id="ficha">
 									<div id="fichaOrden">
