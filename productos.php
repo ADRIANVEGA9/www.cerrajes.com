@@ -35,6 +35,7 @@ $query_productos = $db->Execute("SELECT *, GROUP_CONCAT( DISTINCT id SEPARATOR  
 										 , GROUP_CONCAT( DISTINCT Código SEPARATOR  '<br>') AS codigo, count('ids') AS cuenta
 										 , GROUP_CONCAT( UXC SEPARATOR  '<br>') AS uxc
 										 , GROUP_CONCAT( DISTINCT UXC SEPARATOR  '<br>') AS uxcD
+										 , GROUP_CONCAT( Medida SEPARATOR  '<br>') AS medida
 										 , GROUP_CONCAT( Diámetro SEPARATOR  '<br>') AS diametro
 										 , GROUP_CONCAT( DISTINCT Diámetro SEPARATOR  '<br>') AS diametroD
 										 , GROUP_CONCAT( Freno SEPARATOR  '<br>') AS freno
@@ -50,15 +51,20 @@ $query_productos = $db->Execute("SELECT *, GROUP_CONCAT( DISTINCT id SEPARATOR  
 										 , GROUP_CONCAT( Acabado SEPARATOR  '<br>') AS acabado
 										 , GROUP_CONCAT( DISTINCT Acabado SEPARATOR  '<br>') AS acabadoD
 										 , GROUP_CONCAT( Orientación SEPARATOR  '<br>') AS orientacion
+										 , GROUP_CONCAT( TipoPuerta SEPARATOR  '<br>') AS tipoPuerta
+										 , GROUP_CONCAT( DISTINCT TipoPuerta SEPARATOR  '<br>') AS tipoPuertaD
 										 , GROUP_CONCAT( complementario SEPARATOR  '<br>') AS complemento
 										 , GROUP_CONCAT( opcional SEPARATOR  '<br>') AS opcion
 										 , GROUP_CONCAT( Ajuste SEPARATOR  '<br>') AS ajuste
 								FROM productos
 								WHERE linea = '$id_linea' AND sublinea = '$id_sublinea'
-								GROUP BY id");
+								GROUP BY id
+								ORDER BY id ASC");
 // Verificamos si hemos realizado bien nuestro Query
-var_dump($db);
-$db->debug = true;
+//var_dump($db);
+//var_dump($query_productos);
+//print $db->_errorMsg;
+//print $query_productos;
 if(!$query_productos){
 exit("Error en la consulta productos");
 }
@@ -105,6 +111,8 @@ exit("Error en la consulta productos");
 						$cuentaDiametro = count($diametro);
 						$uxc = explode("<br>", $row_producto['uxcD']);
 						$cuentaUXC = count($uxc);
+						$tipoPuerta = explode("<br>", $row_producto['tipoPuertaD']);
+						$cuentatipoPuerta = count($tipoPuerta);
 						//var_dump($diametro);//var_dump ver el contenido de la variable
 						//var_dump($cuentaDiametro);
 				?>
@@ -141,9 +149,9 @@ exit("Error en la consulta productos");
 								<div id="recuadro"><!-- inicia recuadro de información de códigos multiples -->
 								<?php if ($row_producto['codigo'] <> "") { 
 										$i=1; print '<span><span class="titulo">CÓDIGO</span><br>'.$row_producto['codigo'].'</span>'; }?>
-							 	<?php if (($row_producto['medida'] <> "") AND ((substr($row_producto['medida'], 0, 4)) <> "<br>")) { 
+							 	<?php if (($row_producto['Medida'] <> "") AND ((substr($row_producto['medida'], 0, 4)) <> "<br>")) { 
 										$i++; if ($i>1) { print '<span class="lineaPunteadaCodigo">';} else { print '<span>';}
-										print '<span class="titulo">MEDIDA</span><br>'.$row_producto['medida'].'</span>'; }
+										print '<span class="titulo">MEDIDA</span><br>'.$row_producto['medida'].'</span>';}
 								 	if ((($row_producto['uxc'] <> "")  AND ((substr($row_producto['uxc'], 0, 4)) <> "<br>")) AND ($cuentaUXC>1)){ 
 										$i++; if ($i>1) { print '<span class="lineaPunteadaCodigo">';} else { print '<span>';}
 										print '<span class="titulo">UXC</span><br>'.$row_producto['uxc'].'</span>'; }
@@ -177,9 +185,9 @@ exit("Error en la consulta productos");
 								 	if (($row_producto['orientacion'] <> "")  AND ((substr($row_producto['orientacion'], 0, 4)) <> "<br>")){ 
 										$i++; if ($i>1) { print '<span class="lineaPunteadaCodigo">';} else { print '<span>';}
 										print '<span class="titulo">orientación</span><br>'.$row_producto['orientacion'].'</span>'; }
-								 	if (($row_producto['puerta'] <> "")  AND ((substr($row_producto['puerta'], 0, 4)) <> "<br>")){ 
+								 	if ((($row_producto['TipoPuerta'] <> "")  AND ((substr($row_producto['tipoPuerta'], 0, 4)) <> "<br>")) AND ($tipoPuerta>1)){ 
 										$i++; if ($i>1) { print '<span class="lineaPunteadaCodigo">';} else { print '<span>';}
-										print '<span class="titulo">Tipo de puerta</span><br>'.$row_producto['puerta'].'</span>'; }
+										print '<span class="titulo">Tipo de puerta</span><br>'.$row_producto['tipoPuerta'].'</span>';}
 								 	if ((($row_producto['material'] <> "")  AND ((substr($row_producto['material'], 0, 4)) <> "<br>")) AND ($cuentaMaterial>1)){ 
 										$i++; if ($i>1) { print '<span class="lineaPunteadaCodigo">';} else { print '<span>';}
 										print '<span class="titulo">material</span><br>'.$row_producto['material'].'</span>'; }
@@ -272,11 +280,11 @@ exit("Error en la consulta productos");
 										<div><?php print $row_producto['Adhesión'] ?></div>
 									</figure>
 								<?php } //termina icono Adhesión
-								if ($row_producto['No. hojas'] <> "") { //inicia icono No. hojas?>
+								if ($row_producto['NoHojas'] <> "") { //inicia icono NoHojas?>
 									<figure>
-										<img src="imagenesSitio/productos/iconos/<?php print $row_producto['No. hojas'] ?>.png" alt="icono"/>
+										<img src="imagenesSitio/productos/iconos/<?php print $row_producto['NoHojas'] ?>.png" alt="icono"/>
 									</figure>
-								<?php } //termina icono No. hojas?>
+								<?php } //termina icono NoHojas?>
 							</span>
 	<!-- termina sección de iconos -->
 							<?php if ($row_producto['ficha'] <> "") {//inicia if ficha ?>
