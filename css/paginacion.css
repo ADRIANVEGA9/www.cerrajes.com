@@ -1,0 +1,45 @@
+*{	/* Universal page reset */
+	margin:0;
+	padding:0;
+}
+a.swShowPage{
+	background-color: #71BF44;
+	border-radius: 7px;
+	color: #EFE;
+	float: left;
+	font-size: .8em;
+	height: 1.2em;
+	line-height: 1.2em;
+	margin: 4px 3px;
+	text-align: center;
+	text-decoration: none;
+	width: 1.2em;
+}
+
+a.swShowPage:hover,
+a.swShowPage.active{
+	background-color: #EFE;
+	box-shadow: 0 0 8px #71BF44 inset;
+	color: #063304;
+}
+#holder{	/* The unordered list that is to be split into pages */
+	overflow: hidden;
+	position: relative;
+	top: 25px;
+	width: 98%;
+}
+#holder li{
+	float: left;
+	list-style: none outside none;
+	margin: 10px 10px 0;
+	margin-bottom: 25px;
+}
+#mostrarFI{	/* The main container div */
+	margin:50px auto;
+	position:relative;
+	width:100%;
+}
+.swControls{
+	position: absolute;
+	top: -15px;
+}
