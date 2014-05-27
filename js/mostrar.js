@@ -26,7 +26,7 @@ var $ft  		= $('#productos #v'+$idn);
 	// console.log(e);
 		 $idn = this.id;
 		 $txt = $('#productos #producto #codigo #instructivo #'+$idn).text();
-		console.log("entré a la función"+$txt);
+		console.log("entré a la función mostrarOcultarI"+$txt+$idn);
 var $ii  		= $('#productos #v'+$idn);
 
 	$test=$('#productos #v'+$idn).css('display');
@@ -39,6 +39,7 @@ var $ii  		= $('#productos #v'+$idn);
 		$('#productos #producto #codigo #instructivo #'+$idn).text('Mostrar ');
 		$('#productos #producto #codigo #instructivo #'+$idn).removeClass('ocultar')	
 	};
-
 	$ii.slideToggle( 300 );
+
+	generarSlide();
 }

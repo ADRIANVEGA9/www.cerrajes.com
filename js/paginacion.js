@@ -94,13 +94,14 @@ $.fn.sweetPages = function(opts){
 }})(jQuery);
 
 
-$(document).ready(function(){
+function generarSlide(){
 	/* The following code is executed once the DOM is loaded */
-	
+	$idm="v"+$idn;
+	console.log("entre a la función generarSlide id="+$idm);
 	// Calling the jQuery plugin and splitting the
 	// #holder UL into pages of 3 LIs each:
 	
-	$('#holder').sweetPages({perPage:1});
+	$('#'+$idm+' #holder').sweetPages({perPage:1});
 	
 	// The default behaviour of the plugin is to insert the 
 	// page links in the ul, but we need them in the main container:
@@ -108,4 +109,4 @@ $(document).ready(function(){
 	var controls = $('.swControls').detach();
 	controls.appendTo('#mostrarFI');
 	
-});
+};
