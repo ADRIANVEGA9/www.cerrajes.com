@@ -6,7 +6,7 @@ $.fn.sweetPages = function(opts){
 	// If no options were passed, create an empty opts object
 	if(!opts) opts = {};
 	
-	var resultsPerPage = opts.perPage || 3;
+	var resultsPerPage = opts.perPage || 1;
 	
 	// The plugin works best for unordered lists, althugh ols would do just as well:
 	var ul = this;
@@ -22,7 +22,7 @@ $.fn.sweetPages = function(opts){
 	var pagesNumber = Math.ceil(li.length/resultsPerPage);
 	
 	// If the pages are less than two, do nothing:
-	if(pagesNumber<2) return this;
+	if(pagesNumber<1) return this;
 
 	// Creating the controls div:
 	var swControls = $('<div class="swControls">');
@@ -58,13 +58,14 @@ $.fn.sweetPages = function(opts){
 		
 		elem.css('float','left').width(ul.width());
 	});
-	
-	swPage.wrapAll('<div class="swSlider" />');
+	$sID = "#s"+$id;
+	swPage.wrapAll('<div id="'+$sID+'" class="swSlider" />');
 	
 	// Setting the height of the ul to the height of the tallest page:
 	ul.height(maxHeight);
 	
 	var swSlider = ul.find('.swSlider');
+	console.log("id: " + $sID);
 	swSlider.append('<div class="clear" />').width(totalWidth);
 
 	var hyperLinks = ul.find('a.swShowPage');
@@ -75,6 +76,7 @@ $.fn.sweetPages = function(opts){
 		// (which contains all the pages) and mark it as active:
 
 		$(this).addClass('active').siblings().removeClass('active');
+		console.log('this addclass'+ $(this));
 		
 		swSlider.stop().animate({'margin-left':-(parseInt($(this).text())-1)*ul.width()},'slow');
 		e.preventDefault();
@@ -93,20 +95,21 @@ $.fn.sweetPages = function(opts){
 	
 }})(jQuery);
 
-
-function generarSlide(){
+// $('#productos .lanzar').click( crearSlide );
+function crearSlide(){
+	$vID = "#v"+$idn;
+	console.log("estoy dentro de crearSlide con el id="+$idn +" y he creado "+$vID);
 	/* The following code is executed once the DOM is loaded */
-	$idm="v"+$idn;
-	console.log("entre a la función generarSlide id="+$idm);
+	
 	// Calling the jQuery plugin and splitting the
 	// #holder UL into pages of 3 LIs each:
 	
-	$('#'+$idm+' #holder').sweetPages({perPage:1});
+	$($vID + ' #holder').sweetPages({perPage:1});;
 	
 	// The default behaviour of the plugin is to insert the 
 	// page links in the ul, but we need them in the main container:
 
 	var controls = $('.swControls').detach();
-	controls.appendTo('#mostrarFI');
+	controls.appendTo($vID);
 	
 };

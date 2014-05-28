@@ -28,16 +28,19 @@ a.swShowPage.active{
 	top: 25px;
 	width: 98%;
 }
+#holder img {
+	width: 100%;
+}
 #holder li{
 	float: left;
 	list-style: none outside none;
-	margin: 10px 10px 0;
-	margin-bottom: 25px;
+	margin: 10px 10px 25px;
 }
-#mostrarFI{	/* The main container div */
+#productos .mostrar
+{	/* The main container div */
 	margin:50px auto;
 	position:relative;
-	width:100%;
+	width:15%;
 }
 .swControls{
 	position: absolute;
