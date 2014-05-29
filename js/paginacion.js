@@ -1,4 +1,4 @@
-(function($){
+$(document).ready( function() {
 
 // Creating the sweetPages jQuery plugin:
 $.fn.sweetPages = function(opts){
@@ -58,7 +58,7 @@ $.fn.sweetPages = function(opts){
 		
 		elem.css('float','left').width(ul.width());
 	});
-	$sID = "#s"+$id;
+	$sID = "#s"+$idn;
 	swPage.wrapAll('<div id="'+$sID+'" class="swSlider" />');
 	
 	// Setting the height of the ul to the height of the tallest page:
@@ -104,12 +104,12 @@ function crearSlide(){
 	// Calling the jQuery plugin and splitting the
 	// #holder UL into pages of 3 LIs each:
 	
-	$($vID + ' #holder').sweetPages({perPage:1});;
+	$($vID + ' #holder').sweetPages({perPage:1});
 	
 	// The default behaviour of the plugin is to insert the 
 	// page links in the ul, but we need them in the main container:
 
 	var controls = $('.swControls').detach();
-	controls.appendTo($vID);
+	controls.appendTo($vID + ' #holder');
 	
 };

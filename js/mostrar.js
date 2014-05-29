@@ -41,5 +41,5 @@ var $ii  		= $('#productos #v'+$idn);
 	};
 	$ii.slideToggle( 300 );
 
-	generarSlide();
+	crearSlide();
 }

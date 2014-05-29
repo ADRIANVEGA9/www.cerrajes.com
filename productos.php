@@ -179,7 +179,7 @@ require 'controladores/consulta.php';
 	</section>
 	<?php require(".footer.php") ?>
 
-<script src="js/mostrar.js"></script>
 <script src="js/paginacion.js"></script>
+<script src="js/mostrar.js"></script>
 </body>
 </html>	
