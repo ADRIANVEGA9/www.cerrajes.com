@@ -10,36 +10,37 @@ var $ft  		= $('#productos #v'+$idn);
 	$test=$('#productos #v'+$idn).css('display');
 	if ($('#productos #v'+$idn).css('display') == 'none') {
 		$('#productos #producto #codigo #ficha #'+$idn).text('Ocultar ');
-		$('#productos #producto #codigo #ficha #'+$idn).addClass('ocultar')
+		$('#productos #producto #codigo #ficha #'+$idn).addClass('ocultar');
 	} 
 	if ($('#productos #v'+$idn).css('display') == 'block') {
 		$('#productos #producto #codigo #ficha #'+$idn).text('Mostrar ');
-		$('#productos #producto #codigo #ficha #'+$idn).removeClass('ocultar')	
+		$('#productos #producto #codigo #ficha #'+$idn).removeClass('ocultar');	
 	};
 
 	$ft.slideToggle( 300 );
+	crearSlide();
 }
 
 	$('#productos #producto #codigo #instructivo .mostrar').click( mostrarOcultarI );
 
 	function mostrarOcultarI(e){
 	// console.log(e);
-		 $idn = this.id;
-		 $txt = $('#productos #producto #codigo #instructivo #'+$idn).text();
+		$idn 		= this.id;
+		$verSlide	= 0;
+		$txt 		= $('#productos #producto #codigo #instructivo #'+$idn).text();
+		$ii  		= $('#productos #v'+$idn);
 		console.log("entré a la función mostrarOcultarI"+$txt+$idn);
-var $ii  		= $('#productos #v'+$idn);
 
 	$test=$('#productos #v'+$idn).css('display');
 	console.log('es none? '+$test);
 	if ($('#productos #v'+$idn).css('display') == 'none') {
 		$('#productos #producto #codigo #instructivo #'+$idn).text('Ocultar ');
-		$('#productos #producto #codigo #instructivo #'+$idn).addClass('ocultar')
+		$('#productos #producto #codigo #instructivo #'+$idn).addClass('ocultar');
 	} 
 	if ($('#productos #v'+$idn).css('display') == 'block') {
 		$('#productos #producto #codigo #instructivo #'+$idn).text('Mostrar ');
-		$('#productos #producto #codigo #instructivo #'+$idn).removeClass('ocultar')	
+		$('#productos #producto #codigo #instructivo #'+$idn).removeClass('ocultar');	
 	};
 	$ii.slideToggle( 300 );
-
 	crearSlide();
 }

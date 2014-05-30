@@ -21,11 +21,15 @@ a.swShowPage.active{
 	background-color: #EFE;
 	box-shadow: 0 0 8px #71BF44 inset;
 	color: #063304;
+	text-decoration: none !important;
+}
+a.swShowPage.active{
+	cursor: default;
 }
 #holder{	/* The unordered list that is to be split into pages */
 	overflow: hidden;
+	padding-top: 30px;
 	position: relative;
-	top: 25px;
 	width: 98%;
 }
 #holder img {
@@ -44,5 +48,5 @@ a.swShowPage.active{
 }
 .swControls{
 	position: absolute;
-	top: -15px;
+	top: 5px;
 }

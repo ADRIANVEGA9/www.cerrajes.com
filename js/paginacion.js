@@ -25,8 +25,16 @@ $.fn.sweetPages = function(opts){
 	if(pagesNumber<1) return this;
 
 	// Creating the controls div:
-	var swControls = $('<div class="swControls">');
-	
+	$swID = "sw"+$idn;
+
+	$('#holder #'+$swID).find('.swControls');
+	$sw = $('#holder #'+$swID).find('.swControls');
+	console.log("swID= "+$swID);
+
+	if (!$('#'+$swID).hasClass('swControls')){
+	var swControls = $('<div id="'+$swID+'" class="swControls">');
+	}
+
 	for(var i=0;i<pagesNumber;i++)
 	{
 		// Slice a portion of the lis, and wrap it in a swPage div:
@@ -58,7 +66,7 @@ $.fn.sweetPages = function(opts){
 		
 		elem.css('float','left').width(ul.width());
 	});
-	$sID = "#s"+$idn;
+	$sID = "s"+$idn;
 	swPage.wrapAll('<div id="'+$sID+'" class="swSlider" />');
 	
 	// Setting the height of the ul to the height of the tallest page:
@@ -76,7 +84,6 @@ $.fn.sweetPages = function(opts){
 		// (which contains all the pages) and mark it as active:
 
 		$(this).addClass('active').siblings().removeClass('active');
-		console.log('this addclass'+ $(this));
 		
 		swSlider.stop().animate({'margin-left':-(parseInt($(this).text())-1)*ul.width()},'slow');
 		e.preventDefault();
@@ -109,7 +116,7 @@ function crearSlide(){
 	// The default behaviour of the plugin is to insert the 
 	// page links in the ul, but we need them in the main container:
 
-	var controls = $('.swControls').detach();
+	var controls = $($swID+'.swControls').detach();
 	controls.appendTo($vID + ' #holder');
 	
 };

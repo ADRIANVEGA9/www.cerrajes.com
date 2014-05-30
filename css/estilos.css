@@ -541,6 +541,10 @@ nav td.activo
 	vertical-align: top;
 	width: 27%;
 }
+#contenido #productos #producto #codigo .altoMinimo{
+	height: auto;
+	min-height: 110px;
+}
 #contenido #productos #producto #codigo #codigoUM #logo {
 	left: -131px;
 	position: absolute;
@@ -609,7 +613,7 @@ nav td.activo
 }
 #contenido #productos #producto #codigo #ficha #fichaMostrar,
 #contenido #productos #producto #codigo #instructivo #instructMostrar{
-	width: 10%;
+	width: 12%;
 }
 #contenido #productos #producto #codigo #ficha #fichaOrden,
 #contenido #productos #producto #codigo #instructivo #instructOrden{
@@ -1067,7 +1071,7 @@ nav td.activo
 .mostrar:after
 {
 	color: #71BF44;
-	content: "\e600 ";
+	content: "\e606 ";
 	font-family: 'icomoon';
 	font-size: 2em;
 	font-style: normal;
@@ -1076,7 +1080,7 @@ nav td.activo
 .ocultar:after
 {
 	color: #71BF44;
-	content: "\e601 ";
+	content: "\e607 ";
 	font-family: 'icomoon';
 	font-size: 2em;
 	font-style: normal;

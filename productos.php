@@ -71,7 +71,7 @@ require 'controladores/consulta.php';
 						<section id="codigo"><!-- inicia sección de información de producto -->
 							<span id="descripcion"><?php print $row_producto['Descripción'].' '; if ($row_producto['cuenta']==1 && $row_producto['Medida'] <> ""){ print $row_producto['Medida'];}?></span>
 							
-							<span id="codigoUM"><!-- inicia span #codigoUM -->
+							<span id="codigoUM" <?php if ($row_producto['cuenta']>1) { print 'class="altoMinimo"'; }?> ><!-- inicia span #codigoUM -->
 								<?php if ($row_producto['cuenta']==1) { //si cuenta es == 1, es un solo código?>
 									<span>C&oacute;digo: </span><span class="codigo"><?php print $row_producto['codigo']?></span><br>
 								<?php } //termina código unico?>
