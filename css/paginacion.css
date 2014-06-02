@@ -5,7 +5,7 @@
 a.swShowPage{
 	background-color: #71BF44;
 	border-radius: 7px;
-	color: #EFE;
+	color: #EFE !important;
 	float: left;
 	font-size: .8em;
 	height: 1.2em;
@@ -19,8 +19,8 @@ a.swShowPage{
 a.swShowPage:hover,
 a.swShowPage.active{
 	background-color: #EFE;
-	box-shadow: 0 0 8px #71BF44 inset;
-	color: #063304;
+	box-shadow: 0 0 8px #999 inset;
+	color: #063304 !important;
 	text-decoration: none !important;
 }
 a.swShowPage.active{
