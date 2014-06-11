@@ -26,7 +26,7 @@
 					<figure>
 						<a id="img" href="http://www.cerrajes.me/catalogos/virtual/industrial/index.html" target="_blank" title="Ver cátalogo virtual Industrial">
 							<img src="imagenesSitio/catalogos/industrial.png" alt="Cátalogo Industrial"/>
-						<figcaption>CCI001 Cátalogo Industrial</figcaption>
+						<figcaption>Cátalogo Industrial</figcaption>
 						</a>
 						<a id="down" class="icon-download" href="http://www.cerrajes.me/catalogos/pdf/industrial.pdf" target="_blank" title="Descargar pdf"></a>
 					</figure>

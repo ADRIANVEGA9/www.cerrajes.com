@@ -1,4 +1,3 @@
-<script>	$sw	=	0;	</script>
 <article class="mostrarFI" id="vFT<?php print $row_producto['Código'];?>"> <!-- Mostrar ficha -->
 <ul id="holder">
 	<?php //var_dump($row_producto['paginasf']);

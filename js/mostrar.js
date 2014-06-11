@@ -42,5 +42,6 @@ var $ft  		= $('#productos #v'+$idn);
 		$('#productos #producto #codigo #instructivo #'+$idn).removeClass('ocultar');	
 	};
 	$ii.slideToggle( 300 );
+	
 	crearSlide();
 }
