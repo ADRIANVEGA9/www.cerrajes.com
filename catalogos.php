@@ -49,6 +49,16 @@
 						<a id="down" class="icon-download" href="http://www.cerrajes.me/catalogos/pdf/vauth-sagel.pdf" target="_blank" title="Descargar pdf"></a>
 					</figure>
 
+
+					<figure>
+						<a href="http://www.cerrajes.me/catalogos/virtual/shine/index.html" target="_blank" title="Ver cátalogo virtual Shine">
+							<img src="imagenesSitio/catalogos/shine.png" alt="Cátalogo Shine"/>
+						<figcaption> Cátalogo Shine</figcaption>
+						</a>
+						<a id="down" class="icon-download" href="http://www.cerrajes.me/catalogos/pdf/shine.pdf" target="_blank" title="Descargar pdf"></a>
+					</figure>
+
+
 				</article>	
 
 			</section>

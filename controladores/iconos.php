@@ -11,17 +11,37 @@ if ($row_producto['Perforación'] <> "") { //inicia icono perforación?>
 if (($row_producto['Diámetro'] <> "") AND ($cuentaDiametro == 1)) { //inicia icono Diametro?>
 	<figure>
 		<img src="imagenesSitio/productos/iconos/diametro.png" alt="icono"/>
-		<div><?php print $row_producto['diametro'] ?></div>
+		<div><?php print $row_producto['diametroD']; ?></div>
 	</figure><?php } //termina icono Diametro
 if (($row_producto['ParaPerfil'] <> "") AND ($row_producto['cuenta'] == 1)){ //inicia icono perfil?>
 	<figure>
 		<img src="imagenesSitio/productos/iconos/perfil.png" alt="icono"/>
 		<div><?php print $row_producto['ParaPerfil'] ?></div>
 	</figure><?php } //termina icono perfil de aluminio
-if (($row_producto['aplicacion'] <> "") AND ($row_producto['aplicacion'] == 1)) { //inicia icono aplicación?>
+if (($row_producto['aplicacion'] <> "") AND ($row_producto['cuenta'] == 1)) { //inicia icono aplicación?>
 	<figure>
 		<img src="imagenesSitio/productos/iconos/<?php print $row_producto['Aplicación'] ?>.png" alt="icono"/>
 	</figure><?php } //termina icono aplicación
+if ($row_producto['espesor'] <> "") { //inicia icono espesor?>
+	<figure>
+		<img src="imagenesSitio/productos/iconos/espesor.png" alt="icono"/>
+		<div><?php print $row_producto['espesor'] ?></div>
+	</figure><?php } //termina icono espesor
+if ($row_producto['profundidad'] <> "") { //inicia icono profundidad?>
+	<figure>
+		<img src="imagenesSitio/productos/iconos/profundidad.png" alt="icono"/>
+		<div><?php print $row_producto['profundidad'] ?></div>
+	</figure><?php } //termina icono profundidad
+if ($row_producto['angulo'] <> "") { //inicia icono angulo?>
+	<figure>
+		<img src="imagenesSitio/productos/iconos/angulo.png" alt="icono"/>
+		<div><?php print $row_producto['angulo'] ?></div>
+	</figure><?php } //termina icono angulo
+if (($row_producto['cierre'] <> "") AND ($row_producto['cuenta']==1)){ //inicia icono cierre?>
+	<figure>
+		<img src="imagenesSitio/productos/iconos/cierre.png" alt="icono"/>
+		<div><?php print $row_producto['cierre'] ?></div>
+	</figure><?php } //termina icono cierre
 if (($row_producto['Acabado'] <> "") AND ($cuentaAcabado == 1)) { //inicia icono acabado?>
 	<figure>
 		<img src="imagenesSitio/productos/iconos/acabado.png" alt="icono"/>
@@ -55,4 +75,25 @@ if ($row_producto['Adhesión'] <> "") { //inicia icono Adhesión?>
 if ($row_producto['NoHojas'] <> "") { //inicia icono NoHojas?>
 	<figure>
 		<img src="imagenesSitio/productos/iconos/<?php print $row_producto['NoHojas'] ?>.png" alt="icono"/>
-	</figure><?php } //termina icono NoHojas?>
+	</figure><?php } //termina icono NoHojas
+
+	
+if ($row_producto['push'] <> "") { //inicia icono push?>
+	<figure>
+		<img src="imagenesSitio/productos/iconos/<?php print $row_producto['push'] ?>.png" alt="icono"/>
+	</figure><?php } //termina icono push
+if ($row_producto['smove'] <> "") { //inicia icono smove?>
+	<figure>
+		<img src="imagenesSitio/productos/iconos/<?php print $row_producto['smove'] ?>.png" alt="icono"/>
+	</figure><?php } //termina icono smove
+if ($row_producto['voltaje'] <> "") { //inicia icono voltaje?>
+	<figure>
+		<img src="imagenesSitio/productos/iconos/voltaje.png" alt="icono"/>
+		<div><?php print $row_producto['voltaje'] ?></div>
+	</figure><?php } //termina icono voltaje
+if ($row_producto['consumo'] <> "") { //inicia icono consumo?>
+	<figure>
+		<img src="imagenesSitio/productos/iconos/consumo.png" alt="icono"/>
+		<div><?php print $row_producto['consumo'] ?></div>
+	</figure><?php } //termina icono consumo
+?>

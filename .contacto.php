@@ -139,22 +139,9 @@ background-position: center center;
         <td class=\"estilo1\" colspan=\"2\">".$_POST['giro']."</td>
         </tr>
       <tr>
-        <td class=\"estilo1\">Direcci&oacute;n&nbsp;(Empresa&nbsp;y/o&nbsp;particular)</td>
-        <td class=\"estilo1\" colspan=\"2\">".$_POST['dir']."</td>
-        </tr>
-      <tr>
-        <td class=\"estilo1\">Cargo en la empresa</td>
-        <td class=\"estilo1\" colspan=\"2\">".$_POST['cargo']."</td>
-        </tr>
-      <tr>
         <td class=\"estilo1\">Tel&eacute;fono oficina</td>
         <td class=\"estilo1\" width=\"30\">".$_POST['ladaT']."</td>
         <td class=\"estilo1\" width=\"245\">".$_POST['telefono']."</td>
-        </tr>
-      <tr>
-        <td class=\"estilo1\">Fax</td>
-        <td class=\"estilo1\">".$_POST['ladaF']."</td>
-        <td class=\"estilo1\">".$_POST['fax']."</td>
         </tr>
       <tr>
         <td class=\"estilo1\">Municipio</td>
@@ -167,10 +154,6 @@ background-position: center center;
       <tr>
         <td class=\"estilo1\">Correo electr&oacute;nico</td>
         <td class=\"estilo1\" colspan=\"2\">".$_POST['correo']."</td>
-        </tr>
-      <tr>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
         </tr>
       <tr>
         <td class=\"estilo1\">Pagina web</td>
@@ -204,13 +187,39 @@ $micorreo = "avega@cerrajes.com";/*contacto@cerrajes.com*/
 $correoCli = "$_POST[correo]";
 $headers .= "Reply-To: contacto@cerrajes.com\r\n"; /*contacto@cerrajes.com*/ 
 $headers .= "From: Contacto Cerrajes<avega@cerrajes.com>\r\n";/*contacto@cerrajes.com*/
-$headers .= 'Bcc: avega@tiendascerrajes.com' . "\r\n";
+$headers .= 'Bcc: avega@cerrajes.com' . "\r\n";
 //En este ejemplo suponemos que el mail del destinatario lo hemos enviado desde un formulario con el método post, pero es indistinto desde donde se lo obtenga (consulta a la base de datos, almacenado en una variable de sesi&oacute;n, enviado por get,etc.)
 ini_set("SMTP","mail.cerrajes.com");/*mail.cerrajes.com*/
 ini_set("smtp_port","587");/*25*/
 ini_set("sendmail_from","mail.cerrajes.com");	/*mail.cerrajes.com*/
 mail($micorreo, " (correo recibido de www.cerrajes.com )\r\n", utf8_decode($html),$headers)or die ("<article id='enviado'>Su mensaje no pudo ser enviado, intente mas tarde.</article>");  
-$htmlCliente .="<div align=\"center\"><span class=\"estilo3\">Gracias por contactar a Cerrajes, recibimos sus comentarios, en breve nos pondremos en contacto con usted.</span></div>";
+$htmlCliente ="<html >
+		<head>
+		<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />
+		<title>Documento sin título</title>
+		<style type=\"text/css\">
+		html {
+		height: 100%;
+		}
+		body{ 
+			background-color:#FFFFFF;
+			background-size: 100% 100%;
+			background-position: center center;
+			height: 100%;
+			text-align:left;
+			margin:0 auto;
+			z-index:0;
+		}
+		.estilo3 {
+			font-family: Calibri, \"Trebuchet MS\";
+			font-size:11px;
+			color:#80817C;
+			text-align:left;
+		}
+		<div align=\"center\"><span class=\"estilo3\">Gracias por contactar a Cerrajes, recibimos sus comentarios, en breve nos pondremos en contacto con usted.</span><br>
+			<figure><img src=\"http://www.cerrajes.com/inicioC.png\"></figure>
+		</div>
+		";
 mail($correoCli, " (correo recibido de www.cerrajes.com - Comentario)\r\n", utf8_decode($htmlCliente),$headers)or die ("Su mensaje no pudo ser enviado, intente mas tarde."); 
 ?>				
 	<article id="enviado">
@@ -224,8 +233,7 @@ mail($correoCli, " (correo recibido de www.cerrajes.com - Comentario)\r\n", utf8
 /* This Doppler API Example use an existing library known as NUSOAP V0.7.1
 * Information about this lib can be found at http://sourceforge.net/projects/nusoap/ 
 */
-
-require_once("nusoap/nusoap.php");
+require'nusoap/nusoap.php';
 
 $proxyhost = isset($_POST['proxyhost']) ? $_POST['proxyhost'] : '';
 $proxyport = isset($_POST['proxyport']) ? $_POST['proxyport'] : '';

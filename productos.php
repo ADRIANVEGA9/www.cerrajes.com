@@ -54,9 +54,10 @@ require 'controladores/consulta.php';
 		<?php
 		foreach($query_titulo as $t => $row_titulo) 
 		{//inicia Titulos linea - sublinea 			print $query_productos;?> 
-			<div class="tituloSeccion"><strong><?php echo $row_titulo['linea'];?></strong></div>	
+			<div class="tituloSeccion"><strong><?php echo $row_titulo['linea'];?></strong>
+				<span id="sublinea"> / <?php echo $row_titulo['sublinea'];?></span>
+			</div>	
 			<section id="productos">
-				<span id="sublinea"><?php echo $row_titulo['sublinea'];?></span>
 				<?php } //termina Titulos linea - sublinea
 					foreach($query_productos as $p => $row_producto)
 					{//inicia foreach productos
@@ -70,14 +71,26 @@ require 'controladores/consulta.php';
 						
 						<section id="codigo"><!-- inicia sección de información de producto -->
 							<span id="descripcion"><?php print $row_producto['Descripción'].' '; if ($row_producto['cuenta']==1 && $row_producto['Medida'] <> ""){ print $row_producto['Medida'];}?></span>
-							
-							<span id="codigoUM" <?php if ($row_producto['cuenta']>1) { print 'class="altoMinimo"'; }?> ><!-- inicia span #codigoUM -->
-								<?php if ($row_producto['cuenta']==1) { //si cuenta es == 1, es un solo código?>
+
+							<span 
+							<?php if ($row_producto['imgRecuadro'] == '') { //sino tiene información de recuadro en imagen us ael ancho de codigoUM de lo contrario usa codigoNo
+								print 'id="codigoUM"';} else { 
+									print 'id="codigoNo"';}?> 
+								<?php if ($row_producto['cuenta']>1) { print 'class="altoMinimo"'; }?> 
+							><!-- inicia span #codigoUM -->
+
+								<?php if (($row_producto['cuenta']==1) AND ($row_producto['imgRecuadro'] == '')) { //si cuenta es == 1, es un solo código, cuando no tenga imagen de recuadro pone el código?>
 									<span>C&oacute;digo: </span><span class="codigo"><?php print $row_producto['codigo']?></span><br>
-								<?php } //termina código unico?>
-																
-								<span>UM: <?php print $row_producto['UM'];?></span><br>
-								<?if  ( ($row_producto['UXC'] <> "") AND ($cuentaUXC == 1)) {								?>
+									<?php if ($row_producto['nota']<>'') { ?>
+												<span class="sobrePedido"><?php print $row_producto['nota'] ?></span><br>
+										<?php } ?>
+								<?php } //termina código unico
+
+									if ($row_producto['UM']<>'') { ?>														
+										<span>UM: <?php print $row_producto['UM'];?></span><br>
+								<?php } ?>
+								
+								<?php if  ( ($row_producto['UXC'] <> "") AND ($cuentaUXC == 1)) {								?>
 									<span>UxC: <?php print $row_producto['UXC'];?></span><br>
 								<?php } ?>
 
@@ -88,34 +101,52 @@ require 'controladores/consulta.php';
 								<?php } ?>
 
 	<!-- inicia sección de iconos -->
-								<?php if ($row_producto['cuenta']>1) { ?>
+								<?php if (($row_producto['cuenta']>1) AND ($row_producto['imgRecuadro'] == '')) { //iconos para códigos multiples?>
 									<span id="iconosM">
+										<?php require 'controladores/iconos.php';?>										
+									</span>
+								<?php } 
+
+									 if ($row_producto['imgRecuadro'] <> '') { //iconos verticales, para cuando se usa imagen para información de recuadro?>
+									<span id="iconosV">
 										<?php require 'controladores/iconos.php';?>										
 									</span>
 								<?php } ?>
 	<!-- termina sección de iconos -->
 							</span><!-- termina span #codigoUM -->
 
-							<span id="codigoMultiple"><!-- inicia span codigoMultiple -->
-							<?php if ($row_producto['cuenta']>1) 
-							{//si cuenta es > 1, es código multiple
-								$i=0; ?>
-								<div id="recuadro"><!-- inicia recuadro de información de códigos multiples -->
-									<?php require 'controladores/multiple.php';?>
-								</div><!-- termina recuadro de información de códigos multiples -->
-							<?php 
-							}//Complementos y opcionales para códigos unicos.
-							if (($row_producto['complemento'] <> "")  AND ($row_producto['cuenta']==1)) {
-								print '<span class="verde">»</span><span>'.$row_producto['complemento'].'</span>';
-							}
-							if (($row_producto['opcion'] <> "")  AND ($row_producto['cuenta']==1)) {
-								print '<span class="verde"><br>»</span><span>'.$row_producto['opcion'].'</span>';
-							}
-							 ?>
-							</span><!-- termina #codigoMultiple -->
+							<span id="codigoMultiple"><!-- inicia span recuadro de información -->
+								<?php if ($row_producto['cuenta']>1) 
+								{//si cuenta es > 1, es código multiple
+									$i=0; 
+									if ($row_producto['imgRecuadro'] =='') //si el recuadro de información es una imagen no entra
+									{?>									
+										<div id="recuadro"><!-- inicia recuadro de información de códigos multiples -->
+											<?php require 'controladores/multiple.php';?>
+										</div><!-- termina recuadro de información de códigos multiples -->
+								<?php 
+									} else { //apertura else imgRecuadro, si la información esta como imagen pone la imagen?>
+
+									<img src="http://www.cerrajes.me/imgCerrajes/recuadro/<?php print $row_producto['imgRecuadro'] ?>.png" alt="">
+								<?php
+									} //cierre else imgRecuadro
+								}//Complementos y opcionales para códigos unicos.
+
+								if (($row_producto['imgRecuadro'] <>'') AND ($row_producto['cuenta']==1)) { ?>
+									<span id="imgRecuadro<?php if ($row_producto['imagenA']=='0') {print 1;} ?>">Productos que lo conforman</span>
+									<img src="http://www.cerrajes.me/imgCerrajes/recuadro/<?php print $row_producto['imgRecuadro'] ?>.png" alt="">									
+								<?php }
+								if (($row_producto['complemento'] <> "")  AND ( ($row_producto['cuenta']==1) OR (($cuentaComplemento==1) AND ($row_producto['cuenta']<>1)) ) ) {
+									print '<div><span class="verde">»</span><span>'.$row_producto['complemento'].'</span></div>';
+								}
+								if (($row_producto['opcion'] <> "")  AND ( ($row_producto['cuenta']==1) OR (($cuentaOpcion==1) AND ($row_producto['cuenta']<>1)) ) ) { 
+									print '<div><span class="verde"><br>»</span><span>'.$row_producto['opcion'].'</span></div>';
+								}
+								 ?>
+							</span><!-- termina #codigoMultiple, recuadro de información-->
 
 <!-- inicia sección de iconos unicos-->
-							<?php if ($row_producto['cuenta']==1) { ?>
+							<?php if (($row_producto['cuenta']==1) AND ($row_producto['imgRecuadro'] == '')){ ?>
 								<span id="iconos">
 									<?php require 'controladores/iconos.php';?>
 								</span>
@@ -157,13 +188,15 @@ require 'controladores/consulta.php';
 										</span>
 									</div>
 								</section>
-							<?php } //termina if instructivo?>
+							<?php } //termina if instructivo ?>
 
 						</section><!-- termina sección de información de producto -->
 
+						<?php if ($row_producto['imagenA'] <> '0') {?>
 						<figure id="aplicado"> <!-- imagen producto aplicado -->
 							<img src="http://cerrajes.me/imgCerrajes/aplicado/<?php print $row_producto['imagenA']?>.png" alt="<?php print $row_producto['imagenA']?>"/>
 						</figure>
+						<?php }?>
 
 					</section>
 

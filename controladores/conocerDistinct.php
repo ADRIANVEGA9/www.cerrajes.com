@@ -13,7 +13,16 @@
 
 	$tipoPuerta = explode("<br>", $row_producto['tipoPuertaD']);
 	$cuentatipoPuerta = count($tipoPuerta);
+
+	$cierre = explode("<br>", $row_producto['cierreD']);
+	$cuentacierre = count($cierre);
+
+	$complemento = explode("<br>", $row_producto['complemento']);
+	$cuentaComplemento = count($complemento);
+
+	$opcion = explode("<br>", $row_producto['opcion']);
+	$cuentaOpcion = count($opcion);
 	
-	//var_dump($diametro);//var_dump ver el contenido de la variable
-	//var_dump($cuentaDiametro);
+	//var_dump($complemento);//var_dump ver el contenido de la variable
+	//var_dump($opcion);
 ?>

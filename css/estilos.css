@@ -189,7 +189,7 @@ nav td.activo
 }
 #contenedor 
 {
-	color: #666;
+	color: #888;
 	display: inline-block;
 	vertical-align: top;
 	width: 78%;
@@ -510,6 +510,14 @@ nav td.activo
 	vertical-align: top;
 	width: 72%;
 }
+#contenido #productos #producto #codigo #codigoMultiple #imgRecuadro {
+	float: right;
+	position: relative;
+}
+#contenido #productos #producto #codigo #codigoMultiple #imgRecuadro1 {
+	position: relative;
+	right: -65%; 
+}
 #contenido #productos #producto #codigo #codigoMultiple #recuadro {
 	border-radius: 10px;
 	border: solid 1px #BEBECF;
@@ -554,6 +562,12 @@ nav td.activo
 #contenido #productos #producto #codigo #codigoUM #logo img {
 	width: 100%;
 }
+#contenido #productos #producto #codigo #codigoNo {
+	display: inline-block;
+	margin-top: .5em;
+	vertical-align: top;
+	width: 21%;
+}
 #contenido #productos #producto #codigo #descripcion {
 	display: inline-block;
 	width: 100%;
@@ -565,7 +579,7 @@ nav td.activo
 }
 #contenido #productos #producto #codigo #iconos figure{
 	height: auto;
-	max-width: 9%;
+	max-width: 10%;
 	min-height: 45px;
 	min-width: 8%;
 	overflow: hidden;
@@ -580,6 +594,16 @@ nav td.activo
 	overflow: hidden;
 	text-align: center;
 	width: auto;
+}
+#contenido #productos #producto #codigo #iconosV {
+	display: inline-block;
+	text-align: center;
+}
+#contenido #productos #producto #codigo #iconosV figure{
+	height: auto;
+	min-height: 45px;
+	overflow: hidden;
+	text-align: center;
 }
 #contenido #productos #producto #codigo figure div {
 	color: #ADABAB;
@@ -1126,6 +1150,10 @@ nav td.activo
 	float: right;
 	margin-before: 1em;
 }
+.sobrePedido {
+	color: #1177ee;
+	font-size: .7em;
+}
 .tituloSeccion {
 	background: #ECF3EA;
 	color: #71BF44;
@@ -1136,6 +1164,10 @@ nav td.activo
 }
 .tituloSeccion:first-letter {
 	text-transform: uppercase;
+}
+.tituloSeccion #sublinea {
+	color: #666;
+	font-size: .8em;
 }
 .triangulo_top_right 
 {

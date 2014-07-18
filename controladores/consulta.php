@@ -30,9 +30,16 @@ $query_productos = $db->Execute("SELECT *, GROUP_CONCAT( DISTINCT id SEPARATOR  
 										 , GROUP_CONCAT( Orientación SEPARATOR  '<br>') AS orientacion
 										 , GROUP_CONCAT( TipoPuerta SEPARATOR  '<br>') AS tipoPuerta
 										 , GROUP_CONCAT( DISTINCT TipoPuerta SEPARATOR  '<br>') AS tipoPuertaD
-										 , GROUP_CONCAT( complementario SEPARATOR  '<br>') AS complemento
-										 , GROUP_CONCAT( opcional SEPARATOR  '<br>') AS opcion
+										 , GROUP_CONCAT( DISTINCT cierre SEPARATOR  '<br>') AS cierreD
+										 , GROUP_CONCAT( DISTINCT complementario SEPARATOR  '<br>') AS complemento
+										 , GROUP_CONCAT( DISTINCT opcional SEPARATOR  '<br>') AS opcion
 										 , GROUP_CONCAT( Ajuste SEPARATOR  '<br>') AS ajuste
+										 , GROUP_CONCAT( Configuracion SEPARATOR  '<br>') AS configuracion
+										 , GROUP_CONCAT( color SEPARATOR  '<br>') AS color
+										 , GROUP_CONCAT( descripcion2 SEPARATOR  '<br>') AS descripcion2
+										 , GROUP_CONCAT( posicion SEPARATOR  '<br>') AS posicion
+										 , GROUP_CONCAT( cuello SEPARATOR  '<br>') AS cuello
+										 , GROUP_CONCAT( cierre SEPARATOR  '<br>') AS cierre
 								FROM productos
 								WHERE linea = '$id_linea' AND sublinea = '$id_sublinea'
 								GROUP BY id

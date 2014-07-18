@@ -28,7 +28,7 @@
 	if ($row_producto['paginasi']=='0') { ?>
 			<li>
 				<figure>
-					<img src="http://www.cerrajes.me/imgCerrajes/fichas/<?php print $row_producto['imgI'];?>.jpg" alt="">
+					<img src="http://www.cerrajes.me/imgCerrajes/instructivo/<?php print $row_producto['imgI'];?>.jpg" alt="">
 				</figure>
 			</li>
 	<?php }	
