@@ -1,0 +1,16 @@
+api key descarga catalogos
+D70B127D876B4339C7B896A7E28E336D
+id de lista
+591461
+
+Nombre Código para Insertar | Embed Tipo de Dato Tipo de Campo Personalizado 
+ catalogo [[[catalogo]]]  Texto  Privado 
+ ciudad [[[ciudad]]]  Texto  Privado 
+ dirigido [[[dirigido]]]  Texto  Privado 
+ estado [[[estado]]]
+
+
+api key registro
+D70B127D876B4339C7B896A7E28E336D
+id lista
+591464

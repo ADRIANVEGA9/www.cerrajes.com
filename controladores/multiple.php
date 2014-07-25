@@ -93,8 +93,12 @@
 	$i++;
 	if ($i>1) { print '<span class="lineaPunteadaCodigo">';} else { print '<span>';}
 	print '<span class="titulo">cuello</span><br>'.$row_producto['cuello'].'</span>'; }
-	if (($row_producto['cierre'] <> "")  AND ((substr($row_producto['cierre'], 0, 4)) <> "<br>")){ 
+	if ((($row_producto['cierre'] <> "")  AND ((substr($row_producto['cierre'], 0, 4)) <> "<br>")) AND ($cuentaCierre>1)){ 
 	$i++;
 	if ($i>1) { print '<span class="lineaPunteadaCodigo">';} else { print '<span>';}
 	print '<span class="titulo">cierre lento</span><br>'.$row_producto['cierre'].'</span>'; }
+	if (($row_producto['taquete'] <> "")  AND ((substr($row_producto['taquete'], 0, 4)) <> "<br>")){ 
+	$i++;
+	if ($i>1) { print '<span class="lineaPunteadaCodigo">';} else { print '<span>';}
+	print '<span class="titulo">taquete</span><br>'.$row_producto['taquete'].'</span>'; }
 ?>

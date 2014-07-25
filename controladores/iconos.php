@@ -37,10 +37,10 @@ if ($row_producto['angulo'] <> "") { //inicia icono angulo?>
 		<img src="imagenesSitio/productos/iconos/angulo.png" alt="icono"/>
 		<div><?php print $row_producto['angulo'] ?></div>
 	</figure><?php } //termina icono angulo
-if (($row_producto['cierre'] <> "") AND ($row_producto['cuenta']==1)){ //inicia icono cierre?>
+if (($row_producto['cierreD'] <> "")  AND ($cuentaCierre == 1)){ //inicia icono cierre?>
 	<figure>
 		<img src="imagenesSitio/productos/iconos/cierre.png" alt="icono"/>
-		<div><?php print $row_producto['cierre'] ?></div>
+		<div><?php print $row_producto['cierreD'] ?></div>
 	</figure><?php } //termina icono cierre
 if (($row_producto['Acabado'] <> "") AND ($cuentaAcabado == 1)) { //inicia icono acabado?>
 	<figure>

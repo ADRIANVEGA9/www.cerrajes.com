@@ -16,7 +16,9 @@
 <body>
 <?php require(".header.html") ?>
 	<section id="menuProductos">
-		<?php require("menu/.menu.php") ?>
+		<?php 
+			require("menu/.menu.php");
+			require(".registro.php") ?>
 	</section>
 	<section id="contenedor">
 		<?php require(".nav.php") ?>

@@ -44,9 +44,11 @@ require 'controladores/consulta.php';
 <body>
 <?php require(".header.html") ?>
 	<section id="menuProductos">
-		<?php require("menu/.menu.php") ?>
-		<?php require(".zoom.html") ?>
-
+		<?php 
+			require("menu/.menu.php");
+			require(".zoom.html"); 
+			require(".registro.php");
+		?>
 	</section>
 	<section id="contenedor">
 		<?php require(".nav.php") ?>
@@ -130,17 +132,19 @@ require 'controladores/consulta.php';
 									<img src="http://www.cerrajes.me/imgCerrajes/recuadro/<?php print $row_producto['imgRecuadro'] ?>.png" alt="">
 								<?php
 									} //cierre else imgRecuadro
-								}//Complementos y opcionales para códigos unicos.
+								}//Complementos y opcionales para códigos unicos y códigos multiples con mismo complemento u opcional para todos los códigos
 
 								if (($row_producto['imgRecuadro'] <>'') AND ($row_producto['cuenta']==1)) { ?>
 									<span id="imgRecuadro<?php if ($row_producto['imagenA']=='0') {print 1;} ?>">Productos que lo conforman</span>
 									<img src="http://www.cerrajes.me/imgCerrajes/recuadro/<?php print $row_producto['imgRecuadro'] ?>.png" alt="">									
 								<?php }
-								if (($row_producto['complemento'] <> "")  AND ( ($row_producto['cuenta']==1) OR (($cuentaComplemento==1) AND ($row_producto['cuenta']<>1)) ) ) {
-									print '<div><span class="verde">»</span><span>'.$row_producto['complemento'].'</span></div>';
+
+								if (($row_producto['complementoD'] <> "")  AND ( ($row_producto['cuenta']==1) OR ($cuentaComplemento==1) ) ) {
+									print '<div><span class="verde">»</span><span>'.$row_producto['complementoD'].'</span></div>';
 								}
-								if (($row_producto['opcion'] <> "")  AND ( ($row_producto['cuenta']==1) OR (($cuentaOpcion==1) AND ($row_producto['cuenta']<>1)) ) ) { 
-									print '<div><span class="verde"><br>»</span><span>'.$row_producto['opcion'].'</span></div>';
+
+								if (($row_producto['opcionD'] <> "")  AND ( ($row_producto['cuenta']==1) OR ($cuentaOpcion==1) ) ) { 
+									print '<div><span class="verde"><br>»</span><span>'.$row_producto['opcionD'].'</span></div>';
 								}
 								 ?>
 							</span><!-- termina #codigoMultiple, recuadro de información-->

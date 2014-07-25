@@ -16,7 +16,9 @@
 <body>
 <?php require(".header.html") ?>
 	<section id="menuProductos">
-		<?php require("menu/.menu.php") ?>
+		<?php 
+			require("menu/.menu.php");
+			require(".registro.php") ?>
 	</section>
 	<section id="contenedor">
 		<?php require(".nav.php") ?>
@@ -24,7 +26,7 @@
 			<div class="tituloSeccion"><strong>Contacto</strong></div>	
 			<section id="contacto">
 				
-				<?php if (!$_POST){ ?>
+				<?php if (@!$_POST['nombre']){ ?><!-- @ SE USA PARA EVITAR QUE MANDE LOS ERRORES 'NOTICE' DE PHP -->
 					<form id="contacto" method="post" onsubmit="return validate1(this)">
 					<fieldset>
 							<span>Permítenos conocer tus sugerencias, dudas e inquietudes sobre nuestros productos y servicios.</span><br><br>
@@ -57,18 +59,22 @@
 						<section id="contactoEnvia">
 							<label for="mensaje">Comentarios</label>
 							<textarea name="mensaje" id="mensaje" placeholder="déjanos tu comentario" required onkeyup="Textarea_Sin_Enter(event.keyCode, this.id);" onkeypress="Textarea_Sin_Enter(event.keyCode, this.id);return validarTxtNum(event)"></textarea>
-							<span>Tus datos ser&aacute;n de uso confidencial y nos ayudarán a responder de manera adecuada tus comentarios.<input name="Enviar" type="submit" class="botonEnvia" id="button" value="ENVIAR"/> </span>
+							<span>Tus datos ser&aacute;n de uso confidencial y nos ayudarán a responder de manera adecuada tus comentarios.
+								<input name="Enviar" type="submit" class="botonEnvia" id="button" value="ENVIAR"/> </span>
+								<input type="hidden" name="contactoH" value="a" />
 						</section>
 
 					</fieldset>
 					</form>
 					<?php }
-						else 
+						elseif (isset($_POST['nombre']))
 							{ 
 								require_once(".contacto.php");
 						 	}//fin else?>
 
 			</section>
+		</section>
+	</section>
 	<?php require(".footer.php") ?>
 </body>
 </html>	

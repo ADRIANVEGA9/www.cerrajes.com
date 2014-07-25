@@ -15,12 +15,12 @@
 	$cuentatipoPuerta = count($tipoPuerta);
 
 	$cierre = explode("<br>", $row_producto['cierreD']);
-	$cuentacierre = count($cierre);
+	$cuentaCierre = count($cierre);
 
-	$complemento = explode("<br>", $row_producto['complemento']);
+	$complemento = explode("<br>", $row_producto['complementoD']);
 	$cuentaComplemento = count($complemento);
 
-	$opcion = explode("<br>", $row_producto['opcion']);
+	$opcion = explode("<br>", $row_producto['opcionD']);
 	$cuentaOpcion = count($opcion);
 	
 	//var_dump($complemento);//var_dump ver el contenido de la variable

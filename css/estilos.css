@@ -428,7 +428,7 @@ nav td.activo
 }
 #contenido #np_iconos {
 	padding-top: 1em;
-	text-align: left;
+	text-align: center;
 	width: 100%;
 }
 #contenido #np_iconos section {
@@ -447,6 +447,9 @@ nav td.activo
 }
 #contenido #np_iconos section figcaption {
 	font-size: .7em;
+	left: -15%;
+	position: relative;
+	width: 130%;
 }
 #contenido #np_iconos section figure img {
 	left: -5%;
@@ -530,7 +533,7 @@ nav td.activo
 }
 #contenido #productos #producto #codigo #codigoMultiple #recuadro .lineaPunteadaCodigo {
 	border-left: dotted 1px #BEBECF;
-	padding-left: .4em;
+	padding-left: .2em;
 }
 #contenido #productos #producto #codigo #codigoMultiple #recuadro .titulo {
 	color: #71BF44;
@@ -539,7 +542,7 @@ nav td.activo
 #contenido #productos #producto #codigo #codigoMultiple #recuadro span {
 	display: inline-block;
 	vertical-align: top;
-	padding: 0 .2em;
+	padding: 0 .1em;
 }
 #contenido #productos #producto #codigo #codigoMultiple .verde {
 	color: #71BF44;
@@ -805,7 +808,7 @@ nav td.activo
 #contenido .articuloHome .homeArticulo {
 	height: 200px;
 	overflow: hidden;
-	padding: 2em 0;
+	padding: 1em 0;
 }
 #contenido .articuloHome .homeArticulo .homeTxt {
 	background: #EEE;
@@ -982,6 +985,90 @@ nav td.activo
 	padding-right: 0.3em;
 	width: 20%;
 }
+#menuProductos img
+{
+	width: 100%;
+}
+#menuProductos #registro {
+	margin-bottom: .5em;
+	overflow: hidden;
+	width: 100%;
+}
+#menuProductos #registro #registroDatos {
+	margin: .5em 0;
+}
+#menuProductos #registro #registroDatos input[type="text"],
+#menuProductos #registro #registroDatos input[type="mail"]
+{
+	box-shadow: 1px 1px 6px 1px #AAA;
+	color: #333;
+	font-size: .75em;
+	height: .8em;
+	margin-bottom: .2em;
+	width: 95%;
+}
+#menuProductos #registro #registroDatos input[type="radio"] {
+	width: 15%;
+}
+#menuProductos #registro #registroDatos #tituloR{
+	color: #777;
+	font-size: .85em;
+	margin-bottom: .8em;
+	padding: 0 .5em;
+	text-align: left;
+	width: 95%;
+}
+#menuProductos #registro #registroDatos #registroCajas {
+	border-color: #7A7A7A;
+	display: inline-block;
+	position: relative;
+	vertical-align: text-top;
+	width: 65%;
+}
+#menuProductos #registro #registroDatos #registroEtiquetas {
+	display: inline-block;
+	vertical-align: text-top;
+	width: 30%;
+}
+#menuProductos #registro #registroDatos #registroEtiquetas label{
+	color: #555;
+	font-size: .7em;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+#menuProductos #registro #registroLogo {
+	background: #71BF44;
+	padding: 1em 0 .2em;
+}
+#menuProductos #registro #registroLogo img{
+	left: 25%;
+	position: relative;
+	width: 40%;
+}
+#menuProductos #registro #registroDatos #registroRadio {
+	display: inline-block;
+	padding: .8em 0;
+	text-align: left;
+	vertical-align: top;
+	width: 42%;
+}
+#menuProductos #registro #registroDatos #registroRadio input[type="radio"] {
+	
+}
+#menuProductos #registro #registroDatos #registroRadio label {
+	color: #777;
+	font-size: .8em;
+}
+#menuProductos #registro #registroDatos #registroTexto {
+	color: #666;
+	display: inline-block;
+	font-size: .7em;
+	font-weight: bold;
+	padding-top: .5em;
+	text-align: left;
+	vertical-align: top;
+	width: 35%;
+}
 #simbologia img,
 #simbologia .lineaPunteada {
 	width: 100%;
@@ -1085,7 +1172,7 @@ nav td.activo
 }
 .icono {
 	display: inline-block;
-	padding-right: 4%;
+	padding: 0 2%;
 	text-align: center;
 	vertical-align: top;
 }
@@ -1205,4 +1292,27 @@ nav td.activo
 }
 ._off {
 	display: none ;
+}
+
+.btn {
+	border-radius: 4px;
+	border: 1px solid transparent;
+	display: inline-block;
+	font-size: 1em;
+	font-weight: 400;
+	line-height: 1.2em;
+	padding: .5em 1em;
+	vertical-align: middle;
+}
+.btn-default {
+	background-color: #71BF44;
+	border-color: #AAA;
+	box-shadow: 1px 1px 10px 1px #AAA;
+	color: #EFE;
+}
+.btn-default:hover {
+	background-color: #858582;
+	border-color: #AAA;
+	box-shadow: 1px 1px 10px 1px #AAA;
+	color: #EFE;
 }

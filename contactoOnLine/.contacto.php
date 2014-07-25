@@ -183,7 +183,7 @@ background-position: center center;
 $headers = "MIME-Version: 1.0\r\n";  
 $headers .= "Content-type: text/html; charset= iso-8859-1\r\n"; 
 //Las siguientes 2 cabeceras, permitirán que el destinatario sepa a quién responder y quién le ha enviado el mensaje
-$micorreo = "avega@cerrajes.com";/*contacto@cerrajes.com*/
+$micorreo = "contacto@cerrajes.com";/*contacto@cerrajes.com*/
 $correoCli = "$_POST[correo]";
 $headers .= "Reply-To: contacto@cerrajes.com\r\n"; /*contacto@cerrajes.com*/ 
 $headers .= "From: Cerrajes<contacto@cerrajes.com>\r\n";/*contacto@cerrajes.com*/

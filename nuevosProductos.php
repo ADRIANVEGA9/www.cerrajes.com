@@ -14,7 +14,9 @@
 <body>
 <?php require(".header.html") ?>
 	<section id="menuProductos">
-		<?php require("menu/.menu.php") ?>
+		<?php 
+			require("menu/.menu.php");
+			require(".registro.php") ?>
 	</section>
 	<section id="contenedor">
 		<?php require(".nav.php") ?>
@@ -94,6 +96,26 @@
 					<figure><img id="18" src="imagenesSitio/nuevosProductos/18.png" alt="icono"/></figure>
 					<figcaption>Tubo oval y bridas</figcaption>
 				</section>
+				<section class="icono">
+					<figure><img id="19" src="imagenesSitio/nuevosProductos/19.png" alt="icono"/></figure>
+					<figcaption>Sistema plegable KINVARO-F20</figcaption>
+				</section>
+				<section class="icono">
+					<figure><img id="20" src="imagenesSitio/nuevosProductos/20.png" alt="icono"/></figure>
+					<figcaption>Sistema vertical KINVARO-L80</figcaption>
+				</section>
+				<section class="icono">
+					<figure><img id="21" src="imagenesSitio/nuevosProductos/21.png" alt="icono"/></figure>
+					<figcaption>Sistema oscilante KINVARO-S35</figcaption>
+				</section>
+				<section class="icono">
+					<figure><img id="22" src="imagenesSitio/nuevosProductos/22.png" alt="icono"/></figure>
+					<figcaption>Sistema levadizo KINVARO-T65</figcaption>
+				</section>
+				<section class="icono">
+					<figure><img id="23" src="imagenesSitio/nuevosProductos/23.png" alt="icono"/></figure>
+					<figcaption>Sistema levadizo KINVARO-T71</figcaption>
+				</section>
 			</section>
 
 			<section id="np_info">
@@ -115,6 +137,11 @@
 				<figure id="np_img16" class="_off"><img src="imagenesSitio/nuevosProductos/16.jpg" alt=""></figure>
 				<figure id="np_img17" class="_off"><img src="imagenesSitio/nuevosProductos/17.jpg" alt=""></figure>
 				<figure id="np_img18" class="_off"><img src="imagenesSitio/nuevosProductos/18.jpg" alt=""></figure>
+				<figure id="np_img19" class="_off"><img src="imagenesSitio/nuevosProductos/19.jpg" alt=""></figure>
+				<figure id="np_img20" class="_off"><img src="imagenesSitio/nuevosProductos/20.jpg" alt=""></figure>
+				<figure id="np_img21" class="_off"><img src="imagenesSitio/nuevosProductos/21.jpg" alt=""></figure>
+				<figure id="np_img22" class="_off"><img src="imagenesSitio/nuevosProductos/22.jpg" alt=""></figure>
+				<figure id="np_img23" class="_off"><img src="imagenesSitio/nuevosProductos/23.jpg" alt=""></figure>
 			</section>
 
 		</section>

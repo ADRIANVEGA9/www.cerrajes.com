@@ -116,7 +116,7 @@ background-position: center center;
 <div id=\"comenta\">
     <table width=\"858\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\">
       <tr>
-        <td colspan=\"1\"width=\"182\" class=\"estilo3\">Comentarios recibidos en www.cerrajes.com</td>
+        <td colspan=\"1\"width=\"182\" class=\"estilo3\">registro en www.cerrajes.com</td>
         <td colspan=\"2\">&nbsp;</td>
         </tr>
       <tr>
@@ -124,44 +124,23 @@ background-position: center center;
         </tr>
       <tr>
         <td class=\"estilo1\">Nombre</td>
-        <td class=\"estilo1\" colspan=\"2\">".$_POST['nombre']."</td>
-        </tr>
-      <tr>
-        <td class=\"estilo1\">Apellidos</td>
-        <td class=\"estilo1\" colspan=\"2\">".$_POST['apellidos']."</td>
-        </tr>
-      <tr>
-        <td class=\"estilo1\">Empresa</td>
-        <td class=\"estilo1\" colspan=\"2\">".$_POST['empresa']."</td>
-        </tr>
-      <tr>
-        <td class=\"estilo1\">Giro de la empresa</td>
-        <td class=\"estilo1\" colspan=\"2\">".$_POST['giro']."</td>
-        </tr>
-      <tr>
-        <td class=\"estilo1\">Tel&eacute;fono oficina</td>
-        <td class=\"estilo1\" width=\"30\">".$_POST['ladaT']."</td>
-        <td class=\"estilo1\" width=\"245\">".$_POST['telefono']."</td>
-        </tr>
-      <tr>
-        <td class=\"estilo1\">Municipio</td>
-        <td class=\"estilo1\" colspan=\"2\">".$_POST['municipio']."</td>
-        </tr>
-      <tr>
-        <td class=\"estilo1\">Estado</td>
-        <td class=\"estilo1\" colspan=\"2\">".$_POST['estado']."</td>
+        <td class=\"estilo1\" colspan=\"2\">".$_POST['nombreR']."</td>
         </tr>
       <tr>
         <td class=\"estilo1\">Correo electr&oacute;nico</td>
-        <td class=\"estilo1\" colspan=\"2\">".$_POST['correo']."</td>
+        <td class=\"estilo1\" colspan=\"2\">".$_POST['correoR']."</td>
         </tr>
       <tr>
-        <td class=\"estilo1\">Pagina web</td>
-        <td class=\"estilo1\" colspan=\"2\">".$_POST['web']."</td>
+        <td class=\"estilo1\">Ciudad</td>
+        <td class=\"estilo1\" colspan=\"2\">".$_POST['ciudadR']."</td>
         </tr>
       <tr>
-        <td class=\"estilo1\" valign=\"top\">Sugerencias/comentarios</td>
-        <td colspan=\"2\" align=\"right\"class=\"estilo1\" >".$_POST['mensaje']."</td>
+        <td class=\"estilo1\">Estado</td>
+        <td class=\"estilo1\" colspan=\"2\">".$_POST['estadoR']."</td>
+        </tr>
+      <tr>
+        <td class=\"estilo1\">Dirigido a:</td>
+        <td class=\"estilo1\" colspan=\"2\">".$_POST['dirigido']."</td>
         </tr>
       <tr>
         <td>&nbsp;</td>
@@ -184,15 +163,15 @@ $headers = "MIME-Version: 1.0\r\n";
 $headers .= "Content-type: text/html; charset= iso-8859-1\r\n"; 
 //Las siguientes 2 cabeceras, permitirán que el destinatario sepa a quién responder y quién le ha enviado el mensaje
 $micorreo = "avega@cerrajes.com";/*contacto@cerrajes.com*/
-$correoCli = "$_POST[correo]";
+$correoCli = "$_POST[correoR]";
 $headers .= "Reply-To: contacto@cerrajes.com\r\n"; /*contacto@cerrajes.com*/ 
-$headers .= "From: Cerrajes<contacto@cerrajes.com>\r\n";/*contacto@cerrajes.com*/
+$headers .= "From: Contacto Cerrajes<avega@cerrajes.com>\r\n";/*contacto@cerrajes.com*/
 $headers .= 'Bcc: avega@cerrajes.com' . "\r\n";
 //En este ejemplo suponemos que el mail del destinatario lo hemos enviado desde un formulario con el método post, pero es indistinto desde donde se lo obtenga (consulta a la base de datos, almacenado en una variable de sesi&oacute;n, enviado por get,etc.)
 ini_set("SMTP","mail.cerrajes.com");/*mail.cerrajes.com*/
 ini_set("smtp_port","587");/*25*/
 ini_set("sendmail_from","mail.cerrajes.com");	/*mail.cerrajes.com*/
-mail($micorreo, " Cerrajes el herraje ideal para su mueble - contacto\r\n", utf8_decode($html),utf8_decode($headers))or die ("<article id='enviado'>Su mensaje no pudo ser enviado, intente mas tarde.</article>");  
+mail($micorreo, " Cerrajes el herraje ideal para su mueble - registro\r\n", utf8_decode($html),$headers)or die ("<article id='enviado'>Su mensaje no pudo ser enviado, intente mas tarde.</article>");  
 $htmlCliente ="<html lang=\"es\">
 		<head>
 		<meta charset=\"utf-8\">
@@ -225,11 +204,10 @@ $htmlCliente ="<html lang=\"es\">
 		</body>
 		</html>	
 		";
-mail($correoCli, " Cerrajes el herraje ideal para su mueble - contacto\r\n", utf8_decode($htmlCliente),utf8_decode($headers))or die ("Su mensaje no pudo ser enviado, intente mas tarde."); 
+mail($correoCli, " Cerrajes el herraje ideal para su mueble - registro\r\n", utf8_decode($htmlCliente),$headers)or die ("Su mensaje no pudo ser enviado, intente mas tarde."); 
 ?>				
 	<article id="enviado">
-		TU COMENTARIO HA SIDO ENVIADO EXITOSAMENTE<br />
-	 	Muy pronto nos pondremos en contacto contigo.
+		GRACIAS <br> POR REGISTRARTE<br />
  	</article>
 	
 <!-- Código para doppler -->
@@ -238,18 +216,18 @@ mail($correoCli, " Cerrajes el herraje ideal para su mueble - contacto\r\n", utf
 /* This Doppler API Example use an existing library known as NUSOAP V0.7.1
 * Information about this lib can be found at http://sourceforge.net/projects/nusoap/ 
 */
-require'nusoap/nusoap.php';
+// require'nusoap/nusoap.php';
 
-$proxyhost = isset($_POST['proxyhost']) ? $_POST['proxyhost'] : '';
-$proxyport = isset($_POST['proxyport']) ? $_POST['proxyport'] : '';
-$proxyusername = isset($_POST['proxyusername']) ? $_POST['proxyusername'] : '';
-$proxypassword = isset($_POST['proxypassword']) ? $_POST['proxypassword'] : '';
-$client = new nusoap_client('http://api.fromdoppler.com/Default.asmx?wsdl', 'wsdl',
-						$proxyhost, $proxyport, $proxyusername, $proxypassword);
-$err = $client->getError();
-if ($err) {
-	echo '<h2>Constructor error</h2><pre>' . $err . '</pre>';
-}
+// $proxyhost = isset($_POST['proxyhost']) ? $_POST['proxyhost'] : '';
+// $proxyport = isset($_POST['proxyport']) ? $_POST['proxyport'] : '';
+// $proxyusername = isset($_POST['proxyusername']) ? $_POST['proxyusername'] : '';
+// $proxypassword = isset($_POST['proxypassword']) ? $_POST['proxypassword'] : '';
+// $client = new nusoap_client('http://api.fromdoppler.com/Default.asmx?wsdl', 'wsdl',
+// 						$proxyhost, $proxyport, $proxyusername, $proxypassword);
+// $err = $client->getError();
+// if ($err) {
+// 	echo '<h2>Constructor error</h2><pre>' . $err . '</pre>';
+// }
 
 // $empresa = array('Customfieldid' => '22097','Value' => $_POST['empresa']);
 // $telefono = array('Customfieldid' => '22099','Value' => $_POST['telefono']);
@@ -257,32 +235,32 @@ if ($err) {
 // $municipio = array('Customfieldid' => '22122','Value' => $_POST['municipio']);
 // $estado = array('Customfieldid' => '22121','Value' => $_POST['estado']);
 
-$param = array('APIKey' => '84F4BBEFA9C397B061E491EEE978AEA5',
-		'SubscribersListID' => '506493',
-		'FirstName' => utf8_decode($_POST['nombre']),
-		'LastName' => utf8_decode($_POST['apellidos']),
-		'EMail' => utf8_decode($_POST['correo'])
-		);	
-$result = $client->call('AddSubscriberwithNameandCustoms', $param);
+// $param = array('APIKey' => '84F4BBEFA9C397B061E491EEE978AEA5',
+// 		'SubscribersListID' => '506493',
+// 		'FirstName' => utf8_decode($_POST['nombre']),
+// 		'LastName' => utf8_decode($_POST['apellidos']),
+// 		'EMail' => utf8_decode($_POST['correo'])
+// 		);	
+// $result = $client->call('AddSubscriberwithNameandCustoms', $param);
 
-// Check for a fault
-if ($client->fault) {
-	echo '<h2>Fault</h2><pre>';
-	print_r($result);
-	echo '</pre>';
-} else {
-	// Check for errors
-	$err = $client->getError();
-	if ($err) {
-		// Display the error
-		echo '<h2>Error</h2><pre>' . $err . '</pre>';
-	} else {
-		// Display the result
-		//echo '<h2>Suscripci&oacute;n Exitosa</h2><pre>';
-		//print_r($result);
-		echo '</pre>';
-	}
-}
+// // Check for a fault
+// if ($client->fault) {
+// 	echo '<h2>Fault</h2><pre>';
+// 	print_r($result);
+// 	echo '</pre>';
+// } else {
+// 	// Check for errors
+// 	$err = $client->getError();
+// 	if ($err) {
+// 		// Display the error
+// 		echo '<h2>Error</h2><pre>' . $err . '</pre>';
+// 	} else {
+// 		// Display the result
+// 		//echo '<h2>Suscripci&oacute;n Exitosa</h2><pre>';
+// 		//print_r($result);
+// 		echo '</pre>';
+// 	}
+// }
 /***********************************************/
 /*termina código doppler -->*/
 ?>
