@@ -3,6 +3,7 @@ include("connections/db.inc.php");
 
 $query_menuLinea= $db->Execute("SELECT id_linea, linea
 							FROM linea
+							WHERE activo = 1
 							ORDER BY id_linea ASC");
 // Verificamos si hemos realizado bien nuestro Query
 if(!$query_menuLinea){
@@ -20,7 +21,7 @@ exit("Error en la consulta Menu linea");
 		{ 
 			$query_menuSublinea= $db->Execute("SELECT id_sublinea, sublinea
 										FROM sublinea
-										WHERE 	id_linea = $row_menuLinea[id_linea]
+										WHERE 	id_linea = $row_menuLinea[id_linea] AND activo = 1
 										ORDER BY id_sublinea ASC");
 			// Verificamos si hemos realizado bien nuestro Query
 			if(!$query_menuSublinea){

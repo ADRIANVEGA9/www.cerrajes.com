@@ -1,4 +1,8 @@
-<?php if ($row_producto['codigo'] <> "") { 
+<?php 
+	if (($row_producto['inciso'] <> "") AND ((substr($row_producto['inciso'], 0, 4)) <> "<br>")) { 
+	print '<span class="verde"><span class="titulo"></span><br>'.$row_producto['inciso'].'</span>';}
+
+	if ($row_producto['codigo'] <> "") { 
 	$i=1; print '<span><span class="titulo">CÓDIGO</span><br>'.$row_producto['codigo'].'</span>'; }
 ?>
 <?php if (($row_producto['Medida'] <> "") AND ((substr($row_producto['medida'], 0, 4)) <> "<br>")) { 
@@ -101,4 +105,12 @@
 	$i++;
 	if ($i>1) { print '<span class="lineaPunteadaCodigo">';} else { print '<span>';}
 	print '<span class="titulo">taquete</span><br>'.$row_producto['taquete'].'</span>'; }
+	if (($row_producto['medidaPerfil'] <> "")  AND ((substr($row_producto['medidaPerfil'], 0, 4)) <> "<br>")){ 
+	$i++;
+	if ($i>1) { print '<span class="lineaPunteadaCodigo">';} else { print '<span>';}
+	print '<span class="titulo">Medida del Perfil</span><br>'.$row_producto['medidaPerfil'].'</span>'; }
+	if (($row_producto['tipo'] <> "")  AND ((substr($row_producto['tipo'], 0, 4)) <> "<br>")){ 
+	$i++;
+	if ($i>1) { print '<span class="lineaPunteadaCodigo">';} else { print '<span>';}
+	print '<span class="titulo">tipo</span><br>'.$row_producto['tipo'].'</span>'; }
 ?>

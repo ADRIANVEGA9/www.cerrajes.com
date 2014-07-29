@@ -116,6 +116,10 @@
 					<figure><img id="23" src="imagenesSitio/nuevosProductos/23.png" alt="icono"/></figure>
 					<figcaption>Sistema levadizo KINVARO-T71</figcaption>
 				</section>
+				<section class="icono">
+					<figure><img id="24" src="imagenesSitio/nuevosProductos/24.png" alt="icono"/></figure>
+					<figcaption>Corredera uniset blanca / soporte frontal uniset</figcaption>
+				</section>
 			</section>
 
 			<section id="np_info">
@@ -142,6 +146,7 @@
 				<figure id="np_img21" class="_off"><img src="imagenesSitio/nuevosProductos/21.jpg" alt=""></figure>
 				<figure id="np_img22" class="_off"><img src="imagenesSitio/nuevosProductos/22.jpg" alt=""></figure>
 				<figure id="np_img23" class="_off"><img src="imagenesSitio/nuevosProductos/23.jpg" alt=""></figure>
+				<figure id="np_img24" class="_off"><img src="imagenesSitio/nuevosProductos/24.jpg" alt=""></figure>
 			</section>
 
 		</section>

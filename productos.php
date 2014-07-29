@@ -75,7 +75,7 @@ require 'controladores/consulta.php';
 							<span id="descripcion"><?php print $row_producto['Descripción'].' '; if ($row_producto['cuenta']==1 && $row_producto['Medida'] <> ""){ print $row_producto['Medida'];}?></span>
 
 							<span 
-							<?php if ($row_producto['imgRecuadro'] == '') { //sino tiene información de recuadro en imagen us ael ancho de codigoUM de lo contrario usa codigoNo
+							<?php if ($row_producto['imgRecuadro'] == '') { //sino tiene información de recuadro en imagen usa el ancho de codigoUM de lo contrario usa codigoNo
 								print 'id="codigoUM"';} else { 
 									print 'id="codigoNo"';}?> 
 								<?php if ($row_producto['cuenta']>1) { print 'class="altoMinimo"'; }?> 
@@ -83,9 +83,6 @@ require 'controladores/consulta.php';
 
 								<?php if (($row_producto['cuenta']==1) AND ($row_producto['imgRecuadro'] == '')) { //si cuenta es == 1, es un solo código, cuando no tenga imagen de recuadro pone el código?>
 									<span>C&oacute;digo: </span><span class="codigo"><?php print $row_producto['codigo']?></span><br>
-									<?php if ($row_producto['nota']<>'') { ?>
-												<span class="sobrePedido"><?php print $row_producto['nota'] ?></span><br>
-										<?php } ?>
 								<?php } //termina código unico
 
 									if ($row_producto['UM']<>'') { ?>														
@@ -99,6 +96,12 @@ require 'controladores/consulta.php';
 								<?php if ($row_producto['Logotipo'] <> "") {?>									
 									<div id="logo">
 										<img src="imagenesSitio/productos/iconos/<?php print $row_producto['Logotipo'] ?>.png" alt="<?php print $row_producto['Logotipo'] ?>"/>
+			<!-- 										<?php if ($row_producto['push'] <> "") { //inicia icono push?>
+															<img src="imagenesSitio/productos/iconos/<?php print $row_producto['push'] ?>.png" alt="icono"/>
+													<?php } //termina icono push
+													if ($row_producto['smove'] <> "") { //inicia icono smove?>
+															<img src="imagenesSitio/productos/iconos/<?php print $row_producto['smove'] ?>.png" alt="icono"/>
+													<?php } //termina icono smove?> -->
 									</div>
 								<?php } ?>
 
@@ -145,6 +148,10 @@ require 'controladores/consulta.php';
 
 								if (($row_producto['opcionD'] <> "")  AND ( ($row_producto['cuenta']==1) OR ($cuentaOpcion==1) ) ) { 
 									print '<div><span class="verde"><br>»</span><span>'.$row_producto['opcionD'].'</span></div>';
+								}
+
+								if (($row_producto['notaD'] <> "")  AND ( ($row_producto['cuenta']==1) OR ($cuentaNota==1) ) ) { 
+									print '<div><span class="sobrePedido">'.$row_producto['notaD'].'</span></div>';
 								}
 								 ?>
 							</span><!-- termina #codigoMultiple, recuadro de información-->
@@ -202,9 +209,9 @@ require 'controladores/consulta.php';
 						</figure>
 						<?php }?>
 
-					</section>
+					<?php require'controladores/mostrarF-I.php';?>	
 
-					<?php require'controladores/mostrarF-I.php';?>		
+					</section>	
 
 					<div class="ProductosLineaPunteada"></div>
 

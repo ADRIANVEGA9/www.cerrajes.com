@@ -35,6 +35,7 @@ $query_productos = $db->Execute("SELECT *, GROUP_CONCAT( DISTINCT id SEPARATOR  
 										 , GROUP_CONCAT( DISTINCT complementario SEPARATOR  '<br>') AS complementoD
 										 , GROUP_CONCAT( opcional SEPARATOR  '<br>') AS opcion
 										 , GROUP_CONCAT( DISTINCT opcional SEPARATOR  '<br>') AS opcionD
+										 , GROUP_CONCAT( DISTINCT nota SEPARATOR  '<br>') AS notaD
 										 , GROUP_CONCAT( Ajuste SEPARATOR  '<br>') AS ajuste
 										 , GROUP_CONCAT( Configuracion SEPARATOR  '<br>') AS configuracion
 										 , GROUP_CONCAT( color SEPARATOR  '<br>') AS color
@@ -43,6 +44,9 @@ $query_productos = $db->Execute("SELECT *, GROUP_CONCAT( DISTINCT id SEPARATOR  
 										 , GROUP_CONCAT( cuello SEPARATOR  '<br>') AS cuello
 										 , GROUP_CONCAT( taquete SEPARATOR  '<br>') AS taquete
 										 , GROUP_CONCAT( cierre SEPARATOR  '<br>') AS cierre
+										 , GROUP_CONCAT( medidaPerfil SEPARATOR  '<br>') AS medidaPerfil
+										 , GROUP_CONCAT( tipo SEPARATOR  '<br>') AS tipo
+										 , GROUP_CONCAT( inciso SEPARATOR  '<br>') AS inciso
 										 , GROUP_CONCAT( DISTINCT cierre SEPARATOR  '<br>') AS cierreD
 								FROM productos
 								WHERE linea = '$id_linea' AND sublinea = '$id_sublinea'

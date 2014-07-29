@@ -45,3 +45,27 @@
 	} //end else?>
 </ul>
 </article>	
+
+<article class="mostrarFI" id="vCC<?php print $row_producto['Código'];?>"> <!-- Mostrar instructivo -->
+<ul id="holder">
+	<?php //var_dump($row_producto['paginasi']);
+	if ($row_producto['paginasc']=='0') { ?>
+			<li>
+				<figure>
+					<img src="http://www.cerrajes.me/imgCerrajes/instructivo/<?php print $row_producto['imgI'];?>.jpg" alt="">
+				</figure>
+			</li>
+	<?php }	
+	else {
+		for ($i=1; $i<=($row_producto['paginasi']); $i++) {
+			//var_dump($row_producto['imgI']);
+			//var_dump($i);?>
+			<li>
+				<figure>
+					<img src="http://www.cerrajes.me/imgCerrajes/instructivo/<?php print $row_producto['imgI'].($i);?>.jpg" alt="">
+				</figure>
+			</li>
+		<?php } //end for 
+	} //end else?>
+</ul>
+</article>	

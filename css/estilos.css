@@ -494,7 +494,7 @@ nav td.activo
 #contenido #productos #producto figure,
 #contenido #productos #producto #codigo {
 	display: inline-block;
-	vertical-align: top;
+	vertical-align: middle;
 }
 #contenido #productos #producto #aplicado {
 	width: 16%;
@@ -560,10 +560,11 @@ nav td.activo
 	left: -131px;
 	position: absolute;
 	top: 0;
-	width: 5%;
+	/*width: 5%;*/
 }
 #contenido #productos #producto #codigo #codigoUM #logo img {
-	width: 100%;
+	vertical-align: middle;
+	width: auto;
 }
 #contenido #productos #producto #codigo #codigoNo {
 	display: inline-block;
@@ -623,7 +624,7 @@ nav td.activo
 	bottom: 0;
 	font-size: .7em;
 	font-style: italic;
-	left: -25%;
+	/*left: -25%;*/
 	position: relative;
 }
 #contenido #productos #producto #codigo #instructivo {
@@ -1000,11 +1001,11 @@ nav td.activo
 #menuProductos #registro #registroDatos input[type="text"],
 #menuProductos #registro #registroDatos input[type="mail"]
 {
-	box-shadow: 1px 1px 6px 1px #AAA;
+	/*box-shadow: 1px 1px 6px 1px #AAA;*/
 	color: #333;
 	font-size: .75em;
-	height: .8em;
-	margin-bottom: .2em;
+	/*height: .8em;
+	margin-bottom: .2em;*/
 	width: 95%;
 }
 #menuProductos #registro #registroDatos input[type="radio"] {
@@ -1239,7 +1240,7 @@ nav td.activo
 }
 .sobrePedido {
 	color: #1177ee;
-	font-size: .7em;
+	font-size: .85em;
 }
 .tituloSeccion {
 	background: #ECF3EA;
