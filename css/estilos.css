@@ -588,6 +588,7 @@ nav td.activo
 	min-width: 8%;
 	overflow: hidden;
 	text-align: center;
+	vertical-align: top;
 	width: auto;
 }
 #contenido #productos #producto #codigo #iconosM figure{
@@ -597,6 +598,7 @@ nav td.activo
 	min-width: 25%;
 	overflow: hidden;
 	text-align: center;
+	vertical-align: top;
 	width: auto;
 }
 #contenido #productos #producto #codigo #iconosV {
@@ -619,46 +621,56 @@ nav td.activo
 	top: -5px;
 	width: 110%;
 }
+#contenido #productos #producto #codigo #cc,
 #contenido #productos #producto #codigo #ficha,
-#contenido #productos #producto #codigo #instructivo {
+#contenido #productos #producto #codigo #instructivo  {
 	bottom: 0;
 	font-size: .7em;
 	font-style: italic;
 	/*left: -25%;*/
 	position: relative;
 }
+#contenido #productos #producto #codigo #cc, 
 #contenido #productos #producto #codigo #instructivo {
 	margin-top: .5em;
 }
+#contenido #productos #producto #codigo #cc div,
 #contenido #productos #producto #codigo #ficha div,
 #contenido #productos #producto #codigo #instructivo div {
 	display: inline-block;
 	vertical-align: top;
 }
+#contenido #productos #producto #codigo #cc #ccDescarga,
 #contenido #productos #producto #codigo #ficha #fichaDescarga,
 #contenido #productos #producto #codigo #instructivo #instructDescarga{
 	width: 20%;
 }
+#contenido #productos #producto #codigo #cc #ccMostrar,
 #contenido #productos #producto #codigo #ficha #fichaMostrar,
 #contenido #productos #producto #codigo #instructivo #instructMostrar{
 	width: 12%;
 }
+#contenido #productos #producto #codigo #cc #ccOrden,
 #contenido #productos #producto #codigo #ficha #fichaOrden,
 #contenido #productos #producto #codigo #instructivo #instructOrden{
-	width: 28%;
+	width: 35%;
 }
+#contenido #productos #producto #codigo #cc span,
 #contenido #productos #producto #codigo #ficha span,
 #contenido #productos #producto #codigo #instructivo span {
 	font-size: .9em;
 }
+#contenido #productos #producto #codigo #cc .mostrar,
 #contenido #productos #producto #codigo #ficha .mostrar,
 #contenido #productos #producto #codigo #instructivo .mostrar{
 	cursor: pointer;
 }
+#contenido #productos #producto #codigo #cc .mostrar:hover:after,
 #contenido #productos #producto #codigo #ficha .mostrar:hover:after,
 #contenido #productos #producto #codigo #instructivo .mostrar:hover:after{
 	color: lightgray;
 }
+#contenido #productos #producto #codigo #cc .cc,
 #contenido #productos #producto #codigo #ficha .ft,
 #contenido #productos #producto #codigo #instructivo .ii{
 	background-color: #61BF44;
@@ -669,6 +681,7 @@ nav td.activo
 	font-weight: 700;
 	font-style: normal;
 }
+#contenido #productos #producto #codigo #cc #down,
 #contenido #productos #producto #codigo #ficha #down,
 #contenido #productos #producto #codigo #instructivo #down {
 	display: inline-block;
@@ -678,6 +691,7 @@ nav td.activo
 	transition: all linear .3s;
 	vertical-align: top;
 }
+#contenido #productos #producto #codigo #cc #down:hover,
 #contenido #productos #producto #codigo #ficha #down:hover,
 #contenido #productos #producto #codigo #instructivo #down:hover {
 	color: lightgray;

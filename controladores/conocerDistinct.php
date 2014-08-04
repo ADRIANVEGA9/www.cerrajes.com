@@ -23,9 +23,12 @@
 	$opcion = explode("<br>", $row_producto['opcionD']);
 	$cuentaOpcion = count($opcion);
 
+	$repuesto = explode("<br>", $row_producto['repuestoD']);
+	$cuentaRepuesto = count($repuesto);
+
 	$nota = explode("<br>", $row_producto['notaD']);
 	$cuentaNota = count($nota);
 	
-	//var_dump($taquete);//var_dump ver el contenido de la variable
-	//var_dump($taquete);
+	//var_dump($repuesto);//var_dump ver el contenido de la variable
+	//var_dump($cuentaRepuesto);
 ?>

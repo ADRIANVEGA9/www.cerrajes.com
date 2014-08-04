@@ -73,6 +73,10 @@
 	$i++;
 	if ($i>1) { print '<span class="lineaPunteadaCodigo">';} else { print '<span>';}
 	print '<span class="titulo">opcional</span><br>'.$row_producto['opcion'].'</span>'; }
+	if (($row_producto['repuesto'] <> "")  AND ((substr($row_producto['repuesto'], 0, 4)) <> "<br>")  AND ((substr($row_producto['repuesto'], 0, 4)) <> "Repu")){ 
+	$i++;
+	if ($i>1) { print '<span class="lineaPunteadaCodigo">';} else { print '<span>';}
+	print '<span class="titulo">repuesto</span><br>'.$row_producto['repuesto'].'</span>'; }
 	if (($row_producto['ajuste'] <> "")  AND ((substr($row_producto['ajuste'], 0, 4)) <> "<br>")){ 
 	$i++;
 	if ($i>1) { print '<span class="lineaPunteadaCodigo">';} else { print '<span>';}
@@ -113,4 +117,24 @@
 	$i++;
 	if ($i>1) { print '<span class="lineaPunteadaCodigo">';} else { print '<span>';}
 	print '<span class="titulo">tipo</span><br>'.$row_producto['tipo'].'</span>'; }
+	if (($row_producto['plazas'] <> "")  AND ((substr($row_producto['plazas'], 0, 4)) <> "<br>")){ 
+	$i++;
+	if ($i>1) { print '<span class="lineaPunteadaCodigo">';} else { print '<span>';}
+	print '<span class="titulo">plazas</span><br>'.$row_producto['plazas'].'</span>'; }
+	if (($row_producto['charola'] <> "")  AND ((substr($row_producto['charola'], 0, 4)) <> "<br>")){ 
+	$i++;
+	if ($i>1) { print '<span class="lineaPunteadaCodigo">';} else { print '<span>';}
+	print '<span class="titulo">charola</span><br>'.$row_producto['charola'].'</span>'; }
+	if (($row_producto['colocacion'] <> "")  AND ((substr($row_producto['colocacion'], 0, 4)) <> "<br>")){ 
+	$i++;
+	if ($i>1) { print '<span class="lineaPunteadaCodigo">';} else { print '<span>';}
+	print '<span class="titulo">colocación</span><br>'.$row_producto['colocacion'].'</span>'; }
+	if (($row_producto['canastilla'] <> "")  AND ((substr($row_producto['canastilla'], 0, 4)) <> "<br>")){ 
+	$i++;
+	if ($i>1) { print '<span class="lineaPunteadaCodigo">';} else { print '<span>';}
+	print '<span class="titulo">canastilla</span><br>'.$row_producto['canastilla'].'</span>'; }
+	if (($row_producto['lados'] <> "")  AND ((substr($row_producto['lados'], 0, 4)) <> "<br>")){ 
+	$i++;
+	if ($i>1) { print '<span class="lineaPunteadaCodigo">';} else { print '<span>';}
+	print '<span class="titulo">lados</span><br>'.$row_producto['lados'].'</span>'; }
 ?>

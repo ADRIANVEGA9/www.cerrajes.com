@@ -46,23 +46,23 @@
 </ul>
 </article>	
 
-<article class="mostrarFI" id="vCC<?php print $row_producto['Código'];?>"> <!-- Mostrar instructivo -->
+<article class="mostrarFI" id="vCC<?php print $row_producto['Código'];?>"> <!-- Mostrar componentes -->
 <ul id="holder">
-	<?php //var_dump($row_producto['paginasi']);
-	if ($row_producto['paginasc']=='0') { ?>
+	<?php //var_dump($row_producto['paginasCC']);
+	if ($row_producto['paginasCC']=='0') { ?>
 			<li>
 				<figure>
-					<img src="http://www.cerrajes.me/imgCerrajes/instructivo/<?php print $row_producto['imgI'];?>.jpg" alt="">
+					<img src="http://www.cerrajes.me/imgCerrajes/instructivo/<?php print $row_producto['imgCC'];?>.jpg" alt="">
 				</figure>
 			</li>
 	<?php }	
 	else {
-		for ($i=1; $i<=($row_producto['paginasi']); $i++) {
-			//var_dump($row_producto['imgI']);
+		for ($i=1; $i<=($row_producto['paginasCC']); $i++) {
+			//var_dump($row_producto['imgCC']);
 			//var_dump($i);?>
 			<li>
 				<figure>
-					<img src="http://www.cerrajes.me/imgCerrajes/instructivo/<?php print $row_producto['imgI'].($i);?>.jpg" alt="">
+					<img src="http://www.cerrajes.me/imgCerrajes/instructivo/<?php print $row_producto['imgCC'].($i);?>.jpg" alt="">
 				</figure>
 			</li>
 		<?php } //end for 

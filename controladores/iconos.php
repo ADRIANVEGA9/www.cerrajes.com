@@ -96,4 +96,14 @@ if ($row_producto['consumo'] <> "") { //inicia icono consumo?>
 		<img src="imagenesSitio/productos/iconos/consumo.png" alt="icono"/>
 		<div><?php print $row_producto['consumo'] ?></div>
 	</figure><?php } //termina icono consumo
+if ($row_producto['tamaño'] <> "") { //inicia icono tamaño?>
+	<figure>
+		<img src="imagenesSitio/productos/iconos/tamaño.png" alt="icono"/>
+		<div><?php print $row_producto['tamaño'] ?></div>
+	</figure><?php } //termina icono tamaño
+if ($row_producto['capacidad'] <> "") { //inicia icono capacidad?>
+	<figure>
+		<img src="imagenesSitio/productos/iconos/capacidad.png" alt="icono"/>
+		<div><?php print $row_producto['capacidad'] ?></div>
+	</figure><?php } //termina icono capacidad
 ?>

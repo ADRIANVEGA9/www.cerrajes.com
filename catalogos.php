@@ -61,6 +61,78 @@
 					</figure>
 
 
+					<figure>
+						<a href="http://www.cerrajes.me/catalogos/virtual/elite/index.html" target="_blank" title="Ver cátalogo virtual Accesorios para clóset Elite">
+							<img src="imagenesSitio/catalogos/elite.png" alt="Accesorios para clóset Elite"/>
+						<figcaption> Accesorios para clóset Elite</figcaption>
+						</a>
+						<a id="down" class="icon-download" href="http://www.cerrajes.me/catalogos/pdf/elite.pdf" target="_blank" title="Descargar pdf"></a>
+					</figure>
+
+
+					<figure>
+						<a href="http://www.cerrajes.me/catalogos/virtual/futura/index.html" target="_blank" title="Ver cátalogo virtual Correderas Futura y Unica">
+							<img src="imagenesSitio/catalogos/futura.png" alt="Correderas Futura y Unica"/>
+						<figcaption> Correderas Futura y Unica</figcaption>
+						</a>
+						<a id="down" class="icon-download" href="http://www.cerrajes.me/catalogos/pdf/futura.pdf" target="_blank" title="Descargar pdf"></a>
+					</figure>
+
+
+					<figure>
+						<a href="http://www.cerrajes.me/catalogos/virtual/impaz/index.html" target="_blank" title="Ver cátalogo virtual Corredera Impaz">
+							<img src="imagenesSitio/catalogos/impaz.png" alt="Corredera Impaz"/>
+						<figcaption> Corredera Impaz</figcaption>
+						</a>
+						<a id="down" class="icon-download" href="http://www.cerrajes.me/catalogos/pdf/impaz.pdf" target="_blank" title="Descargar pdf"></a>
+					</figure>
+
+
+					<figure>
+						<a href="http://www.cerrajes.me/catalogos/virtual/prime/index.html" target="_blank" title="Ver cátalogo virtual Corredera Prime">
+							<img src="imagenesSitio/catalogos/prime.png" alt="Corredera Prime"/>
+						<figcaption> Corredera Prime</figcaption>
+						</a>
+						<a id="down" class="icon-download" href="http://www.cerrajes.me/catalogos/pdf/prime.pdf" target="_blank" title="Descargar pdf"></a>
+					</figure>
+
+
+					<figure>
+						<a href="http://www.cerrajes.me/catalogos/virtual/ten/index.html" target="_blank" title="Ver cátalogo virtual Corredera TEN">
+							<img src="imagenesSitio/catalogos/ten.png" alt="Corredera TEN"/>
+						<figcaption> Corredera TEN</figcaption>
+						</a>
+						<a id="down" class="icon-download" href="http://www.cerrajes.me/catalogos/pdf/ten.pdf" target="_blank" title="Descargar pdf"></a>
+					</figure>
+
+
+					<figure>
+						<a href="http://www.cerrajes.me/catalogos/virtual/triomax/index.html" target="_blank" title="Ver cátalogo virtual Corredera Triomax">
+							<img src="imagenesSitio/catalogos/triomax.png" alt="Corredera Triomax"/>
+						<figcaption> Corredera Triomax</figcaption>
+						</a>
+						<a id="down" class="icon-download" href="http://www.cerrajes.me/catalogos/pdf/triomax.pdf" target="_blank" title="Descargar pdf"></a>
+					</figure>
+
+
+					<figure>
+						<a href="http://www.cerrajes.me/catalogos/virtual/triomax_t5/index.html" target="_blank" title="Ver cátalogo virtual Corredera Triomax T5">
+							<img src="imagenesSitio/catalogos/T5.png" alt="Corredera Triomax T5"/>
+						<figcaption> Corredera Triomax T5</figcaption>
+						</a>
+						<a id="down" class="icon-download" href="http://www.cerrajes.me/catalogos/pdf/T5.pdf" target="_blank" title="Descargar pdf"></a>
+					</figure>
+
+
+					<figure>
+						<a href="http://www.cerrajes.me/catalogos/virtual/levadizos_salice/index.html" target="_blank" title="Ver cátalogo virtual Sistemas levadizos Salice">
+							<img src="imagenesSitio/catalogos/levadizos_salice.png" alt="Sistemas levadizos Salice"/>
+						<figcaption> Sistemas levadizos Salice</figcaption>
+						</a>
+						<a id="down" class="icon-download" href="http://www.cerrajes.me/catalogos/pdf/levadizos_salice.pdf" target="_blank" title="Descargar pdf"></a>
+					</figure>
+
+
 				</article>	
 
 			</section>

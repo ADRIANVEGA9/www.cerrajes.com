@@ -149,6 +149,10 @@ require 'controladores/consulta.php';
 								if (($row_producto['opcionD'] <> "")  AND ( ($row_producto['cuenta']==1) OR ($cuentaOpcion==1) ) ) { 
 									print '<div><span class="verde"><br>»</span><span>'.$row_producto['opcionD'].'</span></div>';
 								}
+									
+								if (($row_producto['repuestoD'] <> "")  AND ( ($row_producto['cuenta']==1) OR ($cuentaRepuesto==1) ) ) { 
+									print '<div><span class="verde"><br>»</span><span>'.$row_producto['repuestoD'].'</span></div>';
+								}
 
 								if (($row_producto['notaD'] <> "")  AND ( ($row_producto['cuenta']==1) OR ($cuentaNota==1) ) ) { 
 									print '<div><span class="sobrePedido">'.$row_producto['notaD'].'</span></div>';
@@ -171,9 +175,11 @@ require 'controladores/consulta.php';
 										<span class="ft">FT</span>
 										<span>&nbsp;&nbsp;Ficha T&eacute;cnica&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 									</div>
+								<?php if ($row_producto['imgF'] <> "") { ?>
 									<div id="fichaMostrar">
 										<span id="FT<?php print $row_producto['Código'];?>" class="mostrar">Mostrar&nbsp;</span>
 									</div>
+								<?php } ?>
 									<div id="fichaDescarga">
 										<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;descargar&nbsp;</span>
 										<span>
@@ -188,10 +194,12 @@ require 'controladores/consulta.php';
 									<div id="instructOrden">
 										<span class="ii">&nbsp;II&nbsp;</span>
 										<span>&nbsp;&nbsp;Instructivo de Instalaci&oacute;n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-									</div>
+									</div>								
+								<?php if ($row_producto['imgI'] <> "") { ?>
 									<div id="instructMostrar">
 										<span id="II<?php print $row_producto['Código'];?>" class="mostrar">Mostrar&nbsp;</span>
 									</div>
+								<?php } ?>
 									<div id="instructDescarga">
 										<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;descargar&nbsp;</span>
 										<span>
@@ -200,6 +208,24 @@ require 'controladores/consulta.php';
 									</div>
 								</section>
 							<?php } //termina if instructivo ?>
+							
+							<?php if ($row_producto['cc'] <> "") {//inicia if componentes ?>
+								<section id="cc">
+									<div id="ccOrden">
+										<span class="cc">&nbsp;C&nbsp;</span>
+										<span>&nbsp;&nbsp;Configuraciones y Componentes&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+									</div>
+									<div id="ccMostrar">
+										<span id="CC<?php print $row_producto['Código'];?>" class="mostrar">Mostrar&nbsp;</span>
+									</div>
+									<div id="ccDescarga">
+										<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;descargar&nbsp;</span>
+										<span>
+											<a id="down" class="icon-download" href="http://www.cerrajes.me/instructivos/<?php print $row_producto['cc'];?>.pdf" target="_blank" title="Descargar pdf"></a>
+										</span>
+									</div>
+								</section>
+							<?php } //termina if componentes ?>
 
 						</section><!-- termina sección de información de producto -->
 

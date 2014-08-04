@@ -45,3 +45,28 @@ var $ft  		= $('#productos #v'+$idn);
 	
 	crearSlide();
 }
+
+	$('#productos #producto #codigo #cc .mostrar').click( mostrarOcultarCC );
+
+	function mostrarOcultarCC(e){
+	// console.log(e);
+		$idn 		= this.id;
+		$verSlide	= 0;
+		$txt 		= $('#productos #producto #codigo #cc #'+$idn).text();
+		$ii  		= $('#productos #v'+$idn);
+		console.log("entré a la función mostrarOcultarCC"+$txt+$idn);
+
+	$test=$('#productos #v'+$idn).css('display');
+	console.log('es none? '+$test);
+	if ($('#productos #v'+$idn).css('display') == 'none') {
+		$('#productos #producto #codigo #cc #'+$idn).text('Ocultar ');
+		$('#productos #producto #codigo #cc #'+$idn).addClass('ocultar');
+	} 
+	if ($('#productos #v'+$idn).css('display') == 'block') {
+		$('#productos #producto #codigo #cc #'+$idn).text('Mostrar ');
+		$('#productos #producto #codigo #cc #'+$idn).removeClass('ocultar');	
+	};
+	$ii.slideToggle( 300 );
+	
+	crearSlide();
+}
