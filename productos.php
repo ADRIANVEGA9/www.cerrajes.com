@@ -82,7 +82,8 @@ require 'controladores/consulta.php';
 							><!-- inicia span #codigoUM -->
 
 								<?php if (($row_producto['cuenta']==1) AND ($row_producto['imgRecuadro'] == '')) { //si cuenta es == 1, es un solo código, cuando no tenga imagen de recuadro pone el código?>
-									<span>C&oacute;digo: </span><span class="codigo"><?php print $row_producto['codigo']?></span><br>
+									<span>C&oacute;digo: </span><span class="codigo">
+									<!-- <a name="<?php //print $row_producto['codigo']?>">--><?php print $row_producto['codigo']?><!-- </a> --></span><br> 
 								<?php } //termina código unico
 
 									if ($row_producto['UM']<>'') { ?>														
@@ -169,17 +170,16 @@ require 'controladores/consulta.php';
 <!-- termina sección de iconos unicos-->
 
 
+						<?php if ($row_producto['imgF'] <> "") { ?>
 							<?php if ($row_producto['ficha'] <> "") {//inicia if ficha ?>
 								<section id="ficha">
 									<div id="fichaOrden">
 										<span class="ft">FT</span>
 										<span>&nbsp;&nbsp;Ficha T&eacute;cnica&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 									</div>
-								<?php if ($row_producto['imgF'] <> "") { ?>
 									<div id="fichaMostrar">
 										<span id="FT<?php print $row_producto['Código'];?>" class="mostrar">Mostrar&nbsp;</span>
 									</div>
-								<?php } ?>
 									<div id="fichaDescarga">
 										<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;descargar&nbsp;</span>
 										<span>
@@ -188,18 +188,18 @@ require 'controladores/consulta.php';
 									</div>
 								</section>
 							<?php } //termina if ficha?>
-							
+						<?php } ?>
+															
+						<?php if ($row_producto['imgI'] <> "") { ?>
 							<?php if ($row_producto['instructivo'] <> "") {//inicia if instructivo ?>
 								<section id="instructivo">
 									<div id="instructOrden">
 										<span class="ii">&nbsp;II&nbsp;</span>
 										<span>&nbsp;&nbsp;Instructivo de Instalaci&oacute;n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-									</div>								
-								<?php if ($row_producto['imgI'] <> "") { ?>
+									</div>
 									<div id="instructMostrar">
 										<span id="II<?php print $row_producto['Código'];?>" class="mostrar">Mostrar&nbsp;</span>
 									</div>
-								<?php } ?>
 									<div id="instructDescarga">
 										<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;descargar&nbsp;</span>
 										<span>
@@ -208,6 +208,7 @@ require 'controladores/consulta.php';
 									</div>
 								</section>
 							<?php } //termina if instructivo ?>
+						<?php } ?>
 							
 							<?php if ($row_producto['cc'] <> "") {//inicia if componentes ?>
 								<section id="cc">

@@ -52,7 +52,7 @@ if (($row_producto['Material'] <> "") AND ($cuentaMaterial == 1)) { //inicia ico
 		<img src="imagenesSitio/productos/iconos/material.png" alt="icono"/>
 		<div><?php print $row_producto['Material'] ?></div>
 	</figure><?php } //termina icono Material
-if ($row_producto['Carga'] <> "") { //inicia icono Carga?>
+if (($row_producto['Carga'] <> "") AND ($row_producto['cuenta'] == 1)) { //inicia icono Carga?>
 	<figure>
 		<img src="imagenesSitio/productos/iconos/carga.png" alt="icono"/>
 		<div><?php print $row_producto['Carga'] ?></div>

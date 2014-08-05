@@ -137,4 +137,12 @@
 	$i++;
 	if ($i>1) { print '<span class="lineaPunteadaCodigo">';} else { print '<span>';}
 	print '<span class="titulo">lados</span><br>'.$row_producto['lados'].'</span>'; }
+	if (($row_producto['medidaMueble'] <> "")  AND ((substr($row_producto['medidaMueble'], 0, 4)) <> "<br>")){ 
+	$i++;
+	if ($i>1) { print '<span class="lineaPunteadaCodigo">';} else { print '<span>';}
+	print '<span class="titulo">medida del mueble</span><br>'.$row_producto['medidaMueble'].'</span>'; }
+	if (($row_producto['carga'] <> "")  AND ((substr($row_producto['carga'], 0, 4)) <> "<br>")){ 
+	$i++;
+	if ($i>1) { print '<span class="lineaPunteadaCodigo">';} else { print '<span>';}
+	print '<span class="titulo">carga</span><br>'.$row_producto['carga'].'</span>'; }
 ?>

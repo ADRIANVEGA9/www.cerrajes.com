@@ -533,7 +533,8 @@ nav td.activo
 }
 #contenido #productos #producto #codigo #codigoMultiple #recuadro .lineaPunteadaCodigo {
 	border-left: dotted 1px #BEBECF;
-	padding-left: .2em;
+	margin-left: .3em;
+	padding-left: .3em;
 }
 #contenido #productos #producto #codigo #codigoMultiple #recuadro .titulo {
 	color: #71BF44;
@@ -557,14 +558,14 @@ nav td.activo
 	min-height: 110px;
 }
 #contenido #productos #producto #codigo #codigoUM #logo {
-	left: -131px;
+	left: -137px;
 	position: absolute;
-	top: 0;
-	/*width: 5%;*/
+	top: -10px;
+	width: 6%;
 }
 #contenido #productos #producto #codigo #codigoUM #logo img {
 	vertical-align: middle;
-	width: auto;
+	width: 100%;
 }
 #contenido #productos #producto #codigo #codigoNo {
 	display: inline-block;

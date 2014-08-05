@@ -54,6 +54,8 @@ $query_productos = $db->Execute("SELECT *, GROUP_CONCAT( DISTINCT id SEPARATOR  
 										 , GROUP_CONCAT( colocacion SEPARATOR  '<br>') AS colocacion
 										 , GROUP_CONCAT( canastilla SEPARATOR  '<br>') AS canastilla
 										 , GROUP_CONCAT( lados SEPARATOR  '<br>') AS lados
+										 , GROUP_CONCAT( medidaMueble SEPARATOR  '<br>') AS medidaMueble
+										 , GROUP_CONCAT( carga SEPARATOR  '<br>') AS carga
 										 , GROUP_CONCAT( DISTINCT cierre SEPARATOR  '<br>') AS cierreD
 								FROM productos
 								WHERE linea = '$id_linea' AND sublinea = '$id_sublinea'

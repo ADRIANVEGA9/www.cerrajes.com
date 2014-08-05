@@ -120,6 +120,10 @@
 					<figure><img id="24" src="imagenesSitio/nuevosProductos/24.png" alt="icono"/></figure>
 					<figcaption>Corredera uniset blanca / soporte frontal uniset</figcaption>
 				</section>
+				<section class="icono">
+					<figure><img id="25" src="imagenesSitio/nuevosProductos/25.png" alt="icono"/></figure>
+					<figcaption>Columna lateral alta para despensero</figcaption>
+				</section>
 			</section>
 
 			<section id="np_info">
@@ -147,6 +151,7 @@
 				<figure id="np_img22" class="_off"><img src="imagenesSitio/nuevosProductos/22.jpg" alt=""></figure>
 				<figure id="np_img23" class="_off"><img src="imagenesSitio/nuevosProductos/23.jpg" alt=""></figure>
 				<figure id="np_img24" class="_off"><img src="imagenesSitio/nuevosProductos/24.jpg" alt=""></figure>
+				<figure id="np_img25" class="_off"><img src="imagenesSitio/nuevosProductos/25.jpg" alt=""></figure>
 			</section>
 
 		</section>
