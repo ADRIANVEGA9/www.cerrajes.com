@@ -1343,21 +1343,21 @@ nav td.activo
 }
 
 .form-box {
-	background: #FEFEFE;
+	background: #71BF44;
 	border: 1px solid #cccccc;
-	height: 35px
 }
 .form-box .custom-search-box {
-	border-right: 1px solid #cccccc !important;
-	border: none;
 	color: #666;
-	float: left;
-	height: 95%;
-	width: 85%;
+	height: 100%;
+	padding-right: 1.5em;
+	width: 80%;
 }
 .form-box #form_buscar {
-	height: 100%;
+	padding-left: 1em;
 }
 .form-box #form_buscar .btnSearch {
-	height: 65%;
+	display: inline-block;
+	left: -10%;
+	position: relative;
+	vertical-align: middle;
 }
