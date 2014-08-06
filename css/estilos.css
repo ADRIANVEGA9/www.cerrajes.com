@@ -165,7 +165,7 @@ nav td.activo
 	padding: 0;
 	padding-bottom: 10px;
 }
-#buscar a input
+/*#buscar a input
 {
 	background-image: url(../imagenesSitio/search.png); 
 	background-position: right center; 
@@ -174,7 +174,7 @@ nav td.activo
 	color: #7C9172;
 	padding-right: 10px; 
 	width: 80%;
-}
+}*/
 #circulo1 
 {
 	background: #B2E4EB;
@@ -886,6 +886,15 @@ nav td.activo
 #contenido .articuloHome .img01 .img1 {
 	left: -250px;
 }
+#contenido .busqueda 
+{
+	display: inline-block;
+	font-size: 0.79em;
+	padding-top: 1em;
+	text-align: justify;
+	vertical-align: top;
+	width:100%;
+}
 #contenido .catalogos article figure {
 	display: inline-block;
 	font-size: .8em;
@@ -1331,4 +1340,24 @@ nav td.activo
 	border-color: #AAA;
 	box-shadow: 1px 1px 10px 1px #AAA;
 	color: #EFE;
+}
+
+.form-box {
+	background: #FEFEFE;
+	border: 1px solid #cccccc;
+	height: 35px
+}
+.form-box .custom-search-box {
+	border-right: 1px solid #cccccc !important;
+	border: none;
+	color: #666;
+	float: left;
+	height: 95%;
+	width: 85%;
+}
+.form-box #form_buscar {
+	height: 100%;
+}
+.form-box #form_buscar .btnSearch {
+	height: 65%;
 }

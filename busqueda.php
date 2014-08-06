@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<?php $ac = 13; 
-include("connections/db.inc.php"); 
+<?php $ac = 100;
+include("connections/DB.inc.php"); 
 /***VARIABLES POR GET ***/
 $numero1 = count($_GET);
 $tags1 = array_keys($_GET);// obtiene los nombres de las varibles
@@ -10,59 +10,47 @@ for($i=0;$i<$numero1;$i++){// crea las variables y les asigna el valor
 $$tags1[$i]=$valores1[$i];
 }
 
-if (isset($id_linea)) {
-  $id_linea = $id_linea;
+if ($txt_buscar<>"") {
+  $txt_buscar = $txt_buscar;
 } else {
-	$id_linea='01';
+	$txt_buscar='&nbsp;';
 }
-
-if (isset($id_sublinea)) {
-  $id_sublinea = $id_sublinea;
-} else {
-	$id_sublinea='0101';
-}
-
-require 'controladores/consulta.php';
+require 'controladores/consultaB.php';
 
 ?>
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<!-- <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> -->
 <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> -->
 <link rel="shortcut icon" href="favicon.ico">
-<title>Cerrajes&reg; el herraje ideal para su mueble... - Productos</title>
+<title>Cerrajes&reg; el herraje ideal para su mueble... - Búsqueda</title>
 <link rel="stylesheet" href="css/normalize.css">
-<link rel="stylesheet" href="css/estilos.css">
 <link rel="stylesheet" type="text/css" href="css/paginacion.css" />
 <link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/estilos.css">
 <script src="js/prefixfree.min.js"></script>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-
-
 </head>
 <body>
 <?php require(".header.html") ?>
 	<section id="menuProductos">
 		<?php 
 			require("menu/.menu.php");
-			require(".zoom.html"); 
-			require(".registro.php");
-		?>
+			require(".registro.php") ?>
 	</section>
 	<section id="contenedor">
 		<?php require(".nav.php") ?>
 		<section  id="contenido">
-		<?php
-		foreach($query_titulo as $t => $row_titulo) 
-		{//inicia Titulos linea - sublinea 			print $query_productos;?> 
-			<div class="tituloSeccion"><strong><?php echo $row_titulo['linea'];?></strong>
-				<span id="sublinea"> / <?php echo $row_titulo['sublinea']; //termina Titulos linea - sublinea?></span>
-			</div>	
+			<div class="tituloSeccion">
+				<?php if ($totalRows==0) { ?>
+					<strong>No se encontraron coincidencias con '<?php echo $txt_buscar;?>'</strong></div>
+				<?php } else {?>
+				<strong>Se encontraron  <?php echo $totalRows .' coincidencias con '.$txt_buscar;?></strong></div>
+				<?php }?>
 			<section id="productos">
-				<?php } 
-					foreach($query_productos as $p => $row_producto)
-					{//inicia foreach productos
+				<?php  
+					foreach($query_buscar as $p => $row_producto)
+					{//inicia foreach buscar
 						require 'controladores/conocerDistinct.php';
 				?>
 
@@ -244,12 +232,12 @@ require 'controladores/consulta.php';
 
 				<?php } //termina foreach productos ?>
 
-			</section>
+			</section>			
 		</section>
+
 
 	</section>
 	<?php require(".footer.php") ?>
-
 <script src="js/paginacion.js"></script>
 <script src="js/mostrar.js"></script>
 </body>

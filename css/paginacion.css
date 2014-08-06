@@ -1,8 +1,8 @@
-*{	/* Universal page reset */
+#productos *{	/* Universal page reset */
 	margin:0;
 	padding:0;
 }
-a.swShowPage{
+#productos a.swShowPage{
 	background-color: #71BF44;
 	border-radius: 7px;
 	color: #EFE !important;
@@ -16,37 +16,37 @@ a.swShowPage{
 	width: 1.2em;
 }
 
-a.swShowPage:hover,
-a.swShowPage.active{
+#productos a.swShowPage:hover,
+#productos a.swShowPage.active{
 	background-color: #EFE;
 	box-shadow: 0 0 8px #999 inset;
 	color: #063304 !important;
 	text-decoration: none !important;
 }
-a.swShowPage.active{
+#productos a.swShowPage.active{
 	cursor: default;
 }
-#holder{	/* The unordered list that is to be split into pages */
+#productos #holder{	/* The unordered list that is to be split into pages */
 	overflow: hidden;
 	padding-top: 30px;
 	position: relative;
 	width: 98%;
 }
-#holder img {
+#productos #holder img {
 	width: 100%;
 }
-#holder li{
+#productos #holder li{
 	float: left;
 	list-style: none outside none;
 	margin: 10px 10px 25px;
 }
-#productos .mostrar
+#productos #productos .mostrar
 {	/* The main container div */
 	margin:50px auto;
 	position:relative;
 	width:15%;
 }
-.swControls{
+#productos .swControls{
 	position: absolute;
 	top: 5px;
 }
