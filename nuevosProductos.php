@@ -121,8 +121,16 @@
 					<figcaption>Corredera uniset blanca / soporte frontal uniset</figcaption>
 				</section>
 				<section class="icono">
+					<figure><img id="26" src="imagenesSitio/nuevosProductos/26.png" alt="icono"/></figure>
+					<figcaption>Tope a muro para manija de puerta</figcaption>
+				</section>
+				<section class="icono">
 					<figure><img id="25" src="imagenesSitio/nuevosProductos/25.png" alt="icono"/></figure>
 					<figcaption>Columna lateral alta para despensero</figcaption>
+				</section>
+				<section class="icono">
+					<figure><img id="27" src="imagenesSitio/nuevosProductos/27.png" alt="icono"/></figure>
+					<figcaption>Tubo redondo para armario</figcaption>
 				</section>
 			</section>
 
@@ -151,7 +159,9 @@
 				<figure id="np_img22" class="_off"><img src="imagenesSitio/nuevosProductos/22.jpg" alt=""></figure>
 				<figure id="np_img23" class="_off"><img src="imagenesSitio/nuevosProductos/23.jpg" alt=""></figure>
 				<figure id="np_img24" class="_off"><img src="imagenesSitio/nuevosProductos/24.jpg" alt=""></figure>
+				<figure id="np_img26" class="_off"><img src="imagenesSitio/nuevosProductos/26.jpg" alt=""></figure>
 				<figure id="np_img25" class="_off"><img src="imagenesSitio/nuevosProductos/25.jpg" alt=""></figure>
+				<figure id="np_img27" class="_off"><img src="imagenesSitio/nuevosProductos/27.jpg" alt=""></figure>
 			</section>
 
 		</section>

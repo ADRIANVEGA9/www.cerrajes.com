@@ -45,7 +45,7 @@ require 'controladores/consultaB.php';
 				<?php if ($totalRows==0) { ?>
 					<strong>No se encontraron coincidencias con '<?php echo $txt_buscar;?>'</strong></div>
 				<?php } else {?>
-				<strong>Se encontraron  <?php echo $totalRows .' coincidencias con '.$txt_buscar;?></strong></div>
+				<strong>Se encontraron  <?php echo $totalRows .' coincidencias con \''.$txt_buscar;?>'</strong></div>
 				<?php }?>
 			<section id="productos">
 				<?php  

@@ -30,7 +30,7 @@
 							<img src="imagenesSitio/catalogos/industrial.png" alt="Cátalogo Industrial"/>
 						<figcaption>Cátalogo Industrial</figcaption>
 						</a>
-						<a id="down" class="icon-download" href="http://www.cerrajes.me/catalogos/pdf/industrial.pdf" target="_blank" title="Descargar pdf"></a>
+						<a id="down" class="icon-download" href="descarga.php" title="Descargar pdf"></a>
 					</figure>
 
 
@@ -39,7 +39,7 @@
 							<img src="imagenesSitio/catalogos/Comercial.png" alt="Cátalogo Comercial"/>
 						<figcaption> Cátalogo Comercial</figcaption>
 						</a>
-						<a id="down" class="icon-download" href="http://www.cerrajes.me/catalogos/pdf/comercial.pdf" target="_blank" title="Descargar pdf"></a>
+						<a id="down" class="icon-download" href="descarga.php" title="Descargar pdf"></a>
 					</figure>
 
 
@@ -48,7 +48,7 @@
 							<img src="imagenesSitio/catalogos/Vauth-Sagel.png" alt="Cátalogo Vauth-Sagel"/>
 						<figcaption> Cátalogo Vauth-Sagel</figcaption>
 						</a>
-						<a id="down" class="icon-download" href="http://www.cerrajes.me/catalogos/pdf/vauth-sagel.pdf" target="_blank" title="Descargar pdf"></a>
+						<a id="down" class="icon-download" href="descarga.php" title="Descargar pdf"></a>
 					</figure>
 
 
@@ -57,7 +57,7 @@
 							<img src="imagenesSitio/catalogos/shine.png" alt="Cátalogo Shine"/>
 						<figcaption> Cátalogo Shine</figcaption>
 						</a>
-						<a id="down" class="icon-download" href="http://www.cerrajes.me/catalogos/pdf/shine.pdf" target="_blank" title="Descargar pdf"></a>
+						<a id="down" class="icon-download" href="descarga.php" title="Descargar pdf"></a>
 					</figure>
 
 
@@ -66,7 +66,7 @@
 							<img src="imagenesSitio/catalogos/elite.png" alt="Accesorios para clóset Elite"/>
 						<figcaption> Accesorios para clóset Elite</figcaption>
 						</a>
-						<a id="down" class="icon-download" href="http://www.cerrajes.me/catalogos/pdf/elite.pdf" target="_blank" title="Descargar pdf"></a>
+						<a id="down" class="icon-download" href="descarga.php" title="Descargar pdf"></a>
 					</figure>
 
 
@@ -75,7 +75,7 @@
 							<img src="imagenesSitio/catalogos/futura.png" alt="Correderas Futura y Unica"/>
 						<figcaption> Correderas Futura y Unica</figcaption>
 						</a>
-						<a id="down" class="icon-download" href="http://www.cerrajes.me/catalogos/pdf/futura.pdf" target="_blank" title="Descargar pdf"></a>
+						<a id="down" class="icon-download" href="descarga.php" title="Descargar pdf"></a>
 					</figure>
 
 
@@ -84,7 +84,7 @@
 							<img src="imagenesSitio/catalogos/impaz.png" alt="Corredera Impaz"/>
 						<figcaption> Corredera Impaz</figcaption>
 						</a>
-						<a id="down" class="icon-download" href="http://www.cerrajes.me/catalogos/pdf/impaz.pdf" target="_blank" title="Descargar pdf"></a>
+						<a id="down" class="icon-download" href="descarga.php" title="Descargar pdf"></a>
 					</figure>
 
 
@@ -93,7 +93,7 @@
 							<img src="imagenesSitio/catalogos/prime.png" alt="Corredera Prime"/>
 						<figcaption> Corredera Prime</figcaption>
 						</a>
-						<a id="down" class="icon-download" href="http://www.cerrajes.me/catalogos/pdf/prime.pdf" target="_blank" title="Descargar pdf"></a>
+						<a id="down" class="icon-download" href="descarga.php" title="Descargar pdf"></a>
 					</figure>
 
 
@@ -102,7 +102,7 @@
 							<img src="imagenesSitio/catalogos/ten.png" alt="Corredera TEN"/>
 						<figcaption> Corredera TEN</figcaption>
 						</a>
-						<a id="down" class="icon-download" href="http://www.cerrajes.me/catalogos/pdf/ten.pdf" target="_blank" title="Descargar pdf"></a>
+						<a id="down" class="icon-download" href="descarga.php" title="Descargar pdf"></a>
 					</figure>
 
 
@@ -111,7 +111,7 @@
 							<img src="imagenesSitio/catalogos/triomax.png" alt="Corredera Triomax"/>
 						<figcaption> Corredera Triomax</figcaption>
 						</a>
-						<a id="down" class="icon-download" href="http://www.cerrajes.me/catalogos/pdf/triomax.pdf" target="_blank" title="Descargar pdf"></a>
+						<a id="down" class="icon-download" href="descarga.php" title="Descargar pdf"></a>
 					</figure>
 
 
@@ -120,7 +120,7 @@
 							<img src="imagenesSitio/catalogos/T5.png" alt="Corredera Triomax T5"/>
 						<figcaption> Corredera Triomax T5</figcaption>
 						</a>
-						<a id="down" class="icon-download" href="http://www.cerrajes.me/catalogos/pdf/T5.pdf" target="_blank" title="Descargar pdf"></a>
+						<a id="down" class="icon-download" href="descarga.php" title="Descargar pdf"></a>
 					</figure>
 
 
@@ -129,7 +129,7 @@
 							<img src="imagenesSitio/catalogos/levadizos_salice.png" alt="Sistemas levadizos Salice"/>
 						<figcaption> Sistemas levadizos Salice</figcaption>
 						</a>
-						<a id="down" class="icon-download" href="http://www.cerrajes.me/catalogos/pdf/levadizos_salice.pdf" target="_blank" title="Descargar pdf"></a>
+						<a id="down" class="icon-download" href="descarga.php" title="Descargar pdf"></a>
 					</figure>
 
 

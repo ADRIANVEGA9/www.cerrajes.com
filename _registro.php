@@ -165,7 +165,7 @@ $headers .= "Content-type: text/html; charset= iso-8859-1\r\n";
 $micorreo = "avega@cerrajes.com";/*contacto@cerrajes.com*/
 $correoCli = "$_POST[correoR]";
 $headers .= "Reply-To: contacto@cerrajes.com\r\n"; /*contacto@cerrajes.com*/ 
-$headers .= "From: Contacto Cerrajes<avega@cerrajes.com>\r\n";/*contacto@cerrajes.com*/
+$headers .= "From: Contacto Cerrajes<contacto@cerrajes.com>\r\n";/*contacto@cerrajes.com*/
 $headers .= 'Bcc: avega@cerrajes.com' . "\r\n";
 //En este ejemplo suponemos que el mail del destinatario lo hemos enviado desde un formulario con el método post, pero es indistinto desde donde se lo obtenga (consulta a la base de datos, almacenado en una variable de sesi&oacute;n, enviado por get,etc.)
 ini_set("SMTP","mail.cerrajes.com");/*mail.cerrajes.com*/
@@ -213,54 +213,53 @@ mail($correoCli, " Cerrajes el herraje ideal para su mueble - registro\r\n", utf
 <!-- Código para doppler -->
 <?php
 
-/* This Doppler API Example use an existing library known as NUSOAP V0.7.1
-* Information about this lib can be found at http://sourceforge.net/projects/nusoap/ 
-*/
-// require'nusoap/nusoap.php';
+require_once('nusoap/nusoap.php');
 
-// $proxyhost = isset($_POST['proxyhost']) ? $_POST['proxyhost'] : '';
-// $proxyport = isset($_POST['proxyport']) ? $_POST['proxyport'] : '';
-// $proxyusername = isset($_POST['proxyusername']) ? $_POST['proxyusername'] : '';
-// $proxypassword = isset($_POST['proxypassword']) ? $_POST['proxypassword'] : '';
-// $client = new nusoap_client('http://api.fromdoppler.com/Default.asmx?wsdl', 'wsdl',
-// 						$proxyhost, $proxyport, $proxyusername, $proxypassword);
-// $err = $client->getError();
-// if ($err) {
-// 	echo '<h2>Constructor error</h2><pre>' . $err . '</pre>';
-// }
+	function suscribe ($list) {
+		$wsdlURL = 'http://api.fromdoppler.com/Default.asmx?wsdl';		
+		$operation = 'AddSubscriberwithNameandCustoms';
+		$dirigido = array('Customfieldid' => 37329,'Value' => $_POST['dirigido']);
+		$estado = array('Customfieldid' => 37328,'Value' => $_POST['estadoR']);
+		$cuidad = array('Customfieldid' => 37327,'Value' => $_POST['ciudadR']);
 
-// $empresa = array('Customfieldid' => '22097','Value' => $_POST['empresa']);
-// $telefono = array('Customfieldid' => '22099','Value' => $_POST['telefono']);
-// $lada = array('Customfieldid' => '22120','Value' => $_POST['ladaT']);
-// $municipio = array('Customfieldid' => '22122','Value' => $_POST['municipio']);
-// $estado = array('Customfieldid' => '22121','Value' => $_POST['estado']);
+		$params = array(
+				'APIKey' => 'D70B127D876B4339C7B896A7E28E336D', /* Your API Key Here */
+				'SubscribersListID' => 591464,
+				'FirstName' => $_POST['nombreR'],
+				'EMail' => $_POST['correoR'],
+				'CustomsFields' => array('customField' => array($dirigido,$estado,$ciudad))
+		);
 
-// $param = array('APIKey' => '84F4BBEFA9C397B061E491EEE978AEA5',
-// 		'SubscribersListID' => '506493',
-// 		'FirstName' => utf8_decode($_POST['nombre']),
-// 		'LastName' => utf8_decode($_POST['apellidos']),
-// 		'EMail' => utf8_decode($_POST['correo'])
-// 		);	
-// $result = $client->call('AddSubscriberwithNameandCustoms', $param);
+		$proxyhost = '';
+		$proxyport = '';
+		$proxyusername = '';
+		$proxypassword = '';
+		$client = new nusoap_client($wsdlURL, 'wsdl',
+						$proxyhost, $proxyport, $proxyusername, $proxypassword);;
+		$result = $client->call($operation, $params);	
+		$err = $client->getError(); 
+		if ($err) {
+			/*******************************************/
+			/*		Mensaje de Error*/
+			/******************************************/
+			echo '<h2>Error</h2><pre>' . $err . '</pre><br>';die();
+			/********************************************/
+		} else
+		{
+		echo "SUSCRIPCION_EXITOSA";			
+		}
+	}
 
-// // Check for a fault
-// if ($client->fault) {
-// 	echo '<h2>Fault</h2><pre>';
-// 	print_r($result);
-// 	echo '</pre>';
-// } else {
-// 	// Check for errors
-// 	$err = $client->getError();
-// 	if ($err) {
-// 		// Display the error
-// 		echo '<h2>Error</h2><pre>' . $err . '</pre>';
-// 	} else {
-// 		// Display the result
-// 		//echo '<h2>Suscripci&oacute;n Exitosa</h2><pre>';
-// 		//print_r($result);
-// 		echo '</pre>';
-// 	}
-// }
+
+
+
+	$total_cats = 11;
+	for($i=1 ; $i<=$total_cats;$i++) {
+		if(isset($_POST['cat' . $i])) {
+			suscribe($_POST['cat' . $i]);
+		}
+	}
+
 /***********************************************/
 /*termina código doppler -->*/
 ?>

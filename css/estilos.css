@@ -236,7 +236,7 @@ nav td.activo
 #contenido #contactoCajas input[type="mail"]
 {
 	height: 25px;
-	margin-bottom: 8px;
+	margin-bottom: 5px;
 	width: 100%;
 	color: #333;
 }
@@ -926,6 +926,34 @@ nav td.activo
 #contenido .catalogos .catalogosImg figure #down:hover {
 	transform: scale(1.30);
 }
+#contenido .descargas #imgDescargas {
+	display: inline-block;
+	vertical-align: top;
+	width:50%;
+}
+#contenido .descargas #formDescargas {
+	display: inline-block;
+	text-align: left;
+	vertical-align: top;
+	width: 45%;
+}
+#contenido .descargas #footerDescargas {
+	background: #71BF44;
+	color: #FEFEFE;
+	font-size: 1.3em;
+	padding: .5em 0;
+	position: relative;
+	top: -.3em;
+}
+#contenido .descargas #footerDescargas a{
+	color: #FEFEFE;
+	display: inline-block;
+}
+#contenido .descargas #imgDescargas img {
+	position: relative;
+	right: -1.1em;
+	width: 100%;
+}
 #contenido .noticias {
 	padding-top: 1em;
 }
@@ -1025,11 +1053,11 @@ nav td.activo
 #menuProductos #registro #registroDatos input[type="text"],
 #menuProductos #registro #registroDatos input[type="mail"]
 {
-	/*box-shadow: 1px 1px 6px 1px #AAA;*/
+	border: none;
+	box-shadow: 1px 1px 6px 1px #AAA;
 	color: #333;
 	font-size: .75em;
-	/*height: .8em;
-	margin-bottom: .2em;*/
+	margin: .2em 0;
 	width: 95%;
 }
 #menuProductos #registro #registroDatos input[type="radio"] {
@@ -1281,6 +1309,14 @@ nav td.activo
 	color: #666;
 	font-size: .8em;
 }
+.tituloDescargas {
+	background: #71BF44;
+	color: #FEFEFE;
+	font-size: 2em;
+	padding: .3em 1em;
+	position: relative;
+	text-align: left;
+}
 .triangulo_top_right 
 {
 	-webkit-filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.3));
@@ -1360,4 +1396,113 @@ nav td.activo
 	left: -10%;
 	position: relative;
 	vertical-align: middle;
+}
+
+
+#contenido #descargasDatos {
+	
+}
+#contenido #descargasDatos #enviado {
+	display: inline-block;
+	margin-top: 40%;
+	text-align: center;
+	width: 45%;
+}
+#contenido #descargasDatos #enviado .descargaPDF {
+	color: #FEFEFE !important;
+	margin: 1em;
+}
+#contenido #descargasDatos #enviado .descargaPDF:hover {
+	text-decoration: none !important;
+}
+
+#contenido #descargasDatos input[type="text"],
+#contenido #descargasDatos input[type="mail"]
+{
+	border: none;
+	box-shadow: 1px 1px 6px 1px #AAA;
+	color: #333;
+	font-size: .75em;
+	margin: .4em 0;
+	width: 95%;
+}
+#contenido #descargasDatos input[type="radio"] {
+	width: 15%;
+}
+#contenido #descargasDatos #tituloD{
+	color: #777;
+	font-size: .95em;
+	font-weight: 500;
+	margin: 1em 2em 1.8em;
+	text-align: left;
+	width: 70%;
+}
+#contenido #descargasDatos #descargasCajas {
+	border-color: #7A7A7A;
+	display: inline-block;
+	position: relative;
+	vertical-align: text-top;
+	width: 75%;
+}
+#contenido #descargasDatos #descargasEtiquetas {
+	display: inline-block;
+	text-align: right;
+	vertical-align: text-top;
+	width: 20%;
+}
+#contenido #descargasDatos #descargasEtiquetas label{
+	color: #555;
+	display: inline-block;
+	font-size: .7em;
+	font-weight: bold;
+	line-height: 1.5em;
+	margin: .45em 0;
+	text-transform: uppercase;
+}
+#contenido #descargasDatos #descargasCheck {
+	display: inline-block;
+	padding: .8em 0 2em;
+	text-align: left;
+	vertical-align: top;
+	width: 80%;
+}
+#contenido #descargasDatos #descargasCheck label {
+	color: #777;
+	display: inline-block;
+	font-size: .8em;
+	padding-bottom: 1em;
+	vertical-align: top;
+	width: 90%;
+}
+#contenido #descargasDatos #descargasForm {
+	text-align: center;
+}
+#contenido #descargasDatos #descargasRadio {
+	display: inline-block;
+	padding-top: .8em;
+	text-align: left;
+	vertical-align: top;
+	width: 80%;
+}
+#contenido #descargasDatos #descargasRadio input[type="radio"] {
+	display: inline-block;
+	vertical-align: top;
+	width: 5%;
+}
+#contenido #descargasDatos #descargasRadio label {
+	color: #777;
+	display: inline-block;
+	font-size: .8em;
+	vertical-align: top;
+	width: 40%;
+}
+#contenido #descargasDatos .descargasTexto {
+	color: #666;
+	display: inline-block;
+	font-size: .7em;
+	font-weight: bold;
+	padding-top: 2em;
+	text-align: left;
+	vertical-align: top;
+	width: 85%;
 }

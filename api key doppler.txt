@@ -14,3 +14,25 @@ api key registro
 D70B127D876B4339C7B896A7E28E336D
 id lista
 591464
+
+
+Lista contacto
+D70B127D876B4339C7B896A7E28E336D
+568523
+
+Lista tiendas
+D70B127D876B4339C7B896A7E28E336D
+568524
+
+[04:54:22 p. m.] Cristina Soto Loyola: contacto@tiendascerrajes.com
+[04:54:26 p. m.] Cristina Soto Loyola: mailmasivo2014
+
+
+Nombre		API ID
+catalogo	37330
+dirigido	37329
+estado		37328
+ciudad		37327
+
+http://cerrajes.me/catalogos/pdf/*.pdf
+

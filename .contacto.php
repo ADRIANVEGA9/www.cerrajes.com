@@ -234,7 +234,6 @@ mail($correoCli, " Cerrajes el herraje ideal para su mueble - contacto\r\n", utf
 	
 <!-- Código para doppler -->
 <?php
-
 /* This Doppler API Example use an existing library known as NUSOAP V0.7.1
 * Information about this lib can be found at http://sourceforge.net/projects/nusoap/ 
 */
@@ -251,21 +250,22 @@ if ($err) {
 	echo '<h2>Constructor error</h2><pre>' . $err . '</pre>';
 }
 
+// $estado = array('Customfieldid' => 22121,'Value' => $_POST['estado']);
 // $empresa = array('Customfieldid' => '22097','Value' => $_POST['empresa']);
 // $telefono = array('Customfieldid' => '22099','Value' => $_POST['telefono']);
-// $lada = array('Customfieldid' => '22120','Value' => $_POST['ladaT']);
-// $municipio = array('Customfieldid' => '22122','Value' => $_POST['municipio']);
-// $estado = array('Customfieldid' => '22121','Value' => $_POST['estado']);
 
-$param = array('APIKey' => '84F4BBEFA9C397B061E491EEE978AEA5',
-		'SubscribersListID' => '506493',
-		'FirstName' => utf8_decode($_POST['nombre']),
-		'LastName' => utf8_decode($_POST['apellidos']),
-		'EMail' => utf8_decode($_POST['correo'])
+$dop_estado = array('Customfieldid' => 37328,'Value' => $_POST['estado']);
+$dop_ciudad = array('Customfieldid' => '37327','Value' => $_POST['municipio']);
+$param = array('APIKey' => 'D70B127D876B4339C7B896A7E28E336D',
+		'SubscribersListID' => '568523',
+		'FirstName' => $_POST['nombre'],
+		'LastName' => $_POST['apellidos'],
+		'EMail' => $_POST['correo'],
+		'CustomsFields' => array('customField' => array($dop_estado,$dop_ciudad))
 		);	
 $result = $client->call('AddSubscriberwithNameandCustoms', $param);
-
 // Check for a fault
+
 if ($client->fault) {
 	echo '<h2>Fault</h2><pre>';
 	print_r($result);
@@ -276,13 +276,10 @@ if ($client->fault) {
 	if ($err) {
 		// Display the error
 		echo '<h2>Error</h2><pre>' . $err . '</pre>';
-	} else {
-		// Display the result
-		//echo '<h2>Suscripci&oacute;n Exitosa</h2><pre>';
-		//print_r($result);
-		echo '</pre>';
-	}
+	} 
 }
+
 /***********************************************/
-/*termina código doppler -->*/
+/***********************************************/
 ?>
+<!-- termina código doppler -->

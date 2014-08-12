@@ -36,6 +36,7 @@
 				</section>
 				<button type="submit" class="btn btn-default">REGISTRATE GRATIS</button>
 				<input type="hidden" name="registroH" value="a" />
+				<input type="hidden" name="opcion" value="2"></input>
 			</fieldset>
 		</form>
 		<?php }
