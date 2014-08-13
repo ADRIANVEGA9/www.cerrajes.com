@@ -173,7 +173,7 @@ $headers .= 'Bcc: avega@cerrajes.com' . "\r\n";
 ini_set("SMTP","mail.cerrajes.com");/*mail.cerrajes.com*/
 ini_set("smtp_port","587");/*25*/
 ini_set("sendmail_from","mail.cerrajes.com");	/*mail.cerrajes.com*/
-mail($micorreo, " Cerrajes el herraje ideal para su mueble - descarga de catálogos\r\n", utf8_decode($html),$headers)or die ("<article id='enviado'>Su mensaje no pudo ser enviado, intente mas tarde.</article>");  
+mail($micorreo, utf8_decode("Cerrajes el herraje ideal para su mueble - descarga de catálogos\r\n"), utf8_decode($html),$headers)or die ("<article id='enviado'>Su mensaje no pudo ser enviado, intente mas tarde.</article>");  
 $htmlCliente ="<html lang=\"es\">
 		<head>
 		<meta charset=\"utf-8\">
@@ -206,10 +206,11 @@ $htmlCliente ="<html lang=\"es\">
 		</body>
 		</html>	
 		";
-mail($correoCli, " Cerrajes el herraje ideal para su mueble - registro\r\n", utf8_decode($htmlCliente),$headers)or die ("Su mensaje no pudo ser enviado, intente mas tarde."); 
+mail($correoCli, utf8_decode("Cerrajes el herraje ideal para su mueble - descarga de catálogos\r\n"), utf8_decode($htmlCliente),$headers)or die ("Su mensaje no pudo ser enviado, intente mas tarde."); 
 ?>				
 	<article id="enviado">
 		GRACIAS <br> POR REGISTRARTE<br />
+		<?php require 'comprimir.php'; ?>
  	</article>
 <!-- Código para doppler -->
 <?php
