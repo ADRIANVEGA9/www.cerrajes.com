@@ -209,57 +209,54 @@ mail($correoCli, " Cerrajes el herraje ideal para su mueble - registro\r\n", utf
 	<article id="enviado">
 		GRACIAS <br> POR REGISTRARTE<br />
  	</article>
-	
 <!-- Código para doppler -->
 <?php
+/* This Doppler API Example use an existing library known as NUSOAP V0.7.1
+* Information about this lib can be found at http://sourceforge.net/projects/nusoap/ 
+*/
+require'nusoap/nusoap.php';
 
-require_once('nusoap/nusoap.php');
+$proxyhost = isset($_POST['proxyhost']) ? $_POST['proxyhost'] : '';
+$proxyport = isset($_POST['proxyport']) ? $_POST['proxyport'] : '';
+$proxyusername = isset($_POST['proxyusername']) ? $_POST['proxyusername'] : '';
+$proxypassword = isset($_POST['proxypassword']) ? $_POST['proxypassword'] : '';
+$client = new nusoap_client('http://api.fromdoppler.com/Default.asmx?wsdl', 'wsdl',
+						$proxyhost, $proxyport, $proxyusername, $proxypassword);
+$err = $client->getError();
+if ($err) {
+	echo '<h2>Constructor error</h2><pre>' . $err . '</pre>';
+}
 
-	function suscribe ($list) {
-		$wsdlURL = 'http://api.fromdoppler.com/Default.asmx?wsdl';		
-		$operation = 'AddSubscriberwithNameandCustoms';
-		$dirigido = array('Customfieldid' => 37329,'Value' => $_POST['dirigido']);
-		$estado = array('Customfieldid' => 37328,'Value' => $_POST['estadoR']);
-		$cuidad = array('Customfieldid' => 37327,'Value' => $_POST['ciudadR']);
+// $estado = array('Customfieldid' => 22121,'Value' => $_POST['estado']);
+// $empresa = array('Customfieldid' => '22097','Value' => $_POST['empresa']);
+// $telefono = array('Customfieldid' => '22099','Value' => $_POST['telefono']);
 
-		$params = array(
-				'APIKey' => 'D70B127D876B4339C7B896A7E28E336D', /* Your API Key Here */
-				'SubscribersListID' => 591464,
-				'FirstName' => $_POST['nombreR'],
-				'EMail' => $_POST['correoR'],
-				'CustomsFields' => array('customField' => array($dirigido,$estado,$ciudad))
-		);
+$estado = array('Customfieldid' => '37328','Value' => utf8_decode($_POST['estadoR']));
+$ciudad = array('Customfieldid' => '37327','Value' => utf8_decode($_POST['ciudadR']));
+$dirigido = array('Customfieldid' => '37329','Value' => utf8_decode($_POST['dirigido']));
+$param = array('APIKey' => 'D70B127D876B4339C7B896A7E28E336D',
+		'SubscribersListID' => '591464',
+		'FirstName' => utf8_decode($_POST['nombreR']),
+		'EMail' => $_POST['correoR'],
+		'CustomsFields' => array('customField' => array($estado,$ciudad,$dirigido))
+		);	
+$result = $client->call('AddSubscriberwithNameandCustoms', $param);
+// Check for a fault
 
-		$proxyhost = '';
-		$proxyport = '';
-		$proxyusername = '';
-		$proxypassword = '';
-		$client = new nusoap_client($wsdlURL, 'wsdl',
-						$proxyhost, $proxyport, $proxyusername, $proxypassword);;
-		$result = $client->call($operation, $params);	
-		$err = $client->getError(); 
-		if ($err) {
-			/*******************************************/
-			/*		Mensaje de Error*/
-			/******************************************/
-			echo '<h2>Error</h2><pre>' . $err . '</pre><br>';die();
-			/********************************************/
-		} else
-		{
-		echo "SUSCRIPCION_EXITOSA";			
-		}
-	}
-
-
-
-
-	$total_cats = 11;
-	for($i=1 ; $i<=$total_cats;$i++) {
-		if(isset($_POST['cat' . $i])) {
-			suscribe($_POST['cat' . $i]);
-		}
-	}
+if ($client->fault) {
+	echo '<h2>Fault</h2><pre>';
+	print_r($result);
+	echo '</pre>';
+} else {
+	// Check for errors
+	$err = $client->getError();
+	if ($err) {
+		// Display the error
+		echo '<h2>Error</h2><pre>' . $err . '</pre>';
+	} 
+}
 
 /***********************************************/
-/*termina código doppler -->*/
+/***********************************************/
 ?>
+<!-- termina código doppler -->	

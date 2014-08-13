@@ -1,32 +1,20 @@
-api key descarga catalogos
+api key 
 D70B127D876B4339C7B896A7E28E336D
-id de lista
+
+descarga catalogos listID
 591461
 
-Nombre Código para Insertar | Embed Tipo de Dato Tipo de Campo Personalizado 
- catalogo [[[catalogo]]]  Texto  Privado 
- ciudad [[[ciudad]]]  Texto  Privado 
- dirigido [[[dirigido]]]  Texto  Privado 
- estado [[[estado]]]
-
-
-api key registro
-D70B127D876B4339C7B896A7E28E336D
-id lista
+registro listID
 591464
 
-
-Lista contacto
-D70B127D876B4339C7B896A7E28E336D
+contacto listID
 568523
 
-Lista tiendas
-D70B127D876B4339C7B896A7E28E336D
+tiendas listID
 568524
 
-[04:54:22 p. m.] Cristina Soto Loyola: contacto@tiendascerrajes.com
-[04:54:26 p. m.] Cristina Soto Loyola: mailmasivo2014
-
+contacto@tiendascerrajes.com
+mailmasivo2014
 
 Nombre		API ID
 catalogo	37330
@@ -34,5 +22,9 @@ dirigido	37329
 estado		37328
 ciudad		37327
 
-http://cerrajes.me/catalogos/pdf/*.pdf
+AddSubscriberwithNameandCustoms
+
+
+clave interna para promociones
+promoweb2014
 

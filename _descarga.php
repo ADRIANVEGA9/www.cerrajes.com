@@ -1,5 +1,5 @@
 <?php
-$a_descargaCatalogo = implode(',',$_POST['descargaCatalogo']);//convertir Array de checkbox en cadena separada por coma ","
+$a_descargaCatalogo = implode(',',$_POST['descargaCatalogo']);
 //Guardamos en la variable $html el cuerpo del mensaje
 $html = "
 <html >
@@ -144,9 +144,10 @@ background-position: center center;
         <td class=\"estilo1\" colspan=\"2\">".$_POST['dirigidoD']."</td>
         </tr>
       <tr>
-        <td class=\"estilo1\">Catálogos:</td>
+        <td class=\"estilo1\">Dirigido a:</td>
         <td class=\"estilo1\" colspan=\"2\">".$a_descargaCatalogo."</td>
         </tr>
+      <tr>
       <tr>
         <td>&nbsp;</td>
         <td colspan=\"2\" align=\"right\"></td>
@@ -172,7 +173,7 @@ $headers .= 'Bcc: avega@cerrajes.com' . "\r\n";
 ini_set("SMTP","mail.cerrajes.com");/*mail.cerrajes.com*/
 ini_set("smtp_port","587");/*25*/
 ini_set("sendmail_from","mail.cerrajes.com");	/*mail.cerrajes.com*/
-mail($micorreo, utf8_decode("Cerrajes el herraje ideal para su mueble - descarga de cátalogo\r\n"), utf8_decode($html),$headers)or die ("<article id='enviado'>Su mensaje no pudo ser enviado, intente mas tarde.</article>");  
+mail($micorreo, " Cerrajes el herraje ideal para su mueble - descarga de catálogos\r\n", utf8_decode($html),$headers)or die ("<article id='enviado'>Su mensaje no pudo ser enviado, intente mas tarde.</article>");  
 $htmlCliente ="<html lang=\"es\">
 		<head>
 		<meta charset=\"utf-8\">
@@ -209,58 +210,56 @@ mail($correoCli, " Cerrajes el herraje ideal para su mueble - registro\r\n", utf
 ?>				
 	<article id="enviado">
 		GRACIAS <br> POR REGISTRARTE<br />
-		<?php require 'comprimir.php'; ?>
  	</article>
-	
 <!-- Código para doppler -->
 <?php
-
 /* This Doppler API Example use an existing library known as NUSOAP V0.7.1
 * Information about this lib can be found at http://sourceforge.net/projects/nusoap/ 
 */
-//require'nusoap/nusoap.php';
-//require 'http://www.cerrajes.com/directorio/nusoap/nusoap.php';
+require'nusoap/nusoap.php';
 
-// $proxyhost = isset($_POST['proxyhost']) ? $_POST['proxyhost'] : '';
-// $proxyport = isset($_POST['proxyport']) ? $_POST['proxyport'] : '';
-// $proxyusername = isset($_POST['proxyusername']) ? $_POST['proxyusername'] : '';
-// $proxypassword = isset($_POST['proxypassword']) ? $_POST['proxypassword'] : '';
-// $client = new nusoap_client('http://api.fromdoppler.com/Default.asmx?wsdl', 'wsdl',
-// 						$proxyhost, $proxyport, $proxyusername, $proxypassword);
-// $err = $client->getError();
-// if ($err) {
-// 	echo '<h2>Constructor error</h2><pre>' . $err . '</pre>';
-// }
+$proxyhost = isset($_POST['proxyhost']) ? $_POST['proxyhost'] : '';
+$proxyport = isset($_POST['proxyport']) ? $_POST['proxyport'] : '';
+$proxyusername = isset($_POST['proxyusername']) ? $_POST['proxyusername'] : '';
+$proxypassword = isset($_POST['proxypassword']) ? $_POST['proxypassword'] : '';
+$client = new nusoap_client('http://api.fromdoppler.com/Default.asmx?wsdl', 'wsdl',
+						$proxyhost, $proxyport, $proxyusername, $proxypassword);
+$err = $client->getError();
+if ($err) {
+	echo '<h2>Constructor error</h2><pre>' . $err . '</pre>';
+}
 
-// //$dirigido = array('Customfieldid' => '[[[dirigido]]]','Value' => $_POST['dirigidoD']);
-// //$ciudad = array('Customfieldid' => '[[[ciudad]]]','Value' => $_POST['ciudadD']);
-// //$estado = array('Customfieldid' => '[[[estado]]]','Value' => $_POST['estadoD']);
+// $estado = array('Customfieldid' => 22121,'Value' => $_POST['estado']);
+// $empresa = array('Customfieldid' => '22097','Value' => $_POST['empresa']);
+// $telefono = array('Customfieldid' => '22099','Value' => $_POST['telefono']);
 
-// $param = array('APIKey' => 'D70B127D876B4339C7B896A7E28E336D',
-// 		'SubscribersListID' => '591464',
-// 		'FirstName' => utf8_decode($_POST['nombreD']),
-// 		'EMail' => utf8_decode($_POST['correoD'])
-// 		);	
-// $result = $client->call('AddSubscriberwithNameandCustoms', $param);
+$estado = array('Customfieldid' => '37328','Value' => utf8_decode($_POST['estadoD']));
+$ciudad = array('Customfieldid' => '37327','Value' => utf8_decode($_POST['ciudadD']));
+$dirigido = array('Customfieldid' => '37329','Value' => utf8_decode($_POST['dirigidoD']));
+$catalogo = array('Customfieldid' => '37330','Value' => utf8_decode($a_descargaCatalogo));
+$param = array('APIKey' => 'D70B127D876B4339C7B896A7E28E336D',
+		'SubscribersListID' => '591461',
+		'FirstName' => utf8_decode($_POST['nombreD']),
+		'EMail' => $_POST['correoD'],
+		'CustomsFields' => array('customField' => array($estado,$ciudad,$dirigido,$catalogo))
+		);	
+$result = $client->call('AddSubscriberwithNameandCustoms', $param);
+// Check for a fault
 
-// // Check for a fault
-// if ($client->fault) {
-// 	echo '<h2>Fault</h2><pre>';
-// 	print_r($result);
-// 	echo '</pre>';
-// } else {
-// 	// Check for errors
-// 	$err = $client->getError();
-// 	if ($err) {
-// 		// Display the error
-// 		echo '<h2>Error</h2><pre>' . $err . '</pre>';
-// 	} else {
-// 		// Display the result
-// 		//echo '<h2>Suscripci&oacute;n Exitosa</h2><pre>';
-// 		//print_r($result);
-// 		//echo '</pre>';
-// 	}
-// }
+if ($client->fault) {
+	echo '<h2>Fault</h2><pre>';
+	print_r($result);
+	echo '</pre>';
+} else {
+	// Check for errors
+	$err = $client->getError();
+	if ($err) {
+		// Display the error
+		echo '<h2>Error</h2><pre>' . $err . '</pre>';
+	} 
+}
+
 /***********************************************/
-/*termina código doppler -->*/
+/***********************************************/
 ?>
+<!-- termina código doppler -->	

@@ -254,14 +254,14 @@ if ($err) {
 // $empresa = array('Customfieldid' => '22097','Value' => $_POST['empresa']);
 // $telefono = array('Customfieldid' => '22099','Value' => $_POST['telefono']);
 
-$dop_estado = array('Customfieldid' => 37328,'Value' => $_POST['estado']);
-$dop_ciudad = array('Customfieldid' => '37327','Value' => $_POST['municipio']);
+$estado = array('Customfieldid' => '37328','Value' => utf8_decode($_POST['estado']));
+$ciudad = array('Customfieldid' => '37327','Value' => utf8_decode($_POST['municipio']));
 $param = array('APIKey' => 'D70B127D876B4339C7B896A7E28E336D',
 		'SubscribersListID' => '568523',
-		'FirstName' => $_POST['nombre'],
-		'LastName' => $_POST['apellidos'],
+		'FirstName' => utf8_decode($_POST['nombre']),
+		'LastName' => utf8_decode($_POST['apellidos']),
 		'EMail' => $_POST['correo'],
-		'CustomsFields' => array('customField' => array($dop_estado,$dop_ciudad))
+		'CustomsFields' => array('customField' => array($estado,$ciudad))
 		);	
 $result = $client->call('AddSubscriberwithNameandCustoms', $param);
 // Check for a fault

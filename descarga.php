@@ -60,29 +60,29 @@
 
 						<section class="descargasTexto">Descargar Catálogo(s):</section>
 						<section id="descargasCheck">
-							<input name="descargaCatalogo[]" type="checkbox" id="descargaCatalogo_0" form="descargasForm" tabindex="15" value="catalogo/elite.pdf">
+							<input name="descargaCatalogo[]" type="checkbox" id="descargaCatalogo_0" form="descargasForm" tabindex="15" value="elite.pdf">
 					    		<label for="descargaCatalogo_0">Accesorios para clóset Elite</label>
-							<input name="descargaCatalogo[]" type="checkbox" id="descargaCatalogo_1" form="descargasForm" tabindex="16" value="catalogo/comercial.pdf">
+							<input name="descargaCatalogo[]" type="checkbox" id="descargaCatalogo_1" form="descargasForm" tabindex="16" value="comercial.pdf">
 					    		<label for="descargaCatalogo_1">Comercial</label>
-							<input name="descargaCatalogo[]" type="checkbox" id="descargaCatalogo_2" form="descargasForm" tabindex="17" value="catalogo/futura.pdf">
+							<input name="descargaCatalogo[]" type="checkbox" id="descargaCatalogo_2" form="descargasForm" tabindex="17" value="futura.pdf">
 					    		<label for="descargaCatalogo_2">Correderas Futura y unica</label>
-							<input name="descargaCatalogo[]" type="checkbox" id="descargaCatalogo_3" form="descargasForm" tabindex="18" value="catalogo/impaz.pdf">
+							<input name="descargaCatalogo[]" type="checkbox" id="descargaCatalogo_3" form="descargasForm" tabindex="18" value="impaz.pdf">
 					    		<label for="descargaCatalogo_3">Corredera Impaz</label>
-							<input name="descargaCatalogo[]" type="checkbox" id="descargaCatalogo_4" form="descargasForm" tabindex="19" value="catalogo/prime.pdf">
+							<input name="descargaCatalogo[]" type="checkbox" id="descargaCatalogo_4" form="descargasForm" tabindex="19" value="prime.pdf">
 					    		<label for="descargaCatalogo_4">Corredera Prime</label>
-							<input name="descargaCatalogo[]" type="checkbox" id="descargaCatalogo_5" form="descargasForm" tabindex="20" value="catalogo/ten.pdf">
+							<input name="descargaCatalogo[]" type="checkbox" id="descargaCatalogo_5" form="descargasForm" tabindex="20" value="ten.pdf">
 					    		<label for="descargaCatalogo_5">Corredera TEN</label>
-							<input name="descargaCatalogo[]" type="checkbox" id="descargaCatalogo_6" form="descargasForm" tabindex="21" value="catalogo/triomax.pdf">
+							<input name="descargaCatalogo[]" type="checkbox" id="descargaCatalogo_6" form="descargasForm" tabindex="21" value="triomax.pdf">
 					    		<label for="descargaCatalogo_6">Corredera Triomax</label>
-							<input name="descargaCatalogo[]" type="checkbox" id="descargaCatalogo_7" form="descargasForm" tabindex="22" value="catalogo/T5.pdf">
+							<input name="descargaCatalogo[]" type="checkbox" id="descargaCatalogo_7" form="descargasForm" tabindex="22" value="T5.pdf">
 					    		<label for="descargaCatalogo_7">Corredera Triomax T5</label>
-							<input name="descargaCatalogo[]" type="checkbox" id="descargaCatalogo_8" form="descargasForm" tabindex="23" value="catalogo/industrial.pdf">
+							<input name="descargaCatalogo[]" type="checkbox" id="descargaCatalogo_8" form="descargasForm" tabindex="23" value="industrial.pdf">
 					    		<label for="descargaCatalogo_8">Industrial</label>
-							<input name="descargaCatalogo[]" type="checkbox" id="descargaCatalogo_9" form="descargasForm" tabindex="24" value="catalogo/Shine.pdf">
+							<input name="descargaCatalogo[]" type="checkbox" id="descargaCatalogo_9" form="descargasForm" tabindex="24" value="Shine.pdf">
 					    		<label for="descargaCatalogo_9">Shine</label>
-							<input name="descargaCatalogo[]" type="checkbox" id="descargaCatalogo_10" form="descargasForm" tabindex="25" value="catalogo/levadizos_salice.pdf">
+							<input name="descargaCatalogo[]" type="checkbox" id="descargaCatalogo_10" form="descargasForm" tabindex="25" value="levadizos_salice.pdf">
 					    		<label for="descargaCatalogo_10">Sistemas levadizos Salice</label>
-							<input name="descargaCatalogo[]" type="checkbox" id="descargaCatalogo_11" form="descargasForm" tabindex="26" value="catalogo/vauth-sagel.pdf">
+							<input name="descargaCatalogo[]" type="checkbox" id="descargaCatalogo_11" form="descargasForm" tabindex="26" value="vauth-sagel.pdf">
 					    		<label for="descargaCatalogo_11">Vauth Sagel 2014</label>
 						</section>
 
@@ -95,7 +95,7 @@
 				<?php }
 				elseif (isset($_POST['nombreD']))
 				{ 
-					require_once("_descarga.php");
+					require '_descarga.php';
 			 	}//fin else?>
 
 				<section id="imgDescargas">
