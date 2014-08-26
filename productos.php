@@ -68,11 +68,13 @@ require 'controladores/consulta.php';
 
 					<section id="producto" class="sombra">
 						<figure id="suelto"><!-- imagen de producto "suelto" -->
+					<?php if ($row_producto['imagen'] <> '') {?>
 							<img src="http://cerrajes.me/imgCerrajes/img/<?php print $row_producto['imagen']?>.png" alt="<?php print $row_producto['imagen']?>"/>
+					<?php } ?>
 						</figure>
 						
 						<section id="codigo"><!-- inicia sección de información de producto -->
-							<span id="descripcion"><?php print $row_producto['Descripción'].' '; if ($row_producto['cuenta']==1 && $row_producto['Medida'] <> ""){ print $row_producto['Medida'];}?></span>
+							<span id="descripcion"><?php print $row_producto['Descripción']; if ($row_producto['cuenta']==1 && $row_producto['Medida'] <> ""){ print ' '.$row_producto['Medida'];}if ($row_producto['cuenta']==1 && $row_producto['calibre'] <> ""){ print ' '.$row_producto['calibre'];}?></span>
 
 							<span 
 							<?php if ($row_producto['imgRecuadro'] == '') { //sino tiene información de recuadro en imagen usa el ancho de codigoUM de lo contrario usa codigoNo
@@ -230,7 +232,7 @@ require 'controladores/consulta.php';
 
 						</section><!-- termina sección de información de producto -->
 
-						<?php if ($row_producto['imagenA'] <> '0') {?>
+						<?php if ($row_producto['imagenA'] <> '') {?>
 						<figure id="aplicado"> <!-- imagen producto aplicado -->
 							<img src="http://cerrajes.me/imgCerrajes/aplicado/<?php print $row_producto['imagenA']?>.png" alt="<?php print $row_producto['imagenA']?>"/>
 						</figure>

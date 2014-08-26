@@ -87,7 +87,7 @@
 					</span>
 					<span class="sucGtm" id="sucD07">
 						<p>GUATEMALA</p>
-						4 Avenida 1-12 zona 9<br>
+						4ta.  Avenida 12-12 zona 9<br>
 						C.P. 01009, Guatemala, C.A.<br>
 						Tel. 00 (502) 2331 0051<br>
 						&nbsp;&nbsp;&nbsp;&nbsp; 00 (502) 2362 5839<br>

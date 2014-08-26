@@ -1,0 +1,47 @@
+
+#inicioContiene 
+{
+	margin: 0 auto;
+	position: relative;
+	width: 800px;
+}
+#inicio
+{
+	height: 450px;
+	margin: 0 auto;
+	width: 800px;
+}
+#inicio figure 
+{
+	display: inline-block;
+	vertical-align: top;
+}
+#inicioC 
+{
+	margin-top: 3%;
+	position: absolute;
+	right: 270px;
+	z-index: 1;
+}
+#inicioT,
+#inicioS
+{
+	margin-top: 8%;
+}
+#inicioT
+{
+	float: right;
+}
+#inicioS2
+{	
+	color: #7E8083;
+	font-family: "TChevin", Verdana;
+	font-size: 16px;
+	font-weight: bold;
+	margin-right: 7%;
+	text-align: right;
+}
+#inicioT2
+{
+	margin-left: 10%;
+}

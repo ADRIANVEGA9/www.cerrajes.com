@@ -1,4 +1,5 @@
 <?php
+set_time_limit(0);
 //Guardamos en la variable $html el cuerpo del mensaje
 $html = "
 <html >

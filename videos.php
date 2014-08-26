@@ -39,6 +39,12 @@
 						<figcaption>Sistema 32</figcaption>
 						</a>
 					</figure>
+					<figure>
+						<a class="fancybox-media" href="http://www.youtube.com/watch?v=NBPpOHm2380&amp;autoplay=1&amp;rel=0" title="Sistema Levadizo Kinvaro Sencillo">
+							<img src="imagenesSitio/videos/02/03.jpg" alt="Sistema Levadizo Kinvaro Sencillo"/>
+						<figcaption>Sistema Levadizo Kinvaro Sencillo</figcaption>
+						</a>
+					</figure>
 				</article>
 				
 				<div class="VideoLineaPunteada"></div>

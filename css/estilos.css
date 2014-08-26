@@ -41,6 +41,14 @@ a
 	text-decoration: none;
 	display: block;
 }
+a.mailPromo {
+	display: inline-block;
+	font-size: 1.2em;
+	text-decoration: underline;
+}
+a.mailPromo:hover {
+	color: #71bf44 !important;
+}
 body 
 {
 	background: #FFF;
@@ -59,6 +67,9 @@ footer
 	background: #71BF44;
 	color: #EEE;
 	margin-top: 1em;
+}
+footer .verde {
+	color: #71BF44;
 }
 header
 {
@@ -213,6 +224,13 @@ nav td.activo
 #contenido section article figure {
 	display: inline-block;
 	vertical-align: top;
+}
+#contenido #cerrar {
+	display: inline-block;
+	font-size: .6em;
+	text-align: right;
+	vertical-align: bottom;
+	width: 85%;
 }
 #contenido #contacto {
 	text-align: left;
@@ -714,6 +732,10 @@ nav td.activo
 #contenido #productos article figure img {
 	width: 100%;
 }
+#contenido #restricciones {
+	font-size: .9em;
+	text-align: justify;
+}
 #contenido #sucursales {
 	position: relative;
 	padding-top: 1em;
@@ -941,11 +963,11 @@ nav td.activo
 	background: #71BF44;
 	color: #FEFEFE;
 	font-size: 1.3em;
-	padding: .5em 0;
+	padding: .2em 0;
 	position: relative;
 	top: -.3em;
 }
-#contenido .descargas #footerDescargas a{
+#contenido .descargas #footerDescargas a {
 	color: #FEFEFE;
 	display: inline-block;
 }
@@ -961,11 +983,104 @@ nav td.activo
 	width: 100%;
 }
 #contenido .promo {
-	padding-top: 1em;
+	/*padding-top: 1em;*/
+}
+#contenido .promo #tituloEspecial{
+	margin: 0 0 .5em .7em;
+	text-align: left;
 }
 #contenido .promo figure img{
 	margin: 0 1em;
 	width: 26.5%;
+}
+#contenido .promoClave .claveError {
+	color: #E2480B;
+	font-size: .8em;
+}
+#contenido .promoClave #imgPromo {
+	display: inline-block;
+	vertical-align: top;
+	width:65%;
+}
+#contenido .promoClave #formPromo {
+	display: inline-block;
+	text-align: left;
+	vertical-align: top;
+	width: 30%;
+}
+#contenido .promoClave #footerPromo {
+	background: #71BF44;
+	color: #FEFEFE;
+	font-size: 1.3em;
+	padding: .2em 0;
+	position: relative;
+	top: -.3em;
+}
+#contenido .promoClave #footerPromo a{
+	color: #FEFEFE;
+	display: inline-block;
+}
+#contenido .promoClave #imgPromo img {
+	position: relative;
+	right: -1.05em;
+	width: 100%;
+}
+#contenido .promoClave #tagPromo {
+	display: inline-block;
+	float: right;
+	position: relative;
+	right: 8px;
+	top: -190px;
+	transform: rotate(55deg);
+	vertical-align: top;
+	width: 20%;
+	z-index: 1;
+}
+#contenido .promoClave #tagPromo img {
+	position: relative;
+	width: 100%;
+}
+#contenido .promoClave #tituloP{
+	color: #777;
+	font-size: .95em;
+	font-weight: 500;
+	margin: 4em 5%;
+	text-align: left;
+	width: 90%;
+}
+#contenido .promoClave #promoCajas {
+	border-color: #7A7A7A;
+	display: inline-block;
+	margin: 0 5%;
+	position: relative;
+	width: 90%;
+}
+#contenido .promoClave #promoCajas input[type="text"]
+{
+	border: none;
+	box-shadow: 1px 1px 6px 1px #AAA;
+	color: #333;
+	font-size: .75em;
+	margin: .2em 0;
+	width: 95%;
+}
+#contenido .promoClave #promoEtiquetas {
+	display: inline-block;
+	margin: 0 5%;
+	width: 90%;
+}
+#contenido .promoClave #promoEtiquetas label{
+	color: #555;
+	display: inline-block;
+	font-size: .7em;
+	font-weight: bold;
+	line-height: 1.5em;
+	margin: .45em 0;
+	text-transform: uppercase;
+}
+#contenido .promoClave button{
+	width: 90%;
+	margin: 1em 5%;
 }
 #contenido .videos article figure {
 	display: inline-block;
@@ -1309,7 +1424,8 @@ nav td.activo
 	color: #666;
 	font-size: .8em;
 }
-.tituloDescargas {
+.tituloDescargas,
+.tituloPromo {
 	background: #71BF44;
 	color: #FEFEFE;
 	font-size: 2em;
@@ -1476,6 +1592,9 @@ nav td.activo
 }
 #contenido #descargasDatos #descargasForm {
 	text-align: center;
+}
+#contenido #descargasDatos #descargasForm .error{
+	color: #E2480B;
 }
 #contenido #descargasDatos #descargasRadio {
 	display: inline-block;

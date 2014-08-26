@@ -21,7 +21,8 @@
 	<section id="contenedor">
 		<?php require(".nav.php") ?>
 		<section  id="contenido">
-			<div class="tituloDescargas">DESCARGAS</div>	
+			<div class="tituloSeccion"><strong>Descargas</strong></div>	
+			<!-- <div class="tituloDescargas">DESCARGAS</div> -->	
 			<section id="descargasDatos" class="descargas">	
 				<?php if (@!$_POST['nombreD']){ ?><!-- @ SE USA PARA EVITAR QUE MANDE LOS ERRORES 'NOTICE' DE PHP -->
 					<section id="formDescargas">
@@ -37,7 +38,7 @@
 
 						<section id="descargasCajas">
 							<input type="text" name="nombreD" id="nombreD" placeholder="nombre completo" required/>
-							<input type="mail" name="correoD" id="correoD" placeholder="ejemplo@dominio.ext" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required>
+							<input type="mail" name="correoD" id="correoD" placeholder="ejemplo@dominio.ext" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+[a-zA-Z0-9-])*$" required>
 							<input type="text" name="ciudadD" id="ciudadD" placeholder="ciudad" required />
 							<input type="text" name="estadoD" id="estadoD" placeholder="estado" required />
 						</section>
@@ -85,9 +86,10 @@
 							<input name="descargaCatalogo[]" type="checkbox" id="descargaCatalogo_11" form="descargasForm" tabindex="26" value="vauth-sagel.pdf">
 					    		<label for="descargaCatalogo_11">Vauth Sagel 2014</label>
 						</section>
+						<div class="error"></div>
 
 						
-						<button type="submit" class="btn btn-default">DESCARGA GRATIS</button>
+						<button type="submit" id="validar" class="btn btn-default">DESCARGA GRATIS</button>
 						<input type="hidden" name="registroH" value="a" />
 
 						</form>
@@ -102,13 +104,24 @@
 					<img src="imagenesSitio/catalogos/_descarga.jpg" alt="">
 				</section>
 				<section id="footerDescargas">Tus datos no se usarán con otros fines. <a href="privacidad.php" target="_blank" title="ver aviso de privacidad">AVISO DE PRIVACIDAD</a></section>
-				
-				
 			</section>
 		</section>
 
 
 	</section>
 	<?php require(".footer.php") ?>
+	<script type="text/javascript">
+		$("#descargasForm").submit( function(){
+		        var check = $("input[type='checkbox']:checked").length;
+		 
+		            if(check == 0){
+		                $('.error').text("Seleccione al menos un cátalogo");
+		                return false;
+		            } else {
+		                $('.error').hide();
+		                return true;
+		            }   
+		    });
+	</script>
 </body>
 </html>	

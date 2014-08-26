@@ -1,4 +1,5 @@
 <?php
+set_time_limit(0);
 $a_descargaCatalogo = implode(',',$_POST['descargaCatalogo']);
 //Guardamos en la variable $html el cuerpo del mensaje
 $html = "
@@ -144,7 +145,7 @@ background-position: center center;
         <td class=\"estilo1\" colspan=\"2\">".$_POST['dirigidoD']."</td>
         </tr>
       <tr>
-        <td class=\"estilo1\">Dirigido a:</td>
+        <td class=\"estilo1\">Catálogo(s):</td>
         <td class=\"estilo1\" colspan=\"2\">".$a_descargaCatalogo."</td>
         </tr>
       <tr>

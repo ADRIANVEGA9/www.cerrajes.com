@@ -48,11 +48,17 @@ $query_buscar = $db->Execute("SELECT *, GROUP_CONCAT( DISTINCT id SEPARATOR  ' -
 										 , GROUP_CONCAT( medidaMueble SEPARATOR  '<br>') AS medidaMueble
 										 , GROUP_CONCAT( carga SEPARATOR  '<br>') AS carga
 										 , GROUP_CONCAT( DISTINCT cierre SEPARATOR  '<br>') AS cierreD
+										 , sublinea.sublinea AS sublinea_descripcion
+										 , linea.linea AS linea_descripcion
 								FROM productos
+								INNER JOIN sublinea ON sublinea.id_sublinea = productos.sublinea
+								INNER JOIN linea ON productos.linea = linea.id_linea
 								WHERE Descripción LIKE '%" . $txt_buscar . "%' 
 								OR Código LIKE '%" . $txt_buscar . "%'
 								OR complementario LIKE '%" . $txt_buscar . "%'
 								OR opcional LIKE '%" . $txt_buscar . "%'
+								OR sublinea.sublinea LIKE '%" . $txt_buscar . "%'
+								OR linea.linea LIKE '%" . $txt_buscar . "%'
 								GROUP BY id,productos.sublinea
 								ORDER BY id ASC");
 $totalRows = $query_buscar->_numOfRows;

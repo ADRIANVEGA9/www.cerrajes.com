@@ -1,5 +1,6 @@
 <?php
 set_time_limit(0);
+$a_descargaCatalogo = implode(',',$_POST['descargaCatalogo']);
 //Guardamos en la variable $html el cuerpo del mensaje
 $html = "
 <html >
@@ -117,7 +118,7 @@ background-position: center center;
 <div id=\"comenta\">
     <table width=\"858\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\">
       <tr>
-        <td colspan=\"1\"width=\"182\" class=\"estilo3\">Comentarios recibidos en www.cerrajes.com</td>
+        <td colspan=\"1\"width=\"182\" class=\"estilo3\">registro en www.cerrajes.com</td>
         <td colspan=\"2\">&nbsp;</td>
         </tr>
       <tr>
@@ -125,49 +126,29 @@ background-position: center center;
         </tr>
       <tr>
         <td class=\"estilo1\">Nombre</td>
-        <td class=\"estilo1\" colspan=\"2\">".$_POST['nombre']."</td>
-        </tr>
-      <tr>
-        <td class=\"estilo1\">Apellidos</td>
-        <td class=\"estilo1\" colspan=\"2\">".$_POST['apellidos']."</td>
-        </tr>
-      <tr>
-        <td class=\"estilo1\">Empresa</td>
-        <td class=\"estilo1\" colspan=\"2\">".$_POST['empresa']."</td>
-        </tr>
-      <tr>
-        <td class=\"estilo1\">Giro de la empresa</td>
-        <td class=\"estilo1\" colspan=\"2\">".$_POST['giro']."</td>
-        </tr>
-      <tr>
-        <td class=\"estilo1\">Tel&eacute;fono oficina</td>
-        <td class=\"estilo1\" width=\"30\">".$_POST['ladaT']."</td>
-        <td class=\"estilo1\" width=\"245\">".$_POST['telefono']."</td>
-        </tr>
-      <tr>
-        <td class=\"estilo1\">Municipio</td>
-        <td class=\"estilo1\" colspan=\"2\">".$_POST['municipio']."</td>
-        </tr>
-      <tr>
-        <td class=\"estilo1\">Estado</td>
-        <td class=\"estilo1\" colspan=\"2\">".$_POST['estado']."</td>
+        <td class=\"estilo1\" colspan=\"2\">".$_POST['nombreD']."</td>
         </tr>
       <tr>
         <td class=\"estilo1\">Correo electr&oacute;nico</td>
-        <td class=\"estilo1\" colspan=\"2\">".$_POST['correo']."</td>
+        <td class=\"estilo1\" colspan=\"2\">".$_POST['correoD']."</td>
         </tr>
       <tr>
-        <td class=\"estilo1\">Pagina web</td>
-        <td class=\"estilo1\" colspan=\"2\">".$_POST['web']."</td>
+        <td class=\"estilo1\">Ciudad</td>
+        <td class=\"estilo1\" colspan=\"2\">".$_POST['ciudadD']."</td>
         </tr>
       <tr>
-        <td class=\"estilo1\" valign=\"top\">Sugerencias/comentarios</td>
-        <td colspan=\"2\" align=\"right\"class=\"estilo1\" >".$_POST['mensaje']."</td>
+        <td class=\"estilo1\">Estado</td>
+        <td class=\"estilo1\" colspan=\"2\">".$_POST['estadoD']."</td>
         </tr>
       <tr>
-        <td>&nbsp;</td>
-        <td colspan=\"2\"></td>
+        <td class=\"estilo1\">Dirigido a:</td>
+        <td class=\"estilo1\" colspan=\"2\">".$_POST['dirigidoD']."</td>
         </tr>
+      <tr>
+        <td class=\"estilo1\">Catálogo(s):</td>
+        <td class=\"estilo1\" colspan=\"2\">".$a_descargaCatalogo."</td>
+        </tr>
+      <tr>
       <tr>
         <td>&nbsp;</td>
         <td colspan=\"2\" align=\"right\"></td>
@@ -184,16 +165,16 @@ background-position: center center;
 $headers = "MIME-Version: 1.0\r\n";  
 $headers .= "Content-type: text/html; charset= iso-8859-1\r\n"; 
 //Las siguientes 2 cabeceras, permitirán que el destinatario sepa a quién responder y quién le ha enviado el mensaje
-$micorreo = "avega@cerrajes.com";/*contacto@cerrajes.com*/
-$correoCli = "$_POST[correo]";
+$micorreo = "contacto@cerrajes.com";/*contacto@cerrajes.com*/
+$correoCli = "$_POST[correoD]";
 $headers .= "Reply-To: contacto@cerrajes.com\r\n"; /*contacto@cerrajes.com*/ 
-$headers .= "From: Cerrajes<contacto@cerrajes.com>\r\n";/*contacto@cerrajes.com*/
+$headers .= "From: Contacto Cerrajes<contacto@cerrajes.com>\r\n";/*contacto@cerrajes.com*/
 $headers .= 'Bcc: avega@cerrajes.com' . "\r\n";
 //En este ejemplo suponemos que el mail del destinatario lo hemos enviado desde un formulario con el método post, pero es indistinto desde donde se lo obtenga (consulta a la base de datos, almacenado en una variable de sesi&oacute;n, enviado por get,etc.)
 ini_set("SMTP","mail.cerrajes.com");/*mail.cerrajes.com*/
 ini_set("smtp_port","587");/*25*/
 ini_set("sendmail_from","mail.cerrajes.com");	/*mail.cerrajes.com*/
-mail($micorreo, " Cerrajes el herraje ideal para su mueble - contacto\r\n", utf8_decode($html),utf8_decode($headers))or die ("<article id='enviado'>Su mensaje no pudo ser enviado, intente mas tarde.</article>");  
+mail($micorreo, utf8_decode("Cerrajes el herraje ideal para su mueble - descarga de catálogos\r\n"), utf8_decode($html),$headers)or die ("<article id='enviado'>Su mensaje no pudo ser enviado, intente mas tarde.</article>");  
 $htmlCliente ="<html lang=\"es\">
 		<head>
 		<meta charset=\"utf-8\">
@@ -226,13 +207,12 @@ $htmlCliente ="<html lang=\"es\">
 		</body>
 		</html>	
 		";
-mail($correoCli, " Cerrajes el herraje ideal para su mueble - contacto\r\n", utf8_decode($htmlCliente),utf8_decode($headers))or die ("Su mensaje no pudo ser enviado, intente mas tarde."); 
+mail($correoCli, utf8_decode("Cerrajes el herraje ideal para su mueble - descarga de catálogos\r\n"), utf8_decode($htmlCliente),$headers)or die ("Su mensaje no pudo ser enviado, intente mas tarde."); 
 ?>				
 	<article id="enviado">
-		TU COMENTARIO HA SIDO ENVIADO EXITOSAMENTE<br />
-	 	Muy pronto nos pondremos en contacto contigo.
+		GRACIAS <br> POR REGISTRARTE<br />
+		<?php require 'comprimir.php'; ?>
  	</article>
-	
 <!-- Código para doppler -->
 <?php
 /* This Doppler API Example use an existing library known as NUSOAP V0.7.1
@@ -255,14 +235,15 @@ if ($err) {
 // $empresa = array('Customfieldid' => '22097','Value' => $_POST['empresa']);
 // $telefono = array('Customfieldid' => '22099','Value' => $_POST['telefono']);
 
-$estado = array('Customfieldid' => '37328','Value' => utf8_decode($_POST['estado']));
-$ciudad = array('Customfieldid' => '37327','Value' => utf8_decode($_POST['municipio']));
+$estado = array('Customfieldid' => '37328','Value' => utf8_decode($_POST['estadoD']));
+$ciudad = array('Customfieldid' => '37327','Value' => utf8_decode($_POST['ciudadD']));
+$dirigido = array('Customfieldid' => '37329','Value' => utf8_decode($_POST['dirigidoD']));
+$catalogo = array('Customfieldid' => '37330','Value' => utf8_decode($a_descargaCatalogo));
 $param = array('APIKey' => 'D70B127D876B4339C7B896A7E28E336D',
-		'SubscribersListID' => '568523',
-		'FirstName' => utf8_decode($_POST['nombre']),
-		'LastName' => utf8_decode($_POST['apellidos']),
-		'EMail' => $_POST['correo'],
-		'CustomsFields' => array('customField' => array($estado,$ciudad))
+		'SubscribersListID' => '591461',
+		'FirstName' => utf8_decode($_POST['nombreD']),
+		'EMail' => $_POST['correoD'],
+		'CustomsFields' => array('customField' => array($estado,$ciudad,$dirigido,$catalogo))
 		);	
 $result = $client->call('AddSubscriberwithNameandCustoms', $param);
 // Check for a fault
@@ -283,4 +264,4 @@ if ($client->fault) {
 /***********************************************/
 /***********************************************/
 ?>
-<!-- termina código doppler -->
+<!-- termina código doppler -->	

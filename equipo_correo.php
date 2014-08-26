@@ -40,7 +40,7 @@ $html = "
 </style>
 </head>
 <body>
-  <img src='http://www.cerrajes.com/imagenesSitio/logo.png' alt='Cerrajes'>
+  <img src='http://www.cerrajes.me/logo.png' alt='Cerrajes'>
   <h1>currículo de ".$_POST['nombre']."</h1>
   <div>
     <strong>Nombre: </strong>".$_POST['nombre']." <br>
@@ -56,14 +56,14 @@ $headers = "MIME-Version: 1.0\r\n";
 $headers .= "Content-type: text/html; charset= iso-8859-1\r\n"; 
 //Las siguientes 2 cabeceras, permitirán que el destinatario sepa a quién responder y quién le ha enviado el mensaje
 $micorreo = "lperez@cerrajes.com";/*lperez@cerrajes.com*/
-$headers .= "Reply-To: contacto@cerrajes.com\r\n"; /*contacto@tiendascerrajes.com*/ 
-$headers .= "From: Forma parte del equipo - Cerrajes<contacto@cerrajes.com>\r\n";/*contacto@tiendascerrajes.com*/
+$headers .= "Reply-To: lperez@cerrajes.com\r\n"; /*contacto@tiendascerrajes.com*/ 
+$headers .= "From: Forma parte del equipo - Cerrajes<lperez@cerrajes.com>\r\n";/*contacto@tiendascerrajes.com*/
 $headers .= 'Bcc: avega@cerrajes.com' . "\r\n";
-//En este ejemplo suponemos que el mail del destinatario lo hemos enviado desde un formulario con el método post, pero es indistinto desde donde se lo obtenga (consulta a la base de datos, almacenado en una variable de sesi&oacute;n, enviado por get,etc.)
+
 ini_set("SMTP","mail.cerrajes.com");/*mail.tiendascerrajes.com*/
 ini_set("smtp_port","587");/*25*/
 ini_set("sendmail_from","mail.cerrajes.com");	/*mail.tiendascerrajes.com*/
-mail($micorreo, " (correo recibido de www.cerrajes.com - Forma parte del equipo)\r\n", utf8_decode($html),$headers)or die ("Su mensaje no pudo ser enviado, intente mas tarde.");  
+mail($micorreo, " Cerrajes el herraje ideal para su mueble - Forma parte del equipo\r\n", utf8_decode($html),$headers)or die ("Su mensaje no pudo ser enviado, intente mas tarde.");  
 ?>					
 
 	
