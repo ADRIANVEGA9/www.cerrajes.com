@@ -56,8 +56,8 @@ $headers = "MIME-Version: 1.0\r\n";
 $headers .= "Content-type: text/html; charset= iso-8859-1\r\n"; 
 //Las siguientes 2 cabeceras, permitirán que el destinatario sepa a quién responder y quién le ha enviado el mensaje
 $micorreo = "lperez@cerrajes.com";/*lperez@cerrajes.com*/
-$headers .= "Reply-To: lperez@cerrajes.com\r\n"; /*contacto@tiendascerrajes.com*/ 
-$headers .= "From: Forma parte del equipo - Cerrajes<lperez@cerrajes.com>\r\n";/*contacto@tiendascerrajes.com*/
+$headers .= "Reply-To: contacto@cerrajes.com\r\n"; /*contacto@tiendascerrajes.com*/ 
+$headers .= "From: Forma parte del equipo - Cerrajes<contacto@cerrajes.com>\r\n";/*contacto@tiendascerrajes.com*/
 $headers .= 'Bcc: avega@cerrajes.com' . "\r\n";
 
 ini_set("SMTP","mail.cerrajes.com");/*mail.tiendascerrajes.com*/

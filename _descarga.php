@@ -126,27 +126,27 @@ background-position: center center;
         </tr>
       <tr>
         <td class=\"estilo1\">Nombre</td>
-        <td class=\"estilo1\" colspan=\"2\">".$_POST['nombreD']."</td>
+        <td class=\"estilo1\" colspan=\"2\">".htmlspecialchars($_POST['nombreD'])."</td>
         </tr>
       <tr>
         <td class=\"estilo1\">Correo electr&oacute;nico</td>
-        <td class=\"estilo1\" colspan=\"2\">".$_POST['correoD']."</td>
+        <td class=\"estilo1\" colspan=\"2\">".htmlspecialchars($_POST['correoD'])."</td>
         </tr>
       <tr>
         <td class=\"estilo1\">Ciudad</td>
-        <td class=\"estilo1\" colspan=\"2\">".$_POST['ciudadD']."</td>
+        <td class=\"estilo1\" colspan=\"2\">".htmlspecialchars($_POST['ciudadD'])."</td>
         </tr>
       <tr>
         <td class=\"estilo1\">Estado</td>
-        <td class=\"estilo1\" colspan=\"2\">".$_POST['estadoD']."</td>
+        <td class=\"estilo1\" colspan=\"2\">".htmlspecialchars($_POST['estadoD'])."</td>
         </tr>
       <tr>
         <td class=\"estilo1\">Dirigido a:</td>
-        <td class=\"estilo1\" colspan=\"2\">".$_POST['dirigidoD']."</td>
+        <td class=\"estilo1\" colspan=\"2\">".htmlspecialchars($_POST['dirigidoD'])."</td>
         </tr>
       <tr>
         <td class=\"estilo1\">Catálogo(s):</td>
-        <td class=\"estilo1\" colspan=\"2\">".$a_descargaCatalogo."</td>
+        <td class=\"estilo1\" colspan=\"2\">".htmlspecialchars($a_descargaCatalogo)."</td>
         </tr>
       <tr>
       <tr>

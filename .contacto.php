@@ -125,44 +125,44 @@ background-position: center center;
         </tr>
       <tr>
         <td class=\"estilo1\">Nombre</td>
-        <td class=\"estilo1\" colspan=\"2\">".$_POST['nombre']."</td>
+        <td class=\"estilo1\" colspan=\"2\">".htmlspecialchars($_POST['nombre'])."</td>
         </tr>
       <tr>
         <td class=\"estilo1\">Apellidos</td>
-        <td class=\"estilo1\" colspan=\"2\">".$_POST['apellidos']."</td>
+        <td class=\"estilo1\" colspan=\"2\">".htmlspecialchars($_POST['apellidos'])."</td>
         </tr>
       <tr>
         <td class=\"estilo1\">Empresa</td>
-        <td class=\"estilo1\" colspan=\"2\">".$_POST['empresa']."</td>
+        <td class=\"estilo1\" colspan=\"2\">".htmlspecialchars($_POST['empresa'])."</td>
         </tr>
       <tr>
         <td class=\"estilo1\">Giro de la empresa</td>
-        <td class=\"estilo1\" colspan=\"2\">".$_POST['giro']."</td>
+        <td class=\"estilo1\" colspan=\"2\">".htmlspecialchars($_POST['giro'])."</td>
         </tr>
       <tr>
         <td class=\"estilo1\">Tel&eacute;fono oficina</td>
-        <td class=\"estilo1\" width=\"30\">".$_POST['ladaT']."</td>
-        <td class=\"estilo1\" width=\"245\">".$_POST['telefono']."</td>
+        <td class=\"estilo1\" width=\"30\">".htmlspecialchars($_POST['ladaT'])."</td>
+        <td class=\"estilo1\" width=\"245\">".htmlspecialchars($_POST['telefono'])."</td>
         </tr>
       <tr>
         <td class=\"estilo1\">Municipio</td>
-        <td class=\"estilo1\" colspan=\"2\">".$_POST['municipio']."</td>
+        <td class=\"estilo1\" colspan=\"2\">".htmlspecialchars($_POST['municipio'])."</td>
         </tr>
       <tr>
         <td class=\"estilo1\">Estado</td>
-        <td class=\"estilo1\" colspan=\"2\">".$_POST['estado']."</td>
+        <td class=\"estilo1\" colspan=\"2\">".htmlspecialchars($_POST['estado'])."</td>
         </tr>
       <tr>
         <td class=\"estilo1\">Correo electr&oacute;nico</td>
-        <td class=\"estilo1\" colspan=\"2\">".$_POST['correo']."</td>
+        <td class=\"estilo1\" colspan=\"2\">".htmlspecialchars($_POST['correo'])."</td>
         </tr>
       <tr>
         <td class=\"estilo1\">Pagina web</td>
-        <td class=\"estilo1\" colspan=\"2\">".$_POST['web']."</td>
+        <td class=\"estilo1\" colspan=\"2\">".htmlspecialchars($_POST['web'])."</td>
         </tr>
       <tr>
         <td class=\"estilo1\" valign=\"top\">Sugerencias/comentarios</td>
-        <td colspan=\"2\" align=\"right\"class=\"estilo1\" >".$_POST['mensaje']."</td>
+        <td colspan=\"2\" align=\"right\"class=\"estilo1\" >".htmlspecialchars($_POST['mensaje'])."</td>
         </tr>
       <tr>
         <td>&nbsp;</td>
@@ -226,7 +226,7 @@ $htmlCliente ="<html lang=\"es\">
 		</body>
 		</html>	
 		";
-mail($correoCli, " Cerrajes el herraje ideal para su mueble - contacto\r\n", utf8_decode($htmlCliente),utf8_decode($headers))or die ("Su mensaje no pudo ser enviado, intente mas tarde."); 
+mail($correoCli, " Cerrajes el herraje ideal para su mueble\r\n", utf8_decode($htmlCliente),utf8_decode($headers))or die ("Su mensaje no pudo ser enviado, intente mas tarde."); 
 ?>				
 	<article id="enviado">
 		TU COMENTARIO HA SIDO ENVIADO EXITOSAMENTE<br />
@@ -238,7 +238,7 @@ mail($correoCli, " Cerrajes el herraje ideal para su mueble - contacto\r\n", utf
 /* This Doppler API Example use an existing library known as NUSOAP V0.7.1
 * Information about this lib can be found at http://sourceforge.net/projects/nusoap/ 
 */
-require'nusoap/nusoap.php';
+/*require'nusoap/nusoap.php';
 
 $proxyhost = isset($_POST['proxyhost']) ? $_POST['proxyhost'] : '';
 $proxyport = isset($_POST['proxyport']) ? $_POST['proxyport'] : '';

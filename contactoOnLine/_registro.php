@@ -125,23 +125,23 @@ background-position: center center;
         </tr>
       <tr>
         <td class=\"estilo1\">Nombre</td>
-        <td class=\"estilo1\" colspan=\"2\">".$_POST['nombreR']."</td>
+        <td class=\"estilo1\" colspan=\"2\">".htmlspecialchars($_POST['nombreR'])."</td>
         </tr>
       <tr>
         <td class=\"estilo1\">Correo electr&oacute;nico</td>
-        <td class=\"estilo1\" colspan=\"2\">".$_POST['correoR']."</td>
+        <td class=\"estilo1\" colspan=\"2\">".htmlspecialchars($_POST['correoR'])."</td>
         </tr>
       <tr>
         <td class=\"estilo1\">Ciudad</td>
-        <td class=\"estilo1\" colspan=\"2\">".$_POST['ciudadR']."</td>
+        <td class=\"estilo1\" colspan=\"2\">".htmlspecialchars($_POST['ciudadR'])."</td>
         </tr>
       <tr>
         <td class=\"estilo1\">Estado</td>
-        <td class=\"estilo1\" colspan=\"2\">".$_POST['estadoR']."</td>
+        <td class=\"estilo1\" colspan=\"2\">".htmlspecialchars($_POST['estadoR'])."</td>
         </tr>
       <tr>
         <td class=\"estilo1\">Dirigido a:</td>
-        <td class=\"estilo1\" colspan=\"2\">".$_POST['dirigido']."</td>
+        <td class=\"estilo1\" colspan=\"2\">".htmlspecialchars($_POST['dirigido'])."</td>
         </tr>
       <tr>
         <td>&nbsp;</td>
@@ -205,7 +205,7 @@ $htmlCliente ="<html lang=\"es\">
 		</body>
 		</html>	
 		";
-mail($correoCli, " Cerrajes el herraje ideal para su mueble - registro\r\n", utf8_decode($htmlCliente),$headers)or die ("Su mensaje no pudo ser enviado, intente mas tarde."); 
+mail($correoCli, " Cerrajes el herraje ideal para su mueble\r\n", utf8_decode($htmlCliente),$headers)or die ("Su mensaje no pudo ser enviado, intente mas tarde."); 
 ?>				
 	<article id="enviado">
 		GRACIAS <br> POR REGISTRARTE<br />
@@ -215,7 +215,7 @@ mail($correoCli, " Cerrajes el herraje ideal para su mueble - registro\r\n", utf
 /* This Doppler API Example use an existing library known as NUSOAP V0.7.1
 * Information about this lib can be found at http://sourceforge.net/projects/nusoap/ 
 */
-require'nusoap/nusoap.php';
+/*require'nusoap/nusoap.php';
 
 $proxyhost = isset($_POST['proxyhost']) ? $_POST['proxyhost'] : '';
 $proxyport = isset($_POST['proxyport']) ? $_POST['proxyport'] : '';

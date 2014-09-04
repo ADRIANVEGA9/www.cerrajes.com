@@ -11,7 +11,6 @@
 <link rel="stylesheet" href="css/estilos.css">
 <link rel="stylesheet" href="css/responsive.css">
 <script src="js/prefixfree.min.js"></script>
-<script src="js/validaForm.js"></script>
 </head>
 <body>
 <?php require(".header.html") ?>
@@ -49,7 +48,7 @@
 							<input type="text" name="estado" id="estado" placeholder="Estado" required onkeypress="return validar(event)"/>
 							<input type="tel" name="ladaT" id="ladaT" placeholder="Lada" required onkeypress="return validarNum(event)"/>
 							<input type="tel" name="telefono" id="telefono" placeholder="Tel&eacute;fono" required onkeypress="return validarNum(event)"/>
-							<input type="mail" name="correo" id="correo" placeholder="ejemplo@dominio.ext" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required />
+							<input type="mail" name="correo" id="correo" placeholder="ejemplo@dominio.ext" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+[a-zA-Z0-9-])*$" required />
 							<input type="text" name="empresa" id="empresa" placeholder="Empresa" onkeypress="return validarTxtNum(event)"/>
 							<input type="text" name="giro" id="giro" placeholder="Giro de la empresa" onkeypress="return validar(event)"/>
 							<input type="tel" name="ladaTOf" id="ladaTOf" placeholder="Lada" onkeypress="return validarNum(event)"/>
@@ -58,7 +57,7 @@
 						</section>
 						<section id="contactoEnvia">
 							<label for="mensaje">Comentarios</label>
-							<textarea name="mensaje" id="mensaje" placeholder="déjanos tu comentario" required onkeyup="Textarea_Sin_Enter(event.keyCode, this.id);" onkeypress="Textarea_Sin_Enter(event.keyCode, this.id);return validarTxtNum(event)"></textarea>
+							<textarea name="mensaje" id="mensaje" placeholder="déjanos tu comentario" required onkeyup="Textarea_Sin_Enter(event.keyCode, this.id);" onkeypress="Textarea_Sin_Enter(event.keyCode, this.id);"></textarea>
 							<span>Tus datos ser&aacute;n de uso confidencial y nos ayudarán a responder de manera adecuada tus comentarios.
 								<input name="Enviar" type="submit" class="botonEnvia" id="button" value="ENVIAR"/> </span>
 								<input type="hidden" name="contactoH" value="a" />

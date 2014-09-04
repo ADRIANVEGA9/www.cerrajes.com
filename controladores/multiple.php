@@ -149,4 +149,8 @@
 	$i++;
 	if ($i>1) { print '<span class="lineaPunteadaCodigo">';} else { print '<span>';}
 	print '<span class="titulo">calibre</span><br>'.$row_producto['calibre'].'</span>'; }
+	if (($row_producto['tornillo'] <> "")  AND ((substr($row_producto['tornillo'], 0, 4)) <> "<br>")){ 
+	$i++;
+	if ($i>1) { print '<span class="lineaPunteadaCodigo">';} else { print '<span>';}
+	print '<span class="titulo">tornillo</span><br>'.$row_producto['tornillo'].'</span>'; }
 ?>

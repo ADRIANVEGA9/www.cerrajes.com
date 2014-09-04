@@ -1,3 +1,4 @@
+<script src="js/validaForm.js"></script>
 <section id="registro">
 	<div id="registroLogo">
 		<img src="imagenesSitio/logo.png" alt="">
@@ -14,10 +15,10 @@
 					<label for="estadoR">estado:</label>
 				</section>
 				<section id="registroCajas">
-					<input type="text" name="nombreR" id="nombreR" placeholder="nombre completo" required/>
-					<input type="mail" name="correoR" id="correoR" placeholder="ejemplo@dominio.ext" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required>
-					<input type="text" name="ciudadR" id="ciudadR" placeholder="ciudad" required />
-					<input type="text" name="estadoR" id="estadoR" placeholder="estado" required />
+					<input type="text" name="nombreR" id="nombreR" placeholder="nombre completo" required onkeypress="return validar(event)"/>
+					<input type="mail" name="correoR" id="correoR" placeholder="ejemplo@dominio.ext" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+[a-zA-Z0-9-])*$" required>
+					<input type="text" name="ciudadR" id="ciudadR" placeholder="ciudad" required onkeypress="return validar(event)"/>
+					<input type="text" name="estadoR" id="estadoR" placeholder="estado" required onkeypress="return validar(event)"/>
 				</section>
 				<section id="registroTexto">Dirigido a:</section>
 				<section id="registroRadio">
