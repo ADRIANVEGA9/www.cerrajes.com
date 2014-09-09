@@ -5,7 +5,7 @@ $html = "
 <html lang=\"es\">
 <head>
   <meta charset=\"UTF-8\">
-  <title>Tiendas Cerrajes - Forma parte del equipo</title>
+  <title>Cerrajes - Forma parte del equipo</title>
 <style type=\"text/css\">
   html {
     height: 100%;
@@ -43,10 +43,10 @@ $html = "
   <img src='http://www.cerrajes.me/logo.png' alt='Cerrajes'>
   <h1>currículo de ".$_POST['nombre']."</h1>
   <div>
-    <strong>Nombre: </strong>".$_POST['nombre']." <br>
-    <strong>Estado: </strong>".$_POST['estado']." <br>
-    <strong>Área de interés: </strong>".$_POST['interes']." <br>
-    <a href='http://cerrajes.com/equipo/".$_POST['interes']."/".$nombreArchivo."'>ver archivo</a>
+    <strong>Nombre: </strong>".htmlspecialchars($_POST['nombre'])." <br>
+    <strong>Estado: </strong>".htmlspecialchars($_POST['estado'])." <br>
+    <strong>Área de interés: </strong>".htmlspecialchars($_POST['interes'])." <br>
+    <a href='http://cerrajes.com/equipo/".htmlspecialchars($_POST['interes']."/".$nombreArchivo)."'>ver archivo</a>
   </div>
 </body>
 </html>

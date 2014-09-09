@@ -48,12 +48,12 @@
 									</select>
 									<select name="interes" id="interes" placeholder="elige una opción" onkeypress="return validar(event)">
 										<option value="Ventas">Ventas</option>
-										<option value="ACliente">Atención a Cliente</option>
+										<option value="AtencionCliente">Atención a Cliente</option>
 										<option value="RH">Recursos Humanos</option>
 										<option value="Finanzas">Finanzas</option>
 										<option value="Contraloría">Contraloría</option>
 										<option value="TI">Tecnología de Información</option>
-										<option value="CyL">Compras y Logística</option>
+										<option value="Compras_y_Logistica">Compras y Logística</option>
 										<option value="Legal">Legal</option>
 										<option value="Mkt">Mercadotecnia</option>
 									</select>

@@ -27,7 +27,7 @@
 				<?php if (@!$_POST['nombreD']){ ?><!-- @ SE USA PARA EVITAR QUE MANDE LOS ERRORES 'NOTICE' DE PHP -->
 					<section id="formDescargas">
 							<div id="tituloD">Registra tus datos y descarga de manera gratuita nuestros catálogos.</div>
-						<form id="descargasForm" method="post">		
+						<form id="descargasForm" method="post" >		
 
 						<section id="descargasEtiquetas">
 							<label for="nombreD">nombre:</label>
@@ -119,9 +119,12 @@
 		                return false;
 		            } else {
 		                $('.error').hide();
+						$('#validar').attr('disabled','disabled');
+						$('#validar').text('Descargando...');
 		                return true;
 		            }   
 		    });
+
 	</script>
 </body>
 </html>	

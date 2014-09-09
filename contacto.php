@@ -57,9 +57,10 @@
 						</section>
 						<section id="contactoEnvia">
 							<label for="mensaje">Comentarios</label>
-							<textarea name="mensaje" id="mensaje" placeholder="déjanos tu comentario" required onkeyup="Textarea_Sin_Enter(event.keyCode, this.id);" onkeypress="Textarea_Sin_Enter(event.keyCode, this.id);"></textarea>
+							<textarea name="mensaje" id="mensaje" placeholder="déjanos tu comentario" required onkeyup="Textarea_Sin_Enter(event.keyCode, this.id);" onkeypress="Textarea_Sin_Enter(event.keyCode, this.id);return validarTxtNum(event)"></textarea>
 							<span>Tus datos ser&aacute;n de uso confidencial y nos ayudarán a responder de manera adecuada tus comentarios.
-								<input name="Enviar" type="submit" class="botonEnvia" id="button" value="ENVIAR"/> </span>
+								<button name="Enviar" type="submit" class="botonEnvia" id="button" value="ENVIAR"/> ENVIAR </button>
+							</span>
 								<input type="hidden" name="contactoH" value="a" />
 						</section>
 
@@ -75,5 +76,12 @@
 		</section>
 	</section>
 	<?php require(".footer.php") ?>
+<script type="text/javascript">
+	$("#contacto").submit( function(){
+		$('#button').attr('disabled','disabled');
+		$('#button').text('Enviando...');
+		return true;
+	});
+</script>
 </body>
 </html>	

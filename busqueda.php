@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <?php $ac = 100;
 include("connections/DB.inc.php"); 
-/***VARIABLES POR GET ***/
-$numero1 = count($_GET);
-$tags1 = array_keys($_GET);// obtiene los nombres de las varibles
-$valores1 = array_values($_GET);// obtiene los valores de las varibles
+/***VARIABLES POR POST ***/
+$numero1 = count($_POST);
+$tags1 = array_keys($_POST);// obtiene los nombres de las varibles
+$valores1 = array_values($_POST);// obtiene los valores de las varibles
 
 for($i=0;$i<$numero1;$i++){// crea las variables y les asigna el valor
 $$tags1[$i]=$valores1[$i];
 }
 
-if ($txt_buscar<>"") {
-  $txt_buscar = $txt_buscar;
+if (@$txt_buscar<>"") {
+  $txt_buscar = htmlspecialchars($txt_buscar);
 } else {
 	$txt_buscar='&nbsp;';
 }
@@ -43,9 +43,9 @@ require 'controladores/consultaB.php';
 		<section  id="contenido">
 			<div class="tituloSeccion">
 				<?php if ($totalRows==0) { ?>
-					<strong>No se encontraron coincidencias con '<?php echo $txt_buscar;?>'</strong></div>
+					<strong>No se encontraron coincidencias con '<?php echo htmlspecialchars($txt_buscar);?>'</strong></div>
 				<?php } else {?>
-				<strong>Se encontraron  <?php echo $totalRows .' coincidencias con \''.$txt_buscar;?>'</strong></div>
+				<strong>Se encontraron  <?php echo $totalRows .' coincidencias con \''.htmlspecialchars($txt_buscar);?>'</strong></div>
 				<?php }?>
 			<section id="productos">
 				<?php  

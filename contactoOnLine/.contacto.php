@@ -238,7 +238,7 @@ mail($correoCli, " Cerrajes el herraje ideal para su mueble\r\n", utf8_decode($h
 /* This Doppler API Example use an existing library known as NUSOAP V0.7.1
 * Information about this lib can be found at http://sourceforge.net/projects/nusoap/ 
 */
-/*require'nusoap/nusoap.php';
+require'nusoap/nusoap.php';
 
 $proxyhost = isset($_POST['proxyhost']) ? $_POST['proxyhost'] : '';
 $proxyport = isset($_POST['proxyport']) ? $_POST['proxyport'] : '';

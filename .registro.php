@@ -5,7 +5,7 @@
 	</div>
 	<div id="registroDatos">
 		<?php if (@!$_POST['nombreR']){ ?><!-- @ SE USA PARA EVITAR QUE MANDE LOS ERRORES 'NOTICE' DE PHP -->
-		<form id="registroForm" method="post">
+		<form id="registroForm" method="post" onsubmit="return checkSubmit();">
 			<fieldset>
 				<div id="tituloR">Recibe información de nuestros productos y promociones.</div>
 				<section id="registroEtiquetas">
@@ -35,7 +35,7 @@
 					<input name="dirigido" type="radio" id="dirigido_5" form="registroForm" tabindex="9" value="Instalador"  required="">
 						<label for="dirigido_5">Instalador</label>
 				</section>
-				<button type="submit" class="btn btn-default">REGISTRATE GRATIS</button>
+				<button type="submit" id="btnsubmit" class="btn btn-default">REGISTRATE GRATIS</button>
 				<input type="hidden" name="registroH" value="a" />
 				<input type="hidden" name="opcion" value="2"></input>
 			</fieldset>
@@ -46,4 +46,11 @@
 					require_once("_registro.php");
 			 	}//fin else?>
 	</div>
+<script type="text/javascript">
+	$("#registroForm").submit( function(){
+		$('#btnsubmit').attr('disabled','disabled');
+		$('#btnsubmit').text('Registrando...');
+		return true;
+	});
+</script>
 </section>

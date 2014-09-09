@@ -8,7 +8,7 @@
 	src: url('../fonts/Chevin-Light.otf')   format('opentype');
 }
 @font-face {
-	font-family:'TChevinThin';
+	font-family:'TChevin1';
 	src: url('../fonts/Chevin-Thin.otf')   format('opentype');
 }
 @font-face {
@@ -1122,8 +1122,8 @@ nav td.activo
 #internoHome #menu a
 {
 	color: #71BF44;
-	font-family: "TChevinThin";
-	font-weight: 600;
+	/*font-family: "TChevin1";*/
+	/*font-weight: 600;*/
 	text-decoration: none;
 }
 #internoHome #menu a:before

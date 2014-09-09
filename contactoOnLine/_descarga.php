@@ -146,7 +146,7 @@ background-position: center center;
         </tr>
       <tr>
         <td class=\"estilo1\">Catálogo(s):</td>
-        <td class=\"estilo1\" colspan=\"2\">".htmlspecialchars($a_descargaCatalogo)."</td>
+        <td class=\"estilo1\" colspan=\"2\">".$a_descargaCatalogo."</td>
         </tr>
       <tr>
       <tr>
