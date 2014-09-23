@@ -1,0 +1,16 @@
+Desactivar la vista de compatibilidad en Internet Explorer
+Internet Explorer 8, 9 y 10 incluyen una opción de Vista de Compatibilidad, lo que hace que el navegador funcione como una versión antigua de Internet Explorer. Si esta opción está activada puede causar problemas de visualización en las pestañas y funciones interactivas con Yahoo. No te preocupes, ¡estamos aquí para ayudar!
+
+Desactivar de vista de compatibilidad
+Abre Internet Explorer.
+Haz clic en Herramientas. 
+- Al pulsar ALT + T también se abre el menú desplegable "Herramientas".
+Si la Vista de compatibilidad está seleccionada, haga clic en la opción para quitar la marca de verificación.
+Haga clic en Herramientas de nuevo.
+Selecciona Ver configuración de compatibilidad.
+Asegúrate de que "yahoo.com" no aparece en "Páginas web que ha añadido a la vista de compatibilidad". (Si "yahoo.com" está en la lista, retíralo.)
+Asegúrate de que la opción "Mostrar todos los sitios web en Vista de compatibilidad" no esté marcada.
+Cierra y vuelve a abrir Internet Explorer.
+Ingresa de nuevo a Yahoo .
+
+https://mx.ayuda.yahoo.com/kb/my-yahoo/Desactivar-la-vista-de-compatibilidad-de-Internet-Explorer-sln5506.html

@@ -218,11 +218,13 @@ require 'controladores/consultaB.php';
 
 						</section><!-- termina sección de información de producto -->
 
-						<?php if ($row_producto['imagenA'] <> '0') {?>
+						<?php if ($row_producto['imagenA'] <> '')  { 
+							  if ($row_producto['imagenA'] <> '0')  { ?>
 						<figure id="aplicado"> <!-- imagen producto aplicado -->
 							<img src="http://cerrajes.me/imgCerrajes/aplicado/<?php print $row_producto['imagenA']?>.png" alt="<?php print $row_producto['imagenA']?>"/>
 						</figure>
-						<?php }?>
+						<?php }
+						 }?>
 
 					<?php require'controladores/mostrarF-I.php';?>	
 

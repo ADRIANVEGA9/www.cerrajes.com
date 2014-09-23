@@ -60,10 +60,10 @@
   //       - MUST BE terminated by a '/'.
   //       - MUST be a valid, already created directory
   //       Samples :
- define( 'PCLZIP_TEMPORARY_DIR', '/tmp/' );
+  define( 'PCLZIP_TEMPORARY_DIR', 'tmp/' );
   // define( 'PCLZIP_TEMPORARY_DIR', 'C:/Temp/' );
   if (!defined('PCLZIP_TEMPORARY_DIR')) {
-    define( 'PCLZIP_TEMPORARY_DIR', '/tmp/' );
+    define( 'PCLZIP_TEMPORARY_DIR', '' );
   }
 
   // ----- Optional threshold ratio for use of temporary files

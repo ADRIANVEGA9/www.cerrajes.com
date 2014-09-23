@@ -40,11 +40,17 @@
 						</a>
 					</figure>
 					<figure>
-						<a class="fancybox-media" href="http://www.youtube.com/watch?v=NBPpOHm2380&amp;autoplay=1&amp;rel=0" title="Sistema Levadizo Kinvaro Sencillo">
+						<a class="fancybox-media" href="http://www.youtube.com/watch?v=FloCevvAEp4&amp;autoplay=1&amp;rel=0" title="Sistema Levadizo Kinvaro Sencillo">
 							<img src="imagenesSitio/videos/02/03.jpg" alt="Sistema Levadizo Kinvaro Sencillo"/>
 						<figcaption>Sistema Levadizo Kinvaro Sencillo</figcaption>
 						</a>
 					</figure>
+					<!-- <figure>
+						<a class="fancybox-media" href="http://www.youtube.com/watch?v=k5-hJLs73Ek&amp;autoplay=1&amp;rel=0" title="Sistema Vertical Kinvaro">
+							<img src="imagenesSitio/videos/02/04.jpg" alt="Sistema Vertical Kinvaro"/>
+						<figcaption>Sistema Vertical Kinvaro</figcaption>
+						</a>
+					</figure> -->
 				</article>
 				
 				<div class="VideoLineaPunteada"></div>
