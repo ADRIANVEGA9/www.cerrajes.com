@@ -1,0 +1,3 @@
+Error
+
+wsdl error: Getting http://api.fromdoppler.com/Default.asmx?wsdl - HTTP ERROR: socket read of headers timed out

@@ -21,7 +21,6 @@
 	font-weight: normal;
 	font-style: normal;
 }
-
 [class^="icon-"], [class*=" icon-"] {
 	font-family: 'icomoon';
 	speak: none;
@@ -253,10 +252,11 @@ nav td.activo
 #contenido #contactoCajas input[type="text"],
 #contenido #contactoCajas input[type="mail"]
 {
+	color: #333;
 	height: 25px;
 	margin-bottom: 5px;
+	text-transform: uppercase;
 	width: 100%;
-	color: #333;
 }
 #contenido #contactoCajas #telefono, 
 #contenido #contactoCajas #telOf {
@@ -411,10 +411,11 @@ nav td.activo
 #contenido #equipoCajas input[type="file"],
 #contenido #equipoCajas select
 {
+	color: #333;
 	height: 25px;
 	margin-bottom: 8px;
+	text-transform: uppercase;
 	width: 100%;
-	color: #333;
 }
 #contenido #equipoEnvia {
 	color: #B1B1B1;
@@ -1173,6 +1174,7 @@ nav td.activo
 	color: #333;
 	font-size: .75em;
 	margin: .2em 0;
+	text-transform: uppercase;
 	width: 95%;
 }
 #menuProductos #registro #registroDatos input[type="radio"] {
@@ -1540,6 +1542,7 @@ nav td.activo
 	color: #333;
 	font-size: .75em;
 	margin: .4em 0;
+	text-transform: uppercase;
 	width: 95%;
 }
 #contenido #descargasDatos input[type="radio"] {

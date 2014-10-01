@@ -211,7 +211,10 @@ mail($correoCli, utf8_decode("Cerrajes el herraje ideal para su mueble - descarg
 ?>				
 	<article id="enviado">
 		GRACIAS <br> POR REGISTRARTE<br />
-		<?php require 'comprimir_test.php'; ?>
+		<?php 
+			require 'comprimir_test.php'; 
+			require '.deleteFile.php'
+		?>
  	</article>
 <!-- Código para doppler -->
 <?php
