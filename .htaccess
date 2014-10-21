@@ -1,1 +1,4 @@
-ErrorDocument 404 error404.html
+order allow,deny
+deny from 195.2.240.101
+deny from 77.41.15.59
+allow from all

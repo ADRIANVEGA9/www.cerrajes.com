@@ -14,7 +14,7 @@
 <script src="js/validaForm.js"></script>
 </head>
 <body>
-<?php require(".header.html") ?>
+<?php require(".header.php") ?>
 	<section id="menuProductos">
 		<?php 
 			require("menu/.menu.php");

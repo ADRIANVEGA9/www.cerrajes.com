@@ -12,7 +12,7 @@
 <script src="js/prefixfree.min.js"></script>
 </head>
 <body>
-<?php require(".header.html") ?>
+<?php require(".header.php") ?>
 	<section id="menuProductos">
 		<?php 
 			require("menu/.menu.php");
@@ -55,14 +55,6 @@
 				<section class="icono">
 					<figure><img id="09" src="imagenesSitio/nuevosProductos/09.png" alt="icono"/></figure>
 					<figcaption>Bote para basura</figcaption>
-				</section>
-				<section class="icono">
-					<figure><img id="10" src="imagenesSitio/nuevosProductos/10.png" alt="icono"/></figure>
-					<figcaption>Botón hueco</figcaption>
-				</section>
-				<section class="icono">
-					<figure><img id="11" src="imagenesSitio/nuevosProductos/11.png" alt="icono"/></figure>
-					<figcaption>Jaladera barra hueca</figcaption>
 				</section>
 				<section class="icono">
 					<figure><img id="02" src="imagenesSitio/nuevosProductos/02.png" alt="icono"/></figure>
@@ -132,6 +124,14 @@
 					<figure><img id="27" src="imagenesSitio/nuevosProductos/27.png" alt="icono"/></figure>
 					<figcaption>Tubo redondo para armario</figcaption>
 				</section>
+				<section class="icono">
+					<figure><img id="28" src="imagenesSitio/nuevosProductos/28.png" alt="icono"/></figure>
+					<figcaption>Guía de centros</figcaption>
+				</section>
+				<section class="icono">
+					<figure><img id="29" src="imagenesSitio/nuevosProductos/29.png" alt="icono"/></figure>
+					<figcaption>Jaladera embutida</figcaption>
+				</section>
 			</section>
 
 			<section id="np_info">
@@ -144,8 +144,6 @@
 				<figure id="np_img07" class="_off"><img src="imagenesSitio/nuevosProductos/07.jpg" alt=""></figure>
 				<figure id="np_img08" class="_off"><img src="imagenesSitio/nuevosProductos/08.jpg" alt=""></figure>
 				<figure id="np_img09" class="_off"><img src="imagenesSitio/nuevosProductos/09.jpg" alt=""></figure>
-				<figure id="np_img10" class="_off"><img src="imagenesSitio/nuevosProductos/10.jpg" alt=""></figure>
-				<figure id="np_img11" class="_off"><img src="imagenesSitio/nuevosProductos/11.jpg" alt=""></figure>
 				<figure id="np_img12" class="_off"><img src="imagenesSitio/nuevosProductos/12.jpg" alt=""></figure>
 				<figure id="np_img13" class="_off"><img src="imagenesSitio/nuevosProductos/13.jpg" alt=""></figure>
 				<figure id="np_img14" class="_off"><img src="imagenesSitio/nuevosProductos/14.jpg" alt=""></figure>
@@ -162,6 +160,8 @@
 				<figure id="np_img26" class="_off"><img src="imagenesSitio/nuevosProductos/26.jpg" alt=""></figure>
 				<figure id="np_img25" class="_off"><img src="imagenesSitio/nuevosProductos/25.jpg" alt=""></figure>
 				<figure id="np_img27" class="_off"><img src="imagenesSitio/nuevosProductos/27.jpg" alt=""></figure>
+				<figure id="np_img28" class="_off"><img src="imagenesSitio/nuevosProductos/28.jpg" alt=""></figure>
+				<figure id="np_img29" class="_off"><img src="imagenesSitio/nuevosProductos/29.jpg" alt=""></figure>
 			</section>
 
 		</section>

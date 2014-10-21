@@ -26,7 +26,7 @@ if (isset($n)) {
 <script src="js/prefixfree.min.js"></script>
 </head>
 <body>
-<?php require(".header.html") ?>
+<?php require(".header.php") ?>
 	<section id="menuProductos">
 		<?php 
 			require("menu/.menu.php");

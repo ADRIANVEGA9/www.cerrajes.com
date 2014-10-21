@@ -41,12 +41,13 @@ a
 	display: block;
 }
 a.mailPromo {
+	color: #71bf44 !important;
 	display: inline-block;
 	font-size: 1.2em;
 	text-decoration: underline;
 }
 a.mailPromo:hover {
-	color: #71bf44 !important;
+	color: #666 !important;
 }
 body 
 {
@@ -734,8 +735,35 @@ nav td.activo
 	width: 100%;
 }
 #contenido #restricciones {
-	font-size: .9em;
+	border-radius: 1.5em;
+	box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, .4);
+	font-size: .8em;
+	margin: 1em;
+	padding: 1.5em;
+	position: relative;
 	text-align: justify;
+}
+#contenido #restricciones span:before{
+	color: #71BF44;
+	content: "\e603  ";
+	font-family: 'icomoon';
+	font-size: .8em;
+}
+#contenido #restricciones2 {
+	border-radius: 1.5em;
+	box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, .4);
+	font-size: .8em;
+	margin: 1em;
+	padding: 1.5em;
+	position: absolute;
+	text-align: justify;
+	width: 69%;
+}
+#contenido #restricciones2 .inciso {
+	background: #71BF44;
+	border-radius: 50%;
+	color: #FEFEFE;
+	text-align: center;
 }
 #contenido #sucursales {
 	position: relative;
@@ -992,7 +1020,7 @@ nav td.activo
 }
 #contenido .promo figure img{
 	margin: 0 1em;
-	width: 26.5%;
+	width: 100%;
 }
 #contenido .promoClave .claveError {
 	color: #E2480B;
@@ -1267,7 +1295,6 @@ nav td.activo
 {
 	display: inline-block;
 	font-size: 0.79em;
-	max-height: 340px;
 	padding-top: 1em;
 	vertical-align: top;
 	width: 32%;
@@ -1291,6 +1318,10 @@ nav td.activo
 	text-align: justify;
 	vertical-align: top;
 	width: 96%;
+}
+.articuloSeccionT3  span {
+	font-weight: bold;
+	font-style: italic;
 }
 .catalogos 
 {
@@ -1375,10 +1406,10 @@ nav td.activo
 {
 	background: #F8F8F8;
 	display: inline-block;
-	height: 150px;
+	height: 250px;
 	padding: 65px 10px;
 	position: relative;
-	text-align: justify;
+	text-align: center;
 	top: -50px;
 	width: 150px;
 	z-index: -1;
@@ -1499,6 +1530,7 @@ nav td.activo
 .form-box {
 	background: #71BF44;
 	border: 1px solid #cccccc;
+	width: 100%;
 }
 .form-box .custom-search-box {
 	color: #666;

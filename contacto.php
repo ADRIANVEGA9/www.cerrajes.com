@@ -1,5 +1,9 @@
 <!DOCTYPE html>
-<?php $ac = 4; ?>
+<?php
+if (($_SERVER['REMOTE_ADDR']=='195.2.240.101') OR ($_SERVER['REMOTE_ADDR']=='77.41.15.59')){
+	header('Location: http://www.google.com');
+}
+ $ac = 4; ?>
 <html lang="es">
 <head>
 <meta charset="utf-8">
@@ -13,7 +17,7 @@
 <script src="js/prefixfree.min.js"></script>
 </head>
 <body>
-<?php require(".header.html") ?>
+<?php require(".header.php") ?>
 	<section id="menuProductos">
 		<?php 
 			require("menu/.menu.php");

@@ -1,4 +1,4 @@
-<?php
+<?php 
 include("connections/db.inc.php"); 
 
 $query_menuLinea= $db->Execute("SELECT id_linea, linea
