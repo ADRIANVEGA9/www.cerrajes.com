@@ -165,99 +165,101 @@ $headers .= "Content-type: text/html; charset= iso-8859-1\r\n";
 //Las siguientes 2 cabeceras, permitirán que el destinatario sepa a quién responder y quién le ha enviado el mensaje
 $micorreo = "avega@cerrajes.com";/*contacto@cerrajes.com*/
 $correoCli = "$_POST[correoR]";
-$headers .= "Reply-To: contacto@cerrajes.com\r\n"; /*contacto@cerrajes.com*/ 
-$headers .= "From: Contacto Cerrajes<contacto@cerrajes.com>\r\n";/*contacto@cerrajes.com*/
-$headers .= 'Bcc: avega@cerrajes.com' . "\r\n";
-//En este ejemplo suponemos que el mail del destinatario lo hemos enviado desde un formulario con el método post, pero es indistinto desde donde se lo obtenga (consulta a la base de datos, almacenado en una variable de sesi&oacute;n, enviado por get,etc.)
-ini_set("SMTP","mail.cerrajes.com");/*mail.cerrajes.com*/
-ini_set("smtp_port","587");/*25*/
-ini_set("sendmail_from","mail.cerrajes.com");	/*mail.cerrajes.com*/
-mail($micorreo, " Cerrajes el herraje ideal para su mueble - registro\r\n", utf8_decode($html),$headers)or die ("<article id='enviado'>Su mensaje no pudo ser enviado, intente mas tarde.</article>");  
-$htmlCliente ="<html lang=\"es\">
-		<head>
-		<meta charset=\"utf-8\">
-		<title>Documento sin título</title>
-		<style type=\"text/css\">
-		html {
-		height: 100%;
-		}
-		body{ 
-			background-color:#FFFFFF;
-			background-size: 100% 100%;
-			background-position: center center;
+if ($correoCli <> '') {
+	$headers .= "Reply-To: contacto@cerrajes.com\r\n"; /*contacto@cerrajes.com*/ 
+	$headers .= "From: Contacto Cerrajes<contacto@cerrajes.com>\r\n";/*contacto@cerrajes.com*/
+	$headers .= 'Bcc: avega@cerrajes.com' . "\r\n";
+	//En este ejemplo suponemos que el mail del destinatario lo hemos enviado desde un formulario con el método post, pero es indistinto desde donde se lo obtenga (consulta a la base de datos, almacenado en una variable de sesi&oacute;n, enviado por get,etc.)
+	ini_set("SMTP","mail.cerrajes.com");/*mail.cerrajes.com*/
+	ini_set("smtp_port","587");/*25*/
+	ini_set("sendmail_from","mail.cerrajes.com");	/*mail.cerrajes.com*/
+	mail($micorreo, " Cerrajes el herraje ideal para su mueble - registro\r\n", utf8_decode($html),$headers)or die ("<article id='enviado'>Su mensaje no pudo ser enviado, intente mas tarde.</article>");  
+	$htmlCliente ="<html lang=\"es\">
+			<head>
+			<meta charset=\"utf-8\">
+			<title>Documento sin título</title>
+			<style type=\"text/css\">
+			html {
 			height: 100%;
-			text-align:left;
-			margin:0 auto;
-			z-index:0;
-		}
-		.estilo3 {
-			font-family: Calibri, \"Trebuchet MS\";
-			font-size:11px;
-			color:#80817C;
-			text-align:left;
-		}
-		</style>
-		</head>
-		<body>
-		<div align=\"center\"><br>
-			<figure><img src=\"http://cerrajes.me/registro/agradecimiento.jpg\"></figure>
-		</div>
-		</body>
-		</html>	
-		";
-mail($correoCli, " Cerrajes el herraje ideal para su mueble\r\n", utf8_decode($htmlCliente),$headers)or die ("Su mensaje no pudo ser enviado, intente mas tarde."); 
-?>				
-	<article id="enviado">
-		GRACIAS <br> POR REGISTRARTE<br />
- 	</article>
-<!-- Código para doppler -->
-<?php
-/* This Doppler API Example use an existing library known as NUSOAP V0.7.1
-* Information about this lib can be found at http://sourceforge.net/projects/nusoap/ 
-*/
-/*require'nusoap/nusoap.php';
+			}
+			body{ 
+				background-color:#FFFFFF;
+				background-size: 100% 100%;
+				background-position: center center;
+				height: 100%;
+				text-align:left;
+				margin:0 auto;
+				z-index:0;
+			}
+			.estilo3 {
+				font-family: Calibri, \"Trebuchet MS\";
+				font-size:11px;
+				color:#80817C;
+				text-align:left;
+			}
+			</style>
+			</head>
+			<body>
+			<div align=\"center\"><br>
+				<figure><img src=\"http://cerrajes.me/registro/agradecimiento.jpg\"></figure>
+			</div>
+			</body>
+			</html>	
+			";
+	mail($correoCli, " Cerrajes el herraje ideal para su mueble\r\n", utf8_decode($htmlCliente),$headers)or die ("Su mensaje no pudo ser enviado, intente mas tarde."); 
+	?>				
+		<article id="enviado">
+			GRACIAS <br> POR REGISTRARTE<br />
+	 	</article>
+	<!-- Código para doppler -->
+	<?php
+	/* This Doppler API Example use an existing library known as NUSOAP V0.7.1
+	* Information about this lib can be found at http://sourceforge.net/projects/nusoap/ 
+	*/
+	/*require'nusoap/nusoap.php';
 
-$proxyhost = isset($_POST['proxyhost']) ? $_POST['proxyhost'] : '';
-$proxyport = isset($_POST['proxyport']) ? $_POST['proxyport'] : '';
-$proxyusername = isset($_POST['proxyusername']) ? $_POST['proxyusername'] : '';
-$proxypassword = isset($_POST['proxypassword']) ? $_POST['proxypassword'] : '';
-$client = new nusoap_client('http://api.fromdoppler.com/Default.asmx?wsdl', 'wsdl',
-						$proxyhost, $proxyport, $proxyusername, $proxypassword);
-$err = $client->getError();
-if ($err) {
-	echo '<h2>Constructor error</h2><pre>' . $err . '</pre>';
-}
-
-// $estado = array('Customfieldid' => 22121,'Value' => $_POST['estado']);
-// $empresa = array('Customfieldid' => '22097','Value' => $_POST['empresa']);
-// $telefono = array('Customfieldid' => '22099','Value' => $_POST['telefono']);
-
-$estado = array('Customfieldid' => '37328','Value' => utf8_decode($_POST['estadoR']));
-$ciudad = array('Customfieldid' => '37327','Value' => utf8_decode($_POST['ciudadR']));
-$dirigido = array('Customfieldid' => '37329','Value' => utf8_decode($_POST['dirigido']));
-$param = array('APIKey' => 'D70B127D876B4339C7B896A7E28E336D',
-		'SubscribersListID' => '591464',
-		'FirstName' => utf8_decode($_POST['nombreR']),
-		'EMail' => $_POST['correoR'],
-		'CustomsFields' => array('customField' => array($estado,$ciudad,$dirigido))
-		);	
-$result = $client->call('AddSubscriberwithNameandCustoms', $param);
-// Check for a fault
-
-if ($client->fault) {
-	echo '<h2>Fault</h2><pre>';
-	print_r($result);
-	echo '</pre>';
-} else {
-	// Check for errors
+	$proxyhost = isset($_POST['proxyhost']) ? $_POST['proxyhost'] : '';
+	$proxyport = isset($_POST['proxyport']) ? $_POST['proxyport'] : '';
+	$proxyusername = isset($_POST['proxyusername']) ? $_POST['proxyusername'] : '';
+	$proxypassword = isset($_POST['proxypassword']) ? $_POST['proxypassword'] : '';
+	$client = new nusoap_client('http://api.fromdoppler.com/Default.asmx?wsdl', 'wsdl',
+							$proxyhost, $proxyport, $proxyusername, $proxypassword);
 	$err = $client->getError();
 	if ($err) {
-		// Display the error
-		echo '<h2>Error</h2><pre>' . $err . '</pre>';
-	} 
-}
+		echo '<h2>Constructor error</h2><pre>' . $err . '</pre>';
+	}
 
-/***********************************************/
-/***********************************************/
+	// $estado = array('Customfieldid' => 22121,'Value' => $_POST['estado']);
+	// $empresa = array('Customfieldid' => '22097','Value' => $_POST['empresa']);
+	// $telefono = array('Customfieldid' => '22099','Value' => $_POST['telefono']);
+
+	$estado = array('Customfieldid' => '37328','Value' => utf8_decode($_POST['estadoR']));
+	$ciudad = array('Customfieldid' => '37327','Value' => utf8_decode($_POST['ciudadR']));
+	$dirigido = array('Customfieldid' => '37329','Value' => utf8_decode($_POST['dirigido']));
+	$param = array('APIKey' => 'D70B127D876B4339C7B896A7E28E336D',
+			'SubscribersListID' => '591464',
+			'FirstName' => utf8_decode($_POST['nombreR']),
+			'EMail' => $_POST['correoR'],
+			'CustomsFields' => array('customField' => array($estado,$ciudad,$dirigido))
+			);	
+	$result = $client->call('AddSubscriberwithNameandCustoms', $param);
+	// Check for a fault
+
+	if ($client->fault) {
+		echo '<h2>Fault</h2><pre>';
+		print_r($result);
+		echo '</pre>';
+	} else {
+		// Check for errors
+		$err = $client->getError();
+		if ($err) {
+			// Display the error
+			echo '<h2>Error</h2><pre>' . $err . '</pre>';
+		} 
+	}
+
+	/***********************************************/
+	/***********************************************/
+}
 ?>
 <!-- termina código doppler -->	
