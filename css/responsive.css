@@ -30,4 +30,7 @@
 	#menuProductos {
 		min-width: 138px;
 	}
+	header #home #imgs {
+		height: 57%;
+	}
 }

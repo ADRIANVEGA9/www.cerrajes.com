@@ -102,6 +102,10 @@ header #home #imgs section{
 	top: 3em;
 	width: 17%;
 }
+header #home #imgs section div,
+header #home #imgs section div a {
+	height: 100%;
+}
 header #home #imgs section p {
 	background: rgba(113, 191, 68, 0.50);
 	bottom: 0px;
@@ -115,6 +119,7 @@ header #home #imgs section p {
 	width: 100%;
 }
 header #home #imgs section div img {
+	height: 100%;
 	width: 100%
 }
 header #home #logo 
@@ -175,6 +180,9 @@ nav td.activo
 	color: #60B033 !important;
 	padding: 0;
 	padding-bottom: 10px;
+}
+small {
+    font-size: 70%;
 }
 /*#buscar a input
 {
@@ -933,9 +941,12 @@ nav td.activo
 #contenido .articuloHome .img01 .imgW2{
 	height: 100%;
 	position: relative;
+	width: 102%;
 }
 #contenido .articuloHome .img01 .img1 {
-	left: -250px;
+	/*left: -250px;*/
+	height: 100%;
+	position: relative;
 }
 #contenido .busqueda 
 {

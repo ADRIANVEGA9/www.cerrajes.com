@@ -98,7 +98,7 @@ if ($row_producto['consumo'] <> "") { //inicia icono consumo?>
 	</figure><?php } //termina icono consumo
 if ($row_producto['tamaño'] <> "") { //inicia icono tamaño?>
 	<figure>
-		<img src="imagenesSitio/productos/iconos/tamaño.png" alt="icono"/>
+		<img src="imagenesSitio/productos/iconos/tamano.png" alt="icono"/>
 		<div><?php print $row_producto['tamaño'] ?></div>
 	</figure><?php } //termina icono tamaño
 if ($row_producto['capacidad'] <> "") { //inicia icono capacidad?>

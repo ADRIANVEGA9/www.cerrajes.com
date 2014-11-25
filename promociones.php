@@ -47,17 +47,31 @@ if (verificar_cliente()){
 				y solicítalo enviando un correo a <a class="mailPromo" href="mailto:promociones@cerrajes.com">promociones@cerrajes.com</a>
 			</div>
 			<section class="promo">
-				<figure> <img src="imagenesSitio/promociones/promociones-octubre.png" alt="" usemap="#Map">
+				<figure> <img src="imagenesSitio/promociones/promociones-noviembre_01.png" alt="" usemap="#Map">
                     <map name="Map">
-                  		<area shape="rect" coords="236,3340,328,3362" href="http://www.cerrajes.me/fichas/FT-1214-021.pdf" target="_blank" alt="Bote de basura SOLO">
-						<area shape="rect" coords="637,3341,725,3362" href="http://www.cerrajes.me/fichas/FT-0207-008_009.pdf" target="_blank" alt="Rodaja plastica con freno">
-                  		<area shape="rect" coords="393,2080,484,2106" href="http://www.cerrajes.me/fichas/lift_basculante.pdf" target="_blank" alt="Sistema Levadizo SALICE lift basculante">
-                  		<area shape="rect" coords="8,1353,99,1376" href="http://www.cerrajes.me/fichas/lift_abatible_doble_60cm.pdf" target="_blank" alt="Sistema levadizo SALICE lift abatible doble 60cm alto">
-                  		<area shape="rect" coords="408,1355,498,1374" href="http://www.cerrajes.me/fichas/lift_abatible_doble_72cm.pdf" target="_blank" alt="Sistema levadizo SALICE lift abatible doble 72cm alto">
-                  		<area shape="rect" coords="9,633,101,654" href="http://www.cerrajes.me/fichas/lift_abatible_sencillo_1brazo.pdf" target="_blank" alt="Sistema levadizo SALICE lift abatible sencillo con 1 brazo">
-                  		<area shape="rect" coords="406,632,498,655" href="http://www.cerrajes.me/fichas/lift_abatible_sencillo_2brazos.pdf" target="_blank" alt="Sistema levadizo SALICE lift abatible sencillo con 2 brazos">
-                  		<area shape="rect" coords="9,2787,98,2806" href="http://www.cerrajes.me/fichas/lift_vertical_36a44.pdf" target="_blank" alt="Sistema levadizo salice de 36 a 44cm">
-                  		<area shape="rect" coords="409,2788,499,2806" href="http://www.cerrajes.me/fichas/lift_vertical_44a66.pdf" target="_blank" alt="Sistema levadizo vertical de 44 a 66cm">
+                    <area shape="rect" coords="244,438,337,460" href="http://www.cerrajes.me/fichas/FT-0304-053_056.pdf" target="_blank" alt="Corredera cierre suave">
+                    <area shape="rect" coords="638,437,731,459" href="http://www.cerrajes.me/fichas/FT-0304-051.pdf" target="_blank" alt="Clips para corredera">
+              		<area shape="rect" coords="9,1212,101,1233" href="http://www.cerrajes.me/fichas/lift_abatible_sencillo_1brazo.pdf" target="_blank" alt="Sistema levadizo SALICE lift abatible sencillo con 1 brazo">
+              		<area shape="rect" coords="413,1210,511,1233" href="http://www.cerrajes.me/fichas/lift_abatible_sencillo_2brazos.pdf" target="_blank" alt="Sistema levadizo SALICE lift abatible sencillo con 2 brazos">
+                    </map>
+				</figure>
+				<figure> <img src="imagenesSitio/promociones/promociones-noviembre_02.png" alt="" usemap="#Map2">
+                    <map name="Map2">
+               		  <area shape="rect" coords="8,545,99,568" href="http://www.cerrajes.me/fichas/lift_abatible_doble_60cm.pdf" target="_blank" alt="Sistema levadizo SALICE lift abatible doble 60cm alto">
+                  		<area shape="rect" coords="407,549,497,568" href="http://www.cerrajes.me/fichas/lift_abatible_doble_72cm.pdf" target="_blank" alt="Sistema levadizo SALICE lift abatible doble 72cm alto">
+                    </map>
+				</figure>
+				<figure> <img src="imagenesSitio/promociones/promociones-noviembre_03.png" alt="" usemap="#Map3">
+                    <map name="Map3">
+              		  <area shape="rect" coords="392,303,483,329" href="http://www.cerrajes.me/fichas/lift_basculante.pdf" target="_blank" alt="Sistema Levadizo SALICE lift basculante">
+                  		<area shape="rect" coords="9,1011,98,1030" href="http://www.cerrajes.me/fichas/lift_vertical_36a44.pdf" target="_blank" alt="Sistema levadizo salice de 36 a 44cm">
+                  		<area shape="rect" coords="407,1013,497,1031" href="http://www.cerrajes.me/fichas/lift_vertical_44a66.pdf" target="_blank" alt="Sistema levadizo vertical de 44 a 66cm">
+                    </map>
+				</figure>
+				<figure> <img src="imagenesSitio/promociones/promociones-noviembre_04.png" alt="" usemap="#Map4">
+                    <map name="Map4">
+                  		<area shape="rect" coords="240,410,332,432" href="http://www.cerrajes.me/fichas/FT-1214-021.pdf" target="_blank" alt="Bote de basura SOLO">
+						<area shape="rect" coords="643,413,731,434" href="http://www.cerrajes.me/fichas/FT-0207-008_009.pdf" target="_blank" alt="Rodaja plastica con freno">
                     </map>
 				</figure>
 			</section>
@@ -69,7 +83,7 @@ if (verificar_cliente()){
 				<span>Clave de cliente y RFC al que se facturará<br><br></span>
 
 				Recibirás tu producto en la dirección indicada en un lapso no mayor a 4 días hábiles, el flete esta incluido. <b>ESTE BENEFICIO SE OBTENDRÁ ADQUIRIENDO EL PRODUCTO EN PROMOCIÓN SOLICITÁNDOLO A TRAVÉS DEL MAIL promociones@cerrajes.com</b><br><br>
-				Promoción válida del 01 al 31 de Octubre de 2014 o hasta agotar existencias, revisa los códigos participantes. Promoción exclusiva de Cerrajes México para clientes actuales de Cerrajes México que estén dados de alta en la base de datos, no aplica con otras promociones y descuentos de clientes, los precios ya incluyen IVA, cambios y devoluciones sujetos a revisión del producto.<br><br>
+				Promoción válida del 01 al 30 de Noviembre de 2014 o hasta agotar existencias, revisa los códigos participantes. Promoción exclusiva de Cerrajes México para clientes actuales de Cerrajes México que estén dados de alta en la base de datos, no aplica con otras promociones y descuentos de clientes, los precios ya incluyen IVA, cambios y devoluciones sujetos a revisión del producto.<br><br>
 				Si realizas el pedido directamente con tu asesor de ventas el producto se enviará a la sucursal y él te informará el tiempo de entrega del mismo.
 			</div>
 		</section>
