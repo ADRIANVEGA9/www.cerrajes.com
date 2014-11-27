@@ -28,8 +28,7 @@
 					<div class="homeTxt">
 						<div>
 						<strong class="verdeHome">Espacios Reducidos</strong><br>
-							La creciente necesidad por el aprovechamiento en espacios reducidos, se ha vuelto más común recientemente, lo que ha llevado a los diseñadores a buscar nuevas alternativas, tanto en el diseño de objetos de apariencia minimalista, como en la organización y optimización del espacio para su almacenamiento.<br><br>
-							La fácil accesibilidad a los artículos se vuelve cada vez más importante dentro del diseño de cocinas, donde, herrajes adecuados para áreas de difícil acceso, se tornan cada vez más apreciados.
+							La creciente necesidad por el aprovechamiento de espacios reducidos, se ha vuelto más común; lo que ha llevado a los diseñadores a buscar nuevas alternativas, tanto en el diseño de objetos de apariencia minimalista, como en la organización y optimización del espacio para el almacenamiento, logrando ofrecer herrajes adecuados para áreas de difícil acceso.
 						</div>	
 					</div>
 				</div>
@@ -38,7 +37,7 @@
 					<div class="homeTxt">
 						<div>
 						<strong class="verdeHome">Minimalismo</strong><br>
-							En contraparte, los espacios abiertos, también conocidos como <span class="verdeHome">"Lofts"</span>  utilizan como principal recurso de diseño el <span class="verdeHome">MINIMALISMO</span>, tendencia en la que la frase <strong>menos es más</strong> adquiere absoluta fortaleza. Este estilo de diseño se caracteriza por la utilización de pocos elementos y carencia de color. Es un estilo que carece de desorden y los espacios son extremadamente limpios.
+							Los espacios abiertos, también conocidos como <span class="verdeHome">"Lofts"</span>  utilizan como principal recurso de diseño el minimalismo, tendencia en la que la frase <strong>menos es más</strong> adquiere absoluta fortaleza. Este estilo de diseño se caracteriza por la utilización de pocos elementos y carencia de color. Es un estilo que evita el desorden y facilita el aseo de cada lugar.
 						</div>	
 					</div>
 				</div>
@@ -47,9 +46,7 @@
 					<div class="homeTxt">
 						<div>
 						<strong class="verdeHome">Eclecticismo</strong><br>
-							Una tendencia artística en la que se mezclan elementos de diferentes estilos y épocas de la historia del arte y la arquitectura, la nostalgia de un pasado indeterminado, diseño propio de un <span class="verdeHome">coleccionista</span>, si se tratara de un collage para crear ambientes bellos a partir de la interacción de diferentes estilos de muebles que resulten funcionales. Sin dogmas ni sentido de trascendencia.<br><br>
-							Es un estilo abierto a los cambios en la decoración y, en especial, en los detalles.
-
+							Tendencia artística en la que se mezclan elementos de diferentes estilos y épocas de la historia del arte y la arquitectura. La nostalgia de un pasado indeterminado, diseño propio de un coleccionista, como un collage que crea ambientes bellos a partir de la interacción de diferentes estilos de muebles que resultan funcionales. 
 						</div>	
 					</div>
 				</div>
@@ -58,8 +55,8 @@
 					<div class="homeTxt">
 						<div>
 						<strong class="verdeHome">Artesanal</strong><br>
-							Un estilo que siempre ha estado presente, caracterizado por el uso de colores vivos, maderas laqueadas, a lo largo del tiempo ha conjugado la esencia natural de los materiales con la modernidad de los diseños de espacios, esta tendencia deja ver ambientes realmente acogedores en destinos donde la naturaleza abraza el entorno.<br><br>
-							La decoración rustica mexicana, es muy rica en adherir el colorido de sus textiles y la belleza de sus artesanías de alfarería y orfebrería.
+							Estilo que siempre ha estado presente, caracterizado por el uso de colores vivos, maderas laqueadas, que a lo largo del tiempo ha conjugado la esencia natural de los materiales con la modernidad de los diseños de espacios. Esta tendencia deja ver ambientes realmente acogedores en destinos donde la naturaleza abraza el entorno.<br><br>
+							La decoración rústica mexicana, es muy rica en adherir el colorido de sus textiles y la belleza de sus artesanías de alfarería y orfebrería.
 
 						</div>	
 					</div>
