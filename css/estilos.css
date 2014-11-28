@@ -454,6 +454,25 @@ small {
 #contenido #equipoForm {
 	margin-top: 1em;
 }
+#contenido #masarticulos {
+	text-align: left;
+	padding: 0 .5em 2em;
+}
+#contenido #masarticulos span {
+	background: #71BF44;
+	border-radius: 50%;
+	box-shadow: 1px 1px 10px 1px #AAA;
+	color: #EFE;
+	cursor: pointer;
+	font-size: .8em;
+	padding: .5em 1em;
+}
+#contenido #masarticulos span:hover {
+	background-color: #858582;
+	border-color: #AAA;
+	box-shadow: 1px 1px 10px 1px #AAA;
+	color: #EFE;
+}
 #contenido #np_iconos {
 	padding-top: 1em;
 	text-align: center;
