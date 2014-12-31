@@ -83,7 +83,7 @@ if (verificar_cliente()){
 				<span>Clave de cliente y RFC al que se facturará<br><br></span>
 
 				Recibirás tu producto en la dirección indicada en un lapso no mayor a 4 días hábiles, el flete esta incluido. <b>ESTE BENEFICIO SE OBTENDRÁ ADQUIRIENDO EL PRODUCTO EN PROMOCIÓN SOLICITÁNDOLO A TRAVÉS DEL MAIL promociones@cerrajes.com</b><br><br>
-				Promoción válida del 01 al 30 de Noviembre de 2014 o hasta agotar existencias, revisa los códigos participantes. Promoción exclusiva de Cerrajes México para clientes actuales de Cerrajes México que estén dados de alta en la base de datos, no aplica con otras promociones y descuentos de clientes, los precios ya incluyen IVA, cambios y devoluciones sujetos a revisión del producto.<br><br>
+				Promoción válida del 01 al 31 de Diciembre de 2014 o hasta agotar existencias, revisa los códigos participantes. Promoción exclusiva de Cerrajes México para clientes actuales de Cerrajes México que estén dados de alta en la base de datos, no aplica con otras promociones y descuentos de clientes, los precios ya incluyen IVA, cambios y devoluciones sujetos a revisión del producto.<br><br>
 				Si realizas el pedido directamente con tu asesor de ventas el producto se enviará a la sucursal y él te informará el tiempo de entrega del mismo.
 			</div>
 		</section>

@@ -60,7 +60,13 @@ require 'controladores/consultaB.php';
 						</figure>
 						
 						<section id="codigo"><!-- inicia sección de información de producto -->
-							<span id="descripcion"><?php print $row_producto['Descripción'].' '; if ($row_producto['cuenta']==1 && $row_producto['Medida'] <> ""){ print $row_producto['Medida'];}?></span>
+							<span id="lineaB"><?php print $row_producto['linea'].' - '.$row_producto['sublinea']?></span>
+							<span id="descripcion"><?php print $row_producto['Descripción'].' '; if ($row_producto['cuenta']==1 && $row_producto['Medida'] <> ""){ print $row_producto['Medida'];}?>
+								
+								<?php if  ($row_producto['profundidad_cuerda'] <> "")  {								?>
+									<br><span>Profundidad de cuerda: <?php print $row_producto['profundidad_cuerda'];?></span>
+								<?php } ?>
+							</span>
 
 							<span 
 							<?php if ($row_producto['imgRecuadro'] == '') { //sino tiene información de recuadro en imagen usa el ancho de codigoUM de lo contrario usa codigoNo
@@ -78,7 +84,7 @@ require 'controladores/consultaB.php';
 										<span>UM: <?php print $row_producto['UM'];?></span><br>
 								<?php } ?>
 								
-								<?php if  ( ($row_producto['UXC'] <> "") AND ($cuentaUXC == 1)) {								?>
+								<?php if  ( ($row_producto['UXC'] <> "") AND ($cuentaUXC == 1)) {?>
 									<span>UxC: <?php print $row_producto['UXC'];?></span><br>
 								<?php } ?>
 

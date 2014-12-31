@@ -44,7 +44,7 @@
 					</span>
 					<span class="sucMex" id="sucD02">
 						<p>MÉXICO D.F.</p>
-						Norte 59 No. 870- B<br>
+						Poniente 134 No. 559, int. B1 y B2<br>
 						Col. Industrial Vallejo, C.P. 02300 <br>
 						Azcapotzalco, México, D.F.<br>
 						Tel. 01 (55) 5719 5551 al 55<br>
