@@ -63,8 +63,8 @@ require 'controladores/consultaB.php';
 							<span id="lineaB"><?php print $row_producto['linea'].' - '.$row_producto['sublinea']?></span>
 							<span id="descripcion"><?php print $row_producto['Descripción'].' '; if ($row_producto['cuenta']==1 && $row_producto['Medida'] <> ""){ print $row_producto['Medida'];}?>
 								
-								<?php if  ($row_producto['profundidad_cuerda'] <> "")  {								?>
-									<br><span>Profundidad de cuerda: <?php print $row_producto['profundidad_cuerda'];?></span>
+								<?php if  ($row_producto['tornillo'] <> "")  {								?>
+									<br><span>Tornillo: <?php print $row_producto['tornillo'];?></span>
 								<?php } ?>
 							</span>
 
