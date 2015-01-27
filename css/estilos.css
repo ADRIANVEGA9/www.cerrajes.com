@@ -504,6 +504,7 @@ small {
 	top: -5%;
 	width: 110%;
 	transition: all linear .3s;
+	/*border-radius: 50%;*/
 }
 #contenido #np_iconos section figure img:hover {
 	cursor: pointer;
@@ -1037,6 +1038,9 @@ small {
 }
 #contenido .noticias {
 	padding-top: 1em;
+}
+#contenido .noticias figure {
+	font-size: 0;
 }
 #contenido .noticias figure img{
 	width: 100%;

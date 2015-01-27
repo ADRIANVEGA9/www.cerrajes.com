@@ -55,13 +55,17 @@ $query_productos = $db->Execute("SELECT *, GROUP_CONCAT( DISTINCT id SEPARATOR  
 										 , GROUP_CONCAT( canastilla SEPARATOR  '<br>') AS canastilla
 										 , GROUP_CONCAT( lados SEPARATOR  '<br>') AS lados
 										 , GROUP_CONCAT( medidaMueble SEPARATOR  '<br>') AS medidaMueble
-										 , GROUP_CONCAT( carga SEPARATOR  '<br>') AS carga
+										 , GROUP_CONCAT( Carga SEPARATOR  '<br>') AS carga
 										 , GROUP_CONCAT( calibre SEPARATOR  '<br>') AS calibre
+										 , GROUP_CONCAT( longitud SEPARATOR  '<br>') AS longitud
+										 , GROUP_CONCAT( platos SEPARATOR  '<br>') AS platos
+										 , GROUP_CONCAT( vasos SEPARATOR  '<br>') AS vasos
 										 , GROUP_CONCAT( DISTINCT cierre SEPARATOR  '<br>') AS cierreD
+										 , GROUP_CONCAT( DISTINCT Carga SEPARATOR  '<br>') AS cargaD
 								FROM productos
 								WHERE linea = '$id_linea' AND sublinea = '$id_sublinea'
 								GROUP BY id
-								ORDER BY id ASC");
+								ORDER BY nuevo DESC, id ASC");
 // Verificamos si hemos realizado bien nuestro Query
 //var_dump($db);
 //var_dump($query_productos);

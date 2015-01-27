@@ -79,11 +79,13 @@
 					    		<label for="descargaCatalogo_7">Corredera Triomax T5</label>
 							<input name="descargaCatalogo[]" type="checkbox" id="descargaCatalogo_8" form="descargasForm" tabindex="23" value="industrial.pdf">
 					    		<label for="descargaCatalogo_8">Industrial</label>
-							<input name="descargaCatalogo[]" type="checkbox" id="descargaCatalogo_9" form="descargasForm" tabindex="24" value="Shine.pdf">
+							<input name="descargaCatalogo[]" type="checkbox" id="descargaCatalogo_12" form="descargasForm" tabindex="24" value="jaladeras.pdf">
+					    		<label for="descargaCatalogo_12">Jaladeras y Botones</label>
+							<input name="descargaCatalogo[]" type="checkbox" id="descargaCatalogo_9" form="descargasForm" tabindex="25" value="Shine.pdf">
 					    		<label for="descargaCatalogo_9">Shine</label>
-							<input name="descargaCatalogo[]" type="checkbox" id="descargaCatalogo_10" form="descargasForm" tabindex="25" value="levadizos_salice.pdf">
+							<input name="descargaCatalogo[]" type="checkbox" id="descargaCatalogo_10" form="descargasForm" tabindex="26" value="levadizos_salice.pdf">
 					    		<label for="descargaCatalogo_10">Sistemas levadizos Salice</label>
-							<input name="descargaCatalogo[]" type="checkbox" id="descargaCatalogo_11" form="descargasForm" tabindex="26" value="vauth-sagel.pdf">
+							<input name="descargaCatalogo[]" type="checkbox" id="descargaCatalogo_11" form="descargasForm" tabindex="27" value="vauth-sagel.pdf">
 					    		<label for="descargaCatalogo_11">Vauth Sagel 2014</label>
 						</section>
 						<div class="error"></div>

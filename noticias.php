@@ -23,7 +23,8 @@
 		<section  id="contenido">
 			<div class="tituloSeccion"><strong>Noticias</strong></div>
 			<section class="noticias">
-				<figure><img src="imagenesSitio/noticias/01.jpg" alt=""/></figure>
+				<figure><a href="http://www.cerrajes.com/productos.php?id_linea=03&id_sublinea=0302" target="_blank"><img src="imagenesSitio/noticias/expo-AMPIMM-2015_01.jpg" alt=""/></a></figure>
+				<figure><img src="imagenesSitio/noticias/expo-AMPIMM-2015_02.jpg" alt=""/></figure>
 			</section>
 		</section>
 	</section>

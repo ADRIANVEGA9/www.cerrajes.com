@@ -153,4 +153,16 @@
 	$i++;
 	if ($i>1) { print '<span class="lineaPunteadaCodigo">';} else { print '<span>';}
 	print '<span class="titulo">tornillo</span><br>'.$row_producto['tornillo'].'</span>'; }
+	if (($row_producto['longitud'] <> "")  AND ((substr($row_producto['longitud'], 0, 4)) <> "<br>")){ 
+	$i++;
+	if ($i>1) { print '<span class="lineaPunteadaCodigo">';} else { print '<span>';}
+	print '<span class="titulo">longitud</span><br>'.$row_producto['longitud'].'</span>'; }
+	if (($row_producto['platos'] <> "")  AND ((substr($row_producto['platos'], 0, 4)) <> "<br>")){ 
+	$i++;
+	if ($i>1) { print '<span class="lineaPunteadaCodigo">';} else { print '<span>';}
+	print '<span class="titulo">Platos</span><br>'.$row_producto['platos'].'</span>'; }
+	if (($row_producto['vasos'] <> "")  AND ((substr($row_producto['vasos'], 0, 4)) <> "<br>")){ 
+	$i++;
+	if ($i>1) { print '<span class="lineaPunteadaCodigo">';} else { print '<span>';}
+	print '<span class="titulo">*Vasos</span><br>'.$row_producto['vasos'].'</span>'; }
 ?>

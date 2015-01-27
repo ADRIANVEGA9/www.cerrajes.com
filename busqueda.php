@@ -61,7 +61,7 @@ require 'controladores/consultaB.php';
 						
 						<section id="codigo"><!-- inicia sección de información de producto -->
 							<span id="lineaB"><?php print $row_producto['linea'].' - '.$row_producto['sublinea']?></span>
-							<span id="descripcion"><?php print $row_producto['Descripción'].' '; if ($row_producto['cuenta']==1 && $row_producto['Medida'] <> ""){ print $row_producto['Medida'];}?>
+							<span id="descripcion"><?php print $row_producto['Descripción'].' '.$row_producto['noParte'].' '; if ($row_producto['cuenta']==1 && $row_producto['Medida'] <> ""){ print $row_producto['Medida'];}?>
 								
 								<?php if  ($row_producto['tornillo'] <> "")  {								?>
 									<br><span>Tornillo: <?php print $row_producto['tornillo'];?></span>

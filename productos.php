@@ -69,12 +69,14 @@ require 'controladores/consulta.php';
 					<section id="producto" class="sombra">
 						<figure id="suelto"><!-- imagen de producto "suelto" -->
 					<?php if ($row_producto['imagen'] <> '') {?>
+						<a class="fancybox" rel="group" href="http://cerrajes.me/imgCerrajes/imagenesG/<?php print $row_producto['imagenG']?>.jpg" title="<?php print $row_producto['Descripción']?>">
 							<img src="http://cerrajes.me/imgCerrajes/img/<?php print $row_producto['imagen']?>.png" alt="<?php print $row_producto['imagen']?>"/>
+						</a>
 					<?php } ?>
 						</figure>
 						
 						<section id="codigo"><!-- inicia sección de información de producto -->
-							<span id="descripcion"><?php print $row_producto['Descripción']; if ($row_producto['cuenta']==1 && $row_producto['Medida'] <> ""){ print ' '.$row_producto['Medida'];}if ($row_producto['cuenta']==1 && $row_producto['calibre'] <> ""){ print ' '.$row_producto['calibre'];}?>
+							<span id="descripcion"><?php print $row_producto['Descripción']." ".$row_producto['noParte']; if ($row_producto['cuenta']==1 && $row_producto['Medida'] <> ""){ print ' '.$row_producto['Medida'];}if ($row_producto['cuenta']==1 && $row_producto['calibre'] <> ""){ print ' '.$row_producto['calibre'];}?>
 								
 								<?php if  ($row_producto['tornillo'] <> "")  {								?>
 									<br><span>Tornillo: <?php print $row_producto['tornillo'];?></span>
@@ -259,7 +261,21 @@ require 'controladores/consulta.php';
 	</section>
 	<?php require(".footer.php") ?>
 
-<script src="js/paginacion.js"></script>
-<script src="js/mostrar.js"></script>
+	<script src="js/paginacion.js"></script>
+	<script src="js/mostrar.js"></script>
+
+	<!-- Add mousewheel plugin (this is optional) -->
+	<script type="text/javascript" src="js/jquery.mousewheel-3.0.6.pack.js"></script>
+	<!-- Add fancyBox main JS and CSS files -->
+	<script type="text/javascript" src="fancybox/jquery.fancybox.js?v=2.1.5"></script>
+	<link rel="stylesheet" type="text/css" href="fancybox/jquery.fancybox.css?v=2.1.5" media="screen" />
+	<!-- Add Media helper (this is optional) -->
+	<script type="text/javascript" src="fancybox/jquery.fancybox-media.js?v=1.0.6"></script>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".fancybox").fancybox();
+	});
+</script>
 </body>
 </html>	

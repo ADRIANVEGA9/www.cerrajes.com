@@ -21,7 +21,52 @@
 	<section id="contenedor">
 		<?php require(".nav.php") ?>
 		<section  id="contenido">
-			<div id="art1" class="_on">	
+
+			<div id="art1" class="_off">
+				<div class="tituloSeccion"><strong>Tendencias del herraje</strong></div>
+				<article class="articuloHome">
+					<div class="homeArticulo">
+						<figure class="img01"><img class="imgW2 img1" src="imagenesSitio/home01.jpg" alt="Tendencias"></figure>
+						<div class="homeTxt">
+							<div>
+								En el mundo del mueble, la Creatividad y la Innovación constante conforman e impulsan las nuevas tendencias, presentes en las recientes propuestas de los fabricantes en México; las Jaladeras con diseños a la Vanguardia conforman parte de las tendencias previstas para el 2014, entre las que presentamos algunas a continuación.
+							</div>	
+						</div>
+					</div>
+					<div class="homeArticulo">
+						<figure class="img01"><img class="imgW1" src="imagenesSitio/home02.jpg" alt="Origami"><figcaption><small>www.cocinasconestilo.net/2011/12/las-formas-geometricas-de-una-cocina.html</small></figcaption></figure>
+						<div class="homeTxt">
+							<div>
+							<strong class="verdeHome">Origami</strong><br>
+								Basadas en este antiguo arte Japonés, se realza la propuesta de diseño que nos remite al Origami en donde el uso de líneas rectas, prismas irregulares y ángulos poco convencionales, generan una impresión de apacibilidad y sencillez, que en realidad conlleva a los diseñadores contemporáneos hacia nuevos retos.
+							</div>	
+						</div>
+					</div>
+					<div class="homeArticulo">
+						<figure class="img01"><img class="imgW1" src="imagenesSitio/home03.jpg" alt="Vintage"></figure>
+						<div class="homeTxt">
+							<div>
+							<strong class="verdeHome">Vintage</strong><br>
+								Fusionando el diseño contemporáneo con el diseño nostálgico, el minimalismo expresado por el herraje moderno sobre la calidez y nostalgia de la madera de apariencia desgastada por el tiempo. 
+							</div>	
+						</div>
+					</div>
+					<div class="homeArticulo">
+						<figure class="img01"><img class="imgW2" src="imagenesSitio/home04.jpg" alt="Técnico"></figure>
+						<div class="homeTxt">
+							<div>
+							<strong class="verdeHome">Técnico</strong><br>
+								Bajo los conceptos de precisión, perfección, sencillez, claridad y limpieza, el diseño técnico se conceptualiza como la nueva propuesta, en donde el uso de líneas limpias y uso selectivo del color, se renueva dentro del minimalismo puro, haciendo uso de nuevas las nuevas tecnologías aplicadas al herraje, que permiten sistemas de cierre suave en las bisagras, colgadores para gabinetes y correderas ocultas de bajo montaje.
+							</div>	
+						</div>
+					</div>
+
+
+				</article>	
+				<section id="masarticulos"><span id="2">2</span><span id="3">3</span></section>	
+			</div>	
+
+			<div id="art2" class="_off">	
 				<div class="tituloSeccion"><strong>Tendencias del herraje II</strong></div>
 				<article class="articuloHome">
 					<div class="homeArticulo">
@@ -63,11 +108,11 @@
 						</div>
 					</div>
 				</article>
-				<section id="masarticulos"><span id="1">1</span></section>	
-			</div>
+				<section id="masarticulos"><span id="1">1</span><span id="3">3</span></section>	
+			</div>	
 
-			<div id="art2" class="_off">
-				<div class="tituloSeccion"><strong>Tendencias del herraje</strong></div>
+			<div id="art3" class="_on">
+				<div class="tituloSeccion"><strong>Tendencias del herraje 3</strong></div>
 				<article class="articuloHome">
 					<div class="homeArticulo">
 						<figure class="img01"><img class="imgW2 img1" src="imagenesSitio/home01.jpg" alt="Tendencias"></figure>
@@ -107,8 +152,10 @@
 
 
 				</article>	
-				<section id="masarticulos"><span id="2">2</span></section>	
-			</div>		
+				<section id="masarticulos"><span id="1">1</span><span id="2">2</span></section>	
+			</div>	
+
+			<section id="masarticulos"><span id="1">1</span><span id="2">2</span><span id="3">3</span></section>		
 		</section>
 
 
@@ -124,8 +171,8 @@
 	e.preventDefault();
 		 $idn = this.id;
 		//console.log("aqui estoy"+$idn);
-var $np_off  		= $('#contenido #art'+$idn),
-	$np_on  		= $('#contenido #art'+$idn).siblings();
+var $np_on  		= $('#contenido #art'+$idn),
+	$np_off  		= $('#contenido #art'+$idn).siblings();
 
 	// $np_off.fadeOut( 10 ).hide(300);
 	// $np_on.fadeIn( 10 ).show(300);

@@ -34,7 +34,7 @@ exit("Error en la consulta Menu linea");
 				foreach($query_menuSublinea as $ks => $row_menuSublinea) 
 				{ ?>
 				<li id="<?php echo $row_menuSublinea['id_sublinea'];?>"><a href="productos.php?id_linea=<?php echo $row_menuLinea['id_linea'];?>&id_sublinea=<?php echo $row_menuSublinea['id_sublinea'];?>">
-					<span><?php echo $row_menuSublinea['id_sublinea'];?></span>
+					<span><?php if ($row_menuLinea['id_linea'] <> '04'){ echo $row_menuSublinea['id_sublinea'];}?></span>
 					<?php echo $row_menuSublinea['sublinea'];?></a></li>				
 				<?php } ?>
 			</ul>
