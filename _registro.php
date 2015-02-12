@@ -165,7 +165,8 @@ $headers .= "Content-type: text/html; charset= iso-8859-1\r\n";
 //Las siguientes 2 cabeceras, permitirán que el destinatario sepa a quién responder y quién le ha enviado el mensaje
 $micorreo = "avega@cerrajes.com";/*contacto@cerrajes.com*/
 $correoCli = "$_POST[correoR]";
-if ($correoCli <> '') {
+$nombreCli = "$_POST[nombreR]";
+if ( (preg_match('/(^[0-9a-zA-Z_.+-]+)@([a-zA-Z_-]+).([a-zA-Z]{2,4}$)/i', $correoCli)) and  ($nombreCli <> '') ){ //($correoCli <> '') {
 	$headers .= "Reply-To: contacto@cerrajes.com\r\n"; /*contacto@cerrajes.com*/ 
 	$headers .= "From: Contacto Cerrajes<contacto@cerrajes.com>\r\n";/*contacto@cerrajes.com*/
 	$headers .= 'Bcc: avega@cerrajes.com' . "\r\n";
@@ -260,6 +261,9 @@ if ($correoCli <> '') {
 
 	/***********************************************/
 	/***********************************************/
+} else {
+	require_once("productos.php");
+	echo "corregir datos";
 }
 ?>
 <!-- termina código doppler -->	

@@ -36,6 +36,7 @@ require 'controladores/consultaB.php';
 	<section id="menuProductos">
 		<?php 
 			require("menu/.menu.php");
+			require(".zoom.html"); 
 			require(".registro.php") ?>
 	</section>
 	<section id="contenedor">
@@ -56,7 +57,11 @@ require 'controladores/consultaB.php';
 
 					<section id="producto" class="sombra">
 						<figure id="suelto"><!-- imagen de producto "suelto" -->
-							<img src="http://cerrajes.me/imgCerrajes/img/<?php print $row_producto['imagen']?>.png" alt="<?php print $row_producto['imagen']?>"/>
+					<?php if ($row_producto['imagen'] <> '') {?>
+						<a class="fancybox" rel="group" href="http://cerrajes.me/imgCerrajes/imagenesG/<?php print $row_producto['imagenG']?>.jpg" title="<?php print $row_producto['Descripción']?>" data-fancybox-width="591" data-fancybox-height="591">
+							<img src="http://cerrajes.me/imgCerrajes/img/<?php print $row_producto['imagen']?>.png" alt="<?php print  $row_producto['imagen'] ?> "/>
+						</a>
+					<?php } ?>
 						</figure>
 						
 						<section id="codigo"><!-- inicia sección de información de producto -->
@@ -248,5 +253,42 @@ require 'controladores/consultaB.php';
 	<?php require(".footer.php") ?>
 <script src="js/paginacion.js"></script>
 <script src="js/mostrar.js"></script>
+
+	<!-- Add mousewheel plugin (this is optional) -->
+	<script type="text/javascript" src="js/jquery.mousewheel-3.0.6.pack.js"></script>
+	<!-- Add fancyBox main JS and CSS files -->
+	<script type="text/javascript" src="fancybox/jquery.fancybox.js?v=2.1.5"></script>
+	<link rel="stylesheet" type="text/css" href="fancybox/jquery.fancybox.css?v=2.1.5" media="screen" />
+	<!-- Add Media helper (this is optional) -->
+	<script type="text/javascript" src="fancybox/jquery.fancybox-media.js?v=1.0.6"></script>
+
+<script type="text/javascript">
+jQuery.noConflict();//resuelve el conflicto entre el zoom y el fancybox, cambiar el signo de $ por jQuery
+	jQuery(document).ready(function() {
+		jQuery(".fancybox")
+    		.attr('rel', 'gallery')
+			.fancybox({
+		        type: 'iframe',
+		        autoSize : false,
+		        beforeLoad : function() {         
+		            this.width  = parseInt(this.element.data('fancybox-width'));  
+		            this.height = parseInt(this.element.data('fancybox-height'));
+		        }
+					// openEffect : 'none',
+					// closeEffect : 'none',
+					// prevEffect : 'none',
+					// nextEffect : 'none',
+
+					// arrows : true,
+					// helpers : {
+					// 	title : {
+					// 		type : 'outside'
+					// 	},
+					// 	media : {},
+					// 	buttons : {}
+					// }
+			});
+	});
+</script>
 </body>
 </html>	

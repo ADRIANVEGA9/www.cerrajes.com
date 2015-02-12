@@ -69,8 +69,8 @@ require 'controladores/consulta.php';
 					<section id="producto" class="sombra">
 						<figure id="suelto"><!-- imagen de producto "suelto" -->
 					<?php if ($row_producto['imagen'] <> '') {?>
-						<a class="fancybox" rel="group" href="http://cerrajes.me/imgCerrajes/imagenesG/<?php print $row_producto['imagenG']?>.jpg" title="<?php print $row_producto['Descripción']?>">
-							<img src="http://cerrajes.me/imgCerrajes/img/<?php print $row_producto['imagen']?>.png" alt="<?php print $row_producto['imagen']?>"/>
+						<a class="fancybox" rel="group" href="http://cerrajes.me/imgCerrajes/imagenesG/<?php print $row_producto['imagenG']?>.jpg" title="<?php print $row_producto['Descripción']?>" data-fancybox-width="591" data-fancybox-height="591">
+							<img src="http://cerrajes.me/imgCerrajes/img/<?php print $row_producto['imagen']?>.png" alt="<?php print  $row_producto['imagen'] ?> "/>
 						</a>
 					<?php } ?>
 						</figure>
@@ -273,8 +273,31 @@ require 'controladores/consulta.php';
 	<script type="text/javascript" src="fancybox/jquery.fancybox-media.js?v=1.0.6"></script>
 
 <script type="text/javascript">
-	$(document).ready(function() {
-		$(".fancybox").fancybox();
+jQuery.noConflict();//resuelve el conflicto entre el zoom y el fancybox, cambiar el signo de $ por jQuery
+	jQuery(document).ready(function() {
+		jQuery(".fancybox")
+    		.attr('rel', 'gallery')
+			.fancybox({
+		        type: 'iframe',
+		        autoSize : false,
+		        beforeLoad : function() {         
+		            this.width  = parseInt(this.element.data('fancybox-width'));  
+		            this.height = parseInt(this.element.data('fancybox-height'));
+		        }
+					// openEffect : 'none',
+					// closeEffect : 'none',
+					// prevEffect : 'none',
+					// nextEffect : 'none',
+
+					// arrows : true,
+					// helpers : {
+					// 	title : {
+					// 		type : 'outside'
+					// 	},
+					// 	media : {},
+					// 	buttons : {}
+					// }
+			});
 	});
 </script>
 </body>

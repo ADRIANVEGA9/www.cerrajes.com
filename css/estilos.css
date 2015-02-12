@@ -454,20 +454,28 @@ small {
 #contenido #equipoForm {
 	margin-top: 1em;
 }
-#contenido #masarticulos {
+#contenedor #masarticulos {
 	text-align: left;
-	padding: 0 .5em 2em;
+	margin: 1em .5em;
 }
-#contenido #masarticulos span {
+#contenedor #masarticulos span {
 	background: #71BF44;
 	border-radius: 50%;
 	box-shadow: 1px 1px 10px 1px #AAA;
 	color: #EFE;
 	cursor: pointer;
 	font-size: .8em;
+	margin: 0 .5em;
 	padding: .5em 1em;
 }
-#contenido #masarticulos span:hover {
+#contenedor #masarticulos span.activo {
+	background-color: #858582;
+	border-color: #AAA;
+	box-shadow: 1px 1px 10px 1px #AAA;
+	color: #EFE;
+	cursor: default;
+}
+#contenedor #masarticulos span:hover {
 	background-color: #858582;
 	border-color: #AAA;
 	box-shadow: 1px 1px 10px 1px #AAA;
@@ -546,6 +554,9 @@ small {
 }
 #contenido #productos #producto #aplicado {
 	width: 16%;
+}
+#contenido #productos #producto #aplicado img{
+	border-radius: .5em;
 }
 #contenido #productos #producto #codigo {
 	height: auto;

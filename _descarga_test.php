@@ -165,7 +165,7 @@ background-position: center center;
 $headers = "MIME-Version: 1.0\r\n";  
 $headers .= "Content-type: text/html; charset= iso-8859-1\r\n"; 
 //Las siguientes 2 cabeceras, permitirán que el destinatario sepa a quién responder y quién le ha enviado el mensaje
-$micorreo = "avega@cerrajes.com";/*contacto@cerrajes.com*/
+$micorreo = "contacto@cerrajes.com";/*contacto@cerrajes.com*/
 $correoCli = "$_POST[correoD]";
 $headers .= "Reply-To: contacto@cerrajes.com\r\n"; /*contacto@cerrajes.com*/ 
 $headers .= "From: Contacto Cerrajes<contacto@cerrajes.com>\r\n";/*contacto@cerrajes.com*/
@@ -221,7 +221,7 @@ mail($correoCli, utf8_decode("Cerrajes el herraje ideal para su mueble - descarg
 /* This Doppler API Example use an existing library known as NUSOAP V0.7.1
 * Information about this lib can be found at http://sourceforge.net/projects/nusoap/ 
 */
-/*require'nusoap/nusoap.php';
+require'nusoap/nusoap.php';
 
 $proxyhost = isset($_POST['proxyhost']) ? $_POST['proxyhost'] : '';
 $proxyport = isset($_POST['proxyport']) ? $_POST['proxyport'] : '';

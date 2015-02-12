@@ -22,7 +22,7 @@
 		<?php require(".nav.php") ?>
 		<section  id="contenido">
 
-			<div id="art1" class="_off">
+			<div id="art1" class="_off art">
 				<div class="tituloSeccion"><strong>Tendencias del herraje</strong></div>
 				<article class="articuloHome">
 					<div class="homeArticulo">
@@ -63,10 +63,9 @@
 
 
 				</article>	
-				<section id="masarticulos"><span id="2">2</span><span id="3">3</span></section>	
 			</div>	
 
-			<div id="art2" class="_off">	
+			<div id="art2" class="_off art">	
 				<div class="tituloSeccion"><strong>Tendencias del herraje II</strong></div>
 				<article class="articuloHome">
 					<div class="homeArticulo">
@@ -108,55 +107,62 @@
 						</div>
 					</div>
 				</article>
-				<section id="masarticulos"><span id="1">1</span><span id="3">3</span></section>	
 			</div>	
 
-			<div id="art3" class="_on">
-				<div class="tituloSeccion"><strong>Tendencias del herraje 3</strong></div>
+			<div id="art3" class="_on art">
+				<div class="tituloSeccion"><strong>Tendencias del herraje III</strong></div>
 				<article class="articuloHome">
 					<div class="homeArticulo">
-						<figure class="img01"><img class="imgW2 img1" src="imagenesSitio/home01.jpg" alt="Tendencias"></figure>
+						<figure class="img01"><img class="imgW2 img1" src="imagenesSitio/Contemporaneo.jpg" alt="Contemporáneo"><figcaption><small>arquitecturadecasas.blogspot.com</small></figcaption></figure>
 						<div class="homeTxt">
 							<div>
-								En el mundo del mueble, la Creatividad y la Innovación constante conforman e impulsan las nuevas tendencias, presentes en las recientes propuestas de los fabricantes en México; las Jaladeras con diseños a la Vanguardia conforman parte de las tendencias previstas para el 2014, entre las que presentamos algunas a continuación.
-							</div>	
-						</div>
-					</div>
-					<div class="homeArticulo">
-						<figure class="img01"><img class="imgW1" src="imagenesSitio/home02.jpg" alt="Origami"><figcaption><small>www.cocinasconestilo.net/2011/12/las-formas-geometricas-de-una-cocina.html</small></figcaption></figure>
-						<div class="homeTxt">
-							<div>
-							<strong class="verdeHome">Origami</strong><br>
-								Basadas en este antiguo arte Japonés, se realza la propuesta de diseño que nos remite al Origami en donde el uso de líneas rectas, prismas irregulares y ángulos poco convencionales, generan una impresión de apacibilidad y sencillez, que en realidad conlleva a los diseñadores contemporáneos hacia nuevos retos.
-							</div>	
-						</div>
-					</div>
-					<div class="homeArticulo">
-						<figure class="img01"><img class="imgW1" src="imagenesSitio/home03.jpg" alt="Vintage"></figure>
-						<div class="homeTxt">
-							<div>
-							<strong class="verdeHome">Vintage</strong><br>
-								Fusionando el diseño contemporáneo con el diseño nostálgico, el minimalismo expresado por el herraje moderno sobre la calidez y nostalgia de la madera de apariencia desgastada por el tiempo. 
-							</div>	
-						</div>
-					</div>
-					<div class="homeArticulo">
-						<figure class="img01"><img class="imgW2" src="imagenesSitio/home04.jpg" alt="Técnico"></figure>
-						<div class="homeTxt">
-							<div>
-							<strong class="verdeHome">Técnico</strong><br>
-								Bajo los conceptos de precisión, perfección, sencillez, claridad y limpieza, el diseño técnico se conceptualiza como la nueva propuesta, en donde el uso de líneas limpias y uso selectivo del color, se renueva dentro del minimalismo puro, haciendo uso de nuevas las nuevas tecnologías aplicadas al herraje, que permiten sistemas de cierre suave en las bisagras, colgadores para gabinetes y correderas ocultas de bajo montaje.
-							</div>	
-						</div>
-					</div>
+							<strong class="verdeHome">Contemporáneo</strong><br>
+								Basado en líneas rectas y simples, superficies lisas y pulidas y pocos detalles intrincados. Caracterizado por crear espacios poco sobrecargados, amplios, funcionales y luminosos sin caer en el minimalismo ya que la distribución de espacios no es tan escasa usando muebles clásicos y robustos con mucho peso dentro de la decoración. 
+Generalmente se utilizan colores claros o muy oscuros, la combinación blanco-negro es habitual en este estilo, la luz debe predominar para lucir el ambiente contemporáneo.
 
+							</div>	
+						</div>
+					</div>
+					<div class="homeArticulo">
+						<figure class="img01"><img class="imgW1" src="imagenesSitio/Mediterraneo.jpg" alt="Mediterráneo"><figcaption><small>www.1001consejos.com</small></figcaption></figure>
+						<div class="homeTxt">
+							<div>
+							<strong class="verdeHome">Mediterráneo</strong><br>
+								Se caracteriza por la luminosidad, el color y el calor, combina detalles rústicos con otros que remonten al mar ya que se caracteriza por utilizar diseños de ambientes naturales, frescos, sencillos y vibrantes para recrear espacios acogedores, relajantes y cálidos.
+A este estilo también se le conoce como “español moderno” donde se usan líneas simples en madera combinada con hierro forjado para lograr una decoración sencilla, sin complicaciones para crear un ambiente marino.
+
+							</div>	
+						</div>
+					</div>
+					<div class="homeArticulo">
+						<figure class="img01"><img class="imgW1" src="imagenesSitio/Moderno.jpg" alt="Moderno"><figcaption><small>bildiowa.blogspot.com</small></figcaption></figure>
+						<div class="homeTxt">
+							<div>
+							<strong class="verdeHome">Moderno</strong><br>
+								Surge en las primeras décadas del siglo XX, marcando una ruptura con lo tradicional, enfocado a espacios eficientes y funcionales sin dejar a un lado lo cálido y acogedor. Es muy versátil y adaptable a diferentes gustos.
+Utiliza formas simples, superficies lisas, mobiliario sencillo en tonos oscuros de maderas o negro, que dan un toque de sofisticación y elegancia a las habitaciones y pocos objetos decorativos pero bien seleccionados, exclusivos y ubicados estratégicamente en cada habitación.
+ 
+							</div>	
+						</div>
+					</div>
+					<div class="homeArticulo">
+						<figure class="img01"><img class="imgW2" src="imagenesSitio/Fashion.jpg" alt="Fashion"><figcaption><small>blog.mexicodestinos.com</small></figcaption></figure>
+						<div class="homeTxt">
+							<div>
+							<strong class="verdeHome">Fashion</strong><br>
+								Refleja tendencias y diseños exclusivos mediante el uso de accesorios únicos para denotar clase, elegancia, individualidad e imponer un estilo diferente en la forma de vida, resaltando el gusto de personas que quieren sobresalir de las demás.
+Usualmente se utilizan accesorios grandes, vistosos y coloridos que reflejen ostentosidad y abundancia, difíciles de copiar o adquirir.
+
+
+							</div>	
+						</div>
+					</div>
 
 				</article>	
-				<section id="masarticulos"><span id="1">1</span><span id="2">2</span></section>	
-			</div>	
-
-			<section id="masarticulos"><span id="1">1</span><span id="2">2</span><span id="3">3</span></section>		
+			</div>		
 		</section>
+
+			<section id="masarticulos"><span id="1">1</span><span id="2">2</span><span id="3" class="activo">3</span></section>	
 
 
 	</section>
@@ -176,9 +182,13 @@ var $np_on  		= $('#contenido #art'+$idn),
 
 	// $np_off.fadeOut( 10 ).hide(300);
 	// $np_on.fadeIn( 10 ).show(300);
+	$('#masarticulos #'+$idn).siblings().removeClass('activo')
+	$('#masarticulos #'+$idn).addClass('activo')	
 
 	$np_off.slideUp(5).hide(10);
 	$np_on.slideDown(5).show(10);
+
+
 }
 
 </script>

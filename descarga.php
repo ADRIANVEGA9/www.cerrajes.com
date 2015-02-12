@@ -122,7 +122,7 @@
 		            } else {
 		                $('.error').hide();
 						$('#validar').attr('disabled','disabled');
-						$('#validar').text('Descargando...');
+						$('#validar').text('Creando archivo .zip...');
 		                return true;
 		            }   
 		    });
