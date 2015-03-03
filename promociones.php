@@ -47,15 +47,15 @@ if (verificar_cliente()){
 				y solicítalo enviando un correo a <a class="mailPromo" href="mailto:promociones@cerrajes.com">promociones@cerrajes.com</a>
 			</div>-->
 			<section class="promo">
-				<figure> <img src="imagenesSitio/promociones/promociones-febrero_01.jpg" >
+				<figure> <img src="imagenesSitio/promociones/promociones-marzo.png" >
 				</figure>
-				<figure> <img src="imagenesSitio/promociones/promociones-febrero_02.jpg" >
+				<!-- <figure> <img src="imagenesSitio/promociones/promociones-febrero_02.jpg" >
 				</figure>
 				<figure> <img src="imagenesSitio/promociones/promociones-febrero_03.jpg" >
 				</figure>
 				<figure> <img src="imagenesSitio/promociones/promociones-febrero_04.jpg" >
 				</figure>
-                    <!-- <map name="Map">
+                    <map name="Map">
                     <area shape="rect" coords="244,438,337,460" href="http://www.cerrajes.me/fichas/FT-0304-053_056.pdf" target="_blank" alt="Corredera cierre suave">
                     <area shape="rect" coords="638,437,731,459" href="http://www.cerrajes.me/fichas/FT-0304-051.pdf" target="_blank" alt="Clips para corredera">
               		<area shape="rect" coords="9,1212,101,1233" href="http://www.cerrajes.me/fichas/lift_abatible_sencillo_1brazo.pdf" target="_blank" alt="Sistema levadizo SALICE lift abatible sencillo con 1 brazo">
@@ -90,7 +90,7 @@ if (verificar_cliente()){
 				<span>Clave de cliente y RFC al que se facturará<br><br></span>
 
 				Recibirás tu producto en la dirección indicada en un lapso no mayor a 4 días hábiles, el flete esta incluido. <b>ESTE BENEFICIO SE OBTENDRÁ ADQUIRIENDO EL PRODUCTO EN PROMOCIÓN SOLICITÁNDOLO A TRAVÉS DEL MAIL promociones@cerrajes.com</b><br><br>
-				Promoción válida del 01 al 28 de febrero de 2015 o hasta agotar existencias, revisa los códigos participantes. Promoción exclusiva de Cerrajes México para clientes actuales de Cerrajes México que estén dados de alta en la base de datos, no aplica con otras promociones y descuentos de clientes, los precios ya incluyen IVA, cambios y devoluciones sujetos a revisión del producto.<br><br>
+				Promoción válida del 01 al 31 de marzo de 2015 o hasta agotar existencias, revisa los códigos participantes. Promoción exclusiva de Cerrajes México para clientes actuales de Cerrajes México que estén dados de alta en la base de datos, no aplica con otras promociones y descuentos de clientes, los precios ya incluyen IVA, cambios y devoluciones sujetos a revisión del producto.<br><br>
 				Si realizas el pedido directamente con tu asesor de ventas el producto se enviará a la sucursal y él te informará el tiempo de entrega del mismo.
 			</div> 
 		</section>

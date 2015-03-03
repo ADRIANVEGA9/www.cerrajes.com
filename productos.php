@@ -283,20 +283,25 @@ jQuery.noConflict();//resuelve el conflicto entre el zoom y el fancybox, cambiar
 		        beforeLoad : function() {         
 		            this.width  = parseInt(this.element.data('fancybox-width'));  
 		            this.height = parseInt(this.element.data('fancybox-height'));
-		        }
+		        },
 					// openEffect : 'none',
 					// closeEffect : 'none',
 					// prevEffect : 'none',
 					// nextEffect : 'none',
 
 					// arrows : true,
-					// helpers : {
-					// 	title : {
-					// 		type : 'outside'
-					// 	},
+					helpers : {
+						// title : {
+						// 	type : 'outside'
+						// }
+						// overlay : {
+						// 	css : {
+						// 		'background' : 'rgba(238,238,238,0.85)'
+						// 	}
+						// }
 					// 	media : {},
 					// 	buttons : {}
-					// }
+					}
 			});
 	});
 </script>
